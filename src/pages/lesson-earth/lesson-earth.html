@@ -1,0 +1,51 @@
+<!--
+  Generated template for the LessonEarthPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Origin of the Universe</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="SettingsPage()">
+          <ion-icon name="cog" ></ion-icon>
+        </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <button ion-item no-lines (click)="universeLesson();">
+        <ion-icon name="unlock"></ion-icon>  Universe Formation
+      </button>
+  </ion-item>
+
+  <ion-item *ngFor="let x of lessonUnlocked">
+    <button no-lines [disabled]="x.valid" ion-item (click)="astronomyLesson()">
+    <ion-icon name="{{x.name}}"></ion-icon>  Astronomy
+    </button>
+  </ion-item>
+
+
+  <ion-item *ngFor="let y of lessonUnlocked2">
+    <button ion-item no-lines [disabled]="y.valid" (click)="solarsystemLesson()">
+    <ion-icon name="{{y.name}}"></ion-icon>  Solar System
+    </button>
+  </ion-item>
+
+  <ion-item *ngFor="let z of lessonUnlocked3">
+    <button ion-item no-lines [disabled]="z.valid" (click)="earthsystemLesson()">
+    <ion-icon name="{{z.name}}"></ion-icon>  Earth Systems
+    </button>
+  </ion-item>
+
+
+</ion-content>

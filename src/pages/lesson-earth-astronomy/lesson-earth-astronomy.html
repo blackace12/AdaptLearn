@@ -1,0 +1,305 @@
+<!--
+  Generated template for the LessonEarthAstronomyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Astronomy</ion-title>
+
+    <ion-buttons end>
+        <button ion-button icon-only item-right (click)="openModal()">
+          A
+        </button>
+      </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="SettingsPage()">
+        <ion-icon name="cog" ></ion-icon>
+      </button>
+  </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="chapter">
+    <button ion-item (click)="click4()">
+      Star Birth
+    </button>
+    <ion-card *ngIf="hide4">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Like people, stars are born, they grow old and they die. Their birthplaces are huge, cold clouds of gas and dust, known as 'nebulas'. The most famous of these is the Orion nebula, which is just visible with the unaided eye.
+        <br>
+        These clouds start to shrink under their own gravity. As the cloud gets smaller, it breaks into clumps. Each clump eventually becomes so hot and dense that nuclear reactions begin. When the temperature reaches 10 million degrees Celsius, the clump becomes a new star.
+        <br>
+        After their birth, most young stars lie at the centre of a flat disc of gas and dust. Most of this material is eventually blown away by the star’s radiation. Before this happens, planets may form around the central star.
+        <br>
+        Infrared observatories are able to detect heat coming from invisible stars that are forming inside such clouds. One of the most powerful of these is ESA's Herschel space observatory, launched in May 2009. Herschel will spend at least three years studying the dusty clouds where stars – large and small - are born.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click4_1()">
+      Star Death
+    </button>
+    <ion-card *ngIf="hide4_1">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Most stars take millions of years to die. When a star like the Sun has burned all of its hydrogen fuel, it expands to become a red giant. This may be millions of kilometres across - big enough to swallow the planets Mercury and Venus.
+        <br>
+        After puffing off its outer layers, the star collapses to form a very dense white dwarf. One teaspoon of material from a white dwarf would weigh up to 100 tonnes. Over billions of years, the white dwarf cools and becomes invisible.
+        <br>
+        Stars heavier than eight times the mass of the Sun end their lives very suddenly. When they run out of fuel, they swell into red supergiants. They try to keep alive by burning different fuels, but this only works for a few million years. Then they blow themselves apart in a huge supernova explosion.
+        <br>
+        For a week or so, the supernova outshines all of the other stars in its galaxy. Then it quickly fades. All that is left is a tiny, dense object – a neutron star or a black hole – surrounded by an expanding cloud of very hot gas.
+        The elements made inside the supergiant (such as oxygen, carbon and iron) are scattered through space. This stardust eventually makes other stars and planets.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click4_2()">
+      Supernovas
+    </button>
+    <ion-card *ngIf="hide4_2">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Every now and again our Milky Way galaxy is lit up by a huge explosion. Known as a supernova, this violent event marks the death of a supergiant – a heavyweight star which is many times bigger than the Sun. One of the last supernovas in the Milky Way took place about 340 years ago in the constellation of Cassiopeia, so it is known as Cassiopeia A (Cas A).
+        <br>
+        Cas A is located ten thousand light-years from Earth. Observatories such as the NASA-ESA Hubble Space Telescope have made detailed studies of the left-over cloud of glowing gas and dust.
+        <br>
+        The images show a shredded ring of material that is moving rapidly away from the site of the explosion. Some of the material is moving at about 50 million km per hour (fast enough to travel from Earth to the Moon in 30 seconds!). The huge swirls of debris are glowing because they have been heated by the shock wave from the supernova as it passed by.
+        <br>
+        There are several types of supernova explosions. Cas A blew up when a small star, known as a white dwarf, pulled a lot of material from a nearby star. As the gas built up, the white dwarf became so hot and active that it exploded. Other supernovas occur when massive stars run out of nuclear fuel in their cores. Unable to give out any more energy, the core collapses, destroying the star.
+        <br>
+        Supernovas are important because they spread star material across the galaxy. Almost everything on Earth (including us!) is made of elements (such as carbon and iron) that came from this stardust.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click4_3()">
+      Dwarfs and Supergiants
+    </button>
+    <ion-card *ngIf="hide4_3">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        The Sun is a star. Like most stars, the Sun is a ball of very hot gas that gives off huge amounts of light, heat and other radiation. This radiation is produced by nuclear reactions in the core. It is like millions of hydrogen bombs exploding every second.
+        <br>
+        There are many different types of star. Red stars are the coolest, with surface temperatures of around 2500 degrees Celsius. Blue-white stars are the hottest, reaching a sizzling 40 000 degrees. Yellow stars like the Sun are in-between, with surface temperatures of about 5500 degrees.
+        <br>
+        Stars come in many sizes. The Sun is medium-sized. It burns its hydrogen fuel fairly slowly, so it can keep shining for 10 billion years. Some stars are much bigger and hotter than the Sun. The red supergiant Antares is 800 times wider than the Sun. If it was at the centre of our Solar System, it would swallow up all of the inner planets, including Earth. Like gas guzzler cars, these supergiants use all of their hydrogen and helium fuel very quickly. After perhaps 500 million years, they die in a supernova explosion.
+        <br>
+        The coolest, slowest burning stars are red dwarfs. These can survive for more than 10 trillion (10 000 billion) years. Even cooler and smaller are brown dwarfs. These are 'failed stars'. They are so cool – sometimes only a few hundred degrees at the surface - that their nuclear furnaces never start to burn.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click4_4()">
+      Galaxies
+    </button>
+    <ion-card *ngIf="hide4_4">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Nearly all stars belong to gigantic groups known as galaxies. The Sun is one of at least 100 billion stars in our galaxy, the Milky Way. And there are billions of galaxies in the Universe.
+        <br>
+        Everywhere we look in the sky there are galaxies of different shapes and sizes. Some are spirals, with curved arms wrapped around a bright central core.
+        <br>
+        Some have a bar of stars across the centre, with arms attached at either end. Others have no recognisable shape at all. The largest galaxies look like squashed balls. They contain up to 10 million million stars, but they have very little gas or dust. Nearly all galaxies have a supermassive black hole at the centre.
+        <br>
+        Galaxies were born only a few hundred million years after the Universe was created. At that time, about 13 billion years ago, the galaxies were small and much closer together. Collisions were common. As the galaxies smashed into each other they grew in size and changed shape.
+        <br>
+        Since then, the Universe has been expanding. Most galaxies are moving apart at high speed, except in galaxy clusters where they dance around each other.
+        <p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click4_5()">
+      The Milky Way
+    </button>
+    <ion-card *ngIf="hide4_5">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        We live in one of the arms of a large spiral galaxy called the Milky Way. The Sun and its planets (including Earth) lie in this quiet part of the galaxy, about half way out from the centre.
+        <br>
+        The Milky Way is shaped like a huge whirlpool that rotates once every 200 million years. It is made up of at least 100 billion stars, as well as dust and gas. It is so big that light takes 100 000 years to cross from one side to the other.
+        <br>
+        The centre of the Galaxy is very hard to see because clouds of gas and dust block our view. Scientists think that it contains a supermassive black hole that swallows anything passing too close.
+        <br>
+        Outside the main spiral are about 200 ball-shaped clusters of stars. Each 'globular cluster' is very old and contains up to one million stars. The Milky Way belongs to a cluster of at least 40 galaxies. The so-called Local Group has two large spiral galaxies – the Milky Way and Andromeda.
+        <br>
+        The others are much smaller. They include two galaxies that can be seen with the naked eye from countries south of the equator. The galaxies are called the Magellanic Clouds, after the Portuguese explorer Ferdinand Magellan.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <button ion-item (click)="click5()">
+      Meteors
+    </button>
+    <ion-card *ngIf="hide5">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        The Solar System is full of material left over from the formation of the planets. Small chunks of rock that travel through space are known as meteoroids. If they enter a planet’s atmosphere and burn up, they are then seen as meteors. Sometimes larger pieces of rock survive long enough to crash into a planet’s surface. Space rocks on the Earth’s surface are known as meteorites.
+        <br>
+        Meteors (often called “shooting stars”) are very common sights. Anyone who stares at a clear night sky will eventually see these brief trails of light. Meteors are caused by meteorites entering the upper atmosphere at speeds of around 15 km/s! Meteor trails usually last for less than a second. Friction with the thin air at an altitude of about 100 km causes meteorites to glow as they are heated and then destroyed.
+        <br>
+        Meteors can be seen at any time, but the best time to look for them is during periodic showers. Such showers appear around the same dates each year, when Earth passes through a stream of dust left behind by a passing comet.
+        <br>
+        There are about 20 main showers, although only a few of them produce as many as 50 meteors per minute. Occasionally, the sky is filled with shooting stars. The most famous “meteor storms” are linked with the Leonid shower, which takes place every year between 14 and 20 November. The shower has been so active in the past that it resembled falling snow!
+        <br>
+        Some meteors are too faint to be seen, even at night, but they can be detected by radar. Other planets have meteor showers too. On Mars, meteorites generally burn up in the thin atmosphere to produce meteors. However, there is no air on the Moon, so meteorites hit the ground and explode without burning up.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click5_1()">
+      Comets
+    </button>
+    <ion-card *ngIf="hide5_1">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Ancient people were afraid of comets – they were said to bring bad luck or foretell disaster. We now know that comets are small ice worlds that have been left over from the formation of the planets. Billions of comets are thought to exist on the edge of the Solar System, beyond the orbit of Pluto.
+        <br>
+        Most comets are so small and so far away that we cannot see them, even in the biggest telescopes. But we can see them when they head inwards toward the Sun and grow tails of gas and dust. (The word comet means 'hairy star'.)
+        <br>
+        The heat of the Sun makes the ices turn into gas that streams for millions of kilometres into space. Despite their length, the dust particles they contain are no bigger than grains of sand.
+        <br>
+        Some comets take only a few years to swing around the Sun. Some – like Halley's comet – take much longer. Others appear once and are never seen again. ESA's SOHO spacecraft has been used to discover thousands of small comets that fly very close to the Sun. Many of them crash into the Sun or are pulled apart by its strong gravity.
+        <br>
+        In 2014, Europe's Rosetta spacecraft will make history by going into orbit around a comet and dropping a lander on its surface.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click5_2()">
+      Exploring Asteroids
+    </button>
+    <ion-card *ngIf="hide5_2">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Most asteroids are so small and so far away that we can only see them as tiny points of light. They are found through their movement in front of the 'fixed stars' of the night sky. We learn more about them by using large telescopes to study the light they reflect.
+        <br>
+        However, even the Hubble Space Telescope is unable to reveal much about them. One of the most interesting asteroids is metal-rich Vesta. Hubble’s images show a fairly round world with a large impact crater.
+        <br>
+        Some Earth-grazing asteroids have been studied with radar. The radar echoes are picked up by large radio telescopes and used to find out their shape and size.
+        <br>
+        A few asteroids have been studied in greater detail by visiting spacecraft. The pictures show objects that have many craters, showing they have been battered by collisions over billions of years. In 2000, NEAR Shoemaker became the first spacecraft to go into orbit around an asteroid. The spacecraft ended its life by making an historic landing on Eros, one of the largest near-Earth asteroids.
+        <br>
+        ESA's Rosetta spacecraft has also flown past two main belt asteroids - Steins and Lutetia - on its way to a comet. About 130 km across, Lutetia was the largest asteroid yet visited by a spacecraft. ESA is also studying ways of nudging off course an asteroid that is heading towards Earth.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click5_3()">
+      Meteorites
+    </button>
+    <ion-card *ngIf="hide5_3">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Every day about 50 tonnes of rocky material from space lands on the Earth's surface. These rocks are called meteorites.
+        <br>
+        Nearly all meteorites come from the main asteroid belt between Jupiter and Mars. Although most asteroids are separated by thousands of kilometres of empty space, collisions are fairly common.
+        <br>
+        Sometimes an entire asteroid can break apart. Mostly a few small pieces are chipped off. These pieces travel through space for millions of years until they are caught by a planet's gravity.
+        <br>
+        If they survive the fiery journey through the air to land on the planet's surface, they become meteorites. Many thousands of meteorites have been found on Earth.
+        <br>
+        From studying these rocks, scientists have learned a lot about the age and birth of the Solar System. Some meteorites have been proved to come from the Moon or Mars.
+        <br>
+        The Hoba iron meteorite of southern Africa is the largest on Earth. It is 10 metres across and weighs 60 tonnes.
+        <br>
+        No one is known to have been killed by a falling meteorite, but several people have been bruised. Meteorites have also been known to kill a cow and damage houses and cars.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click5_4()">
+      Shooting Stars
+    </button>
+    <ion-card *ngIf="hide5_4">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        There are several hundred comets that spend most of their lives among the planets of the inner Solar System. These comets leave many trails of gas and dust behind them.
+        <br>
+        The sand-sized grains of dust sometimes slam into the thin air that surrounds the Earth, called the atmosphere, where they get hot very quickly. As the dust grains burn up, they leave bright streaks of light across the night sky. These streaks are called meteors, often nicknamed 'shooting stars' or 'falling stars'.
+        <br>
+        On a clear night, if you stare at the sky for long enough, you will see one of these meteors, or shooting stars. At certain times of the year, the Earth passes through a comet trail. The number of shooting stars then increases to perhaps 100 per hour. This is called a ‘meteor shower’.
+        <br>
+        On rare occasions, meteor showers have been known to light up the entire sky. People who saw the Leonid shower of 1966 were amazed to see 40 shooting stars every second!
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click5_5()">
+      SOHO discover thousands of comets
+    </button>
+    <ion-card *ngIf="hide5_5">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Since beginning operations in 1996, the ESA/NASA SOHO spacecraft has spent its time staring non-stop at the enormous, sizzling Sun. One of its instruments, called LASCO, is used to observe the Sun’s outer atmosphere (the corona). However, the sharp-eyed LASCO camera has also shown a wonderful ability to find the small chunks of dirty ice that we call comets. By September 2010, SOHO had found over 1,900 comets, more than all the other discoverers of comets put together. Not bad for a spacecraft that was designed to study our nearest star.
+        <br>
+        Comets are chunks of ice and dust - ‘leftovers’ from the formation of the planets 4.5 billion years ago. All comets travel around the Sun, and many of them are sungrazers, passing very close to its scorching surface. Some of the comets swinging around the Sun show up as tiny dots or streaks in SOHO’s images – though not all of them survive the fiery passage. Many of them are vaporised or plunge into the star.
+        <br>
+        Roughly 85% of SOHO’s discoveries are pieces of a once-great comet that split apart in a death plunge around the Sun, probably many centuries ago.
+        <br>
+        When it comes to comet catching, SOHO has one big advantage over everybody else: its location between the Sun and Earth. By blocking out the Sun’s glare, LASCO can see regions that would otherwise only be visible during a total solar eclipse.
+        <br>
+        Of course, LASCO itself does not make the detections. That task falls to a group of highly-skilled volunteers who scan the images as soon as they are downloaded. After SOHO transmits them to Earth, the pictures can be on the Internet and ready for analysis just 15 minutes after they are taken.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click5_6()">
+      A Diamond in the Sky
+    </button>
+    <ion-card *ngIf="hide5_6">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        The first images of Asteroid Steins taken by Rosetta’s instruments were derived from raw data and have delivered spectacular results: asteroid Steins looks like a diamond in the sky.
+        <br>
+        Visible in the images are several small craters on the asteroid, and two huge ones, one of which is 2 km in diameter, indicating that the asteroid must be very old.
+        <br>
+        The images are 50 to 60 pixels in diameter, enough to characterise the shape and other characteristics of the body of the asteroid. In the images is a chain of impact craters, which must have formed from recurring impact as the asteroid rotated. The chain is composed of about 7 craters. To determine the age of the asteroid, a count of the craters on the asteroid’s surface has been started (the more the number of craters, the older the asteroid). So far, 23 craters have been spotted.
+        <br>
+        After analysis of the Rosetta data, Steins will be one of the best-characterised asteroids so far.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click5_7()">
+      Rosetta Makes Friends with a Comet
+    </button>
+    <ion-card *ngIf="hide5_7">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        After travelling for 10 long years, covering over half the length of the Solar System and looping around the Sun five times, the Rosetta spacecraft has finally arrived at its destination: Comet 67P/ Churyumov–Gerasimenko!
+        <br>
+        Rosetta is currently orbiting 100 km above the comet’s surface, sending details about its new friend back to Earth. For the next few weeks, Rosetta’s main task is to search for the perfect landing site for the probe its carrying, called Philae (pronounced FEE-lay).
+        <br>
+        If everything goes well, in just a few months Philae will become the first probe ever to be dropped onto a comet’s surface!
+        <br>
+        But Rosetta's journey won’t end there, for many months the little spacecraft will travel alongside the comet as it swings around the Sun and back out towards Jupiter again.
+        One year from now, the pair will approach the closest point to the Sun on their tour of the Solar System — this is where the comet will really begin to shine.
+        <br>
+        Comets are lumps of cosmic ice and rock, which means that as Comet 67P travels closer to the Sun it will begin to melt. The vapourised ice from the comet will create a magnificent tail like those we are sometimes lucky enough to see travelling across our skies.
+        <br>
+        Unfortunately, Comet 67P won’t be visible in our night sky without powerful telescopes, even with its dazzling tail. Instead, Rosetta will provide us with something better — an up-close view of how the comet changes in the glare of the Sun!
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-fab right bottom *ngFor="let styleElement of styles">
+    <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
+        <!--<audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
+          <audio-track-play dark [audioTrack]="audio">
+          </audio-track-play>
+        </audio-track>-->
+        <ion-icon name="volume-up"></ion-icon>
+      </button>
+
+      <button ion-fab color="primary" (click)="regularShare()"
+      *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
+
+      <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
+
+      <button ion-fab color="primary" (click)="playVideo()"
+      *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+          <ion-icon name="logo-youtube"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+
+</ion-content>

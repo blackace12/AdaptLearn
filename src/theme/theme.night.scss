@@ -1,0 +1,51 @@
+.night-theme {
+    ion-content {
+        background-color: #2F2D2D;
+        color: #ffffff;
+    }
+
+    ion-header{
+        color: #ffffff;
+    }
+
+    button{
+        background-color: #2F2D2D;
+        color: #ffffff;
+    }
+
+    .toolbar {
+        background-color: #2F2D2D;
+    }
+
+    .header .toolbar-title {
+        color: #ffffff;
+    }
+
+    .header .toolbar-background {
+        border-color: #3aa9ff;
+        background-color: #2F2D2D;
+    }
+
+    ion-item {
+        background-color: #2F2D2D;
+    }
+
+    /* For font size */
+    .size1{
+        font-size: 14px;
+    }
+    .size2{
+        font-size: 16px;
+    }
+    .size3{
+        font-size: 18px;
+    }
+    .size4{
+        font-size: 20px;
+    }
+    .size5{
+        font-size: 22px;
+    }
+
+
+}

@@ -1,0 +1,683 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Solar System</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="openModal()">
+        A
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="SettingsPage()">
+        <ion-icon name="cog" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="chapter">
+    <button ion-item (click)="click2()">
+      Our Nearest Star
+    </button>
+    <ion-card *ngIf="hide2">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        The Sun is our nearest star. The Sun provides us with light and heat. It also gives out dangerous ultraviolet light which causes sunburn and may cause cancer. Without the Sun there would be no daylight, and our planet would simply be a dark, frozen world, with no oceans of liquid water and no life.
+        <br>
+        This huge ball of superhot gas is 1.4 million kilometres across, equal to 109 Earths set side by side. With a mass of 2 million-trillion-trillion-trillion kilograms, it weighs as much as 330 000 Earths. About 1 300 000 Earths would fit inside the Sun!
+        <br>
+        From Earth, the Sun looks like it moves across the sky in the daytime and appears to disappear at night. This is because the Earth is spinning towards the east. The Earth spins about its axis, an imaginary line that runs through the middle of the Earth between the North and South poles. This means that to us here on the spinning Earth, the Sun appears to rise in the east in the morning, and climb higher and higher in the sky towards midday. In the afternoon the Sun then seems to move lower and lower in the sky before setting in the west.
+        <br>
+        Although it seems small when seen at sunrise or sunset this is only because the Sun lies about 150 million km away from us. At this distance, it takes about 8 minutes for sunlight to reach us – even when it is travelling at about 300 000 km/s. This means that we see the Sun set eight minutes after the event has actually taken place!
+        <p>
+      </ion-card-content>
+    </ion-card>
+     <button ion-item (click)="click2_1()">
+      The Sun
+    </button>
+    <ion-card *ngIf="hide2_1">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Special instruments known as spectrographs tell us that the Sun is made almost entirely of two gases, hydrogen and helium. The temperature at its surface is about 5 500 degrees Celsius – more than 20 times hotter than an oven on maximum. In the centre, the temperature soars to about 15 million degrees Celsius and the gas is squeezed to about 10 times the density of lead.
+        <br>
+        At such high temperatures and pressures, the Sun becomes a nuclear reactor, where hydrogen is converted to helium. At the same time, huge amounts of radiation are produced. This finds its way to the surface as visible, infrared and ultraviolet light, and X-rays.
+        Every hour, the Sun ejects a billion tons of gas into space at a speed of up to 2 million km per hour. Even so, the Sun is so massive that it can continue burning for billions of years.
+        <br>
+        The Sun becomes more active every 11 years. At such times, the number of dark sunspots on its surface increases. At the peak of the sunspot cycle, there are many more explosive solar storms. During the last solar maximum in 2001, many solar flares and coronal mass ejections blasted billions of tonnes of material into space at high speed.
+        <br>
+        If these storms head towards Earth, they can have serious side-effects. They may cause power cuts, damage satellites, and affect communications and navigation systems. They also cause the Earth's auroras – commonly known as the Northern and Southern Lights.
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-list>
+    <div class="chapter">
+      <button ion-item (click)="click3()">
+          The Solar System And Its Planets
+        </button>
+      <ion-card *ngIf="hide3">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            The Solar System is made up of the Sun and all of the smaller objects that move around it. Apart from the Sun, the largest
+            members of the Solar System are the eight major planets. Nearest the Sun are four fairly small, rocky planets
+            - Mercury, Venus, Earth and Mars.
+          <br>
+            Beyond Mars is the asteroid belt – a region populated by millions of rocky objects. These are left-overs from the formation
+            of the planets, 4.5 billion years ago.
+          <br>
+            On the far side of the asteroid belt are the four gas giants - Jupiter, Saturn, Uranus and Neptune. These planets are much
+            bigger than Earth, but very lightweight for their size. They are mostly made of hydrogen and helium.
+          <br>
+            Until recently, the furthest known planet was an icy world called Pluto. However, Pluto is dwarfed by Earth’s Moon and many
+            astronomers think it is too small to be called a true planet.
+          <br>
+            An object named Eris, which is at least as big as Pluto, was discovered very far from the Sun in 2005. More than 1,000 icy
+            worlds such as Eris have been discovered beyond Pluto in recent years. These are called Kuiper Belt Objects.
+            In 2006, the International Astronomical Union decided that Pluto and Eris must be classed as “dwarf planets”.
+          <br>
+            Even further out are the comets of the Oort Cloud. These are so far away that they are invisible in even the largest telescopes.
+            Every so often one of these comets is disturbed and heads towards the Sun. It then becomes visible in the night
+            sky.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_1()">
+          Mercury
+        </button>
+      <ion-card *ngIf="hide3_1">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Mercury is the first planet from the Sun. It is not very easy to observe since it is always close to the Sun in the sky.
+            Even when best placed, it is close to the horizon and only visible for a few hours after sunset or before sunrise.
+          <br>
+            Named after the winged messenger of the gods, the planet speeds around the Sun once every 88 days. However, it spins on its
+            axis very slowly – once every 58.6 days. This is exactly two thirds of its orbital period.
+          <br>
+            Mercury is a small, rocky world. It is only about as wide as the Atlantic Ocean and 18 Mercurys would fit inside the Earth.
+          <br>
+            Mercury is very like the Moon. Its surface is covered with impact craters. It has no atmosphere and no water. The noon temperature
+            at the equator can soar to 450°C but the nights are extremely cold, below -180°C. There may be some water ice
+            in the deep dark craters near the poles.
+          <br>
+            Mercury is surprisingly dense. It is thought to have a large iron core that fills most of Mercury’s interior. It also has
+            a surprisingly strong magnetic field.
+          <br>
+            So far, less than half of the surface has been imaged at close range by the Mariner 10 spacecraft. ESA and Japan are planning
+            to send two orbiter spacecraft to Mercury in 2013. The BepiColombo mission is named after a famous Italian mathematician
+            and scientist.
+          </p>
+          <ion-card-header>
+            Europe Goes to Mercury
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Following its wonderfully successful missions to Mars, Venus and Titan, Europe is going to explore Mercury, the closest planet
+            to the Sun.
+          <br>
+            Named after a famous Italian mathematician who made a study of the best flight path to Mercury, BepiColombo will be one of
+            the most complex space missions ever flown. Three modules will be launched towards the smallest planet in the
+            Solar System - a European orbiter, a Japanese orbiter and a propulsion section that will carry the two spacecraft
+            to Mercury.
+          <br>
+            Why go to Mercury? Only two spacecraft have so far visited the planet and much of its surface has yet to be studied in detail.
+            There are still many questions to be answered by BepiColombo. For example, why is Mercury mainly made of iron?
+            Why does it have a magnetic field? Is there water ice in cold, shaded craters near its poles?
+          <br>
+            ESA’s Mercury Planetary Orbiter will carry 11 instruments. From a polar orbit, these will map the planet’s surface, probe
+            the nature of its interior, measure what its rocks are made of and study its thin atmosphere. The second spacecraft,
+            Japan’s Mercury Magnetospheric Orbiter, will carry five instruments to study the planet’s magnetic field.
+          <br>
+            BepiColombo will be the first mission to this mysterious planet to consist of a pair of orbiters. Launch is expected to take
+            place in July 2016. After a long, roundabout voyage through the inner Solar System, BepiColombo will reach Mercury
+            in 2024.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_2()">
+          Venus
+        </button>
+      <ion-card *ngIf="hide3_2">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Venus is the second planet from the Sun, so it is always fairly close to the Sun in the sky. It appears as a brilliant morning
+            or evening “star” – the brightest object in the night sky apart from the Moon. In a telescope it can be seen
+            to go through phases, just like the Moon.
+          <br>
+            Venus is so bright because it is covered by clouds that reflect much of the incoming sunlight. The yellowish clouds are made
+            of sulphur and sulphuric acid.
+          <br>
+            In some ways, Venus is Earth’s twin. It is about the same size and made of the same rocky materials. It also comes closer
+            to us than any other planet. However, it is blanketed with a thick atmosphere of carbon dioxide – the gas that
+            we breathe out. This atmosphere is so dense that walking through would be like wading through water.
+          <br>
+            The carbon dioxide traps most of the heat from the Sun. The cloud layers also act as a blanket. The result is a “runaway
+            greenhouse effect” that has caused the planet’s temperature to soar to 465°C, hot enough to melt lead. This means
+            that Venus is even hotter than Mercury.
+          <br>
+            Without special protection, a visitor to Venus would die instantly – crushed by the immense air pressure, suffocated by the
+            atmosphere, burned to a crisp by the scorching heat, and dissolved by the acid.
+          <br>
+            The surface of Venus has been mapped by radar. The maps show thousands of volcanoes and impact craters. There are two main
+            upland areas, with a mountain range taller than Mt. Everest.
+          <br>
+            Dozens of spacecraft have visited Venus, but many mysteries remain. ESA’s Venus Express has been in near-polar orbit around
+            the planet since it arrived in April 2006. Most of its instruments have been studying the dense atmosphere and
+            rapidly moving clouds, or investigating how the Sun affects the planet. However, its infrared sensor has also
+            been able to map some of the surface and show that active volcanoes may exist on Earth’s neighbour.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_3()">
+          Earth - Traveller In Space
+        </button>
+      <ion-card *ngIf="hide3_3">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Everyone on Earth is a traveller through space. First, the Earth zooms around the Sun at a speed of 30 km/s – 45 times faster
+            than Concorde. It takes 365 days (one year) to complete one orbit of the Sun.
+          <br>
+            It also spins very quickly, like a top that is leaning to one side. People living at the equator travel from west to east
+            at a speed of 1670 km per hour. (The speed is slower for people living near the poles). Since everything around
+            us is moving in the same way, we do not usually notice our high speed journey. The most obvious way to tell is
+            to watch the Sun, Moon and stars as they appear to move across the sky.
+          <br>
+            The tilt of the axis that joins the north and south poles means that the Earth has seasons. When the north pole points towards
+            the Sun, then it is summer in the northern countries. When the north pole points away from the Sun, these countries
+            have their winter. The seasons are the exact opposite to the south of the equator.
+          </p>
+          <ion-card-header>
+            Life on Earth
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Studies of fossils in ancient rocks tell us that life probably began about 4 billion years ago, when the Earth was very young.
+            No one knows how life began on Earth. Most scientists think that it began in liquid water. But was this in pools
+            on the surface, or underground, or at the bottom of oceans where volcanic activity forms hot springs?
+          <br>
+            Experiments show that the chemical building blocks of life can form in space or on Earth. Many of them must have come to
+            Earth with falling meteorites and comets. Somehow, these simple 'organic' chemicals came together to form more
+            advanced molecules. Then they began to copy themselves and grow.
+          <br>
+            What we do know is that – once it gets under way – life is incredibly tough. Living bacteria have been found in frozen Antarctica,
+            in boiling hot water and inside rocks up to five km underground. We also know that such organisms can survive
+            for years in the harsh environment of space.
+          <br>
+            Once plants became widespread, large amounts of oxygen were released into the air. Earth became the only planet in our Solar
+            System with an oxygen-rich atmosphere. By searching for oxygen on other worlds, we may one day find evidence
+            of alien life.
+          </p>
+          <ion-card-header>
+            Planet Earth - A water world
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Earth is like no other planet that we have yet observed. It is the only world we know that has large areas of surface water
+            and a lot of oxygen in its atmosphere. It is also the only world known to support life. This makes it very special.
+          <br>
+            Seen from spacecraft or from the Moon, the Earth appears as a blue planet – an oasis in space. This is because about seven
+            tenths of its surface is covered by oceans. When the water is heated by the Sun, it changes to a gas (known as
+            water vapour). If this gas is cooled, it turns back to water droplets, forming clouds and rain.
+          <br>
+            This water cycle is made possible because Earth lies 150 million km from the Sun, in the 'Goldilocks' zone of the Solar System.
+            As the third planet from the Sun, Earth is neither too hot nor too cold for oceans to exist. The temperature
+            is also just right for life. And it has stayed that way for billions of years.
+          </p>
+          <ion-card-header>
+            Threats from Space
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Earth is the largest of the four rocky planets in our Solar System. It is very heavy for its size. At its centre is a large,
+            iron-rich core, where the temperature reaches 6000 degrees Celsius – as hot as the surface of the Sun.
+          <br>
+            The liquid outer core churns around as the planet spins, acting like a dynamo on a bicycle. This dynamo causes the Earth
+            to behave like a strong magnet. Forming an invisible bubble around the planet, Earth's magnetic field acts like
+            a shield. This protects the planet from most of the high speed particles blasted into space by solar storms.
+            Sometimes particles break through the barrier near the magnetic poles. This results in Earth's auroras – commonly
+            known as the Northern and Southern Lights.
+          <br>
+            Earth's surface is also protected by the thick atmosphere. This blocks out most of the harmful radiation from space. It also
+            causes small incoming objects to burn up as shooting stars. Only the larger meteorites and comets reach the surface
+            and explode, leaving large craters.
+          <br>
+            Unlike the Moon and other rocky planets, there are few impact craters on Earth today. Most of them have been worn away or
+            filled in by the action of flowing water, wind and ice.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_4()">
+          Mars the Red Planet
+      </button>
+      <ion-card *ngIf="hide3_4">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Mars is often called the 'Red Planet' because it appears in the sky as an orange-red star. The colour caused the ancient
+            Greeks and Romans to name it after their god of war. Today, thanks to visiting spacecraft, we know that the planet's
+            appearance is due to rust in the Martian rocks.
+          <br>
+            Mars is the fourth planet from the Sun. It orbits the Sun at an average distance of 228 million km, half as far again as
+            the Earth, so human visitors would find it very cold. Although summers near the equator can be quite warm, the
+            average temperature is 63 degrees Celsius below zero - similar to winters in Antarctica. The nights are also
+            bitterly cold.
+          <br>
+            The first humans on Mars will have other problems to face. The air is 100 times thinner than on Earth, and mostly made up
+            of carbon dioxide. Human explorers will have to wear oxygen masks and special suits every time they step outside
+            their sealed homes.
+          <br>
+            Violent storms can whip up clouds of dust. Sometimes these spread rapidly around the entire planet, hiding the surface from
+            view.
+          </p>
+          <ion-card-header>
+            Life on Mars
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Even with the largest telescopes it is very hard to see much detail on Mars. In the late 1800s, some scientists thought they
+            could see straight lines crossing the planet's surface. These lines joined greenish areas that looked as if they
+            were covered by plants. These scientists thought that the straight lines were canals built by Martians to carry
+            water to their crops.
+          <br>
+            Spacecraft pictures have shown that these canals do not exist. There is no sign of any life – plants or intelligent Martians
+            - on the planet. We now know that Mars is a very cold, dry planet, where liquid water cannot exist on the surface.
+            However, there are large areas of water ice at the polar caps. There is also a lot of ice in the frozen ground
+            – much like the permafrost areas of northern Canada and Russia.
+          <br>
+            Large, dry channels also show that there was once a lot of running water on the surface. Recent results from Mars Express
+            and other spacecraft show that there may be liquid water deep underground. If Mars was once warmer and wetter,
+            life may have begun on the red planet. Simple life, such as bacteria, may still exist beneath the frozen surface.
+          <br>
+            In 1996, a group of scientists told the world that they had found evidence of bacteria inside a meteorite that had come from
+            Mars. However, this idea is not very popular with most other scientists. If life is found on Mars in the future,
+            it would be the first proof that we are not alone in the Universe.
+          </p>
+          <ion-card-header>
+            Mars' Valleys and Volcanoes
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Pictures sent back by spacecraft such as ESA's Mars Express show that Mars has many large impact craters. Most of these are
+            to the south of the equator. They seem to have been made by meteorites crashing onto the surface billions of
+            years ago. The largest crater is about 1800 km across – large enough to swallow half of Europe.
+          <br>
+            However, the surface of Mars has changed during its lifetime. One obvious feature is the huge system of valleys – the Valles
+            Marineris - near the planet's equator. About 5000 km long, they would stretch all the way from Paris to New York.
+          <br>
+            The valleys seem to have been formed by cracking in the planet's surface, when the rocky crust stretched and pulled apart.
+            The valleys are now so wide that a person standing on one edge would not be able to see the other side.
+          <br>
+            Not far to the west are five enormous volcanoes. Most impressive of all is Olympus Mons, the largest volcano in the Solar
+            System. It is wider than England and three times higher than Mount Everest, the highest mountain on Earth. None
+            of these volcanoes are active at the present time.
+          </p>
+          <ion-card-header>
+            Phobos and Deimos
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            In 1877, the American astronomer Asaph Hall discovered two small moons circling the planet Mars. They were named Phobos (Fear)
+            and Deimos (Panic). More than 130 years later, scientists are still trying to unravel the mysteries of these
+            moons.
+          <br>
+            They may be asteroids – small rocks left over from the birth of the planets – that were captured by Mars. Both moons are
+            blacker than coal and look like battered potatoes. Phobos is 27 km across at its widest point and has a large
+            impact crater on one side. It flies around Mars three times in one Martian day.
+          <br>
+            Deimos is even smaller – one of the smallest moons in the Solar System. It is further from Mars, so each orbit around the
+            planet takes a little over one day.
+          <br>
+            Their small size means that gravity on both moons is very weak. An astronaut standing on Phobos would be 1000 times slighter
+            than on Earth. Any large jumps might result in the astronaut flying off into space!
+          <br>
+            Close flybys by ESA’s Mars Express spacecraft have provided clues about what these planets are made of and where they came
+            from.
+          <br>
+            Mars Express is the only spacecraft presently operating around the Red Planet which is in a highly elliptical (egg-shaped)
+            orbit. This path takes it across the orbit of Phobos, enabling it to see all sides of the little moon. (Like
+            Earth’s Moon, Phobos always keeps the same face towards the nearby planet.) Between 23 July and 15 September
+            2008 , Mars Express carried out eight flybys of Phobos, sweeping past at distances ranging from 4,500 km to only
+            93 km.
+          <br>
+            Close-up images show that Phobos, the larger moon, is a potato-shaped space rock measuring just 27 km x 22 km x 19 km. It
+            is very dark - blacker than coal – and heavily cratered. By carefully tracking the way Phobos pulls on Mars Express
+            during each flyby, scientists have found that the satellite is not very dense. It is almost certainly a ‘rubble
+            pile’ - made of many chunks of rock, held together by gravity - rather than a single, solid object.
+          <br>
+            Mars Express studies suggest that Phobos and Deimos may once have been asteroids that orbited the Sun between Mars and Jupiter.
+            However, no one can yet explain how they were captured by Mars and ended up in ‘normal’ orbits above its equator.
+          </p>
+          <ion-card-header>
+            Water on Mars
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            In many ways, Mars is the most Earth-like of all the planets. A visitor would find that a day on Mars is only slightly longer
+            than one on Earth. Mars is also tilted about the same amount as the Earth, so it has seasons.
+          <br>
+            Both Mars and Earth have white polar caps. Those on Mars are much smaller and thinner, so they grow quickly in winter and
+            almost disappear in summer. They are much colder than the polar caps on Earth, so they contain frozen carbon
+            dioxide (the 'dry ice' used to create fog in stage shows) as well as water ice.
+          <br>
+            Mars is in the middle of an ice age, so liquid water cannot exist on its surface at the present time. However, the planet
+            seems to have been warmer and wetter in the past.
+          <br>
+            Winding channels that look like dry river beds have been seen in spacecraft images. They suggest that huge amounts of water
+            once flowed over the surface – possibly fed by melting ice. There may even have been rain and snow. Many of the
+            channels seem to have filled large craters or emptied onto the northern plains. Some scientists believe there
+            was a large ocean that covered the northern half of Mars.
+          <br>
+            Where did the water go? Some may have escaped into space. The rest is frozen in the ground.
+          </p>
+          <ion-card-header>
+            Radar's icy echoes on Mars
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Mars is often regarded as an arid world covered by deserts. However, like Earth, the Red Planet has two large ice caps at
+            its north and south poles. If people are one day to live on Mars, it is important to know how much frozen water
+            is in these ice sheets. This is just what is being discovered by the MARSIS instrument on ESA’s Mars Express
+            orbiter.
+          <br>
+            In order to measure the thickness of the southern ice sheet, the radar instrument sends invisible signals toward the surface
+            and records the echoes. In this way, the radar is able to ‘see’ through the layers to the bottom of the ice.
+            More than 300 of these ‘slices’ have been made through the deposits of ice and dust that cover the pole.
+          <br>
+            We now know that the southern cap is up to 3.7 km thick. If all the ice melted, the entire planet would be covered by an
+            ocean about 11 metres deep. Despite the weight of this massive ice sheet, the rock beneath the ice has not been
+            pushed down – evidence that it is stiffer than Earth’s crust.
+          <br>
+            Ongoing radar studies of the north polar cap have shown that it is about 1.8 km thick. The thin layers of water ice and dust
+            at both poles seem to be caused by seasonal and long-term changes in the climate. Although the polar caps hold
+            most of the known water on modern Mars, other places on the planet may have been wet enough to support life in
+            the distant past.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_5()">
+          Jupiter
+        </button>
+      <ion-card *ngIf="hide3_5">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Beyond the asteroid belt is Jupiter, the fifth planet from the Sun. Everything about Jupiter is large. It is so big that
+            it could easily swallow all of the other planets (or more than 1,300 Earths). It also weighs more than twice
+            as much as all the other planets. Despite its huge size, Jupiter is the fastest-spinning planet, rotating once
+            in less than 10 hours.
+          <br>
+            Jupiter is five times as far from the Sun as the Earth, so its surface temperature is low, around –145°C. Every 13 months
+            or so it comes closer to us and becomes very bright in the night sky.
+          <br>
+            Jupiter is a giant ball of gas, with no solid surface. It is mainly made of the very light gases, hydrogen and helium. Telescopes
+            show a cloudy atmosphere with colourful belts and spots. The largest feature – called the Great Red Spot – is
+            a giant storm, several times the size of the Earth. It has been blowing non-stop for more than 300 years.
+          <br>
+            Jupiter has a faint ring of dust, over 100,000 km wide, that was discovered by the Voyager spacecraft. It is also orbited
+            by the largest family of satellites (63 at the latest count).
+          <br>
+            Four of these, discovered by the Italian scientist Galileo in 1610, are very big. Io has hundreds of volcanoes that cover
+            its surface with yellow-orange sulphur. Europa has a smooth, icy surface that looks like a cracked egg shell.
+            Ganymede has light and dark patches with grooves and craters. Callisto has an ancient, cratered surface.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_6()">
+          Saturn The Gas Giant
+        </button>
+      <ion-card *ngIf="hide3_6">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Saturn is the sixth planet from the Sun. It was thought to be the furthest of the planets until the telescope was invented.
+          <br>
+            Second only in size to Jupiter, Saturn is made mainly of the light gases hydrogen and helium. 764 Earths would fit inside
+            Saturn, but the gas giant weighs only 95 times as much as our rocky world. If you could put all of the planets
+            in a pool of water, Saturn is the only one that would float.
+          <br>
+            Despite its size, Saturn spins once in a little more than 10 hours. Its spin is so rapid that it bulges outwards at the equator,
+            making it look like a ball that has been squashed.
+          <br>
+            In a telescope, Saturn appears a pale yellow colour. It has no solid surface, so what we are seeing are clouds that appear
+            as light and dark bands. These clouds are blown along by very strong winds. Much of the heat that drives these
+            winds comes from inside the planet. Above the cloud tops is a flat, disk-shaped system of rings.
+          <br>
+            Much of what we know about Saturn has come from the NASA-ESA Cassini-Huygens mission. The Cassini orbiter has been in orbit
+            around the planet since 1 July 2004. It has been exploring many of Saturn’s moons, especially planet-sized Titan.
+            It has also sent back remarkably detailed pictures and other data about Saturn’s thunderstorms, the thousands
+            of icy ringlets and the magnetic field.
+          <br>
+            On 14 January 2005, Europe’s Huygens probe parachuted onto the hidden surface of Titan. It was the first soft landing on
+            another planetary satellite (apart from our Moon). Orange Titan was found to be a strange, icy world where methane
+            rain fills lakes and rivers.
+          </p>
+          <ion-card-header>
+            Cassini-Huygens
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            The Cassini-Huygens mission, involving ESA, NASA and the Italian Space Agency, has changed many of our ideas about the Saturn
+            system. Launched from Florida in October 1997, it took almost seven years to reach Saturn, travelling nearly
+            3.5 billion kilometres. The 5.6 tonne spacecraft was made up of two parts – the Cassini orbiter and the Huygens
+            probe.
+          <br>
+            Cassini is the first spacecraft to orbit Saturn. It carries 12 experiments. Since arrival at Saturn on 1 July 2004, Cassini
+            has been sending back huge amounts of new information about Saturn, its rings, moons and magnetic field. Originally
+            planned as a four-year mission, Cassini-Huygens has been so successful that it has been extended until at least
+            2017. It has flown past seven of the larger satellites, including giant Titan – which is larger than the planet
+            Mercury. The orbiter has swept past Titan more than 70 times. Flying within 880 km of the moon, it has studied
+            Titan’s orange clouds and nitrogen-rich atmosphere. It has also mapped its surface with an imaging radar.
+          <br>
+            On Christmas Day 2004, Huygens separated from Cassini. Three weeks later, it slammed into Titan’s thick atmosphere, becoming
+            the first probe to descend to the surface of a planetary satellite (other than our Moon). Protected by a heat
+            shield, the probe slowed from 18,000 to 1,400 km per hour in just three minutes. Soon after, a large parachute
+            opened out. At a height of about 160 km, the probe began to take pictures and study the atmosphere. For more
+            than two hours, data from Huygens were received and stored on Cassini as it flew overhead.
+          <br>
+            The pictures and other information sent back by its six instruments told us for the first time what this orange moon is really
+            like. Huygens touched down on a dry river bed covered in small icy boulders.
+          </p>
+          <ion-card-header>
+            Saturn’s Moons
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Saturn has 31 known moons – more than any other planet except Jupiter. One of them, Titan, is planet-sized, but the others
+            are much smaller. Most of the moons are icy, and covered with many round craters of different sizes. These have
+            been dug by comets and rocky meteorites crashing into them.
+          <br>
+            Tethys has a huge crater with a peak in the centre, making it look like the 'Death Star' in the Star Wars movies. Mimas also
+            has a giant crater, hundreds of kilometres across.
+          <br>
+            Although their surfaces are extremely cold, some of the moons seem to be warm inside. Parts of the moon Enceladus are smooth,
+            and seem to have been covered with material thrown out of ice volcanoes.
+          <br>
+            Another strange world is Iapetus. It has one face that is very bright, but the opposite side is blacker than coal. The smaller satellites orbit very close to the rings or far away from the planet. The most distant moons behave like drunken
+            drivers going the wrong way down a one way street. They are thought to have come too close to Saturn and been
+            captured by its powerful gravity.
+          <br>
+            Some of the smaller moons orbit inside the rings. They act as 'shepherds', keeping the ring particles in place. Two of them
+            even swap orbits as one overtakes the other.
+          </p>
+          <ion-card-header>
+            Saturn’s Rings
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Saturn is famous as the 'lord of the rings', even though the other three giant gas planets – Jupiter, Uranus and Neptune
+            – also have rings. Saturn's system takes pride of place, since its rings are extremely bright and very large.
+          <br>
+            They may be the remains of a satellite or a comet that broke apart. When they were discovered in the 17th century, drawings
+            showed them looking like huge 'Mickey Mouse ears' on either side of the planet. As telescopes improved, astronomers
+            realised that they are made of millions of fragments of ice and rock. Gaps in the rings have been cleared by
+            the gravity of nearby moons.
+          <br>
+            Like a giant compact disk, the flat rings are more than 275 000 km across – wide enough to fill most of the gap between the
+            Earth and Moon – but less than 1 km thick. As Saturn and Earth move up and down in their orbits, our view of
+            the rings changes. In 2003, they were at their brightest and best. But every 15 years we see them edge on. They
+            are then invisible in all but the largest telescopes. This is a good time to look for small moons near the rings.
+          </p>
+          <ion-card-header>
+            Titan
+          </ion-card-header>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Titan is larger than the planet Mercury. It is also the second largest moon in the Solar System, and the only moon with a
+            dense atmosphere. Just as on Earth, the main gas is nitrogen, but Titan is much colder. Its surface is in deep
+            freeze at minus 180 degrees Celsius. If it became warmer, Titan might be able to support life.
+          <br>
+            Until the arrival of the NASA-ESA Cassini-Huygens spacecraft in 2004, little was known about Titan. Its surface is hidden
+            beneath a thick blanket of orange cloud.
+          <br>
+            On 14 January 2005, ESA's Huygens probe made an historic landing on Titan. During its 2½ hour descent, Huygens was blown
+            eastward by high level winds of more than 100 km per hour. The winds reversed direction at a height of 7 km,
+            carrying Huygens gently westward during the final minutes of the descent. Huygens found an icy landscape marked
+            by dark channels snaking towards a smooth ‘shoreline’.
+          <br>
+            Titan’s atmosphere is about 5 per cent methane. The action of sunlight on the methane creates the thick orange haze. (On
+            Earth, methane gas is burnt in boilers and cookers.) Methane rainstorms sometimes fill the dry channels, creating
+            temporary rivers that wear away the surface and carry loose material onto nearby plains.
+          </p>
+          <p>
+            During more than 70 flybys of Titan, Cassini’s radar and infrared instruments have mapped much of the surface. They have
+            found many strange features, including huge dunes of hydrocarbon sand, mountain ranges, methane lakes and possible
+            ice volcanoes. (Hydrocarbons are made of hydrogen and carbon. Examples on Earth are coal, soot and tar.)
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_7()">
+          Uranus
+      </button>
+      <ion-card *ngIf="hide3_7">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Uranus is the seventh planet from the Sun. It was discovered by William Herschel in 1781.
+          <br>
+            Uranus lies more than 2,800 million km from the Sun. At this distance, the temperature of its cloud tops is -214 degrees
+            C. It moves quite slowly and has a long way to travel, so each orbit lasts 84 years.
+          <br>
+            Uranus is a giant world, the third largest planet in our Solar System. 64 Earths would fit inside it. Despite its size, it
+            spins rapidly. A day on Uranus lasts only 17 hours 14 minutes.
+          <br>
+            Uranus spins like a top knocked over on its side. This means that the Sun is sometimes directly overhead at the poles. Each
+            pole has a summer and a winter lasting 21 years, making them the hottest and coldest places on the planet!
+          <br>
+            When the Voyager 2 spacecraft visited Uranus in 1986, hardly any clouds were visible. However, recent images by the Hubble
+            Space Telescope have shown some very large storms.
+          <br>
+            The main gases in its thick atmosphere are hydrogen and helium, with a small amount of methane. (The methane scatters blue
+            light, which is why Uranus appears blue). However, it is very different from Jupiter and Saturn.
+          <br>
+            Uranus is mainly made of ‘ices’ – a mixture of water, methane and ammonia. At its centre there may be a small rocky core.
+            This means that it is very lightweight for its size.
+          <br>
+            Uranus has 27 known moons. None of these are very big. The largest satellites are Oberon and Titania, both more than 1,500
+            km in diameter.
+          <br>
+            Uranus also has at least a dozen dark, dusty rings. Most of these are extremely thin. They are kept in shape by nearby “shepherd”
+            moons. At least one ring is created by meteorites crashing into a small satellite.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_8()">
+          Neptune
+        </button>
+      <ion-card *ngIf="hide3_8">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Neptune was discovered in 1846 by Johann Galle, an astronomer at the Berlin Observatory. Galle knew where to look because
+            of calculations by French mathematician Urbain Le Verrier. Both Le Verrier and John Adams in England had realised
+            that an unseen planet was pulling on Uranus, causing it to slow down or speed up.
+          <br>
+            Neptune turned out to be almost an identical twin of Uranus. It is 57 times bigger than the Earth, but spins quite rapidly
+            – one day lasts only 16 hours 7 minutes. Its average distance from the Sun is about 4,500 million km, and one
+            year on Neptune lasts for almost 165 Earth years.
+          <br>
+            Like Uranus, it has an atmosphere of hydrogen, helium and methane. Its interior is made of ices, with a possible rocky core.
+            Although the atmosphere is very cold (-220 degrees C), the blue planet has some very strong winds and violent
+            storms. Voyager 2 imaged a huge spot the size of the Earth.
+          <br>
+            Neptune has at least five dark, narrow rings (named after Galle, Le Verrier, Adams and others who worked to discover the
+            planet).
+          <br>
+            It has 13 known moons. By far the largest is Triton, an icy world that is bigger than Pluto. Triton is very cold, so its
+            thin atmosphere has frozen onto the surface. However, it does have many active ice volcanoes that spurt plumes
+            of gas and dust. Triton is also unusual because it travels “the wrong way” (east to west) around Neptune. It
+            seems to have been captured by Neptune’s gravity long ago.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_9()">
+          Pluto
+        </button>
+      <ion-card *ngIf="hide3_9">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Pluto was discovered in 1930 by 24 year-old Clyde Tombaugh, who was using a special machine to compare photos of the sky.
+            It turned out to be a tiny world, even smaller than our Moon.
+          <br>
+            Pluto follows an elliptical (egg-shaped) orbit that varies between 7,381 million km (49 Sun-Earth distances) and 4,446 million
+            km (30 Sun-Earth distances). Since one orbit lasts 248 years, no one born on Pluto would ever experience a single
+            birthday!
+          <br>
+            Very little is known about Pluto. Its surface is extremely cold (-230 degrees C) and seems to be covered with frozen ices.
+            In recent years it has been fairly close to the Sun and enjoying a brief summer. Surface ices have vaporised,
+            producing a thin atmosphere. However, it is now retreating into the cold depths of the Solar System and this
+            atmosphere will soon freeze again.
+          <br>
+            Pluto spins “backwards” (east to west) once every 6 days 9 hours. Its largest moon, Charon, takes the same length of time
+            to orbit Pluto. This means that anyone living on one side of Pluto would never see Charon. Two smaller moons
+            have recently been discovered with the Hubble Space Telescope.
+          <br>
+            For many years, Pluto was accepted as the ninth planet from the Sun (even though it sometimes comes closer than Neptune).
+            Today, it is regarded as a “ dwarf planet”. It is also one of the largest members of the Kuiper Belt, a family
+            of icy worlds that occupy the space beyond Neptune.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-item (click)="click3_10()">
+          The Kuiper Belt
+        </button>
+      <ion-card *ngIf="hide3_10">
+        <ion-card-content>
+          <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+            Modern telescopes have revealed hundreds of icy objects beyond the orbit of Neptune, in a region known as the Kuiper Belt.
+            The Belt is named after Gerard Kuiper, a Dutch-born astronomer who suggested in 1951 that some comets may originate
+            in this region.
+          <br>
+            The first Kuiper Belt Object was discovered in 1992, proving that Kuiper’s theory was correct. Detecting them is difficult
+            because they are very faint and move so slowly. It takes hundreds of years for these objects to complete one
+            orbit around the Sun.
+          <br>
+            The objects are probably left-overs from the birth of the planets. They were ejected to this remote outer region by interactions
+            with the giant planets.
+          <br>
+            Most of the objects are small, typically 10-50 km across. Until recently, Pluto was the largest member, though a number of
+            other objects were almost as large.
+          <br>
+            Then, in 2005, an even bigger object was found. Known as 2003 UB313, scientists nicknamed it “Xena” (after the warrior princess
+            in the hit TV series) until they could give it a proper name, Eris.
+          <br>
+            When discovered, Eris was twice as far as Pluto (97 Sun-Earth distances) from the Sun. This made it the furthest object yet
+            seen in the Solar System. Its orbit is also tilted by 44 degrees, so it travels well above and below the paths
+            of the other planets. It has also been found to have a moon, named Dysnomia.
+          <br>
+            Not everyone agrees that Pluto and Eris should be regarded as the ninth and tenth planet in the Solar System. In 2006, the
+            International Astronomical Union classed them as 'dwarf planets'.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-fab right bottom *ngFor="let styleElement of styles">
+      <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
+          <!--<audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
+            <audio-track-play dark [audioTrack]="audio">
+            </audio-track-play>
+          </audio-track>-->
+          <ion-icon name="volume-up"></ion-icon>
+        </button>
+
+        <button ion-fab color="primary" (click)="regularShare()"
+        *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
+
+        <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
+
+        <button ion-fab color="primary" (click)="playVideo()"
+        *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+            <ion-icon name="logo-youtube"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+
+  </ion-list>
+
+
+
+</ion-content>

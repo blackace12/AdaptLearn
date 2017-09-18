@@ -1,0 +1,126 @@
+{
+    "questions": [
+
+        {
+            "flashCardFront": "<img src='assets/images/animals.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "Astronomy Questions",
+            "answers": [
+                {"answer": "Non-living Things", "correct": false, "selected": false},
+                {"answer": "Living Things", "correct": true, "selected": false},
+                {"answer": "None of the above", "correct": false, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/universe.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "It is the only world that supports life.",
+            "answers": [
+                {"answer": "Mars", "correct": false, "selected": false},
+                {"answer": "Universe", "correct": false, "selected": false},
+                {"answer": "Earth", "correct": true, "selected": false}
+            ],
+            "correctAnswer":"Earth"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/earth.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "It was a water world with small areas of dry land",
+            "answers": [
+                {"answer": "Old Earth", "correct": false, "selected": false},
+                {"answer": "Young Earth", "correct": false, "selected": false},
+                {"answer": "Earth", "correct": true, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/earth.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
+            "answers": [
+                {"answer": "5 million years", "correct": false, "selected": false},
+                {"answer": "3300 million years", "correct": false, "selected": false},
+                {"answer": "3800 million years", "correct": true, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/animals.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
+            "answers": [
+                {"answer": "Living things", "correct": true, "selected": false},
+                {"answer": "Non-living things", "correct": false, "selected": false},
+                {"answer": "Cells", "correct": false, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/universe.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "It is the only world that supports life.",
+            "answers": [
+                {"answer": "Mars", "correct": false, "selected": false},
+                {"answer": "Universe", "correct": false, "selected": false},
+                {"answer": "Earth", "correct": true, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/earth.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "It was a water world with small areas of dry land",
+            "answers": [
+                {"answer": "Old Earth", "correct": false, "selected": false},
+                {"answer": "Young Earth", "correct": false, "selected": false},
+                {"answer": "Earth", "correct": true, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/earth.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
+            "answers": [
+                {"answer": "5 million years", "correct": false, "selected": false},
+                {"answer": "3300 million years", "correct": false, "selected": false},
+                {"answer": "3800 million years", "correct": true, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/animals.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
+            "answers": [
+                {"answer": "Living things", "correct": true, "selected": false},
+                {"answer": "Non-living things", "correct": false, "selected": false},
+                {"answer": "Cells", "correct": false, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        },
+        {
+            "flashCardFront": "<img src='assets/images/animals.png' />",
+            "flashCardBack": "",
+            "flashCardFlipped": false,
+            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
+            "answers": [
+                {"answer": "Living things", "correct": true, "selected": false},
+                {"answer": "Non-living things", "correct": false, "selected": false},
+                {"answer": "Cells", "correct": false, "selected": false}
+            ],
+            "correctAnswer":"Living Things"
+        }
+
+    ]
+}

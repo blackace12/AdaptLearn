@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+      Home
+    </button>
+      <ion-buttons end>
+        <button ion-button icon-only item-right (click)="SettingsPage()">
+          <ion-icon name="cog" ></ion-icon>
+        </button>
+      </ion-buttons>
+</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+      <ion-row *ngFor = "let styleElement of styles">
+          <ion-col width-25>
+            <ion-card *ngIf = "styleElement && styleElement.src && styleElement.button" class="card-5 full">
+             <img class="list" [src]="styleElement.src" (click)="commonMethod(styleElement.button)" />
+           </ion-card>
+         </ion-col>
+       </ion-row>
+
+</ion-content>

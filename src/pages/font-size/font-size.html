@@ -1,0 +1,24 @@
+<!--
+  Generated template for the FontSizePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label >Set Font Size</ion-label>
+      <ion-range min="1" max="5" snaps="true" [(ngModel)]="fontSize" class="fontSize">
+        <ion-label range-left class="small-text">A</ion-label>
+        <ion-label range-right>A</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+      Preview of text size.
+    </p>
+  </ion-list>
+
+
+  <button ion-button block color = "primary" (click)="applyModal()">Apply</button>
+</ion-content>

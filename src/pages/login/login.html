@@ -1,0 +1,42 @@
+<ion-content padding class="trial2" scroll="false">
+
+  <div class="trial">
+
+  </div>
+
+  <ion-list inset>
+    <div class="input">
+      <form class="form" [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+
+        <ion-item>
+          <ion-input #email formControlName="email" type="email" placeholder="Email Address" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid  &&
+          loginForm.controls.email.dirty">
+          <p>Please enter a valid email.</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-input #password formControlName="password" type="password" placeholder="Password" [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  &&
+          loginForm.controls.password.dirty">
+          <p>Password needs atleast 8 characters.</p>
+        </ion-item>
+
+        <button color="secondary" ion-button block type="submit">
+          Login
+        </button>
+
+      </form>
+    </div>
+
+
+    <div class="buttons">
+      <button ion-button block clear color="dark" (click)="registerPage()">Dont have an Account?</button>
+      <button ion-button block clear color="dark" (click)="forgotPage()">Forgot Password?</button>
+    </div>
+  </ion-list>
+
+</ion-content>
+

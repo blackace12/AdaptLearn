@@ -1,0 +1,23 @@
+<ion-menu [content]="content">
+  <ion-content>
+    <ion-item style="font-family: 'Open Sans', sans-serif; background-color:#00aced">
+
+      <br>
+      <h1>AdaptLearn</h1>
+    </ion-item>
+    <ion-list>
+
+      <br>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+       <ion-icon name="{{p.icon}}"></ion-icon>&nbsp;{{p.title}}
+      </button>
+
+      <button ion-item (click)="doConfirm()">
+       <ion-icon name="log-out"></ion-icon>&nbsp;Logout
+      </button>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

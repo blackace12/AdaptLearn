@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Earthquake</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="openModal()">
+        A
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="SettingsPage()">
+        <ion-icon name="cog" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="chapter">
+    <button ion-item (click)="click1()">
+      What is an earthquake?
+    </button>
+    <ion-card *ngIf="hide1">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        An earthquake is what happens when two blocks of the earth suddenly slip past one another. The surface where they slip is called the fault or fault plane. The location below the earth’s surface where the earthquake starts is called the hypocenter, and the location directly above it on the surface of the earth is called the epicenter.
+        <br>
+        Sometimes an earthquake has foreshocks. These are smaller earthquakes that happen in the same place as the larger earthquake that follows. Scientists can’t tell that an earthquake is a foreshock until the larger earthquake happens. The largest, main earthquake is called the mainshock. Mainshocks always have aftershocks that follow. These are smaller earthquakes that occur afterwards in the same place as the mainshock. Depending on the size of the mainshock, aftershocks can continue for weeks, months, and even years after the mainshock!
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_1()">
+      What causes earthquakes and where do they happen?
+    </button>
+    <ion-card *ngIf="hide1_1">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        The earth has four major layers: the inner core, outer core, mantle and crust. The crust and the top of the mantle make up a thin skin on the surface of our planet. But this skin is not all in one piece – it is made up of many pieces like a puzzle covering the surface of the earth. Not only that, but these puzzle pieces keep slowly moving around, sliding past one another and bumping into each other. We call these puzzle pieces tectonic plates, and the edges of the plates are called the plate boundaries. The plate boundaries are made up of many faults, and most of the earthquakes around the world occur on these faults. Since the edges of the plates are rough, they get stuck while the rest of the plate keeps moving. Finally, when the plate has moved far enough, the edges unstick on one of the faults and there is an earthquake.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_2()">
+      Why does the Earth shake when there is an earthquake?
+    </button>
+    <ion-card *ngIf="hide1_2">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        While the edges of faults are stuck together, and the rest of the block is moving, the energy that would normally cause the blocks to slide past one another is being stored up. When the force of the moving blocks finally overcomes the friction of the jagged edges of the fault and it unsticks, all that stored up energy is released. The energy radiates outward from the fault in all directions in the form of seismic waves like ripples on a pond. The seismic waves shake the earth as they move through it, and when the waves reach the earth’s surface, they shake the ground and anything on it, like our houses and us!
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <ion-fab right bottom *ngFor="let styleElement of styles">
+    <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
+        <!--<audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
+          <audio-track-play dark [audioTrack]="audio">
+          </audio-track-play>
+        </audio-track>-->
+        <ion-icon name="volume-up"></ion-icon>
+      </button>
+
+      <button ion-fab color="primary" (click)="regularShare()"
+      *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
+
+      <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
+
+      <button ion-fab color="primary" (click)="playVideo()"
+      *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+          <ion-icon name="logo-youtube"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+</ion-content>

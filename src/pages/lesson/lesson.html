@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+     Lesson
+    </button>
+
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="SettingsPage()">
+        <ion-icon name="cog" ></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item >
+  <button ion-item no-lines (click)="earthLesson();">
+      <ion-icon name="unlock"></ion-icon>  Origin and structure of the Earth
+  </button>
+  </ion-item>
+
+  <ion-item *ngFor="let x of hazardsUnlocked">
+    <button no-lines [disabled]="x.valid" ion-item (click)="naturalLesson()">
+  <ion-icon name="{{x.name}}"></ion-icon>  Natural Hazards
+  </button>
+  </ion-item>
+
+
+  <ion-item *ngFor="let y of mitAdaptUnlocked">
+    <button ion-item no-lines [disabled]="y.valid" (click)="mitadaptLesson()">
+  <ion-icon name="{{y.name}}"></ion-icon>  Mitigation and Adaptation
+  </button>
+  </ion-item>
+
+
+</ion-content>

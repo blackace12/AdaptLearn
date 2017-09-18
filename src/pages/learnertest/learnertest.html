@@ -1,0 +1,148 @@
+<ion-content padding>
+  <h4>Memletics Learning Style Test</h4>
+  <h5>Note: Answer all statements.</h5>
+  <p>
+    0 - the statement is nothing like me
+    <br> 1 - the statement is partially like me
+    <br> 2 - the statement is very much like me
+  </p>
+
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>0</th>
+        <th>1</th>
+        <th>2</th>
+      </tr>
+
+      <!-- Visual -->
+      <ng-container *ngIf="hide1">
+        <tr *ngFor="let VisualQ of VisualList; let i = index;">
+          <td>
+            {{VisualQ}}
+          </td>
+          <td *ngFor="let btn of Button">
+            <input type="radio"
+            ng-model="choice"
+            name="Visual{{i}}"
+            ng-value=btn
+            (click)="visualSelect(i,btn)">
+          </td>
+        </tr>
+      </ng-container>
+      <!-- End Visual -->
+
+      <!-- Audio -->
+      <ng-container *ngIf="hide2">
+        <tr *ngFor="let AudioQ of AudioList; let i = index;">
+          <td>
+            {{AudioQ}}
+          </td>
+          <td *ngFor="let btn of Button">
+              <input type="radio" #choice
+              name="Audio{{i}}"
+              [value]=btn
+              (click)="audioSelect(i,btn)">
+          </td>
+        </tr>
+      </ng-container>
+      <!-- End Audio -->
+
+      <!-- Verbal -->
+      <ng-container *ngIf="hide3">
+        <tr *ngFor="let VerbalQ of VerbalList; let i = index;">
+          <td>
+            {{VerbalQ}}
+          </td>
+          <td *ngFor="let btn of Button">
+              <input type="radio" #choice
+              name="Verbal{{i}}"
+              [value]=btn
+              (click)="verbalSelect(i,btn)">
+          </td>
+        </tr>
+      </ng-container>
+      <!-- End Verbal -->
+
+      <!-- Physical -->
+      <ng-container *ngIf="hide4">
+        <tr *ngFor="let PhysicalQ of PhysicalList; let i = index;">
+          <td>
+            {{PhysicalQ}}
+          </td>
+          <td *ngFor="let btn of Button">
+              <input type="radio" #choice
+              name="Physical{{i}}"
+              [value]=btn
+              (click)="physicalSelect(i,btn)">
+          </td>
+        </tr>
+      </ng-container>
+      <!-- End Physical -->
+
+      <!-- Logical -->
+      <ng-container *ngIf="hide5">
+        <tr *ngFor="let LogicalQ of LogicalList; let i = index;">
+          <td>
+            {{LogicalQ}}
+          </td>
+          <td *ngFor="let btn of Button">
+              <input type="radio" #choice
+              name="Logical{{i}}"
+              [value]=btn
+              (click)="logicalSelect(i,btn)">
+          </td>
+        </tr>
+      </ng-container>
+      <!-- End Logical -->
+
+      <!-- Social -->
+      <ng-container *ngIf="hide6">
+        <tr *ngFor="let SocialQ of SocialList; let i = index;">
+          <td>
+            {{SocialQ}}
+          </td>
+          <td *ngFor="let btn of Button">
+              <input type="radio" #choice
+              name="Social{{i}}"
+              [value]=btn
+              (click)="socialSelect(i,btn)">
+          </td>
+        </tr>
+      </ng-container>
+      <!-- End Social -->
+
+      <!-- Solitary -->
+      <ng-container *ngIf="hide7">
+        <tr *ngFor="let SolitaryQ of SolitaryList; let i = index;">
+          <td>
+            {{SolitaryQ}}
+          </td>
+          <td *ngFor="let btn of Button">
+              <input type="radio" #choice
+              name="Solitary{{i}}"
+              [value]=btn
+              (click)="solitarySelect(i,btn)">
+          </td>
+        </tr>
+      </ng-container>
+      <!-- End Solitary -->
+
+    </table>
+
+    <!--<ng-container *ngIf="hide8">
+      <button ion-button block color="blue" [disabled]="submitDisabled" (click)="submit()">Submit</button>
+    </ng-container>-->
+
+    <div class="center text-muted">
+      {{currentpage}}/7
+    </div>
+
+    <div *ngIf="hideNext">
+      <button ion-button block color="blue" [disabled]="nextDisabled" (click)="next()">Next</button>
+    </div>
+    <div *ngIf="hideSubmit">
+      <button ion-button block color="blue" [disabled]="submitDisabled" (click)="submit()">Submit</button>
+    </div>
+
+</ion-content>

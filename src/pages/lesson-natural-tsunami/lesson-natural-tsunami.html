@@ -1,0 +1,120 @@
+<!--
+  Generated template for the LessonNaturalTsunamiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Tsunami</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="openModal()">
+        A
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only item-right (click)="SettingsPage()">
+        <ion-icon name="cog" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="chapter">
+    <button ion-item (click)="click1()">
+      What causes a tsunami?
+    </button>
+    <ion-card *ngIf="hide1">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        A tsunami is a large ocean wave that is caused by sudden motion on the ocean floor. This sudden motion could be an earthquake, a powerful volcanic eruption, or an underwater landslide. The impact of a large meteorite could also cause a tsunami. Tsunamis travel across the open ocean at great speeds and build into large deadly waves in the shallow water of a shoreline.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_1()">
+      Subduction Zones are Potential Tsunami Locations
+    </button>
+    <ion-card *ngIf="hide1_1">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Most tsunamis are caused by earthquakes generated in a subduction zone, an area where an oceanic plate is being forced down into the mantle by plate tectonic forces. The friction between the subducting plate and the overriding plate is enormous. This friction prevents a slow and steady rate of subduction and instead the two plates become "stuck."
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_2()">
+      Accumulated Seismic Energy
+    </button>
+    <ion-card *ngIf="hide1_2">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        As the stuck plate continues to descend into the mantle, the motion causes a slow distortion of the overriding plate. The result is an accumulation of energy very similar to the energy stored in a compressed spring. Energy can accumulate in the overriding plate over a long period of time - decades or even centuries.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_3()">
+      Earthquake causes Tsunami
+    </button>
+    <ion-card *ngIf="hide1_3">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Energy accumulates in the overriding plate until it exceeds the frictional forces between the two stuck plates. When this happens, the overriding plate snaps back into an unrestrained position. This sudden motion is the cause of the tsunami - because it gives an enormous shove to the overlying water. At the same time, inland areas of the overriding plate are suddenly lowered.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_4()">
+      Tsunami Races Away From The Epicenter
+    </button>
+    <ion-card *ngIf="hide1_4">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        The moving wave begins travelling out from where the earthquake has occurred. Some of the water travels out and across the ocean basin, and at the same time, water rushes landward to flood the recently lowered shoreline.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_5()">
+      Tsunamis Travel Rapidly Across Ocean Basin
+    </button>
+    <ion-card *ngIf="hide1_5">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Tsunamis travel swiftly across the open ocean. The map on this page shows how a tsunami produced by an earthquake along the coast of Chile in 1960 traveled across the Pacific Ocean, reaching Hawaii in about 15 hours and Japan in less than 24 hours.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <button ion-item (click)="click1_6()">
+      Tsunami “Wave Train”
+    </button>
+    <ion-card *ngIf="hide1_6">
+      <ion-card-content>
+        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+        Many people have the mistaken belief that tsunamis are single waves. They are not. Instead tsunamis are "wave trains" consisting of multiple waves. The chart on this page is a tidal gauge record from Onagawa, Japan beginning at the time of the 1960 Chile earthquake. Time is plotted along the horizontal axis and water level is plotted on the vertical axis. Note the normal rise and fall of the ocean surface, caused by tides, during the early part of this record. Then recorded are a few waves a little larger than normal followed by several much larger waves. In many tsunami events, the shoreline is pounded by repeated large waves.
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-fab right bottom *ngFor="let styleElement of styles">
+    <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
+        <!--<audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
+          <audio-track-play dark [audioTrack]="audio">
+          </audio-track-play>
+        </audio-track>-->
+        <ion-icon name="volume-up"></ion-icon>
+      </button>
+
+      <button ion-fab color="primary" (click)="regularShare()"
+      *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
+
+      <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
+
+      <button ion-fab color="primary" (click)="playVideo()"
+      *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+          <ion-icon name="logo-youtube"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
