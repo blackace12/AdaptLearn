@@ -22,6 +22,7 @@ export class LearnertestPage {
   nextDisabled:boolean = true; //to disable next button
   submitDisabled:boolean = true; //to disable next button
   currentUser: any;
+  userChecker: any;
   learningStyles: FirebaseListObservable<any>;
 
   constructor(public navCtrl: NavController, af: AngularFireDatabase, afAuth: AngularFireAuth, public alertCtrl: AlertController) {
@@ -104,6 +105,7 @@ export class LearnertestPage {
     this.currentUser = afAuth.auth.currentUser.uid;
     console.log(this.currentUser);
     this.learningStyles = af.list('/LearningStyle/' + this.currentUser + '/LearningStyle/');
+    this.userChecker = af.list('/Users/');
   }
 
   Button = [0, 1, 2];
@@ -580,6 +582,8 @@ export class LearnertestPage {
     var VisualTotal = this.visualTotal;
     console.log("Visual Total: " + VisualTotal);
 
+    const checker = true;
+
     let confirm = this.alertCtrl.create({
       title: 'Confirm form Submission?',
       buttons: [{
@@ -598,6 +602,7 @@ export class LearnertestPage {
           this.learningStyles.push({ style: "Solitary", value: SolitaryTotal });
           this.learningStyles.push({ style: "Visual", value: VisualTotal });
           this.learningStyles.push({ style: "Verbal", value: VerbalTotal });
+          this.userChecker.update( this.currentUser, { Checker: 'true' });
           this.navCtrl.push(SplashscreenPage);
         }
       }

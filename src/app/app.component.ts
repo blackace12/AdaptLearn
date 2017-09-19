@@ -17,25 +17,30 @@ export class MyApp {
   Status:any;
   constructor(platform: Platform, afAuth: AngularFireAuth, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsProvider, smartAudio: SmartAudioProvider, private network:Network, public toastCtrl:ToastController) {
     // watch network for a disconnect
-    let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
-      let toast = this.toastCtrl.create({
-        message: 'Network was Disconnected',
-        duration: 2500,
+
+    let dc;
+    this.network.onDisconnect().subscribe(() => {
+      dc = this.toastCtrl.create({
+        message: 'Network Disconnected',
+        //duration: 5000,
         position: 'bottom',
         cssClass:"toast-error"
       });
-      toast.present();
+      dc.present();
     });
 
     // watch network for a connection
-    let connectSubscription = this.network.onConnect().subscribe(() => {
+    this.network.onConnect().subscribe(() => {
+      dc.dismiss();
       let toast = this.toastCtrl.create({
         message: 'Network Connected',
-        duration: 2500,
+        duration: 5000,
         position: 'bottom',
         cssClass:"toast-success"
-      });
+      })
+
       toast.present();
+
     });
 
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //for updating theme

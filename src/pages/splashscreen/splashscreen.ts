@@ -22,7 +22,7 @@ export class SplashscreenPage {
   icons: string[];
   pages: Array<{ title: string, component: any, icon: string }>
 
-  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, private network: Network, public toastCtrl: ToastController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider) {
+  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider) {
     this.initializeApp();
     this.icons = ['home', 'book', 'podium'];
 
@@ -35,68 +35,6 @@ export class SplashscreenPage {
       { title: 'Progress', component: ProfilePage, icon: this.icons[2] }
 
     ];
-
-    // watch network for a disconnect
-    let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
-      let toast = this.toastCtrl.create({
-        message: 'Network was Disconnected',
-        duration: 3000,
-        position: 'bottom'
-      });
-
-      toast.onDidDismiss(() => {
-        console.log('Dismissed toast');
-      });
-      toast.present();
-    });
-
-
-    // watch network for a connection
-    let connectSubscription = this.network.onConnect().subscribe(() => {
-      let toast = this.toastCtrl.create({
-        message: 'Network Connected',
-        duration: 3000,
-        position: 'bottom'
-      });
-
-      toast.onDidDismiss(() => {
-        console.log('Dismissed toast');
-      });
-
-      toast.present();
-      // We just got a connection but we need to wait briefly
-      // before we determine the connection type. Might need to wait.
-      // prior to doing any api requests as well.
-      setTimeout(() => {
-        if (this.network.type === 'wifi') {
-          let toast = this.toastCtrl.create({
-            message: 'Yehey! Looks like we have an internet connection via Wi-fi',
-            duration: 3000,
-            position: 'bottom'
-          });
-
-          toast.onDidDismiss(() => {
-            console.log('Dismissed toast');
-          });
-
-          toast.present();
-        }
-
-        else if (this.network.type === '3g') {
-          let toast = this.toastCtrl.create({
-            message: 'Yehey! Looks like we have an internet connection via 3G!',
-            duration: 3000,
-            position: 'bottom'
-          });
-
-          toast.onDidDismiss(() => {
-            console.log('Dismissed toast');
-          });
-
-          toast.present();
-        }
-      }, 3000);
-    });
 
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }

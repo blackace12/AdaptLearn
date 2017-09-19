@@ -100,8 +100,8 @@ export class QuizPage {
     this.currentUser = this.afAuth.auth.currentUser.uid;
     this.quizUniverse = this.af.list('/Quiz/');
     this.progressID = this.af.list('/UserProgress/' + this.currentUser)
-/*
-    this.getID = this.af.object('/UserProgress/' + this.currentUser + '/${key}/', { preserveSnapshot: true });
+
+   /*  this.getID = this.af.object('/UserProgress/' + this.currentUser, { preserveSnapshot: true });
 
     this.getID.subscribe(snapshots => {
       snapshots.forEach(snapshot => {
@@ -139,10 +139,9 @@ export class QuizPage {
           });
         }
       }
-    })
- */
+    }) */
 
-     if (this.score >= 7) {
+    if (this.score >= 7) {
       this.quizID = this.quizUniverse.push(
         {
           Chapter_Quiz: "UniverseFormation", Passed: true, Score: this.score, Quiz: 1
