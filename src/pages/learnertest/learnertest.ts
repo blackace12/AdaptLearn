@@ -103,8 +103,7 @@ export class LearnertestPage {
     'You think independently. You know how you think and you make up your own mind. You understand your own strengths and weaknesses.']
 
     this.currentUser = afAuth.auth.currentUser.uid;
-    console.log(this.currentUser);
-    this.learningStyles = af.list('/LearningStyle/' + this.currentUser + '/LearningStyle/');
+    this.learningStyles = af.list('/LearningStyle/' + this.currentUser + '/');
     this.userChecker = af.list('/Users/');
   }
 
@@ -595,13 +594,16 @@ export class LearnertestPage {
       {
         text: 'Yes',
         handler: data => {
-          this.learningStyles.push({ style: "Auditory", value: AudioTotal });
-          this.learningStyles.push({ style: "Logical", value: LogicalTotal });
-          this.learningStyles.push({ style: "Physical", value: PhysicalTotal });
-          this.learningStyles.push({ style: "Social", value: SocialTotal });
-          this.learningStyles.push({ style: "Solitary", value: SolitaryTotal });
-          this.learningStyles.push({ style: "Visual", value: VisualTotal });
-          this.learningStyles.push({ style: "Verbal", value: VerbalTotal });
+          this.learningStyles.push(
+          [
+          {style: "Auditory", value: AudioTotal},
+          {style: "Logical", value: LogicalTotal},
+          {style: "Physical", value: PhysicalTotal},
+          {style: "Social", value: SocialTotal},
+          {style: "Solitary", value: SolitaryTotal},
+          {style: "Visual", value: VisualTotal},
+          {style: "Verbal", value: VerbalTotal}]
+          );
           this.userChecker.update( this.currentUser, { Checker: 'true' });
           this.navCtrl.push(SplashscreenPage);
         }
