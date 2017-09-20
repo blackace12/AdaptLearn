@@ -34,7 +34,7 @@ export class MyApp {
       dc.dismiss();
       let toast = this.toastCtrl.create({
         message: 'Network Connected',
-        duration: 5000,
+        duration: 2500,
         position: 'bottom',
         cssClass:"toast-success"
       })
@@ -63,7 +63,6 @@ export class MyApp {
 
     const authObserver = afAuth.authState.subscribe( user => {
       if (user) {
-
         this.rootPage = SplashscreenPage;
         authObserver.unsubscribe();
       } else {
