@@ -1,11 +1,9 @@
 import { AuthProvider } from './../../providers/auth/auth';
-import { Network } from '@ionic-native/network';
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav, AlertController, ToastController, ToastOptions, NavController } from 'ionic-angular';
+import { Platform, Nav, AlertController, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { ListPage } from '../list/list';
-//import { QuizPage } from '../quiz/quiz';
 import { ProfilePage } from '../profile/profile';
 import { LessonPage } from '../lesson/lesson';
 import { LoginPage } from '../login/login';

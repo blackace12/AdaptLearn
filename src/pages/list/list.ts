@@ -11,7 +11,6 @@ import { SolitaryLearnerInstructionPage } from '../solitary-learner-instruction/
 import { SettingsPage } from '../settings/settings';
 import {
   AngularFireDatabase,
-  FirebaseListObservable,
   FirebaseObjectObservable
 } from 'angularfire2/database';
 
@@ -34,12 +33,14 @@ export class ListPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, db: AngularFireDatabase, afAuth: AngularFireAuth) {
 
+
     this.currentUser = afAuth.auth.currentUser.uid;
     this.currentEmail = afAuth.auth.currentUser.email;
 
+
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
-      this.learningStyleObject.subscribe(snapshots => {
+    this.learningStyleObject.subscribe(snapshots => {
       snapshots.forEach(snapshot => {
         this.user.push(snapshot.key);
       });
@@ -57,6 +58,7 @@ export class ListPage {
         this.arrayTest.sort(function (a, b) {
           return parseInt(b.value) - parseInt(a.value);
         });
+
         console.log(this.arrayTest[0].style);
 
         for (var i = 0; i <= this.styleArray.length - 1; i++) {

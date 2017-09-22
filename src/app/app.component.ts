@@ -1,7 +1,9 @@
+import { LearnertestPage } from './../pages/learnertest/learnertest';
+import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { SplashscreenPage } from './../pages/splashscreen/splashscreen';
 import { LoginPage } from '../pages/login/login';
 import { Component } from '@angular/core';
-import {ToastController, Platform} from 'ionic-angular';
+import { ToastController, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -12,19 +14,21 @@ import { Network } from '@ionic-native/network';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any;
+  rootPage: any;
   selectedTheme: String;
-  Status:any;
-  constructor(platform: Platform, afAuth: AngularFireAuth, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsProvider, smartAudio: SmartAudioProvider, private network:Network, public toastCtrl:ToastController) {
+  UserChecker: FirebaseListObservable<any>;
+  checkerTest = [];
+  currentUser;
+  currentEmail;
+  constructor(platform: Platform, af: AngularFireDatabase, afAuth: AngularFireAuth, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsProvider, smartAudio: SmartAudioProvider, private network: Network, public toastCtrl: ToastController) {
     // watch network for a disconnect
-
     let dc;
     this.network.onDisconnect().subscribe(() => {
       dc = this.toastCtrl.create({
         message: 'Network Disconnected',
         //duration: 5000,
         position: 'bottom',
-        cssClass:"toast-error"
+        cssClass: "toast-error"
       });
       dc.present();
     });
@@ -36,7 +40,7 @@ export class MyApp {
         message: 'Network Connected',
         duration: 2500,
         position: 'bottom',
-        cssClass:"toast-success"
+        cssClass: "toast-success"
       })
 
       toast.present();
@@ -61,13 +65,31 @@ export class MyApp {
       smartAudio.preload('mitigation', 'assets/sounds/Mitigation.mp3');
     });
 
-    const authObserver = afAuth.authState.subscribe( user => {
+    const authObserver = afAuth.authState.subscribe(user => {
       if (user) {
-        this.rootPage = SplashscreenPage;
-        authObserver.unsubscribe();
+        this.currentUser = afAuth.auth.currentUser.uid;
+        this.currentEmail = afAuth.auth.currentUser.email;
+        console.log(this.currentUser);
+        this.UserChecker = af.list('/Users/' + this.currentUser + '/', { preserveSnapshot: true });
+
+        this.UserChecker.subscribe(snapshots => {
+          snapshots.forEach(snapshot => {
+            console.log(snapshot.key)
+            console.log(snapshot.val())
+            this.checkerTest.push(snapshot.val());
+          });
+          console.log(this.checkerTest[0]);
+          if (this.checkerTest[0] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
+            this.rootPage = LearnertestPage;
+          }
+          else if (this.checkerTest[0] == "true") {
+            this.rootPage = SplashscreenPage;
+          }
+        })
+        //authObserver.unsubscribe();
       } else {
         this.rootPage = LoginPage;
-        authObserver.unsubscribe();
+        //authObserver.unsubscribe();
       }
     });
   }

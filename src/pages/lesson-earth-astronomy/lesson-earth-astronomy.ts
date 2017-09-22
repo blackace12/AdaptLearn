@@ -8,7 +8,6 @@ import { SettingsPage } from '../settings/settings';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import {
   AngularFireDatabase,
-  FirebaseListObservable,
   FirebaseObjectObservable
 } from 'angularfire2/database';
 

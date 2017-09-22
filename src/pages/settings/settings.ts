@@ -1,10 +1,13 @@
+import { LoginPage } from './../login/login';
+import { LearnertestPage } from './../learnertest/learnertest';
 import { AuthProvider } from './../../providers/auth/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Loading, LoadingController } from 'ionic-angular';
 import { SettingsProvider } from "../../providers/settings/settings";
 import {
   AngularFireDatabase,
+  FirebaseListObservable
 } from 'angularfire2/database';
 
 /**
@@ -19,43 +22,66 @@ import {
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
-  password:any;
-  selectedTheme:String;
-  title:String;
-  public userProfile:any;
+  currentUser: any;
+  userChecker: any;
+  learningStyles: FirebaseListObservable<any>;
+  quiz: FirebaseListObservable<any>;
+  userProgress: FirebaseListObservable<any>;
+  userStyle: FirebaseListObservable<any>;
+  password: any;
+  selectedTheme: String;
+  title: String;
+  public userProfile: any;
+  public loading: Loading;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, af:AngularFireDatabase,afAuth:AngularFireAuth, public alertCtrl:AlertController, private settings: SettingsProvider, public auth:AuthProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFireDatabase, afAuth: AngularFireAuth, public alertCtrl: AlertController, private settings: SettingsProvider, public auth: AuthProvider, public loadingCtrl: LoadingController) {
 
 
+    this.currentUser = afAuth.auth.currentUser.uid;
+    console.log(this.currentUser);
+
+    this.learningStyles = af.list('/LearningStyle/' + this.currentUser + '/');
+    console.log(this.learningStyles);
+
+    this.userChecker = af.list('/Users/' + this.currentUser);
+    console.log(this.userChecker);
+
+    this.quiz = af.list('/Quiz/');
+    console.log(this.quiz);
+
+    this.userProgress = af.list('/UserProgress/' + this.currentUser + '/');
+    console.log(this.userProgress);
 
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
-    if(this.selectedTheme === 'day-theme'){
+    if (this.selectedTheme === 'day-theme') {
       this.title = "Enable Night Mode";
-    } else{
+    } else {
       this.title = "Disable Night Mode";
     }
   }
 
-
-
-  toggleAppTheme(){
-    if(this.selectedTheme === 'day-theme'){
+  toggleAppTheme() {
+    if (this.selectedTheme === 'day-theme') {
       this.settings.setActiveTheme('night-theme');
       this.title = "Disable Night Mode";
-    } else{
+    } else {
       this.settings.setActiveTheme('day-theme');
       this.title = "Enable Night Mode";
     }
   }
 
-  Reset(){
+  Reset() {
     let alert = this.alertCtrl.create({
       title: 'Reset Confirmation',
       message: 'Do you want to reset your Learning Style?',
       buttons: [
         {
           text: 'Yes',
-          handler: () => {
+          handler: data => {
+            this.userChecker.update({ Checker: "true" });
+            this.userProgress.remove();
+            this.learningStyles.remove();
+            this.navCtrl.setRoot(LearnertestPage);
             console.log('Yes clicked');
           }
         },
@@ -72,51 +98,8 @@ export class SettingsPage {
     alert.present();
   }
 
-  changePassword(){
-    let alert = this.alertCtrl.create({
-      title: 'Change Password',
-      inputs: [
-        {
-          name: 'oldPassword',
-          placeholder: 'Current Password'
-        },
-        {
-          name: 'newPassword',
-          placeholder: 'New Password',
-          type: 'password'
-        },
-        {
-          name: 'confPassword',
-          placeholder: 'Confirm New Password',
-          type: 'password'
-        },
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: data => {
-              console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Change Password',
-       /*    handler: data => {
-            if (User.isValid(data.username, data.password)) {
-              // logged in!
-            } else {
-              // invalid login
-              return false;
-            }
-          } */
-        }
-      ]
-    });
-    alert.present();
-  }
 
-
-  updatePassword(){
+  updatePassword() {
     let alert = this.alertCtrl.create({
       inputs: [
         {
@@ -137,7 +120,19 @@ export class SettingsPage {
         {
           text: 'Save',
           handler: data => {
-          this.settings.updatePassword(data.newPassword, data.oldPassword);
+            this.settings.updatePassword(data.newPassword, data.oldPassword).then(() => {
+              let alert = this.alertCtrl.create({
+                message: "Password Changed Successfully!, Please login again!",
+                buttons: [
+                  {
+                    text: "Ok",
+                    role: 'cancel'
+                  }
+                ]
+              });
+              alert.present();
+              this.navCtrl.setRoot(LoginPage);
+            })
           }
         }
       ]
@@ -148,5 +143,4 @@ export class SettingsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
-
 }

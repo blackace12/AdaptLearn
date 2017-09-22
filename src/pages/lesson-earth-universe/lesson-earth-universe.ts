@@ -6,7 +6,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { SettingsPage} from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
-import { AngularFireDatabase,  FirebaseListObservable,  FirebaseObjectObservable} from 'angularfire2/database';
+import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/database';
 
 @IonicPage()
 @Component({

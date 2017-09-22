@@ -1,13 +1,12 @@
 import { QuizMitadaptPage } from './../quiz-mitadapt/quiz-mitadapt';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import { QuizPage } from './../quiz/quiz';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions } from 'ionic-angular';
 import { SettingsPage} from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
-import { AngularFireDatabase,  FirebaseListObservable,  FirebaseObjectObservable} from 'angularfire2/database';
+import { AngularFireDatabase,  FirebaseObjectObservable} from 'angularfire2/database';
 
 /**
  * Generated class for the LessonMitadaptPage page.

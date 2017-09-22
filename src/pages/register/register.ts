@@ -26,7 +26,7 @@ export class RegisterPage {
     }
 
   loginPage(){
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.setRoot(LoginPage);
   }
 
   signupUser(){

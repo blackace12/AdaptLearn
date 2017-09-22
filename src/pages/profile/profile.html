@@ -15,13 +15,13 @@
 
 
 <ion-content>
-  <ion-row *ngFor="let styleElement of styles">
+  <!-- <ion-row *ngFor="let styleElement of styles">
     <ion-col width-25>
       <ion-card *ngIf="styleElement && styleElement.src && styleElement.button" class="card-5 full">
         <img class="list" [src]="styleElement.src" />
       </ion-card>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
 
   <chart type="chart" style="display:block;" [options]="chartOptions"></chart>
@@ -36,7 +36,7 @@
         <ion-icon name="planet" item-start></ion-icon>
        {{score.Score}}
       </button>
-     <button ion-item *ngIf="score.Score == null || score.Score == undefined">
+        <button ion-item *ngIf="score === null || score === undefined || score.length === 0">
         <ion-icon name="planet" item-start></ion-icon>
         <p>No Score</p>
       </button>

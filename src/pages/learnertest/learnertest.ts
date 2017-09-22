@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SplashscreenPage } from './../splashscreen/splashscreen';
@@ -581,7 +580,7 @@ export class LearnertestPage {
     var VisualTotal = this.visualTotal;
     console.log("Visual Total: " + VisualTotal);
 
-    const checker = true;
+    //const checker = true;
 
     let confirm = this.alertCtrl.create({
       title: 'Confirm form Submission?',
