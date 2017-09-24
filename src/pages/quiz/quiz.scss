@@ -26,6 +26,16 @@ page-quiz {
         }
     }*/
 
+    .resultimg {
+        width: 100%;
+        height: 45%;
+        position: relative;
+    }
+
+    .textResult {
+        font-family: 'Titillium Web';
+    }
+
     .bar-buttons { //X button
         margin-top: -5%;
         margin-right: -3%;
@@ -67,4 +77,14 @@ page-quiz {
         height: 103%;
         display: block;
     }
+
+    .icon-md-danger {
+        color: #f53d3d;
+        margin-right: 1%;
+    }
+
+    .correction {
+        margin-top: 50%;
+    }
+
 }

@@ -1,5 +1,5 @@
 page-quiz-tsunami {
-    .ios,
+       /*.ios,
     .md {
        ion-slide {
             align-items: flex-start;
@@ -12,7 +12,7 @@ page-quiz-tsunami {
         flash-card {
             color: #000;
             img {
-                width: 70%;
+                width: 50%;
                 height: auto;
             }
         }
@@ -24,5 +24,67 @@ page-quiz-tsunami {
                 font-weight: bold;
             }
         }
+    }*/
+
+    .resultimg {
+        width: 100%;
+        height: 45%;
+        position: relative;
     }
+
+    .textResult {
+        font-family: 'Titillium Web';
+    }
+
+    .bar-buttons { //X button
+        margin-top: -5%;
+        margin-right: -3%;
+    }
+
+    .flash-card-front {
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
+
+    .slide-zoom { //whole card content
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .start-slide { //Start!
+        button {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: black;
+        }
+        margin-top: 60%;
+    }
+
+    .content { //whole card
+        background-color: #FFFFFF;
+    }
+
+    .item-cover { //choices
+        border-bottom: 2px #495F77 solid;
+    }
+
+    ion-slides {
+        width: 100%;
+        height: 103%;
+        display: block;
+    }
+
+    .icon-md-danger {
+        color: #f53d3d;
+        margin-right: 1%;
+    }
+
+    .correction {
+        margin-top: 50%;
+    }
+
 }
