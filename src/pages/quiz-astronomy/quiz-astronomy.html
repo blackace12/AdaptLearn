@@ -1,46 +1,57 @@
-<ion-header>
-    <ion-buttons end>
-      <button ion-button item-right clear color="dark" (click)="exit()">X</button>
-    </ion-buttons>
-  </ion-header>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
 
 <ion-content padding>
-  <ion-slides #slides class="slide-color">
-   <ion-slide class="start-slide">
-     <button ion-button color="primary" (click)="nextSlide()">Start!</button>
-   </ion-slide>
+<ion-buttons end>
+  <button ion-button item-right clear color="dark" (click)="exit()">X</button>
+</ion-buttons>
 
-   <ion-slide *ngFor="let question of questions; let i = index;">
+<ion-slides #slides class="slide-color">
+  <ion-slide class="start-slide">
+    <button ion-button clear (click)="nextSlide()">Start!</button>
+  </ion-slide>
 
-     <h3>Question {{i+1}}</h3>
+  <ion-slide *ngFor="let question of questions; let i = index;">
+    <h3>Question {{i+1}}</h3>
+    <flash-card [isFlipped]="question.flashCardFlipped">
 
-     <flash-card [isFlipped]="question.flashCardFlipped">
-       <div class="flash-card-front" [innerHTML]="question.flashCardFront"></div>
-       <div class="flash-card-back" [innerHTML]="question.flashCardBack"></div>
-     </flash-card>
+      <div class="flash-card-front" [innerHTML]="question.flashCardFront"></div>
+      <div class="flash-card-back" [innerHTML]="question.flashCardBack"></div>
+    </flash-card>
 
-     <h3>{{question.questionText}}</h3>
+    <h3>{{question.questionText}}</h3>
 
-     <ion-list no-lines radio-group>
+    <ion-list no-lines radio-group>
 
-       <ion-item *ngFor="let answer of question.answers; let i = index;">
+      <ion-item *ngFor="let answer of question.answers; let i = index;">
 
-         <ion-label>{{i+1}}.) {{answer.answer}}</ion-label>
-         <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio>
+        <ion-label>{{i+1}}.) {{answer.answer}}</ion-label>
+        <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio>
 
-       </ion-item>
+      </ion-item>
 
-     </ion-list>
+    </ion-list>
+  </ion-slide>
 
-   </ion-slide>
+  <ion-slide *ngFor="let incorrect of wrongAnswers;let i=index" class="correction">
+    <h5>Question: {{incorrect.questionA}}</h5>
+    <h6><ion-icon name="close" color="danger"></ion-icon> You Answer: {{incorrect.answer}}</h6>
+    <h6><ion-icon name="checkmark" color="secondary"></ion-icon> Answer: {{incorrect.correctAnswer}}</h6>
+    <button ion-button clear color="dark" (click)="error()"> <ion-icon name="arrow-forward"></ion-icon></button>
+  </ion-slide>
 
-   <ion-slide>
-     <h2>Final Score: {{score}} </h2>
-     <h2>User Percentage Score: {{userpercentage}}%</h2>
-     <h2>Passing Percentage Score: {{percentage}}%</h2>
-     <button (click)="restartQuiz()" ion-button full color="primary">Start Again</button>
-     <button (click)="continue()" ion-button block color="primary" *ngIf="score >= 7" >Continue</button>
-   </ion-slide>
+  <ion-slide class="results">
+    <h1 class="textResult">RESULTS</h1>
+    <div class="resultimg">
+      <img src="{{imagename}}">
+    </div>
+    <h2 class="textResult">Your Final Score: {{score}} </h2>
+    <h2 class="textResult">Passing Percentage Score: {{percentage}}%</h2>
+    <h2 class="textResult">Your Percentage Score: {{userpercentage}}%</h2>
+    <button (click)="restartQuiz()" ion-button block color="primary">Take Quiz Again</button>
+    <button (click)="continue()" ion-button block color="primary" *ngIf="score >= 7">Continue</button>
+  </ion-slide>
 
- </ion-slides>
+</ion-slides>
 </ion-content>
