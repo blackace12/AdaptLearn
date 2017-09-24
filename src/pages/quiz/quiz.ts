@@ -19,21 +19,25 @@ export class QuizPage {
   hasAnswered: boolean = false;
   passingscore: number = 0;
   percentage: number = 70;
-  progressID: FirebaseListObservable<any>;
   questions: any;
+  progressID: FirebaseListObservable<any>;
   quizUniverse: FirebaseListObservable<any>;
-
-  getID:FirebaseObjectObservable<any>;
-  prevScoreChecker: FirebaseObjectObservable<any>;
-  prevQuizChecker:FirebaseObjectObservable<any>;
-
   score: number = 0;
   shuffledQuestions: any;
   quizID: any;
   userpercentage: number = 0;
   wrongAnswers: any[] = [];
-  correctAnswer: any;
-  prevScore = [];
+
+
+
+  userProgressID: FirebaseObjectObservable<any>;
+  userProgressIDArr = [];
+  userProgressKey = [];
+  updaterUPID: FirebaseListObservable<any>;
+
+  userQuizID: FirebaseObjectObservable<any>;
+  userQuizIDArr = [];
+  updateQID: FirebaseListObservable<any>;
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
 
   }
@@ -97,79 +101,98 @@ export class QuizPage {
   }
 
   continue() {
+    //Used
     this.currentUser = this.afAuth.auth.currentUser.uid;
     this.quizUniverse = this.af.list('/Quiz/');
-    this.progressID = this.af.list('/UserProgress/' + this.currentUser)
+    this.progressID = this.af.list('/UserProgress/' + this.currentUser + '/')
 
-   /*  this.getID = this.af.object('/UserProgress/' + this.currentUser, { preserveSnapshot: true });
+    this.userProgressID = this.af.object('/UserProgress/' + this.currentUser + '/', { preserveSnapshot: true });
 
-    this.getID.subscribe(snapshots => {
+    this.userQuizID = this.af.object('/Quiz/', { preserveSnapshot: true });
+
+    console.log(this.progressID);
+    console.log(this.userProgressID);
+
+    this.userProgressID.subscribe(snapshots => {
       snapshots.forEach(snapshot => {
-        console.log(snapshot.key);
-        console.log(snapshot.val());
+        this.userProgressIDArr.push(snapshot.val());
       });
     });
+    console.log(this.userProgressIDArr);
+    if (this.userProgressIDArr.length == 0) {
 
-    this.prevQuizChecker = this.af.object('/Quiz/');
-    this.getID = this.af.object('/UserProgress/' + this.currentUser + '/', { preserveSnapshot: true });
+      //Edit Here
 
+      if (this.score >= 7) {
+        this.quizID = this.quizUniverse.push(
+          {
+            Chapter_Quiz: "UniverseFormation", Passed: true, Score: this.score, Quiz: 1
+          }
+        ).key;
+        console.log(this.quizID);
 
-    this.getID.subscribe(snapshots => {
-      snapshots.forEach(snapshot => {
-        console.log(snapshot.key);
-        this.prevScore.push(snapshot.key);
-      });
-      console.log(this.prevScore);
-      console.log(this.prevScore[0].key);
-
-      this.prevScoreChecker = this.af.object('/UserProgress/' + this.currentUser + '/' + this.prevScore[0].key, { preserveSnapshot: true });
-      if (this.prevScore == undefined || this.prevScore == null) {
-        console.log("No Data yet");
+        this.progressID.push({
+          QuizID: this.quizID,
+          Chapter_Quiz: "UniverseFormation",
+          Passed: true, Score: this.score,
+          Quiz: 1
+        });
       }
 
-      else {
-        if (this.score >= 7) {
-         this.prevScoreChecker.update(
-            {
-              Score: this.score
-            }
-          );
-          this.prevQuizChecker.update({
-            Score: this.score,
-          });
-        }
+      else if (this.score < 7) {
+        this.quizID = this.quizUniverse.push(
+          {
+            Chapter_Quiz: "UniverseFormation", Passed: false, Score: this.score, Quiz: 1
+          }
+        ).key;
+        console.log(this.quizID);
+        this.progressID.push({
+          QuizID: this.quizID,
+          Chapter_Quiz: "UniverseFormation",
+          Passed: true, Score: this.score,
+          Quiz: 1
+        });
       }
-    }) */
+      console.log("Eto yun");
 
-    if (this.score >= 7) {
-      this.quizID = this.quizUniverse.push(
-        {
-          Chapter_Quiz: "UniverseFormation", Passed: true, Score: this.score, Quiz: 1
-        }
-      ).key;
-      console.log(this.quizID);
-
-      this.progressID.push({
-        QuizID: this.quizID,
-        Chapter_Quiz: "UniverseFormation",
-        Passed: true, Score: this.score,
-        Quiz: 1
-      });
+      //Edit Here
     }
 
-    else if (this.score < 7) {
-      this.quizID = this.quizUniverse.push(
-        {
-          Chapter_Quiz: "UniverseFormation", Passed: false, Score: this.score, Quiz: 1
-        }
-      ).key;
-      console.log(this.quizID);
-      this.progressID.push({
-        QuizID: this.quizID,
-        Chapter_Quiz: "UniverseFormation",
-        Passed: true, Score: this.score,
-        Quiz: 1
-      });
+    else {
+      //Getting the progress ID of USER first
+      this.userProgressID.subscribe(snapshots => {
+        snapshots.forEach(snapshot => {
+          this.userProgressKey.push(snapshot.key);
+          this.userProgressIDArr.push(snapshot.val());
+        });
+        console.log(this.userProgressKey[0]);
+        console.log(this.userProgressIDArr[0].QuizID);
+
+        //Getting the progress ID of USER first
+        this.userQuizID.subscribe(snapshots => {
+          snapshots.forEach(snapshot => {
+            this.userQuizIDArr.push(snapshot.key);
+          });
+          console.log(this.userQuizIDArr[0]);
+
+          for (var i = 0; i <= this.userQuizIDArr.length; i++) {
+            //Add for loop for the ProgressKey
+            if (this.userProgressIDArr[0].QuizID === this.userQuizIDArr[i]) {
+              this.updaterUPID = this.af.list('/UserProgress/' + this.currentUser + '/');
+              this.updaterUPID.update(this.userProgressKey[0], { Score: this.score });
+
+              this.updateQID = this.af.list('/Quiz/');
+              this.updateQID.update(this.userQuizIDArr[i], { Score: this.score });
+              console.log("Equal");
+              break;
+            }
+            else {
+              console.log("Not Equal");
+            }
+          }
+          console.log("Update time");
+        })
+      })
     }
     this.navCtrl.pop();
   }

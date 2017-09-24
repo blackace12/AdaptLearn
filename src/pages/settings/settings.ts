@@ -136,6 +136,8 @@ export class SettingsPage {
           }
         }
       ]
+
+
     });
     alert.present();
   }

@@ -1,6 +1,6 @@
 import { FormBuilder } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
+import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { DataMitadaptProvider } from './../../providers/data-mitadapt/data-mitadapt';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
@@ -26,6 +26,17 @@ export class QuizMitadaptPage {
     shuffledQuestions: any;
     quizID: any;
     userpercentage: number = 0;
+
+
+
+    userProgressID: FirebaseObjectObservable<any>;
+    userProgressIDArr = [];
+    userProgressKey = [];
+    updaterUPID: FirebaseListObservable<any>;
+
+    userQuizID: FirebaseObjectObservable<any>;
+    userQuizIDArr = [];
+    updateQID: FirebaseListObservable<any>;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataMitadaptProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
 
@@ -79,10 +90,28 @@ export class QuizMitadaptPage {
 
     continue() {
 
-      this.currentUser = this.afAuth.auth.currentUser.uid;
-      this.quizUniverse = this.af.list('/Quiz/');
-      this.progressID = this.af.list('/UserProgress/' + this.currentUser)
-      //to be inserted, check first before push
+
+       //Used
+    this.currentUser = this.afAuth.auth.currentUser.uid;
+    this.quizUniverse = this.af.list('/Quiz/');
+    this.progressID = this.af.list('/UserProgress/' + this.currentUser + '/')
+
+    this.userProgressID = this.af.object('/UserProgress/' + this.currentUser + '/', { preserveSnapshot: true });
+
+    this.userQuizID = this.af.object('/Quiz/', { preserveSnapshot: true });
+
+    console.log(this.progressID);
+    console.log(this.userProgressID);
+
+    this.userProgressID.subscribe(snapshots => {
+      snapshots.forEach(snapshot => {
+        this.userProgressIDArr.push(snapshot.val());
+      });
+    });
+    console.log(this.userProgressIDArr);
+    if (this.userProgressIDArr.length == 8) {
+
+      //Edit Here
 
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
@@ -115,8 +144,47 @@ export class QuizMitadaptPage {
           Quiz: 9
         });
       }
+      console.log("Eto yun");
+      //Edit Here
+    }
+
+    else {
+      //Getting the progress ID of USER first
+      this.userProgressID.subscribe(snapshots => {
+        snapshots.forEach(snapshot => {
+          this.userProgressKey.push(snapshot.key);
+          this.userProgressIDArr.push(snapshot.val());
+        });
+        console.log(this.userProgressKey[8]);
+        console.log(this.userProgressIDArr[8].QuizID);
+
+        //Getting the progress ID of USER first
+        this.userQuizID.subscribe(snapshots => {
+          snapshots.forEach(snapshot => {
+            this.userQuizIDArr.push(snapshot.key);
+          });
+          console.log(this.userQuizIDArr[8]);
+
+          for (var i = 0; i <= this.userQuizIDArr.length; i++) {
+            //Add for loop for the ProgressKey
+            if (this.userProgressIDArr[8].QuizID === this.userQuizIDArr[i]) {
+              this.updaterUPID = this.af.list('/UserProgress/' + this.currentUser + '/');
+              this.updaterUPID.update(this.userProgressKey[8], { Score: this.score });
+
+              this.updateQID = this.af.list('/Quiz/');
+              this.updateQID.update(this.userQuizIDArr[i], { Score: this.score });
+              console.log("Equal");
+              break;
+            }
+            else {
+              console.log("Not Equal");
+            }
+          }
+          console.log("Update time");
+        })
+      })
+    }
       this.navCtrl.pop();
-      // this.navCtrl.setRoot(LessonEarthUniversePage);
     }
 
     restartQuiz() {

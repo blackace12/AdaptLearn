@@ -34,15 +34,15 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public authData: AuthProvider, public navParams: NavParams, public modalCtrl: ModalController, public formBuilder: FormBuilder, public alertCtrl: AlertController,
     public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public toastCtrl: ToastController) {
 
-      this.loginForm = formBuilder.group({
+    this.loginForm = formBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
-      password: ['', Validators.compose([Validators.minLength(8), Validators.required])]
+      password: ['', Validators.compose([Validators.required])]
     });
   }
 
 
   ionViewDidLoad() {
-      console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad LoginPage');
   }
 
 
@@ -53,23 +53,22 @@ export class LoginPage {
       this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password)
         .then(authData => {
           this.currentUser = this.afAuth.auth.currentUser.uid;
-         //authData.Checker ? this.navCtrl.push(LearnertestPage) : this.navCtrl.push(SplashscreenPage);
-if (this.currentUser != null){
-        var checked = this.af.object('/Users/' + this.currentUser, {preserveSnapshot: true});
-        checked.subscribe(snapshot => {
-          console.log(this.currentUser + " <- Current user");
-          console.log(snapshot.val().Checker + " <- Checker");
-          this.checker = snapshot.val().Checker;
+          if (this.currentUser != null) {
+            var checked = this.af.object('/Users/' + this.currentUser, { preserveSnapshot: true });
+            checked.subscribe(snapshot => {
+              console.log(this.currentUser + " <- Current user");
+              console.log(snapshot.val().Checker + " <- Checker");
+              this.checker = snapshot.val().Checker;
 
-          if (this.checker == "false" || this.checker == null){
-            this.navCtrl.setRoot(LearnertestPage);
-            } else {
-            this.navCtrl.setRoot(SplashscreenPage);
-            }
+              if (this.checker == "false" || this.checker == null) {
+                this.navCtrl.setRoot(LearnertestPage);
+              } else {
+                this.navCtrl.setRoot(SplashscreenPage);
+              }
 
-          });
-        }
-       }, error => {
+            });
+          }
+        }, error => {
           this.loading.dismiss().then(() => {
             let alert = this.alertCtrl.create({
               message: error.message,

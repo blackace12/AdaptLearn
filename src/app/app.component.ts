@@ -2,8 +2,8 @@ import { LearnertestPage } from './../pages/learnertest/learnertest';
 import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { SplashscreenPage } from './../pages/splashscreen/splashscreen';
 import { LoginPage } from '../pages/login/login';
-import { Component } from '@angular/core';
-import { ToastController, Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { ToastController, Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -14,6 +14,7 @@ import { Network } from '@ionic-native/network';
   templateUrl: 'app.html'
 })
 export class MyApp {
+  @ViewChild(Nav) nav: Nav;
   rootPage: any;
   selectedTheme: String;
   UserChecker: FirebaseListObservable<any>;
@@ -80,10 +81,10 @@ export class MyApp {
           });
           console.log(this.checkerTest[0]);
           if (this.checkerTest[0] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
-            this.rootPage = LearnertestPage;
+            this.nav.setRoot(LearnertestPage);
           }
           else if (this.checkerTest[0] == "true") {
-            this.rootPage = SplashscreenPage;
+            this.nav.setRoot(SplashscreenPage);
           }
         })
         //authObserver.unsubscribe();

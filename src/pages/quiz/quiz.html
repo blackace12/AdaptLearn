@@ -43,7 +43,7 @@
       <h2>Percentage Score: {{userpercentage}}%</h2>
       <h2>Passing Percentage Score: {{percentage}}%</h2>
       <button (click)="restartQuiz()" ion-button block color="primary">Take Quiz Again</button>
-      <button (click)="continue()" ion-button block color="primary" *ngIf="score > 7">Continue</button>
+      <button (click)="continue()" ion-button block color="primary" *ngIf="score >= 7">Continue</button>
 
 
     </ion-slide>

@@ -1,6 +1,6 @@
 import { FormBuilder } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
+import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { DataLslideProvider } from './../../providers/data-lslide/data-lslide';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
@@ -28,6 +28,17 @@ export class QuizLslidePage {
   shuffledQuestions: any;
   quizID: any;
   userpercentage: number = 0;
+
+
+
+  userProgressID: FirebaseObjectObservable<any>;
+  userProgressIDArr = [];
+  userProgressKey = [];
+  updaterUPID: FirebaseListObservable<any>;
+
+  userQuizID: FirebaseObjectObservable<any>;
+  userQuizIDArr = [];
+  updateQID: FirebaseListObservable<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataLslideProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
 
@@ -81,44 +92,99 @@ export class QuizLslidePage {
 
   continue() {
 
+    //Used
     this.currentUser = this.afAuth.auth.currentUser.uid;
     this.quizUniverse = this.af.list('/Quiz/');
-    this.progressID = this.af.list('/UserProgress/' + this.currentUser)
-    //to be inserted, check first before push
+    this.progressID = this.af.list('/UserProgress/' + this.currentUser + '/')
 
-    if (this.score >= 7) {
-      this.quizID = this.quizUniverse.push(
-        {
-          Chapter_Quiz: "Landslide", Passed: true, Score: this.score, Quiz: 7
-        }
-      ).key;
-      console.log(this.quizID);
+    this.userProgressID = this.af.object('/UserProgress/' + this.currentUser + '/', { preserveSnapshot: true });
 
+    this.userQuizID = this.af.object('/Quiz/', { preserveSnapshot: true });
 
-      this.progressID.push({
-        QuizID: this.quizID,
-        Chapter_Quiz: "Landslide",
-        Passed: true, Score: this.score,
-        Quiz: 7
+    console.log(this.progressID);
+    console.log(this.userProgressID);
+
+    this.userProgressID.subscribe(snapshots => {
+      snapshots.forEach(snapshot => {
+        this.userProgressIDArr.push(snapshot.val());
       });
+    });
+    console.log(this.userProgressIDArr);
+    if (this.userProgressIDArr.length == 6) {
+
+      //Edit Here
+      if (this.score >= 7) {
+        this.quizID = this.quizUniverse.push(
+          {
+            Chapter_Quiz: "Landslide", Passed: true, Score: this.score, Quiz: 7
+          }
+        ).key;
+        console.log(this.quizID);
+
+
+        this.progressID.push({
+          QuizID: this.quizID,
+          Chapter_Quiz: "Landslide",
+          Passed: true, Score: this.score,
+          Quiz: 7
+        });
+      }
+
+      else if (this.score < 7) {
+        this.quizID = this.quizUniverse.push(
+          {
+            Chapter_Quiz: "Landslide", Passed: false, Score: this.score, Quiz: 7
+          }
+        ).key;
+        console.log(this.quizID);
+        this.progressID.push({
+          QuizID: this.quizID,
+          Chapter_Quiz: "Landslide",
+          Passed: true, Score: this.score,
+          Quiz: 7
+        });
+      }
+      console.log("Eto yun");
+      //Edit Here
     }
 
-    else if (this.score < 7) {
-      this.quizID = this.quizUniverse.push(
-        {
-          Chapter_Quiz: "Landslide", Passed: false, Score: this.score, Quiz: 7
-        }
-      ).key;
-      console.log(this.quizID);
-      this.progressID.push({
-        QuizID: this.quizID,
-        Chapter_Quiz: "Landslide",
-        Passed: true, Score: this.score,
-        Quiz: 7
-      });
+    else {
+      //Getting the progress ID of USER first
+      this.userProgressID.subscribe(snapshots => {
+        snapshots.forEach(snapshot => {
+          this.userProgressKey.push(snapshot.key);
+          this.userProgressIDArr.push(snapshot.val());
+        });
+        console.log(this.userProgressKey[6]);
+        console.log(this.userProgressIDArr[6].QuizID);
+
+        //Getting the progress ID of USER first
+        this.userQuizID.subscribe(snapshots => {
+          snapshots.forEach(snapshot => {
+            this.userQuizIDArr.push(snapshot.key);
+          });
+          console.log(this.userQuizIDArr[6]);
+
+          for (var i = 0; i <= this.userQuizIDArr.length; i++) {
+            //Add for loop for the ProgressKey
+            if (this.userProgressIDArr[6].QuizID === this.userQuizIDArr[i]) {
+              this.updaterUPID = this.af.list('/UserProgress/' + this.currentUser + '/');
+              this.updaterUPID.update(this.userProgressKey[6], { Score: this.score });
+
+              this.updateQID = this.af.list('/Quiz/');
+              this.updateQID.update(this.userQuizIDArr[i], { Score: this.score });
+              console.log("Equal");
+              break;
+            }
+            else {
+              console.log("Not Equal");
+            }
+          }
+          console.log("Update time");
+        })
+      })
     }
     this.navCtrl.pop();
-    // this.navCtrl.setRoot(LessonEarthUniversePage);
   }
 
   restartQuiz() {
