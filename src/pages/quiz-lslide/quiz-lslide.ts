@@ -40,6 +40,8 @@ export class QuizLslidePage {
   userQuizIDArr = [];
   updateQID: FirebaseListObservable<any>;
 
+  imagename:string;
+  wrongAnswers: any[] = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataLslideProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
 
   }
@@ -58,16 +60,33 @@ export class QuizLslidePage {
 
   }
 
+
   nextSlide() {
     this.slides.lockSwipes(false);
     this.slides.slideNext();
     this.slides.lockSwipes(true);
+    if (this.score>=7) {
+      this.imagename = "../assets/img/pass.png";
+    }
+    else {
+      this.imagename = "../assets/img/fail.jpg";
+    }
   }
 
   selectAnswer(answer, question) {
     this.hasAnswered = true;
     answer.selected = true;
     question.flashCardFlipped = true;
+
+    if (answer.correct == false) {
+
+      this.wrongAnswers.push({
+        questionA: question.questionText,
+        answer: answer.answer,
+        correctAnswer: question.correctAnswer,
+      });
+      console.log(this.wrongAnswers);
+    }
 
     if (answer.correct) {
       this.score++;
@@ -87,6 +106,10 @@ export class QuizLslidePage {
       answer.selected = false;
       question.flashCardFlipped = false;
     }, 1000);
+  }
+
+  error() {
+    this.nextSlide();
   }
 
 

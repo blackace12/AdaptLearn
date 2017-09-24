@@ -38,6 +38,10 @@ export class QuizPage {
   userQuizID: FirebaseObjectObservable<any>;
   userQuizIDArr = [];
   updateQID: FirebaseListObservable<any>;
+
+  imagename:string;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
 
   }
@@ -59,6 +63,12 @@ export class QuizPage {
     this.slides.lockSwipes(false);
     this.slides.slideNext();
     this.slides.lockSwipes(true);
+    if (this.score>=7) {
+      this.imagename = "../assets/img/pass.png";
+    }
+    else {
+      this.imagename = "../assets/img/fail.jpg";
+    }
   }
 
   selectAnswer(answer, question) {
