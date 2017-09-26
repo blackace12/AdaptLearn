@@ -120,9 +120,10 @@ export class SettingsPage {
         {
           text: 'Save',
           handler: data => {
+
             this.settings.updatePassword(data.newPassword, data.oldPassword).then(() => {
               let alert = this.alertCtrl.create({
-                message: "Password Changed Successfully!, Please login again!",
+                message: "Password Changed Successfully!, Please log in again!",
                 buttons: [
                   {
                     text: "Ok",

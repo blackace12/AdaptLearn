@@ -1,12 +1,11 @@
-<ion-menu [content]="content">
+<ion-menu id="myMenu" [content]="content">
   <ion-content>
     <ion-item style="background-color:#00aced">
-      <img src="./assets/img/adapt.png" height="150px" width="350px"/>
+      <!-- <img src="./assets/img/adapt.png" height="100px" width="350px"/> -->
     </ion-item>
     <ion-list>
 
-      <br>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
        <ion-icon name="{{p.icon}}"></ion-icon>&nbsp;{{p.title}}
       </button>
 

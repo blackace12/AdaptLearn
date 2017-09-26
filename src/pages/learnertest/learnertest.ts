@@ -604,11 +604,11 @@ export class LearnertestPage {
           {style: "Verbal", value: VerbalTotal}]
           );
           this.userChecker.update( this.currentUser, { Checker: 'true' });
-          this.navCtrl.push(SplashscreenPage);
         }
       }
       ]
     });
     confirm.present();
+    this.navCtrl.setRoot(SplashscreenPage);
   }
 }

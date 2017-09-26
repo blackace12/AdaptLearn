@@ -1,9 +1,10 @@
+import { HomePage } from './../pages/home/home';
 import { LearnertestPage } from './../pages/learnertest/learnertest';
 import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { SplashscreenPage } from './../pages/splashscreen/splashscreen';
 import { LoginPage } from '../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
-import { ToastController, Platform, Nav } from 'ionic-angular';
+import { ToastController, Platform, Nav, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -21,7 +22,7 @@ export class MyApp {
   checkerTest = [];
   currentUser;
   currentEmail;
-  constructor(platform: Platform, af: AngularFireDatabase, afAuth: AngularFireAuth, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsProvider, smartAudio: SmartAudioProvider, private network: Network, public toastCtrl: ToastController) {
+  constructor(platform: Platform, af: AngularFireDatabase, afAuth: AngularFireAuth, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsProvider, smartAudio: SmartAudioProvider, private network: Network, public toastCtrl: ToastController, public alertCtrl: AlertController) {
     // watch network for a disconnect
     let dc;
     this.network.onDisconnect().subscribe(() => {
@@ -79,21 +80,32 @@ export class MyApp {
             console.log(snapshot.val())
             this.checkerTest.push(snapshot.val());
           });
+          /* console.log(this.checkerTest);
           console.log(this.checkerTest[0]);
-          if (this.checkerTest[0] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
+          console.log(this.checkerTest[1]);
+ */
+          if (this.checkerTest[2] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
+            this.nav.setRoot(HomePage);
+          }
+          else if (this.checkerTest[0] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
             this.nav.setRoot(LearnertestPage);
           }
           else if (this.checkerTest[0] == "true") {
+            let toast = this.toastCtrl.create({
+              message: 'Welcome Back!',
+              duration: 2500,
+              position: 'bottom',
+              cssClass: "toast-success"
+            })
+            toast.present();
             this.nav.setRoot(SplashscreenPage);
           }
         })
-        //authObserver.unsubscribe();
+        authObserver.unsubscribe();
       } else {
         this.rootPage = LoginPage;
-        //authObserver.unsubscribe();
+        authObserver.unsubscribe();
       }
     });
   }
-
-
 }

@@ -1,6 +1,6 @@
 import { AuthProvider } from './../../providers/auth/auth';
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav, AlertController, NavController } from 'ionic-angular';
+import {MenuController, Platform,  Nav,  AlertController,  NavController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { ListPage } from '../list/list';
@@ -20,16 +20,15 @@ export class SplashscreenPage {
   icons: string[];
   pages: Array<{ title: string, component: any, icon: string }>
 
-  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider) {
+  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider, public menuCtrl:MenuController) {
     this.initializeApp();
-    this.icons = ['home', 'book', 'podium'];
+    this.icons = ['home', 'planet', 'podium'];
 
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: SplashscreenPage, icon: this.icons[0], },
-      { title: 'Subject', component: LessonPage, icon: this.icons[1] },
-      // { title: 'Quiz', component: QuizPage,icon:this.icons[2] },
+      { title: 'Earth Science', component: LessonPage, icon: this.icons[1] },
       { title: 'Progress', component: ProfilePage, icon: this.icons[2] }
 
     ];
@@ -38,7 +37,9 @@ export class SplashscreenPage {
   }
 
 
-
+  ionViewDidLoad(){
+    this.menuCtrl.enable(true, "myMenu");
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
