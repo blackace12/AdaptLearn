@@ -1,116 +1,139 @@
+
 {
     "questions": [
 
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "Astronomy Questions",
-            "answers": [
-                {"answer": "Non-living Things", "correct": false, "selected": false},
-                {"answer": "Living Things", "correct": true, "selected": false},
-                {"answer": "None of the above", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        }
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is what happens when two blocks of the Earth suddenly slip past one another.",
+                    "answers": [
+                        {"answer": "Rock erosion", "correct": false, "selected": false},
+                        {"answer": "Seismic Collapse", "correct": false, "selected": false},
+                        {"answer": "Earthquake", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Earthquake"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The surface where blocks of the Earth slip.",
+                    "answers": [
+                        {"answer": "Fault", "correct": true, "selected": false},
+                        {"answer": "Flaut", "correct": false, "selected": false},
+                        {"answer": "Fautle", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Fault"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The location below the Earth’s surface where the earthquake starts.",
+                    "answers": [
+                        {"answer": "Hypercenter", "correct": false, "selected": false},
+                        {"answer": "Hypocenter", "correct": true, "selected": false},
+                        {"answer": "Hydrocore", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Hypocenter"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The location directly above the hypocenter on the surface of the Earth.",
+                    "answers": [
+                        {"answer": "Epicenter", "correct": true, "selected": false},
+                        {"answer": "Metal core", "correct": false, "selected": false},
+                        {"answer": "Endo cortex", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Epicenter"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Sometimes, an earthquake has _____.",
+                    "answers": [
+                        {"answer": "Frontshocks", "correct": false, "selected": false},
+                        {"answer": "Foreshocks", "correct": true, "selected": false},
+                        {"answer": "Farshocks", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Foreshocks"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The largest main earthquake.",
+                    "answers": [
+                        {"answer": "Mainshock", "correct": true, "selected": false},
+                        {"answer": "Event shock", "correct": false, "selected": false},
+                        {"answer": "Actual shock", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Mainshock"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Edges of tectonic plates are called?",
+                    "answers": [
+                        {"answer": "Plate edges", "correct": false, "selected": false},
+                        {"answer": "Plate boundaries", "correct": true, "selected": false},
+                        {"answer": "Side plates", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Plate boundaries"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Layer of Earth that make up a thin skin on the surface of our planet.",
+                    "answers": [
+                        {"answer": "Mantle and crust", "correct": true, "selected": false},
+                        {"answer": "Crust and plates", "correct": false, "selected": false},
+                        {"answer": "Plateaus and plains", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Mantle and crust"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Smaller earthquakes that occur after a mainshock.",
+                    "answers": [
+                        {"answer": "Aftershock", "correct": true, "selected": false},
+                        {"answer": "Beforeshock", "correct": false, "selected": false},
+                        {"answer": "Middleshock", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Aftershock"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Puzzle pieces that slowly move around.",
+                    "answers": [
+                        {"answer": "Tectonic plates", "correct": true, "selected": false},
+                        {"answer": "Totemic plains", "correct": false, "selected": false},
+                        {"answer": "Tonic panes", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Tectonic plates"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The four major layers of Earth.",
+                    "answers": [
+                        {"answer": "Inner core, mantle, crust, center", "correct": false, "selected": false},
+                        {"answer": "Inner core, mantle, crust, outer core", "correct": true, "selected": false},
+                        {"answer": "Core, epicenter, mantle, crust", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Inner core, mantle, crust, outer core"
+                }
 
-    ]
+                ]
 }

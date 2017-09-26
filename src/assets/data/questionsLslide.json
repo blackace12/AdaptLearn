@@ -1,116 +1,139 @@
-{
+
+{/* Questions for Landslide */
     "questions": [
 
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "Astronomy Questions",
-            "answers": [
-                {"answer": "Non-living Things", "correct": false, "selected": false},
-                {"answer": "Living Things", "correct": true, "selected": false},
-                {"answer": "None of the above", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        }
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "The most important force holding land surfaces together.",
+                            "answers": [
+                                {"answer": "Tension Force", "correct": false, "selected": false},
+                                {"answer": "Applied Force", "correct": false, "selected": false},
+                                {"answer": "Frictional Force", "correct": true, "selected": false}
+                            ],
+                            "correctAnswer":"Frictional Force  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "What occurs when gravity overcomes the force of friction?",
+                            "answers": [
+                                {"answer": "Landslides", "correct": true, "selected": false},
+                                {"answer": "Resistance", "correct": false, "selected": false},
+                                {"answer": "Eruption", "correct": false, "selected": false}
+                            ],
+                            "correctAnswer":"Landslides  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "What is the most common trigger of a landslide?",
+                            "answers": [
+                                {"answer": "Earthquakes", "correct": false, "selected": false},
+                                {"answer": "Wildfire", "correct": false, "selected": false},
+                                {"answer": "Water", "correct": true, "selected": false}
+                            ],
+                            "correctAnswer":"Water  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "The cause of landslides that disrupts the force of friction holding sediments in place.",
+                            "answers": [
+                                {"answer": "Earthquakes", "correct": true, "selected": false},
+                                {"answer": "Wildfire", "correct": false, "selected": false},
+                                {"answer": "Water", "correct": false, "selected": false}
+                            ],
+                            "correctAnswer":"Earthquakes  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "All landscapes are held together by ______ between the sediment cover and the underlying bedrock.",
+                            "answers": [
+                                {"answer": "Water", "correct": false, "selected": false},
+                                {"answer": "Friction", "correct": true, "selected": false},
+                                {"answer": "Mud", "correct": false, "selected": false}
+                            ],
+                            "correctAnswer":"Friction  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "What happens when something is introduced to disrupt the friction on an incline?",
+                            "answers": [
+                                {"answer": "Landslide", "correct": true, "selected": false},
+                                {"answer": "Earthquake", "correct": false, "selected": false},
+                                {"answer": "Volcanic Eruption", "correct": false, "selected": false}
+                            ],
+                            "correctAnswer":"Landslide  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "What is the other name for underwater landslides?",
+                            "answers": [
+                                {"answer": "Water Erosions", "correct": false, "selected": false},
+                                {"answer": "Deep Ocean Landslides", "correct": false, "selected": false},
+                                {"answer": "Submarine Landslides", "correct": true, "selected": false}
+                            ],
+                            "correctAnswer":"Submarine Landslides  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "Which human activity does not cause landslides?",
+                            "answers": [
+                                {"answer": "Deforestation", "correct": false, "selected": false},
+                                {"answer": "Road-building", "correct": false, "selected": false},
+                                {"answer": "Water Drainage", "correct": true, "selected": false}
+                            ],
+                            "correctAnswer":"Water Drainage  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "Its characteristics make it a fertile starting point for especially destructive landslides.",
+                            "answers": [
+                                {"answer": "Volcanoes", "correct": true, "selected": false},
+                                {"answer": "Mountains", "correct": false, "selected": false},
+                                {"answer": "Valleys", "correct": false, "selected": false}
+                            ],
+                            "correctAnswer":"Volcanoes  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "It acts like a glue to prevent the soil from loosening.",
+                            "answers": [
+                                {"answer": "Friction", "correct": false, "selected": false},
+                                {"answer": "Vegetation", "correct": true, "selected": false},
+                                {"answer": "Water", "correct": false, "selected": false}
+                            ],
+                            "correctAnswer":"Vegetation  "
+                        },
+                        {
+                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardBack": "",
+                            "flashCardFlipped": false,
+                            "questionText": "Which of the following is a good deterrent to landslides?",
+                            "answers": [
+                                {"answer": "Reforestation", "correct": true, "selected": false},
+                                {"answer": "Road Building", "correct": false, "selected": false},
+                                {"answer": "Urbanization", "correct": false, "selected": false}
+                            ],
+                            "correctAnswer":"Reforestation  "
+                        }
 
-    ]
-}
+                        ]
+        }

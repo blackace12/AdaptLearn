@@ -1,116 +1,607 @@
+
 {
     "questions": [
 
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "Astronomy Questions",
-            "answers": [
-                {"answer": "Non-living Things", "correct": false, "selected": false},
-                {"answer": "Living Things", "correct": true, "selected": false},
-                {"answer": "None of the above", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        }
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This contains the cold and hard solid land of the planet’s crust(surface).",
+                    "answers": [
+                        {"answer": "Lithosphere", "correct": true, "selected": false},
+                        {"answer": "Ionosphere", "correct": false, "selected": false},
+                        {"answer": "Atmosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Lithosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These are the subsystems of Earth’s system.",
+                    "answers": [
+                        {"answer": "Spheres", "correct": true, "selected": false},
+                        {"answer": "Land", "correct": false, "selected": false},
+                        {"answer": "Regions", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Spheres"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This contains all the solid, liquid, and gaseous water of the planet.",
+                    "answers": [
+                        {"answer": "Lithosphere", "correct": false, "selected": false},
+                        {"answer": "Hydrosphere", "correct": true, "selected": false},
+                        {"answer": "Atmosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Hydrosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Earth’s water is ______ salty.",
+                    "answers": [
+                        {"answer": "85%", "correct": false, "selected": false},
+                        {"answer": "75%", "correct": false, "selected": false},
+                        {"answer": "97%", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"97%"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The surface of the lithosphere is very ____.",
+                    "answers": [
+                        {"answer": "Uneven", "correct": true, "selected": false},
+                        {"answer": "Rough", "correct": false, "selected": false},
+                        {"answer": "Leveled ", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Uneven"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This contains all of the planet’s living things.",
+                    "answers": [
+                        {"answer": "Atmosphere", "correct": false, "selected": false},
+                        {"answer": "Bioshpere", "correct": true, "selected": false},
+                        {"answer": "Ionosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Bioshpere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It contains all of the air in the Earth’s system.",
+                    "answers": [
+                        {"answer": "Atmosphere", "correct": true, "selected": false},
+                        {"answer": "Bioshpere", "correct": false, "selected": false},
+                        {"answer": "Lithosphere ", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Atmosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This sphere includes all of the microorganisms, plants, and animals of the Earth.",
+                    "answers": [
+                        {"answer": "Hydrosphere", "correct": false, "selected": false},
+                        {"answer": "Ionoshpere", "correct": false, "selected": false},
+                        {"answer": "Bioshpere", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Bioshpere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Portion of the atmosphere that protects the organisms of the biosphere from the sun’s ultraviolet radiation.",
+                    "answers": [
+                        {"answer": "Inner", "correct": false, "selected": false},
+                        {"answer": "Middle", "correct": false, "selected": false},
+                        {"answer": "Upper", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Upper"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Some scientists place humans in their own sphere called _____.",
+                    "answers": [
+                        {"answer": "Anthrosphere", "correct": true, "selected": false},
+                        {"answer": "Dedoshpere", "correct": false, "selected": false},
+                        {"answer": "Nanosphere ", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Anthrosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The hydrosphere ranges from ______ to ______ kilometers in thickness.",
+                    "answers": [
+                        {"answer": "10, 20", "correct": true, "selected": false},
+                        {"answer": "50, 60", "correct": false, "selected": false},
+                        {"answer": "100, 150", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"10, 20"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Living things form ecological communities called _____.",
+                    "answers": [
+                        {"answer": "Biomes", "correct": true, "selected": false},
+                        {"answer": "Geomes", "correct": false, "selected": false},
+                        {"answer": "Lithiomes", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Biomes"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The atmosphere is ______ kilometers above the planet’s surface.",
+                    "answers": [
+                        {"answer": "100,000", "correct": false, "selected": false},
+                        {"answer": "10,000", "correct": true, "selected": false},
+                        {"answer": "125,000", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"10,000"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Another term used for hydrosphere.",
+                    "answers": [
+                        {"answer": "Cryosphere", "correct": true, "selected": false},
+                        {"answer": "Aquasphere", "correct": false, "selected": false},
+                        {"answer": "Liquisphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Cryosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The rainforest belongs to what sphere?",
+                    "answers": [
+                        {"answer": "Lithosphere", "correct": false, "selected": false},
+                        {"answer": "Biosphere", "correct": true, "selected": false},
+                        {"answer": "Atmosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Biosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The ozone layer belongs to what sphere?",
+                    "answers": [
+                        {"answer": "Atmosphere", "correct": true, "selected": false},
+                        {"answer": "Ionoshpere", "correct": false, "selected": false},
+                        {"answer": "Hydrosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Atmosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This subsystem absorbs and emits heat.",
+                    "answers": [
+                        {"answer": "Lithosphere", "correct": false, "selected": false},
+                        {"answer": "Cryosphere", "correct": false, "selected": false},
+                        {"answer": "Atmosphere", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Atmosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Spheres can be divided into ____.",
+                    "answers": [
+                        {"answer": "Ozone Layers", "correct": false, "selected": false},
+                        {"answer": "Subspheres", "correct": true, "selected": false},
+                        {"answer": "Subsystems", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Subspheres"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The _____ layer of the lithosphere consists of loose soil rich in nutrients, oxygen, and silicon.",
+                    "answers": [
+                        {"answer": "Innermost", "correct": false, "selected": false},
+                        {"answer": "Middlemost", "correct": false, "selected": false},
+                        {"answer": "Outermost", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Outermost"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "What are the four major subsystems of Earth?",
+                    "answers": [
+                        {"answer": "Lithosphere, Ionosphere, Hydrosphere, Cryosphere", "correct": false, "selected": false},
+                        {"answer": "Atmosphere, Cryosphere, Anthrosphere, Ionosphere", "correct": false, "selected": false},
+                        {"answer": "Lithosphere, Hydrosphere, Biosphere, Atmosphere", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Lithosphere, Hydrosphere, Biosphere, Atmosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A system that consists of four major subsystems.",
+                    "answers": [
+                        {"answer": "Earth system", "correct": true, "selected": false},
+                        {"answer": "Solar system", "correct": false, "selected": false},
+                        {"answer": "Water system", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Earth system"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The differences in _____ cause water to change physical states.",
+                    "answers": [
+                        {"answer": "Temperature", "correct": true, "selected": false},
+                        {"answer": "Distance", "correct": false, "selected": false},
+                        {"answer": "Stage", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Temperature"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A small portion of the water in the hydrosphere is ____.",
+                    "answers": [
+                        {"answer": "Salty", "correct": false, "selected": false},
+                        {"answer": "Fresh", "correct": true, "selected": false},
+                        {"answer": "Humid", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Fresh"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Most of Earth’s fresh water however, is _____.",
+                    "answers": [
+                        {"answer": "Vapour", "correct": false, "selected": false},
+                        {"answer": "Frozen", "correct": true, "selected": false},
+                        {"answer": "Hot", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Frozen"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "At the center of the center of Earth is a solid inner core of _____ and _____.",
+                    "answers": [
+                        {"answer": "Nickel, Metal", "correct": false, "selected": false},
+                        {"answer": "Iron, Silver", "correct": false, "selected": false},
+                        {"answer": "Frozen", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Frozen"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is where land is found.",
+                    "answers": [
+                        {"answer": "Lithosphere", "correct": true, "selected": false},
+                        {"answer": "Ionosphere", "correct": false, "selected": false},
+                        {"answer": "Cryosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Lithosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is where water is found.",
+                    "answers": [
+                        {"answer": "Lithosphere", "correct": false, "selected": false},
+                        {"answer": "Hydrosphere", "correct": true, "selected": false},
+                        {"answer": "Atmosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Hydrosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is where air is found.",
+                    "answers": [
+                        {"answer": "Atmosphere", "correct": true, "selected": false},
+                        {"answer": "Lithosphere", "correct": false, "selected": false},
+                        {"answer": "Anthrosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Atmosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is where living things are found.",
+                    "answers": [
+                        {"answer": "Cryosphere", "correct": false, "selected": false},
+                        {"answer": "Ionosphere", "correct": false, "selected": false},
+                        {"answer": "Biosphere", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Biosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "There are how many major subsystems on Earth?",
+                    "answers": [
+                        {"answer": "5", "correct": false, "selected": false},
+                        {"answer": "7", "correct": false, "selected": false},
+                        {"answer": "4", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"4"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is a combination of land, water, air, and living things.",
+                    "answers": [
+                        {"answer": "Earth system", "correct": true, "selected": false},
+                        {"answer": "Earth Levels", "correct": false, "selected": false},
+                        {"answer": "Earth Stages", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Earth system"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Referred to as large collections of salt water.",
+                    "answers": [
+                        {"answer": "Lakes", "correct": false, "selected": false},
+                        {"answer": "Oceans", "correct": true, "selected": false},
+                        {"answer": "Rivers", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Oceans"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is an example of a biome.",
+                    "answers": [
+                        {"answer": "Rainforest", "correct": true, "selected": false},
+                        {"answer": "Ocean", "correct": false, "selected": false},
+                        {"answer": "Desert", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Rainforest"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Tornadoes can be found where?",
+                    "answers": [
+                        {"answer": "Lithosphere", "correct": false, "selected": false},
+                        {"answer": "Hydrosphere", "correct": false, "selected": false},
+                        {"answer": "Atmosphere", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Atmosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "When air temperature in the lower portion of the atmosphere changes, _____ occurs.",
+                    "answers": [
+                        {"answer": "Air pressure", "correct": false, "selected": false},
+                        {"answer": "Weather", "correct": true, "selected": false},
+                        {"answer": "Heat wave", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Weather"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "____ temperatures freeze the water.",
+                    "answers": [
+                        {"answer": "Humid", "correct": false, "selected": false},
+                        {"answer": "Hot", "correct": false, "selected": false},
+                        {"answer": "Low", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Low"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These can be seen from space.",
+                    "answers": [
+                        {"answer": "Biomes", "correct": true, "selected": false},
+                        {"answer": "Inner core", "correct": false, "selected": false},
+                        {"answer": "Gas Molecules", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Biomes"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is where living things can be seen.",
+                    "answers": [
+                        {"answer": "Anthrosphere", "correct": true, "selected": false},
+                        {"answer": "Cryosphere", "correct": false, "selected": false},
+                        {"answer": "Nanosphere", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Anthrosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is where water can be found.",
+                    "answers": [
+                        {"answer": "Anthrosphere", "correct": false, "selected": false},
+                        {"answer": "Biosphere", "correct": false, "selected": false},
+                        {"answer": "Cryosphere", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Cryosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Places along Earth’s surface where salty water collects.",
+                    "answers": [
+                        {"answer": "Rivers", "correct": false, "selected": false},
+                        {"answer": "Lakes", "correct": false, "selected": false},
+                        {"answer": "Deep valleys", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Deep valleys"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The atmosphere is made up of many _____ that differ in chemical composition and temperature.",
+                    "answers": [
+                        {"answer": "Stages", "correct": false, "selected": false},
+                        {"answer": "Layers", "correct": true, "selected": false},
+                        {"answer": "Levels", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Layers"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Living things form ___________ based on the physical surroundings of an area.",
+                    "answers": [
+                        {"answer": "Lithological communities", "correct": false, "selected": false},
+                        {"answer": "Ecological communities", "correct": true, "selected": false},
+                        {"answer": "Cryological communities", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Ecological communities"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These are referred to as ecological communities.",
+                    "answers": [
+                        {"answer": "Geosphere", "correct": false, "selected": false},
+                        {"answer": "Biomes", "correct": true, "selected": false},
+                        {"answer": "Land mass", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Biomes"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is where storms and tornadoes are formed.",
+                    "answers": [
+                        {"answer": "Geosphere", "correct": false, "selected": false},
+                        {"answer": "Nonasphere", "correct": false, "selected": false},
+                        {"answer": "Atmosphere", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Atmosphere"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This is produced when water is at high temperature.",
+                    "answers": [
+                        {"answer": "Water humidity", "correct": false, "selected": false},
+                        {"answer": "Water vapour", "correct": true, "selected": false},
+                        {"answer": "Water molecules", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Water vapour"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Nickel and iron are found here.",
+                    "answers": [
+                        {"answer": "Center of Earth", "correct": true, "selected": false},
+                        {"answer": "Center of Lithosphere", "correct": false, "selected": false},
+                        {"answer": "Center of Earth systems", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Center of Earth"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Smaller systems in Earth’s system.",
+                    "answers": [
+                        {"answer": "Mini systems", "correct": false, "selected": false},
+                        {"answer": "Spheres", "correct": true, "selected": false},
+                        {"answer": "Biomes", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Spheres"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This element can be found in the lithosphere",
+                    "answers": [
+                        {"answer": "Titanium", "correct": false, "selected": false},
+                        {"answer": "Nickel", "correct": false, "selected": false},
+                        {"answer": "Silicon", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Silicon"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This element is NOT found in the lithosphere",
+                    "answers": [
+                        {"answer": "Silicon", "correct": false, "selected": false},
+                        {"answer": "Oxygen", "correct": false, "selected": false},
+                        {"answer": "Iron", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Iron"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "97% of the water on Earth is ______.",
+                    "answers": [
+                        {"answer": "Fresh", "correct": false, "selected": false},
+                        {"answer": "Salty", "correct": true, "selected": false},
+                        {"answer": "Spicy", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Salty"
+                }
 
-    ]
+                ]
 }

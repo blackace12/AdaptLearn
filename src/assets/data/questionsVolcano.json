@@ -1,116 +1,186 @@
+
 {
     "questions": [
 
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "Astronomy Questions",
-            "answers": [
-                {"answer": "Non-living Things", "correct": false, "selected": false},
-                {"answer": "Living Things", "correct": true, "selected": false},
-                {"answer": "None of the above", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        }
-
-    ]
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A mountain that opens downward to a pool of molten rock below the surface of the Earth.",
+                    "answers": [
+                        {"answer": "Mountain ranges", "correct": false, "selected": false},
+                        {"answer": "Volcano", "correct": true, "selected": false},
+                        {"answer": "Hill", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Volcano"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This occurs when pressure builds up.",
+                    "answers": [
+                        {"answer": "Erosion", "correct": false, "selected": false},
+                        {"answer": "Eruption", "correct": true, "selected": false},
+                        {"answer": "Intrusion", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Eruption"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Eruptions can cause all EXCEPT.",
+                    "answers": [
+                        {"answer": "Lava flows", "correct": false, "selected": false},
+                        {"answer": "Lateral Blasts", "correct": false, "selected": false},
+                        {"answer": "Tsunamis", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Tsunamis"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Volcanoes are formed when ______ from within the Earth’s upper mantle works its way to the surface.",
+                    "answers": [
+                        {"answer": "Magma", "correct": true, "selected": false},
+                        {"answer": "Lava", "correct": false, "selected": false},
+                        {"answer": "Rocks", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Magma"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A stage of a volcano where it has recently erupted and has the possibility of erupting soon.",
+                    "answers": [
+                        {"answer": "Dormant", "correct": false, "selected": false},
+                        {"answer": "Active", "correct": true, "selected": false},
+                        {"answer": "Extinct", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Active"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A stage of a volcano where it has not erupted for a long time but have the possibility of erupting.",
+                    "answers": [
+                        {"answer": "Active", "correct": false, "selected": false},
+                        {"answer": "Extinct", "correct": false, "selected": false},
+                        {"answer": "Dormant", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Dormant"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A stage of a volcano where it has erupted thousands of years ago and has no possibility of erupting again.",
+                    "answers": [
+                        {"answer": "Extinct", "correct": true, "selected": false},
+                        {"answer": "Dormant", "correct": false, "selected": false},
+                        {"answer": "Active", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Extinct"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The Earth’s crust is made up of huge slabs called ______, which fit together like a jigsaw puzzle.",
+                    "answers": [
+                        {"answer": "Plates", "correct": true, "selected": false},
+                        {"answer": "Cups", "correct": false, "selected": false},
+                        {"answer": "Caves", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Plates"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It causes earthquakes and volcanic eruptions near the edges of the plates.",
+                    "answers": [
+                        {"answer": "Fiction", "correct": false, "selected": false},
+                        {"answer": "Erosion", "correct": false, "selected": false},
+                        {"answer": "Friction", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Friction"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The reason why volcanoes erupt.",
+                    "answers": [
+                        {"answer": "Tectonic plates", "correct": true, "selected": false},
+                        {"answer": "Sonic plates", "correct": false, "selected": false},
+                        {"answer": "Seismic plates", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Tectonic plates"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A type of volcano that is a circular or oval cone made up of small fragments of lava from a single event.",
+                    "answers": [
+                        {"answer": "Dormant cone volcano", "correct": false, "selected": false},
+                        {"answer": "Cinder cone volcano", "correct": true, "selected": false},
+                        {"answer": "Shield cone volcano", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Cinder cone volcano"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A steep-sided volcano composed of many layers of volcanic rocks.",
+                    "answers": [
+                        {"answer": "Active volcano", "correct": false, "selected": false},
+                        {"answer": "Composite volcano", "correct": true, "selected": false},
+                        {"answer": "Shield volcano", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Composite volcano"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A volcano shaped like a bowl in the middle with long gentle slopes made by basaltic lava flows.",
+                    "answers": [
+                        {"answer": "Composite volcano", "correct": false, "selected": false},
+                        {"answer": "Lava volcano", "correct": false, "selected": false},
+                        {"answer": "Shield volcano", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Shield volcano"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A type of volcano where lava domes are formed when erupting lava is too thick to flow and makes a steep-sided mound as the lava piles up near the volcanic vent.",
+                    "answers": [
+                        {"answer": "Composite volcano", "correct": false, "selected": false},
+                        {"answer": "Active volcano", "correct": false, "selected": false},
+                        {"answer": "Lava volcano", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Lava volcano"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These have been known to knock down entire forests.",
+                    "answers": [
+                        {"answer": "Forest earthquake", "correct": false, "selected": false},
+                        {"answer": "Volcanic eruption", "correct": true, "selected": false},
+                        {"answer": "Forest landslide", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Volcanic eruption"
+                }
+                ]
 }

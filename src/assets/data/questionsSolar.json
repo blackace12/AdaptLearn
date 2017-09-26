@@ -1,116 +1,605 @@
 {
     "questions": [
 
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "Astronomy Questions",
-            "answers": [
-                {"answer": "Non-living Things", "correct": false, "selected": false},
-                {"answer": "Living Things", "correct": true, "selected": false},
-                {"answer": "None of the above", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        }
-
-    ]
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These are special instruments that tell as that the Sun is made almost entirely of two gases, hydrogen and helium.",
+                    "answers": [
+                        {"answer": "Spectrographs", "correct": true, "selected": false},
+                        {"answer": "Spectacle Telescopes", "correct": false, "selected": false},
+                        {"answer": "Telegraphs", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Spectrographs"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The Sun becomes active every ______ years.",
+                    "answers": [
+                        {"answer": "12", "correct": false, "selected": false},
+                        {"answer": "11", "correct": true, "selected": false},
+                        {"answer": "10", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"11"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "When was the last Solar Maximum?",
+                    "answers": [
+                        {"answer": "2010", "correct": false, "selected": false},
+                        {"answer": "2011", "correct": false, "selected": false},
+                        {"answer": "2001", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"2001"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is beyond Mars.",
+                    "answers": [
+                        {"answer": "Asteroid Belt", "correct": true, "selected": false},
+                        {"answer": "Venus", "correct": false, "selected": false},
+                        {"answer": "Sun", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Sun"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The surface of the Sun is about ______ degrees Celsius.",
+                    "answers": [
+                        {"answer": "5000", "correct": false, "selected": false},
+                        {"answer": "5600", "correct": false, "selected": false},
+                        {"answer": "5500", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"5500"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "An object which was at least as big as Pluto was discovered very far from the Sun in 2005.",
+                    "answers": [
+                        {"answer": "Ernis", "correct": false, "selected": false},
+                        {"answer": "Eris", "correct": true, "selected": false},
+                        {"answer": "Aries", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Eris"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is made up of the Sun and all of the smaller objects that move around it.",
+                    "answers": [
+                        {"answer": "Universe", "correct": false, "selected": false},
+                        {"answer": "Solar System", "correct": true, "selected": false},
+                        {"answer": "Milky Way", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Solar System"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "In 2006, the _______ decided that Pluto and Eris must be classed as ‘dwarf planets’.",
+                    "answers": [
+                        {"answer": "International Astronomical Unit", "correct": false, "selected": false},
+                        {"answer": "Internal Astronomy Union", "correct": false, "selected": false},
+                        {"answer": "International Astronomical Union", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"International Astronomical Union"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the first planet from the Sun.",
+                    "answers": [
+                        {"answer": "Mars", "correct": false, "selected": false},
+                        {"answer": "Venus", "correct": false, "selected": false},
+                        {"answer": "Mercury", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Mercury"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It was one of the most complex space missions ever flown.",
+                    "answers": [
+                        {"answer": "Bepi Colombo", "correct": true, "selected": false},
+                        {"answer": "Bepi Coloumb", "correct": false, "selected": false},
+                        {"answer": "Bepi Columbus", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Bepi Colombo"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It appears as a brilliant morning or evening 'star'.",
+                    "answers": [
+                        {"answer": "Mercury", "correct": false, "selected": false},
+                        {"answer": "Venus", "correct": true, "selected": false},
+                        {"answer": "Juno", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Venus"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the second planet from the Sun.",
+                    "answers": [
+                        {"answer": "Mercury", "correct": false, "selected": false},
+                        {"answer": "Earth", "correct": false, "selected": false},
+                        {"answer": "Venus", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Venus"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is considered as Earth’s twin.",
+                    "answers": [
+                        {"answer": "Mars", "correct": false, "selected": false},
+                        {"answer": "Moon", "correct": false, "selected": false},
+                        {"answer": "Venus", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Venus"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It takes how many days to complete an orbit of the Sun?",
+                    "answers": [
+                        {"answer": "369 days", "correct": false, "selected": false},
+                        {"answer": "365 days", "correct": true, "selected": false},
+                        {"answer": "336 days", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"365 day"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is neither too hot nor too cold for oceans to exist.",
+                    "answers": [
+                        {"answer": "Earth", "correct": true, "selected": false},
+                        {"answer": "Uranus", "correct": false, "selected": false},
+                        {"answer": "Saturn", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Earth"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is also called as the Red Planet.",
+                    "answers": [
+                        {"answer": "Jupiter", "correct": false, "selected": false},
+                        {"answer": "Mars", "correct": true, "selected": false},
+                        {"answer": "Venus", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Mars"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the third planet from the Sun.",
+                    "answers": [
+                        {"answer": "Earth", "correct": true, "selected": false},
+                        {"answer": "Uranus", "correct": false, "selected": false},
+                        {"answer": "Pluto", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Earth"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the largest of the four rocky planets in the solar system.",
+                    "answers": [
+                        {"answer": "Mars", "correct": false, "selected": false},
+                        {"answer": "Pluto", "correct": false, "selected": false},
+                        {"answer": "Earth", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Earth"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the fourth planet from the Sun.",
+                    "answers": [
+                        {"answer": "Mercury", "correct": false, "selected": false},
+                        {"answer": "Mars", "correct": true, "selected": false},
+                        {"answer": "Mluto", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Mars"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These are the moons that orbit Mars.",
+                    "answers": [
+                        {"answer": "Phonos and Denmos", "correct": false, "selected": false},
+                        {"answer": "Phomos and Deinos", "correct": false, "selected": false},
+                        {"answer": "Phobos and Deimos", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Phobos and Deimos"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is beyond the asteroid belt and is the fifth planet from the Sun.",
+                    "answers": [
+                        {"answer": "Saturn", "correct": false, "selected": false},
+                        {"answer": "Mars", "correct": false, "selected": false},
+                        {"answer": "Jupiter", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Jupiter"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is known as the Gas Giant",
+                    "answers": [
+                        {"answer": "Pluto", "correct": false, "selected": false},
+                        {"answer": "Saturn", "correct": true, "selected": false},
+                        {"answer": "Mercury", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Saturn"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "How many moons does Saturn have?",
+                    "answers": [
+                        {"answer": "35", "correct": false, "selected": false},
+                        {"answer": "31", "correct": true, "selected": false},
+                        {"answer": "38", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"31"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This planet is famous as the ‘Lord of the rings’.",
+                    "answers": [
+                        {"answer": "Neptune", "correct": false, "selected": false},
+                        {"answer": "Saturn", "correct": true, "selected": false},
+                        {"answer": "Jupiter", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Saturn"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the seventh planet from the Sun.",
+                    "answers": [
+                        {"answer": "Saturn", "correct": false, "selected": false},
+                        {"answer": "Uranus", "correct": true, "selected": false},
+                        {"answer": "Neptune", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Uranus"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "He discovered Uranus in 1781.",
+                    "answers": [
+                        {"answer": "William Shakespeare", "correct": false, "selected": false},
+                        {"answer": "William Herschel", "correct": true, "selected": false},
+                        {"answer": "William Demitri", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"William Herschel"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "How many moons does Uranus have?",
+                    "answers": [
+                        {"answer": "75", "correct": false, "selected": false},
+                        {"answer": "21", "correct": true, "selected": false},
+                        {"answer": "16", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"21"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the eighth planet from the Sun.",
+                    "answers": [
+                        {"answer": "Neptune", "correct": true, "selected": false},
+                        {"answer": "Uranus", "correct": false, "selected": false},
+                        {"answer": "Pluto", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Neptune"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "When was Neptune discovered?",
+                    "answers": [
+                        {"answer": "1852", "correct": false, "selected": false},
+                        {"answer": "1793", "correct": false, "selected": false},
+                        {"answer": "1846", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"1846"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Neptune has how many rings?",
+                    "answers": [
+                        {"answer": "10", "correct": false, "selected": false},
+                        {"answer": "26", "correct": false, "selected": false},
+                        {"answer": "5", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"5"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the eighth planet from the Sun.",
+                    "answers": [
+                        {"answer": "Pluto", "correct": true, "selected": false},
+                        {"answer": "Juno", "correct": false, "selected": false},
+                        {"answer": "Saturn", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Pluto"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Who discovered Pluto?",
+                    "answers": [
+                        {"answer": "Clyde Tombaugh ", "correct": true, "selected": false},
+                        {"answer": "Jon Snow", "correct": false, "selected": false},
+                        {"answer": "Adam Smears", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Clyde Tombaugh"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the largest moon of Pluto.",
+                    "answers": [
+                        {"answer": "Cheron", "correct": false, "selected": false},
+                        {"answer": "Charon", "correct": true, "selected": false},
+                        {"answer": "Chiron", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Charon"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Region where the family of icy worlds that occupy the space beyond Neptune is found.",
+                    "answers": [
+                        {"answer": "Caper Belt", "correct": false, "selected": false},
+                        {"answer": "Asteroid Belt", "correct": false, "selected": false},
+                        {"answer": "Kuiper Belt", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Kuiper Belt"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "When was the first Kuiper Belt object discovered?",
+                    "answers": [
+                        {"answer": "1952", "correct": false, "selected": false},
+                        {"answer": "1992", "correct": true, "selected": false},
+                        {"answer": "1865", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"1992"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These planets are smaller than the normal planets.",
+                    "answers": [
+                        {"answer": "Small planets", "correct": false, "selected": false},
+                        {"answer": "Mini planets", "correct": false, "selected": false},
+                        {"answer": "Dwarf planets", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Dwarf planets"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Kuiper Belt was named after this Dutch-born astronomer.",
+                    "answers": [
+                        {"answer": "Gerard Kuiper", "correct": true, "selected": false},
+                        {"answer": "Gerald Lecraux", "correct": false, "selected": false},
+                        {"answer": "Gerand Butler", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Gerard Kuiper"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The nickname of 2003 UB313 before it was given the proper name Eris.",
+                    "answers": [
+                        {"answer": "Xena", "correct": true, "selected": false},
+                        {"answer": "Gamora", "correct": false, "selected": false},
+                        {"answer": "Nebula", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Xena"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the furthest object seen in the Solar System.",
+                    "answers": [
+                        {"answer": "Eris", "correct": true, "selected": false},
+                        {"answer": "Pluto", "correct": false, "selected": false},
+                        {"answer": "Kuiper Belt", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Eris"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This planet spins backwards.",
+                    "answers": [
+                        {"answer": "Saturn", "correct": false, "selected": false},
+                        {"answer": "Pluto", "correct": true, "selected": false},
+                        {"answer": "Mercury", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Pluto"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is Neptune’s largest moon.",
+                    "answers": [
+                        {"answer": "Triton", "correct": true, "selected": false},
+                        {"answer": "Poseidon", "correct": false, "selected": false},
+                        {"answer": "Aqua", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Triton"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This planet has many active icy volcanoes.",
+                    "answers": [
+                        {"answer": "Neptune", "correct": true, "selected": false},
+                        {"answer": "Pluto", "correct": false, "selected": false},
+                        {"answer": "Uranus", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Neptune"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A day on Uranus lasts how long?",
+                    "answers": [
+                        {"answer": "17 hours 14 minutes", "correct": true, "selected": false},
+                        {"answer": "25 hours 10 minutes", "correct": false, "selected": false},
+                        {"answer": "52 hours 25 minutes", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"17 hours 14 minutes"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the second largest moon in the Solar System.",
+                    "answers": [
+                        {"answer": "Artemis", "correct": false, "selected": false},
+                        {"answer": "Titan", "correct": true, "selected": false},
+                        {"answer": "Nebula", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Titan"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is often regarded as an arid world covered in deserts.",
+                    "answers": [
+                        {"answer": "Mercury", "correct": false, "selected": false},
+                        {"answer": "Venus", "correct": false, "selected": false},
+                        {"answer": "Mars", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Mars"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Mars’ moon which means Panic.",
+                    "answers": [
+                        {"answer": "Deimos", "correct": true, "selected": false},
+                        {"answer": "Phobos", "correct": false, "selected": false},
+                        {"answer": "Triotos", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Deimos"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The temperature here reaches up to 6000 degrees celsius.",
+                    "answers": [
+                        {"answer": "Earth’s core", "correct": true, "selected": false},
+                        {"answer": "Mercury", "correct": false, "selected": false},
+                        {"answer": "Solar Flare", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Earth’s core"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "When the water is heated by the Sun, it changes into a gas also known as ____.",
+                    "answers": [
+                        {"answer": "Water gas", "correct": false, "selected": false},
+                        {"answer": "Carbon Dioxide", "correct": false, "selected": false},
+                        {"answer": "Water Vapour", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Water Vapour"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It takes how many days to complete the orbit of Earth around the Sun?",
+                    "answers": [
+                        {"answer": "345 days", "correct": false, "selected": false},
+                        {"answer": "269 days", "correct": false, "selected": false},
+                        {"answer": "365 days", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"365 days"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "This planet is named after the winged god of messenger.",
+                    "answers": [
+                        {"answer": "Venus", "correct": false, "selected": false},
+                        {"answer": "Mercury", "correct": true, "selected": false},
+                        {"answer": "Earth", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Mercury"
+                }
+                ]
 }

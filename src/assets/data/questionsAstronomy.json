@@ -1,116 +1,427 @@
-{
+
+{/* Questions for Astronomy */
     "questions": [
 
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "Astronomy Questions",
-            "answers": [
-                {"answer": "Non-living Things", "correct": false, "selected": false},
-                {"answer": "Living Things", "correct": true, "selected": false},
-                {"answer": "None of the above", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        }
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is where stars are born.",
+                    "answers": [
+                        {"answer": "Comets", "correct": false, "selected": false},
+                        {"answer": "Supernova", "correct": false, "selected": false},
+                        {"answer": "Nebula", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Nebula"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the most famous nebula which is just visible with the unaided eye.",
+                    "answers": [
+                        {"answer": "Onion Nebula", "correct": false, "selected": false},
+                        {"answer": "Orion Nebula", "correct": true, "selected": false},
+                        {"answer": "Oneon Nebula", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Orion Nebula"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These start to shrink at their own gravity.",
+                    "answers": [
+                        {"answer": "Gas deposits", "correct": false, "selected": false},
+                        {"answer": "Gas clouds", "correct": false, "selected": false},
+                        {"answer": "Hot gas", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Hot gas"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "One teaspoon of material from a white dwarf would weigh up to ______.",
+                    "answers": [
+                        {"answer": "1000 tonnes", "correct": false, "selected": false},
+                        {"answer": "150 tonnes", "correct": false, "selected": false},
+                        {"answer": "100 tonnes", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"100 tonnes"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Over billions of years, the __________ cools and becomes invisible.",
+                    "answers": [
+                        {"answer": "Black dwarf", "correct": false, "selected": false},
+                        {"answer": "White dwarf", "correct": true, "selected": false},
+                        {"answer": "Nebula", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Nebula"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "When the temperature reaches _______ degrees celsius, the clump becomes a new star.",
+                    "answers": [
+                        {"answer": "15 million", "correct": false, "selected": false},
+                        {"answer": "5 billion", "correct": false, "selected": false},
+                        {"answer": "10 million", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"10 million"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Located ten thousand light years from Earth.",
+                    "answers": [
+                        {"answer": "Nebula core", "correct": false, "selected": false},
+                        {"answer": "Cas A", "correct": true, "selected": false},
+                        {"answer": "Gas clouds", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Cas A"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Some supernovas occur when massive stars run out of ________ in their cores.",
+                    "answers": [
+                        {"answer": "Gas deposits", "correct": false, "selected": false},
+                        {"answer": "Nuclear fuel", "correct": true, "selected": false},
+                        {"answer": "Heat emissions", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Nuclear fuel"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A red supergiant that is 800 times wider than the Sun.",
+                    "answers": [
+                        {"answer": "Decius", "correct": false, "selected": false},
+                        {"answer": "Antares", "correct": true, "selected": false},
+                        {"answer": "Celiseus", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Antares"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The coolest and slowest burning stars.",
+                    "answers": [
+                        {"answer": "White dwarfs", "correct": false, "selected": false},
+                        {"answer": "Blue nebula", "correct": false, "selected": false},
+                        {"answer": "Red dwarfs", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Red dwarfs"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Gigantic groups where nearly all stars belong to.",
+                    "answers": [
+                        {"answer": "Galaxies", "correct": true, "selected": false},
+                        {"answer": "Star nests", "correct": false, "selected": false},
+                        {"answer": "Nebula fields", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Galaxies"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The Milky Way is shaped like a huge whirlpool that rotates once every ______ million years.",
+                    "answers": [
+                        {"answer": "100", "correct": false, "selected": false},
+                        {"answer": "200", "correct": true, "selected": false},
+                        {"answer": "350", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"200"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Each _______ is very old and contains up to one million stars.",
+                    "answers": [
+                        {"answer": "Nebular field", "correct": false, "selected": false},
+                        {"answer": "Globular cluster", "correct": true, "selected": false},
+                        {"answer": "Giant galaxies", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Globular cluster"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "A large spiral galaxy that is within the so-called Local Group.",
+                    "answers": [
+                        {"answer": "Black Supernova", "correct": false, "selected": false},
+                        {"answer": "Leonidas", "correct": false, "selected": false},
+                        {"answer": "Andromeda", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Andromeda"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Small galaxies which can be seen by the naked eye from countries south of the equator.",
+                    "answers": [
+                        {"answer": "Magellanic clouds", "correct": true, "selected": false},
+                        {"answer": "The Milky Way", "correct": false, "selected": false},
+                        {"answer": "Andromeda B1", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Magellanic clouds"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The Milky Way belongs to a cluster of at least  _______ galaxies.",
+                    "answers": [
+                        {"answer": "10", "correct": false, "selected": false},
+                        {"answer": "40", "correct": true, "selected": false},
+                        {"answer": "47", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"40"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Small chunks of rock that travel through space.",
+                    "answers": [
+                        {"answer": "Meteoroids", "correct": true, "selected": false},
+                        {"answer": "Supernova", "correct": false, "selected": false},
+                        {"answer": "Debris", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Meteoroids"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Caused by meteorites entering the upper atmosphere at speeds of around 15 km/s.",
+                    "answers": [
+                        {"answer": "Space debris", "correct": false, "selected": false},
+                        {"answer": "Meteors", "correct": true, "selected": false},
+                        {"answer": "Stardust", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Meteors"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Between Jupiter and Mars where nearly all meteorites come from.",
+                    "answers": [
+                        {"answer": "Kuiper Belt", "correct": false, "selected": false},
+                        {"answer": "Judas Belt", "correct": false, "selected": false},
+                        {"answer": "Asteroid Belt", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Asteroid Belt"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The largest iron meteorite on Earth.",
+                    "answers": [
+                        {"answer": "Hoba", "correct": true, "selected": false},
+                        {"answer": "Habo", "correct": false, "selected": false},
+                        {"answer": "Habb", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Hoba"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "At certain times of the year, Earth passes through a _____.",
+                    "answers": [
+                        {"answer": "Solar ring", "correct": false, "selected": false},
+                        {"answer": "Cosmic cloud", "correct": false, "selected": false},
+                        {"answer": "Comet trail", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Comet trail"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "What does the word comet mean?",
+                    "answers": [
+                        {"answer": "Shiny Star", "correct": false, "selected": false},
+                        {"answer": "Hairy Star", "correct": true, "selected": false},
+                        {"answer": "Bright Star", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Hairy Star"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Spacecraft that was used to discover thousands of small comets that fly over close to the Sun.",
+                    "answers": [
+                        {"answer": "Esa’s SOHO", "correct": true, "selected": false},
+                        {"answer": "Hubble Spacecraft", "correct": false, "selected": false},
+                        {"answer": "Andromeda elite", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Esa’s SOHO"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Largest asteroid yet visited by a spacecraft.",
+                    "answers": [
+                        {"answer": "Artemis", "correct": false, "selected": false},
+                        {"answer": "Lunetta", "correct": false, "selected": false},
+                        {"answer": "Lutetia", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Lutetia"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "One of the most interesting metal-rich asteroids.",
+                    "answers": [
+                        {"answer": "Vesta", "correct": true, "selected": false},
+                        {"answer": "Demos", "correct": false, "selected": false},
+                        {"answer": "Kladro", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Vesta"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "These are often called shooting stars.",
+                    "answers": [
+                        {"answer": "Comets", "correct": false, "selected": false},
+                        {"answer": "Meteors", "correct": true, "selected": false},
+                        {"answer": "Asteroids", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Meteors"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The most famous meteor shower which takes place every year between 14 and 20 November.",
+                    "answers": [
+                        {"answer": "Drakares shower", "correct": false, "selected": false},
+                        {"answer": "Leonid shower", "correct": true, "selected": false},
+                        {"answer": "Kinessa shower", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Leonid shower"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The coolest stars in the universe.",
+                    "answers": [
+                        {"answer": "Red stars", "correct": true, "selected": false},
+                        {"answer": "Blue stars", "correct": false, "selected": false},
+                        {"answer": "Yellow stars", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Red stars"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "The hottest stars in the universe.",
+                    "answers": [
+                        {"answer": "Blue stars", "correct": true, "selected": false},
+                        {"answer": "Red stars", "correct": false, "selected": false},
+                        {"answer": "White stars", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Blue stars"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Stars undergo this process when they die",
+                    "answers": [
+                        {"answer": "Nebula cluster", "correct": false, "selected": false},
+                        {"answer": "Supernova explosion", "correct": true, "selected": false},
+                        {"answer": "Gas explosion", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Supernova explosion"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It is the name of our galaxy.",
+                    "answers": [
+                        {"answer": "Andromeda", "correct": false, "selected": false},
+                        {"answer": "Leonidas B", "correct": false, "selected": false},
+                        {"answer": "The Milky Way", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"The Milky Way"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Almost everything on Earth is made of elements that come from its stardust.",
+                    "answers": [
+                        {"answer": "Supernova", "correct": true, "selected": false},
+                        {"answer": "Nebula", "correct": false, "selected": false},
+                        {"answer": "Andromeda", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Supernova"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "One of the last supernovas in the Milky Way took place about _____ years ago in the constellation Cassiopeia.",
+                    "answers": [
+                        {"answer": "340", "correct": true, "selected": false},
+                        {"answer": "510", "correct": false, "selected": false},
+                        {"answer": "123", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"340"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Red stars are the coolest, with surface temperatures of around _______ degrees celsius.",
+                    "answers": [
+                        {"answer": "3450", "correct": false, "selected": false},
+                        {"answer": "1253", "correct": false, "selected": false},
+                        {"answer": "2500", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"2500"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Blue-white stars are the hottest, reaching a sizzling ______ degrees.",
+                    "answers": [
+                        {"answer": "40,000", "correct": true, "selected": false},
+                        {"answer": "23,124", "correct": false, "selected": false},
+                        {"answer": "64,000", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"40,000"
+                }
 
-    ]
+                ]
 }
