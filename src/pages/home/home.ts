@@ -1,13 +1,19 @@
+import { LearnertestPage } from './../learnertest/learnertest';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  currentUser:any;
+  introSlides: FirebaseListObservable<any>;
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, af: AngularFireDatabase, afAuth: AngularFireAuth) {
+    this.introSlides = af.list('/Users/');
+    this.currentUser = afAuth.auth.currentUser.uid;
 
   }
 
@@ -30,7 +36,8 @@ export class HomePage {
     ];
 
     onButtonClicked(){
-      this.navCtrl.push(LoginPage);
+      this.introSlides.update( this.currentUser, { introSlides: 'true' });
+      this.navCtrl.setRoot(LearnertestPage);
     }
 }
 
