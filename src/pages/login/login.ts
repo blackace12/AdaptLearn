@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { LearnertestPage } from './../learnertest/learnertest';
 
 import { SplashscreenPage } from './../splashscreen/splashscreen';
@@ -31,6 +32,7 @@ export class LoginPage {
   loading: Loading;
   checker: any;
   currentUser: any;
+  introSlides:any;
   constructor(public navCtrl: NavController, public authData: AuthProvider, public navParams: NavParams, public modalCtrl: ModalController, public formBuilder: FormBuilder, public alertCtrl: AlertController,
     public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public toastCtrl: ToastController) {
 
@@ -56,13 +58,20 @@ export class LoginPage {
           if (this.currentUser != null) {
             var checked = this.af.object('/Users/' + this.currentUser, { preserveSnapshot: true });
             checked.subscribe(snapshot => {
-              console.log(this.currentUser + " <- Current user");
-              console.log(snapshot.val().Checker + " <- Checker");
               this.checker = snapshot.val().Checker;
+              this.introSlides = snapshot.val().introSlides
 
-              if (this.checker == "false" || this.checker == null) {
+              if (this.checker == "false" || this.checker == null && this.introSlides == "false" || this.introSlides == null) {
+                this.navCtrl.setRoot(HomePage);
+              }
+              else if(this.introSlides == "false" || this.introSlides == null){
+                this.navCtrl.setRoot(HomePage);
+              }
+              else if (this.checker == "false" || this.checker == null){
                 this.navCtrl.setRoot(LearnertestPage);
-              } else {
+              }
+
+              else {
                 this.navCtrl.setRoot(SplashscreenPage);
               }
 
