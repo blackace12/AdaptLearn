@@ -19,10 +19,10 @@
         <ion-item>
           <ion-input #password formControlName="password" type="password" placeholder="Password" [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
         </ion-item>
-        <!-- <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  &&
+        <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  &&
           loginForm.controls.password.dirty">
-          //<p>Password needs atleast 8 characters.</p>
-        </ion-item> -->
+          <p>Please enter your password.</p>
+        </ion-item>
 
         <button color="secondary" ion-button block type="submit">
           Login
