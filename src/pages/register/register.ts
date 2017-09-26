@@ -11,34 +11,46 @@ import { LoginPage } from '../login/login';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  public signupForm:FormGroup;
-  public loading:Loading;
+  public signupForm: FormGroup;
+  public loading: Loading;
 
   constructor(public navCtrl: NavController, public authData: AuthProvider,
     public formBuilder: FormBuilder, public loadingCtrl: LoadingController,
     public alertCtrl: AlertController, public navParams: NavParams) {
 
-      this.signupForm = formBuilder.group({
-        email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
-        password: ['', Validators.compose([Validators.minLength(8), Validators.required])]
-      });
+    this.signupForm = formBuilder.group({
+      email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
+      password: ['', Validators.compose([Validators.minLength(8), Validators.required])]
+    });
 
-    }
+  }
 
-  loginPage(){
+  loginPage() {
     this.navCtrl.setRoot(LoginPage);
   }
 
-  signupUser(){
-    if (!this.signupForm.valid){
+  signupUser() {
+    if (!this.signupForm.valid) {
       console.log(this.signupForm.value);
     } else {
       this.authData.signupUser(this.signupForm.value.email, this.signupForm.value.password)
-      .then(() => {
-        this.navCtrl.setRoot(LoginPage);
-      }, (error) => {
-        this.loading.dismiss().then( () => {
-          var errorMessage: string = error.message;
+        .then(() => {
+          let alert = this.alertCtrl.create({
+            title: 'Registration Successful',
+            subTitle: 'Please login to continue.',
+            buttons: [
+              {
+                text: 'OK',
+                handler: () => {
+                  this.navCtrl.setRoot(LoginPage);
+                }
+              }
+            ]
+          });
+          alert.present();
+        }, (error) => {
+          this.loading.dismiss().then(() => {
+            var errorMessage: string = error.message;
             let alert = this.alertCtrl.create({
               message: errorMessage,
               buttons: [
@@ -48,9 +60,9 @@ export class RegisterPage {
                 }
               ]
             });
-          alert.present();
+            alert.present();
+          });
         });
-      });
 
       this.loading = this.loadingCtrl.create({
         dismissOnPageChange: true,
