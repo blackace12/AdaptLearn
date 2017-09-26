@@ -139,7 +139,7 @@ export class QuizMitadaptPage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "MitAdapt", Passed: true, Score: this.score, Quiz: 9
+            Chapter_Quiz: "MitAdapt", Passed: true, Score: this.score, ProgressRate: 100
           }
         ).key;
         console.log(this.quizID);
@@ -149,14 +149,14 @@ export class QuizMitadaptPage {
           QuizID: this.quizID,
           Chapter_Quiz: "MitAdapt",
           Passed: true, Score: this.score,
-          Quiz: 9
+          ProgressRate: 100
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "MitAdapt", Passed: false, Score: this.score, Quiz: 9
+            Chapter_Quiz: "MitAdapt", Passed: false, Score: this.score, ProgressRate: 100
           }
         ).key;
         console.log(this.quizID);
@@ -164,7 +164,7 @@ export class QuizMitadaptPage {
           QuizID: this.quizID,
           Chapter_Quiz: "MitAdapt",
           Passed: true, Score: this.score,
-          Quiz: 9
+          ProgressRate: 100
         });
       }
       console.log("Eto yun");

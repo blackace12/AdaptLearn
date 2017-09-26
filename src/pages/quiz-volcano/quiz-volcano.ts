@@ -138,7 +138,7 @@ export class QuizVolcanoPage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Volcanic", Passed: true, Score: this.score, Quiz: 6
+            Chapter_Quiz: "Volcanic", Passed: true, Score: this.score, ProgressRate: 60
           }
         ).key;
         console.log(this.quizID);
@@ -148,14 +148,14 @@ export class QuizVolcanoPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Volcanic",
           Passed: true, Score: this.score,
-          Quiz: 6
+          ProgressRate: 60
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Volcanic", Passed: false, Score: this.score, Quiz: 6
+            Chapter_Quiz: "Volcanic", Passed: false, Score: this.score, ProgressRate: 60
           }
         ).key;
         console.log(this.quizID);
@@ -163,7 +163,7 @@ export class QuizVolcanoPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Volcanic",
           Passed: true, Score: this.score,
-          Quiz: 6
+          ProgressRate: 60
         });
       }
       console.log("Eto yun");

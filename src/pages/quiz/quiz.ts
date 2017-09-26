@@ -39,7 +39,7 @@ export class QuizPage {
   userQuizIDArr = [];
   updateQID: FirebaseListObservable<any>;
 
-  imagename:string;
+  imagename: string;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
@@ -63,7 +63,7 @@ export class QuizPage {
     this.slides.lockSwipes(false);
     this.slides.slideNext();
     this.slides.lockSwipes(true);
-    if (this.score>=7) {
+    if (this.score >= 7) {
       this.imagename = "../assets/img/pass.png";
     }
     else {
@@ -136,31 +136,31 @@ export class QuizPage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "UniverseFormation", Passed: true, Score: this.score, Quiz: 1
+            Chapter_Quiz: "Universe Formation", Passed: true, Score: this.score, ProgressRate: 10
           }
         ).key;
         console.log(this.quizID);
 
         this.progressID.push({
           QuizID: this.quizID,
-          Chapter_Quiz: "UniverseFormation",
+          Chapter_Quiz: "Universe Formation",
           Passed: true, Score: this.score,
-          Quiz: 1
+          ProgressRate: 10
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "UniverseFormation", Passed: false, Score: this.score, Quiz: 1
+            Chapter_Quiz: "Universe Formation", Passed: false, Score: this.score, ProgressRate: 10
           }
         ).key;
         console.log(this.quizID);
         this.progressID.push({
           QuizID: this.quizID,
-          Chapter_Quiz: "UniverseFormation",
+          Chapter_Quiz: "Universe Formation",
           Passed: true, Score: this.score,
-          Quiz: 1
+          ProgressRate: 10
         });
       }
       console.log("Eto yun");

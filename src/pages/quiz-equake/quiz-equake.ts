@@ -138,7 +138,7 @@ export class QuizEquakePage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Earthquake", Passed: true, Score: this.score, Quiz: 5
+            Chapter_Quiz: "Earthquake", Passed: true, Score: this.score, ProgressRate: 50
           }
         ).key;
         console.log(this.quizID);
@@ -148,14 +148,14 @@ export class QuizEquakePage {
           QuizID: this.quizID,
           Chapter_Quiz: "Earthquake",
           Passed: true, Score: this.score,
-          Quiz: 5
+          ProgressRate: 50
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Earthquake", Passed: false, Score: this.score, Quiz: 5
+            Chapter_Quiz: "Earthquake", Passed: false, Score: this.score, ProgressRate: 50
           }
         ).key;
         console.log(this.quizID);
@@ -163,7 +163,7 @@ export class QuizEquakePage {
           QuizID: this.quizID,
           Chapter_Quiz: "Earthquake",
           Passed: true, Score: this.score,
-          Quiz: 5
+          ProgressRate: 50
         });
       }
       console.log("Eto yun");

@@ -1,7 +1,7 @@
 import { FormBuilder } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
-import { DataEarthsystemProvider } from './../../providers/data-earthsystem/data-earthsystem';
+import { DataEarthsystemProvider } from './../../providers/data-EarthSystem/data-EarthSystem';
 
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
@@ -10,8 +10,8 @@ import * as _ from 'lodash';
 
 @IonicPage()
 @Component({
-  selector: 'page-quiz-earthsystem',
-  templateUrl: 'quiz-earthsystem.html',
+  selector: 'page-quiz-Earth System',
+  templateUrl: 'quiz-Earth System.html',
 })
 export class QuizEarthsytemPage {
   @ViewChild('slides') slides: any;
@@ -140,7 +140,7 @@ export class QuizEarthsytemPage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "EarthSystem", Passed: true, Score: this.score, Quiz: 4
+            Chapter_Quiz: "Earth System", Passed: true, Score: this.score, ProgressRate: 40
           }
         ).key;
         console.log(this.quizID);
@@ -148,24 +148,24 @@ export class QuizEarthsytemPage {
 
         this.progressID.push({
           QuizID: this.quizID,
-          Chapter_Quiz: "EarthSystem",
+          Chapter_Quiz: "Earth System",
           Passed: true, Score: this.score,
-          Quiz: 4
+          ProgressRate: 40
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "EarthSystem", Passed: false, Score: this.score, Quiz: 4
+            Chapter_Quiz: "Earth System", Passed: false, Score: this.score, ProgressRate: 40
           }
         ).key;
         console.log(this.quizID);
         this.progressID.push({
           QuizID: this.quizID,
-          Chapter_Quiz: "EarthSystem",
+          Chapter_Quiz: "Earth System",
           Passed: true, Score: this.score,
-          Quiz: 4
+          ProgressRate: 40
         });
       }
       console.log("Eto yun");
