@@ -79,11 +79,11 @@
                     "flashCardFlipped": false,
                     "questionText": "Many scientists believe that life began here.",
                     "answers": [
-                        {"answer": "Lakes and oceans", "correct": true, "selected": false},
-                        {"answer": "Planet Earth", "correct": false, "selected": false},
+                        {"answer": "Lakes and oceans", "correct": false, "selected": false},
+                        {"answer": "Planet Earth", "correct": true, "selected": false},
                         {"answer": "Rivers and mountains", "correct": false, "selected": false}
                     ],
-                    "correctAnswer":"Lakes and oceans"
+                    "correctAnswer":"Planet Earth"
                 },
                 {
                     "flashCardFront": "<img src='assets/images/earth.png' />",
@@ -215,7 +215,7 @@
                         {"answer": "Black holes", "correct": true, "selected": false},
                         {"answer": "Gravitational fields", "correct": false, "selected": false}
                     ],
-                    "correctAnswer":"Gravitation fields"
+                    "correctAnswer":"Black holes"
                 },
                 {
                     "flashCardFront": "<img src='assets/images/earth.png' />",
