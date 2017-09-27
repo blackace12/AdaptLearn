@@ -45,8 +45,8 @@ export class ListPage {
         this.user.push(snapshot.key);
       });
 
-      this.userLearningID = db.object('/UserStyle/' + this.user[0], { preserveSnapshot: true });
-      this.userLearningID.set({ UID: this.currentUser, Email: this.currentEmail });
+     /*  this.userLearningID = db.object('/UserStyle/' + this.user[0], { preserveSnapshot: true });
+      this.userLearningID.set({ UID: this.currentUser, Email: this.currentEmail }); */
 
       this.learningStyleObject2 = db.object('/LearningStyle/' + this.currentUser + '/' + this.user[0], { preserveSnapshot: true });
 
