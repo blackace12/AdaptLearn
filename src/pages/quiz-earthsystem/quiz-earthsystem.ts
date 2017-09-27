@@ -1,7 +1,7 @@
+import { DataEarthsystemProvider } from './../../providers/data-earthsystem/data-earthsystem';
 import { FormBuilder } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
-import { DataEarthsystemProvider } from './../../providers/data-EarthSystem/data-EarthSystem';
 
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
@@ -10,8 +10,8 @@ import * as _ from 'lodash';
 
 @IonicPage()
 @Component({
-  selector: 'page-quiz-Earth System',
-  templateUrl: 'quiz-Earth System.html',
+  selector: 'page-quiz-earthsystem',
+  templateUrl: 'quiz-earthsystem.html',
 })
 export class QuizEarthsytemPage {
   @ViewChild('slides') slides: any;
