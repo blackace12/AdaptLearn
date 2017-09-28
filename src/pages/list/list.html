@@ -16,8 +16,13 @@
 
       <ion-row *ngFor = "let styleElement of styles">
           <ion-col width-25>
-            <ion-card *ngIf = "styleElement && styleElement.src && styleElement.button" class="card-5 full">
+            <ion-card *ngIf = "styleElement && styleElement.src && styleElement.button && styleElement.title" class="card-1 full">
+
+                <ion-card-title>
+                    {{styleElement.title}}
+                 </ion-card-title>
              <img class="list" [src]="styleElement.src" (click)="commonMethod(styleElement.button)" />
+
            </ion-card>
          </ion-col>
        </ion-row>
