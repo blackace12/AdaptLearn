@@ -66,37 +66,44 @@ export class ListPage {
             this.styles = [
               {
                 src: './assets/img/' + this.arrayTest[0].style + '.png',
-                button: this.arrayTest[0].style + 'InstructionPage'
+                button: this.arrayTest[0].style + 'InstructionPage',
+                title:this.arrayTest[0].style + ' Learner'
               },
 
               {
                 src: './assets/img/' + this.arrayTest[1].style + '.png',
-                button: this.arrayTest[1].style + 'InstructionPage'
+                button: this.arrayTest[1].style + 'InstructionPage',
+                title:this.arrayTest[1].style + ' Learner'
               },
 
               {
                 src: './assets/img/' + this.arrayTest[2].style + '.png',
-                button: this.arrayTest[2].style + 'InstructionPage'
+                button: this.arrayTest[2].style + 'InstructionPage',
+                title:this.arrayTest[2].style + ' Learner'
               },
 
               {
                 src: './assets/img/' + this.arrayTest[3].style + '.png',
-                button: this.arrayTest[3].style + 'InstructionPage'
+                button: this.arrayTest[3].style + 'InstructionPage',
+                title:this.arrayTest[3].style + ' Learner'
               },
 
               {
                 src: './assets/img/' + this.arrayTest[4].style + '.png',
-                button: this.arrayTest[4].style + 'InstructionPage'
+                button: this.arrayTest[4].style + 'InstructionPage',
+                title:this.arrayTest[4].style + ' Learner'
               },
 
               {
                 src: './assets/img/' + this.arrayTest[5].style + '.png',
-                button: this.arrayTest[5].style + 'InstructionPage'
+                button: this.arrayTest[5].style + 'InstructionPage',
+                title:this.arrayTest[5].style + ' Learner'
               },
 
               {
                 src: './assets/img/' + this.arrayTest[6].style + '.png',
-                button: this.arrayTest[6].style + 'InstructionPage'
+                button: this.arrayTest[6].style + 'InstructionPage',
+                title:this.arrayTest[6].style + ' Learner'
               },
             ];
           }
