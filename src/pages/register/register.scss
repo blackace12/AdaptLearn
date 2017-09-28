@@ -65,6 +65,23 @@ page-register {
   position: relative;
   }
 
+  p {
+    font-size: 0.8em;
+    color: red;
+  }
+  ion-label {
+    margin-left: 5px;
+  }
+  ion-input {
+    padding: 5px;
+  }
+  .invalid {
+    border-bottom: 2px solid red;
+  }
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+
 /*  .trial2{
   background-color: #7EC0EE;
   }*/
