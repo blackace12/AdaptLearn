@@ -80,10 +80,7 @@ export class MyApp {
             console.log(snapshot.val())
             this.checkerTest.push(snapshot.val());
           });
-          /* console.log(this.checkerTest);
-          console.log(this.checkerTest[0]);
-          console.log(this.checkerTest[1]);
- */
+
           if (this.checkerTest[2] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
             this.nav.setRoot(HomePage);
           }
