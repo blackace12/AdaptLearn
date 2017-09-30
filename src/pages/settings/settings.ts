@@ -1,5 +1,4 @@
 import { LoginPage } from './../login/login';
-import { LearnertestPage } from './../learnertest/learnertest';
 import { AuthProvider } from './../../providers/auth/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
@@ -40,17 +39,19 @@ export class SettingsPage {
     this.currentUser = afAuth.auth.currentUser.uid;
     console.log(this.currentUser);
 
-    this.learningStyles = af.list('/LearningStyle/' + this.currentUser + '/');
-    console.log(this.learningStyles);
 
     this.userChecker = af.list('/Users/' + this.currentUser);
     console.log(this.userChecker);
 
+    this.learningStyles = af.list('/LearningStyle/' + this.currentUser);
+    console.log(this.learningStyles);
+
+    this.userProgress = af.list('/UserProgress/' + this.currentUser);
+    console.log(this.userProgress);
+
     this.quiz = af.list('/Quiz/');
     console.log(this.quiz);
 
-    this.userProgress = af.list('/UserProgress/' + this.currentUser + '/');
-    console.log(this.userProgress);
 
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     if (this.selectedTheme === 'day-theme') {
@@ -73,17 +74,37 @@ export class SettingsPage {
   Reset() {
     let alert = this.alertCtrl.create({
       title: 'Reset Confirmation',
-      message: 'Do you want to reset your Learning Style?',
+      message: 'Are you sure you want to reset your account?',
       buttons: [
         {
           text: 'Yes',
           handler: data => {
-            this.userChecker.update({ Checker: "true" });
-            this.userProgress.remove();
+            this.userChecker.remove();
             this.learningStyles.remove();
-            this.navCtrl.setRoot(LearnertestPage);
-            console.log('Yes clicked');
+
+            if (this.userProgress != undefined || this.userProgress != null){
+              this.userProgress.remove();
+            }else {
+              console.log('Undefined/Null');
+            }
+
+            let alert = this.alertCtrl.create({
+              message: "Account successfully reset! Please login to continue.",
+              buttons: [
+                {
+                  text: "Ok",
+                  role: 'cancel',
+                }
+              ]
+            });
+            alert.present();
+            this.auth.logoutUser().then(() => {
+              this.navCtrl.setRoot(LoginPage);
+            });
+
+
           }
+
         },
         {
           text: 'No',
@@ -96,6 +117,7 @@ export class SettingsPage {
       ]
     });
     alert.present();
+
   }
 
 
@@ -112,6 +134,11 @@ export class SettingsPage {
           placeholder: 'New password',
           type: 'password'
         },
+        {
+          name: 'confirmPassword',
+          placeholder: 'Confirm password',
+          type: 'password'
+        },
       ],
       buttons: [
         {
@@ -120,10 +147,9 @@ export class SettingsPage {
         {
           text: 'Save',
           handler: data => {
-
-            this.settings.updatePassword(data.newPassword, data.oldPassword).then(() => {
+            if (data.newPassword.length < 8){
               let alert = this.alertCtrl.create({
-                message: "Password Changed Successfully!, Please log in again!",
+                message: "Password needs atleast 8 characters.",
                 buttons: [
                   {
                     text: "Ok",
@@ -132,13 +158,57 @@ export class SettingsPage {
                 ]
               });
               alert.present();
-              this.navCtrl.setRoot(LoginPage);
-            })
+            }
+        /*     else if (data.newPassword == null || data.oldPassword == null || data.confirmPassword == null ){
+              console.log("Please enter credentials");
+            } */
+            else if (data.newPassword != data.confirmPassword) {
+              let alert = this.alertCtrl.create({
+                message: "Password does not match the confirm password!",
+                buttons: [
+                  {
+                    text: "Ok",
+                    role: 'cancel'
+                  }
+                ]
+              });
+              alert.present();
+            } else {
+              this.settings.updatePassword(data.newPassword, data.oldPassword).then(() => {
+                let alert = this.alertCtrl.create({
+                  message: "Password Changed Successfully!, Please log in again!",
+                  buttons: [
+                    {
+                      text: "Ok",
+                      role: 'cancel'
+                    }
+                  ]
+                });
+                alert.present();
+                this.navCtrl.setRoot(LoginPage);
+              }, error => {
+                this.loading.dismiss().then(() => {
+                  let alert = this.alertCtrl.create({
+                    message: error.message,
+                    buttons: [
+                      {
+                        text: "Ok",
+                        role: 'Cancel'
+                      }
+                    ]
+                  });
+                  alert.present();
+                });
+              });
+              this.loading = this.loadingCtrl.create({
+                dismissOnPageChange: true,
+              });
+              this.loading.present();
+            }
+
           }
         }
       ]
-
-
     });
     alert.present();
   }

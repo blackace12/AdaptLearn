@@ -44,14 +44,13 @@ export class LessonEarthPage {
 
       else if (this.arrayTest !== null) {
         for (var i = 0; i < this.arrayTest.length; i++) {
-          if (this.arrayTest[i].Chapter_Quiz == "UniverseFormation" && this.arrayTest[i].Passed == true) {
+          if (this.arrayTest[i].Chapter_Quiz == "Universe Formation" && this.arrayTest[i].Passed == true) {
             this.lessonUnlocked = [{
-              name: "unlock",
               valid: false,
             }];
             console.log('Unlocked')
           }
-          else if (this.arrayTest[i].Chapter_Quiz == "UniverseFormation" && this.arrayTest[i].Passed == false) {
+          else if (this.arrayTest[i].Chapter_Quiz == "Universe Formation" && this.arrayTest[i].Passed == false) {
             this.lessonUnlocked = [{
               name: "lock",
               valid: true,
@@ -73,7 +72,6 @@ export class LessonEarthPage {
         for (var i = 0; i < this.arrayTest.length; i++) {
           if (this.arrayTest[i].Chapter_Quiz == "Astronomy" && this.arrayTest[i].Passed == true) {
             this.lessonUnlocked2 = [{
-              name: "unlock",
               valid: false,
             }];
             console.log('Unlocked')
@@ -99,14 +97,13 @@ export class LessonEarthPage {
 
       else if (this.arrayTest !== null) {
         for (var i = 0; i < this.arrayTest.length; i++) {
-          if (this.arrayTest[i].Chapter_Quiz == "SolarSystem" && this.arrayTest[i].Passed == true) {
+          if (this.arrayTest[i].Chapter_Quiz == "Solar System" && this.arrayTest[i].Passed == true) {
             this.lessonUnlocked3 = [{
-              name: "unlock",
               valid: false,
             }];
             console.log('Unlocked')
           }
-          else if (this.arrayTest[i].Chapter_Quiz == "SolarSystem" && this.arrayTest[i].Passed == false) {
+          else if (this.arrayTest[i].Chapter_Quiz == "Solar System" && this.arrayTest[i].Passed == false) {
             this.lessonUnlocked3 = [{
               name: "lock",
               valid: true,

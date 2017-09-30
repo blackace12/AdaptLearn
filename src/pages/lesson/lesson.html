@@ -17,13 +17,14 @@
 <ion-content>
   <ion-item >
   <button ion-item no-lines (click)="earthLesson();">
-      <ion-icon name="unlock"></ion-icon>  Origin and structure of the Earth
+      <img src="../assets/img/LEStructure.svg" width="35px" >  Origin and structure of the Earth
   </button>
   </ion-item>
 
   <ion-item *ngFor="let x of hazardsUnlocked">
     <button no-lines [disabled]="x.valid" ion-item (click)="naturalLesson()">
-  <ion-icon name="{{x.name}}"></ion-icon>  Natural Hazards
+        <ion-icon *ngIf="x.valid == true" name="{{x.name}}"></ion-icon>
+        <img *ngIf="x.valid == false" src="../assets/img/LHazards.svg" width="35px"> Natural Hazards
   </button>
   </ion-item>
 

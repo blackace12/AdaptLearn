@@ -47,7 +47,6 @@ export class LessonNaturalPage {
         for (var i = 0; i < this.arrayTest.length; i++) {
           if (this.arrayTest[i].Chapter_Quiz == "Earthquake" && this.arrayTest[i].Passed == true) {
             this.lessonUnlocked = [{
-              name: "unlock",
               valid: false,
             }];
             console.log('Unlocked')
@@ -74,7 +73,6 @@ export class LessonNaturalPage {
         for (var i = 0; i < this.arrayTest.length; i++) {
           if (this.arrayTest[i].Chapter_Quiz == "Volcanic" && this.arrayTest[i].Passed == true) {
             this.lessonUnlocked2 = [{
-              name: "unlock",
               valid: false,
             }];
             console.log('Unlocked')
@@ -102,7 +100,6 @@ export class LessonNaturalPage {
         for (var i = 0; i < this.arrayTest.length; i++) {
           if (this.arrayTest[i].Chapter_Quiz == "Landslide" && this.arrayTest[i].Passed == true) {
             this.lessonUnlocked3 = [{
-              name: "unlock",
               valid: false,
             }];
             console.log('Unlocked')

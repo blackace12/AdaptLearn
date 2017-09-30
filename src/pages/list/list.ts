@@ -45,8 +45,6 @@ export class ListPage {
         this.user.push(snapshot.key);
       });
 
-     /*  this.userLearningID = db.object('/UserStyle/' + this.user[0], { preserveSnapshot: true });
-      this.userLearningID.set({ UID: this.currentUser, Email: this.currentEmail }); */
 
       this.learningStyleObject2 = db.object('/LearningStyle/' + this.currentUser + '/' + this.user[0], { preserveSnapshot: true });
 
@@ -65,43 +63,43 @@ export class ListPage {
           if (this.arrayTest[0].style == this.styleArray[i]) {
             this.styles = [
               {
-                src: './assets/img/' + this.arrayTest[0].style + '.png',
+                src: './assets/img/' + this.arrayTest[0].style + '.svg',
                 button: this.arrayTest[0].style + 'InstructionPage',
                 title:this.arrayTest[0].style + ' Learner'
               },
 
               {
-                src: './assets/img/' + this.arrayTest[1].style + '.png',
+                src: './assets/img/' + this.arrayTest[1].style + '.svg',
                 button: this.arrayTest[1].style + 'InstructionPage',
                 title:this.arrayTest[1].style + ' Learner'
               },
 
               {
-                src: './assets/img/' + this.arrayTest[2].style + '.png',
+                src: './assets/img/' + this.arrayTest[2].style + '.svg',
                 button: this.arrayTest[2].style + 'InstructionPage',
                 title:this.arrayTest[2].style + ' Learner'
               },
 
               {
-                src: './assets/img/' + this.arrayTest[3].style + '.png',
+                src: './assets/img/' + this.arrayTest[3].style + '.svg',
                 button: this.arrayTest[3].style + 'InstructionPage',
                 title:this.arrayTest[3].style + ' Learner'
               },
 
               {
-                src: './assets/img/' + this.arrayTest[4].style + '.png',
+                src: './assets/img/' + this.arrayTest[4].style + '.svg',
                 button: this.arrayTest[4].style + 'InstructionPage',
                 title:this.arrayTest[4].style + ' Learner'
               },
 
               {
-                src: './assets/img/' + this.arrayTest[5].style + '.png',
+                src: './assets/img/' + this.arrayTest[5].style + '.svg',
                 button: this.arrayTest[5].style + 'InstructionPage',
                 title:this.arrayTest[5].style + ' Learner'
               },
 
               {
-                src: './assets/img/' + this.arrayTest[6].style + '.png',
+                src: './assets/img/' + this.arrayTest[6].style + '.svg',
                 button: this.arrayTest[6].style + 'InstructionPage',
                 title:this.arrayTest[6].style + ' Learner'
               },

@@ -1,3 +1,5 @@
+import { AngularFireAuth } from 'angularfire2/auth';
+import { FirebaseObjectObservable, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AuthProvider } from './../../providers/auth/auth';
 import { Component, ViewChild } from '@angular/core';
 import {MenuController, Platform,  Nav,  AlertController,  NavController} from 'ionic-angular';
@@ -20,11 +22,70 @@ export class SplashscreenPage {
   icons: string[];
   pages: Array<{ title: string, component: any, icon: string }>
 
-  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider, public menuCtrl:MenuController) {
+  styles: any[] = [];
+  learningStyleObject: FirebaseObjectObservable<any>;
+  learningStyleObject2: FirebaseObjectObservable<any>;
+  userObject: FirebaseObjectObservable<any>
+  user = [];
+  userName = [];
+
+  arrayTest = [];
+  styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
+  currentUser;
+  currentEmail;
+
+  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider, public menuCtrl:MenuController,db: AngularFireDatabase, afAuth: AngularFireAuth) {
+    this.currentUser = afAuth.auth.currentUser.uid;
+    this.currentEmail = afAuth.auth.currentUser.email;
+
+
+    this.userObject = db.object('/Users/' + this.currentUser, {preserveSnapshot: true});
+
+    this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
+
+    this.learningStyleObject.subscribe(snapshots => {
+      snapshots.forEach(snapshot => {
+        this.user.push(snapshot.key);
+      });
+
+      this.learningStyleObject2 = db.object('/LearningStyle/' + this.currentUser + '/' + this.user[0], { preserveSnapshot: true });
+
+      this.learningStyleObject2.subscribe(snapshots => {
+        snapshots.forEach(snapshot => {
+          console.log(snapshot.key);
+          this.arrayTest.push(snapshot.val());
+        });
+        this.arrayTest.sort(function (a, b) {
+          return parseInt(b.value) - parseInt(a.value);
+        });
+
+        console.log(this.arrayTest[0].style);
+
+    this.userObject.subscribe(snapshots => {
+      snapshots.forEach(snapshot => {
+        this.userName.push(snapshot.val());
+      });
+      console.log(this.userName);
+
+
+        for (var i = 0; i <= this.styleArray.length - 1; i++) {
+          if (this.arrayTest[0].style == this.styleArray[i]) {
+            this.styles = [
+              {
+                user:this.userName[2],
+                title:this.arrayTest[0].style + ' Learner'
+              },
+            ];
+          }
+        }
+      });
+    });
+    });
+
+
+
     this.initializeApp();
     this.icons = ['home', 'planet', 'podium'];
-
-
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: SplashscreenPage, icon: this.icons[0], },

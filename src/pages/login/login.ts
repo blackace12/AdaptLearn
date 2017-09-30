@@ -61,7 +61,7 @@ export class LoginPage {
               this.checker = snapshot.val().Checker;
               this.introSlides = snapshot.val().introSlides
 
-              if (this.checker == "false" || this.checker == null && this.introSlides == "false" || this.introSlides == null) {
+              if (this.checker == "false" || this.introSlides == "false") {
                 this.navCtrl.setRoot(HomePage);
               }
               else if(this.introSlides == "false" || this.introSlides == null){
@@ -76,6 +76,8 @@ export class LoginPage {
               }
 
             });
+          }else if (this.currentUser == null && this.checker == null || this.introSlides == null){
+            console.log("User = null");
           }
         }, error => {
           this.loading.dismiss().then(() => {
@@ -100,10 +102,10 @@ export class LoginPage {
   }
 
   registerPage() {
-    this.navCtrl.push(RegisterPage);
+    this.navCtrl.setRoot(RegisterPage);
   }
   forgotPage() {
-    this.navCtrl.push(ForgotpasswordPage);
+    this.navCtrl.setRoot(ForgotpasswordPage);
   }
 
 }

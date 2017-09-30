@@ -13,26 +13,29 @@
 <ion-content padding>
   <ion-item>
     <button ion-item no-lines (click)="earthquakesLesson();">
-        <ion-icon name="unlock"></ion-icon>  Earthquake
+        <img src="../assets/img/LEquake.svg" width="35px" height="35px"> Earthquake
     </button>
   </ion-item>
 
   <ion-item *ngFor="let x of lessonUnlocked">
     <button no-lines [disabled]="x.valid" ion-item (click)="volcanoLesson()">
-        <ion-icon name="{{x.name}}"></ion-icon>  Volcanic Eruption
+        <ion-icon *ngIf="x.valid == true" name="{{x.name}}"></ion-icon>
+        <img *ngIf="x.valid == false" src="../assets/img/LVolcano.svg" width="35px" height="35px"> Volcanic Eruption
         </button>
   </ion-item>
 
 
   <ion-item *ngFor="let y of lessonUnlocked2">
     <button ion-item no-lines [disabled]="y.valid" (click)="landslidesLesson()">
-        <ion-icon name="{{y.name}}"></ion-icon>  Landslide
+        <ion-icon *ngIf="y.valid == true" name="{{y.name}}"></ion-icon>
+        <img *ngIf="y.valid == false" src="../assets/img/LLandslide.svg" width="35px" height="35px"> Landslide
         </button>
   </ion-item>
 
   <ion-item *ngFor="let z of lessonUnlocked3">
     <button ion-item no-lines [disabled]="z.valid" (click)="tsunamiLesson()">
-        <ion-icon name="{{z.name}}"></ion-icon>  Tsunami
+        <ion-icon *ngIf="z.valid == true" name="{{z.name}}"></ion-icon>
+        <img *ngIf="z.valid == false" src="../assets/img/LTsunami.svg" width="35px" height="35px"> Tsunami
         </button>
   </ion-item>
 

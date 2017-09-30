@@ -1,128 +1,233 @@
-
 {
-    "questions": [
-
-
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "It is a large ocean wave that is caused by sudden motion on the ocean floor.",
-                    "answers": [
-                        {"answer": "Tsunami", "correct": true, "selected": false},
-                        {"answer": "Earthquake", "correct": false, "selected": false},
-                        {"answer": "Tectonic Plates", "correct": false, "selected": false}
-                    ],
-                    "correctAnswer":"Tsunami"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "These are potential tsunami locations.",
-                    "answers": [
-                        {"answer": "Shoreline", "correct": false, "selected": false},
-                        {"answer": "Subducation Zones", "correct": false, "selected": false},
-                        {"answer": "Subduction Zones", "correct": true, "selected": false}
-                    ],
-                    "correctAnswer":"Subduction Zones"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "Most tsunamis are caused by ______.",
-                    "answers": [
-                        {"answer": "Subducation Zones", "correct": false, "selected": false},
-                        {"answer": "Earthquakes", "correct": true, "selected": false},
-                        {"answer": "Seismic Energy", "correct": false, "selected": false}
-                    ],
-                    "correctAnswer":"Earthquakes"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "Which of the following is not a cause of a tsunami?",
-                    "answers": [
-                        {"answer": "Volcanic Eruption", "correct": false, "selected": false},
-                        {"answer": "Underwater Landslide", "correct": false, "selected": false},
-                        {"answer": "Sinking Ships", "correct": true, "selected": false}
-                    ],
-                    "correctAnswer":"Sinking Ships"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "As the stuck plate continues to descend into the mantle, the motion causes a slow distortion of the overriding plate that results to _______.",
-                    "answers": [
-                        {"answer": "Accumulated Seismic Energy", "correct": true, "selected": false},
-                        {"answer": "Accumulated Kinesthetic Energy", "correct": false, "selected": false},
-                        {"answer": "Subduction Energy", "correct": false, "selected": false}
-                    ],
-                    "correctAnswer":"Accumulated Seismic Energy"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "An area where an oceanic plate is being forced down into the mantle by plate tectonic forces.",
-                    "answers": [
-                        {"answer": "Tsunami Zones", "correct": false, "selected": false},
-                        {"answer": "Subduction Zones", "correct": true, "selected": false},
-                        {"answer": "Ring of Fire", "correct": false, "selected": false}
-                    ],
-                    "correctAnswer":"Subduction Zones"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "Tsunamis travel swiftly across the open ____.",
-                    "answers": [
-                        {"answer": "Ocean", "correct": true, "selected": false},
-                        {"answer": "Sea", "correct": false, "selected": false},
-                        {"answer": "Lake", "correct": false, "selected": false}
-                    ],
-                    "correctAnswer":"Ocean"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "Many people have the mistaken belief that tsunamis are _____ wave/s.",
-                    "answers": [
-                        {"answer": "Multiple", "correct": false, "selected": false},
-                        {"answer": "Single", "correct": true, "selected": false},
-                        {"answer": "Continuous", "correct": false, "selected": false}
-                    ],
-                    "correctAnswer":"Single"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "Tsunamis are ‘wave trains’ consisting of ______ wave/s.",
-                    "answers": [
-                        {"answer": "Multiple", "correct": true, "selected": false},
-                        {"answer": "Single", "correct": false, "selected": false},
-                        {"answer": "Single", "correct": false, "selected": false}
-                    ],
-                    "correctAnswer":"Multiple"
-                },
-                {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
-                    "flashCardBack": "",
-                    "flashCardFlipped": false,
-                    "questionText": "The impact of a ______ could also cause a tsunami.",
-                    "answers": [
-                        {"answer": "Boulder", "correct": false, "selected": false},
-                        {"answer": "Cannon Ball", "correct": false, "selected": false},
-                        {"answer": "Large Meteorite", "correct": true, "selected": false}
-                    ],
-                    "correctAnswer":"Large Meteorite"
-                }
-
-                ]
+  "questions": [{
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "It is a large ocean wave that is caused by sudden motion on the ocean floor.",
+      "answers": [{
+          "answer": "Tsunami",
+          "correct": true,
+          "selected": false
+        },
+        {
+          "answer": "Earthquake",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Tectonic Plates",
+          "correct": false,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Tsunami"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "These are potential tsunami locations.",
+      "answers": [{
+          "answer": "Shoreline",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Subducation Zones",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Subduction Zones",
+          "correct": true,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Subduction Zones"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "Most tsunamis are caused by ______.",
+      "answers": [{
+          "answer": "Subducation Zones",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Earthquakes",
+          "correct": true,
+          "selected": false
+        },
+        {
+          "answer": "Seismic Energy",
+          "correct": false,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Earthquakes"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "Which of the following is not a cause of a tsunami?",
+      "answers": [{
+          "answer": "Volcanic Eruption",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Underwater Landslide",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Sinking Ships",
+          "correct": true,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Sinking Ships"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "As the stuck plate continues to descend into the mantle, the motion causes a slow distortion of the overriding plate that results to _______.",
+      "answers": [{
+          "answer": "Accumulated Seismic Energy",
+          "correct": true,
+          "selected": false
+        },
+        {
+          "answer": "Accumulated Kinesthetic Energy",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Subduction Energy",
+          "correct": false,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Accumulated Seismic Energy"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "An area where an oceanic plate is being forced down into the mantle by plate tectonic forces.",
+      "answers": [{
+          "answer": "Tsunami Zones",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Subduction Zones",
+          "correct": true,
+          "selected": false
+        },
+        {
+          "answer": "Ring of Fire",
+          "correct": false,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Subduction Zones"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "Tsunamis travel swiftly across the open ____.",
+      "answers": [{
+          "answer": "Ocean",
+          "correct": true,
+          "selected": false
+        },
+        {
+          "answer": "Sea",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Lake",
+          "correct": false,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Ocean"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "Many people have the mistaken belief that tsunamis are _____ wave/s.",
+      "answers": [{
+          "answer": "Multiple",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Single",
+          "correct": true,
+          "selected": false
+        },
+        {
+          "answer": "Continuous",
+          "correct": false,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Single"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "Tsunamis are ‘wave trains’ consisting of ______ wave/s.",
+      "answers": [{
+          "answer": "Multiple",
+          "correct": true,
+          "selected": false
+        },
+        {
+          "answer": "Single",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Single",
+          "correct": false,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Multiple"
+    },
+    {
+      "flashCardFront": "<img src='assets/images/universe.png' />",
+      "flashCardBack": "",
+      "flashCardFlipped": false,
+      "questionText": "The impact of a ______ could also cause a tsunami.",
+      "answers": [{
+          "answer": "Boulder",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Cannon Ball",
+          "correct": false,
+          "selected": false
+        },
+        {
+          "answer": "Large Meteorite",
+          "correct": true,
+          "selected": false
+        }
+      ],
+      "correctAnswer": "Large Meteorite"
+    }
+  ]
 }

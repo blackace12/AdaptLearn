@@ -48,14 +48,13 @@ export class LessonPage {
 
       else if (this.arrayTest !== null) {
         for (var i = 0; i < this.arrayTest.length; i++) {
-          if (this.arrayTest[i].Chapter_Quiz == "EarthSystem" && this.arrayTest[i].Passed == true) {
+          if (this.arrayTest[i].Chapter_Quiz == "Earth System" && this.arrayTest[i].Passed == true) {
             this.hazardsUnlocked = [{
-              name: "unlock",
               valid: false,
             }];
             console.log('Unlocked')
           }
-          else if (this.arrayTest[i].Chapter_Quiz == "EarthSystem" && this.arrayTest[i].Passed == false) {
+          else if (this.arrayTest[i].Chapter_Quiz == "Earth System" && this.arrayTest[i].Passed == false) {
             this.hazardsUnlocked = [{
               name: "lock",
               valid: true,

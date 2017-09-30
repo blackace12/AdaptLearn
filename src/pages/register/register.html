@@ -5,6 +5,13 @@
 
     <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
 
+   <!--    <ion-item>
+        <ion-input formControlName="name" type="text" placeholder="Name" [class.invalid]="!signupForm.controls.name.valid && signupForm.controls.name.dirty"></ion-input>
+      </ion-item>
+      <ion-item class="error-message" *ngIf="!signupForm.controls.name.valid  && signupForm.controls.name.dirty">
+        <p>Please enter.</p>
+      </ion-item> -->
+
       <ion-item>
         <ion-input formControlName="email" type="email" placeholder="Your email address" [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty"></ion-input>
       </ion-item>

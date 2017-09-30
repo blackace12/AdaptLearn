@@ -1,20 +1,24 @@
 <ion-menu id="myMenu" [content]="content">
-  <ion-content>
-    <ion-item style="background-color:#00aced">
-      <!-- <img src="./assets/img/adapt.png" height="100px" width="350px"/> -->
-    </ion-item>
-    <ion-list>
+    <ion-content>
+      <ion-item style="background-color:#00aced" *ngFor = "let styleElement of styles">
+         <div *ngIf = "styleElement && styleElement.user && styleElement.title" >
+          <h1>{{styleElement.user}}</h1>
+          <h4>{{styleElement.title}}</h4>
+          </div>
 
-      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
-       <ion-icon name="{{p.icon}}"></ion-icon>&nbsp;{{p.title}}
-      </button>
+      </ion-item>
+      <ion-list>
 
-      <button ion-item (click)="doConfirm()">
-       <ion-icon name="log-out"></ion-icon>&nbsp;Logout
-      </button>
+        <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+         <ion-icon name="{{p.icon}}"></ion-icon>&nbsp;{{p.title}}
+        </button>
 
-    </ion-list>
-  </ion-content>
+        <button ion-item (click)="doConfirm()">
+         <ion-icon name="log-out"></ion-icon>&nbsp;Logout
+        </button>
 
-</ion-menu>
-<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

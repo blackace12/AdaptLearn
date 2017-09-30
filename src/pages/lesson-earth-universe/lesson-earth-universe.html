@@ -17,8 +17,17 @@
   </ion-header>
 
   <ion-content padding>
+      <ion-slides>
+        <ion-slide>
+            <img src="assets/img/Universe.svg" width="250px" height="150px" />
+        </ion-slide>
+      </ion-slides>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
 
-    <button ion-item (click)="click1()">
+
+
+    <!--  <button ion-item (click)="click1()">
       In the Beginning
     </button>
     <ion-card *ngIf="hide1">
@@ -231,7 +240,7 @@
           Many galaxies, also packed with stars, are thousands of times further away. Space is huge!
         </p>
       </ion-card-content>
-    </ion-card>
+    </ion-card> -->
 
 
     <ion-fab right bottom *ngFor="let styleElement of styles">
@@ -245,13 +254,11 @@
           <ion-icon name="volume-up"></ion-icon>
         </button>
 
-        <button ion-fab color="primary" (click)="regularShare()"
-        *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab color="primary" (click)="regularShare()" *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
 
         <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
 
-        <button ion-fab color="primary" (click)="playVideo()"
-        *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+        <button ion-fab color="primary" (click)="playVideo()" *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
             <ion-icon name="logo-youtube"></ion-icon></button>
       </ion-fab-list>
     </ion-fab>

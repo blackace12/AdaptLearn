@@ -1,3 +1,4 @@
+/* import { NameValidator } from './../../validators/name'; */
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -19,6 +20,7 @@ export class RegisterPage {
     public alertCtrl: AlertController, public navParams: NavParams) {
 
     this.signupForm = formBuilder.group({
+    /*   name:['', Validators.compose([Validators.required, NameValidator.isValid])], */
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
       password: ['', Validators.compose([Validators.minLength(8), Validators.required])]
     });

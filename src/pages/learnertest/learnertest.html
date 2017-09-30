@@ -130,16 +130,12 @@
 
     </table>
 
-    <!--<ng-container *ngIf="hide8">
-      <button ion-button block color="blue" [disabled]="submitDisabled" (click)="submit()">Submit</button>
-    </ng-container>-->
-
     <div class="center text-muted">
       {{currentpage}}/7
     </div>
 
     <div *ngIf="hideNext">
-      <button ion-button block color="blue" [disabled]="nextDisabled" (click)="next()">Next</button>
+        <button ion-button block color="blue" [disabled]="nextDisabled" (click)="next()" (click)="scrollToTop()"> Next</button>
     </div>
     <div *ngIf="hideSubmit">
       <button ion-button block color="secondary" [disabled]="submitDisabled" (click)="submit()">Submit</button>

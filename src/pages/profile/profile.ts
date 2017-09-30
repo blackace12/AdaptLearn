@@ -77,7 +77,7 @@ export class ProfilePage {
                         }
                     },
                     title: {
-                        text: 'Learning Style Overview'
+                        text: ''
                     },
 
                     plotOptions: {

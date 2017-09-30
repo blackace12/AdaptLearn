@@ -2,7 +2,8 @@ import { LearnertestPage } from './../learnertest/learnertest';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, AlertController } from 'ionic-angular';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -10,8 +11,7 @@ import { NavController, ModalController } from 'ionic-angular';
 export class HomePage {
   currentUser:any;
   introSlides: FirebaseListObservable<any>;
-
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController, af: AngularFireDatabase, afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, af: AngularFireDatabase, afAuth: AngularFireAuth, public alertCtrl:AlertController) {
     this.introSlides = af.list('/Users/');
     this.currentUser = afAuth.auth.currentUser.uid;
 
@@ -37,7 +37,26 @@ export class HomePage {
 
     onButtonClicked(){
       this.introSlides.update( this.currentUser, { introSlides: 'true' });
-      this.navCtrl.setRoot(LearnertestPage);
+      let prompt = this.alertCtrl.create({
+        title: 'Hello Learner!',
+        message:'What shall I call you?',
+        inputs: [
+          {
+            name: 'name',
+            placeholder: 'Name'
+          },
+        ],
+        buttons: [
+          {
+            text: 'Ok',
+            handler: data => {
+              this.introSlides.update( this.currentUser, { UserName: data.name });
+              this.navCtrl.setRoot(LearnertestPage);
+            }
+          }
+        ]
+      });
+      prompt.present();
     }
 }
 

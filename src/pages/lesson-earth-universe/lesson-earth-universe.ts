@@ -123,7 +123,25 @@ export class LessonEarthUniversePage {
     });
   }
 
-  //under chapter 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* //under chapter 1
   public hide1:boolean=true;
   public hide1_1:boolean=false;
   public hide1_2:boolean=false;
@@ -242,7 +260,7 @@ export class LessonEarthUniversePage {
       this.hide1_6 = false;
       this.hide1_7 = false;
     }
-    //====end of chapter 1=======
+    //====end of chapter 1======= */
 
 
 
