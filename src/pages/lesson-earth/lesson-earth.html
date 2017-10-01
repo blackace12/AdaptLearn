@@ -25,14 +25,14 @@
   <ion-item>
     <button ion-item no-lines (click)="universeLesson();">
         <!-- <ion-icon name="unlock"></ion-icon> -->
-        <img src="../assets/img/LUniverse.svg" width="35px">  Universe Formation
+        <img src="assets/img/LUniverse.svg" width="35px">  Universe Formation
       </button>
   </ion-item>
 
   <ion-item *ngFor="let x of lessonUnlocked">
     <button no-lines [disabled]="x.valid" ion-item (click)="astronomyLesson()">
     <ion-icon *ngIf="x.valid == true" name="{{x.name}}"></ion-icon>
-    <img *ngIf="x.valid == false" src="../assets/img/LAstronomy.svg" width="35px" > Astronomy
+    <img *ngIf="x.valid == false" src="assets/img/LAstronomy.svg" width="35px" > Astronomy
     </button>
   </ion-item>
 
@@ -40,14 +40,14 @@
   <ion-item *ngFor="let y of lessonUnlocked2">
     <button ion-item no-lines [disabled]="y.valid" (click)="solarsystemLesson()">
         <ion-icon *ngIf="y.valid == true" name="{{y.name}}"></ion-icon>
-        <img *ngIf="y.valid == false" src="../assets/img/LSolar.svg" width="35px"> Solar System
+        <img *ngIf="y.valid == false" src="assets/img/LSolar.svg" width="35px"> Solar System
     </button>
   </ion-item>
 
   <ion-item *ngFor="let z of lessonUnlocked3">
     <button ion-item no-lines [disabled]="z.valid" (click)="earthsystemLesson()">
         <ion-icon *ngIf="z.valid == true" name="{{z.name}}"></ion-icon>
-        <img *ngIf="z.valid == false" src="../assets/img/LESystem.svg" width="35px">  Earth Systems
+        <img *ngIf="z.valid == false" src="assets/img/LESystem.svg" width="35px">  Earth Systems
     </button>
   </ion-item>
 

@@ -17,21 +17,22 @@
 <ion-content>
   <ion-item >
   <button ion-item no-lines (click)="earthLesson();">
-      <img src="../assets/img/LEStructure.svg" width="35px" >  Origin and structure of the Earth
+      <img src="assets/img/LEStructure.svg" width="35px" >  Origin and structure of the Earth
   </button>
   </ion-item>
 
   <ion-item *ngFor="let x of hazardsUnlocked">
     <button no-lines [disabled]="x.valid" ion-item (click)="naturalLesson()">
         <ion-icon *ngIf="x.valid == true" name="{{x.name}}"></ion-icon>
-        <img *ngIf="x.valid == false" src="../assets/img/LHazards.svg" width="35px"> Natural Hazards
+        <img *ngIf="x.valid == false" src="assets/img/LHazards.svg" width="35px"> Natural Hazards
   </button>
   </ion-item>
 
 
   <ion-item *ngFor="let y of mitAdaptUnlocked">
     <button ion-item no-lines [disabled]="y.valid" (click)="mitadaptLesson()">
-  <ion-icon name="{{y.name}}"></ion-icon>  Mitigation and Adaptation
+      <ion-icon *ngIf="y.valid == true" name="{{y.name}}"></ion-icon>
+      <img *ngIf="y.valid == false" src="assets/img/LMitigation.svg" width="35px">  Mitigation and Adaptation
   </button>
   </ion-item>
 

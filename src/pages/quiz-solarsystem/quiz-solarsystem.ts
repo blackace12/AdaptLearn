@@ -4,6 +4,7 @@ import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable }
 import { DataSolarsystemProvider } from './../../providers/data-solarsystem/data-solarsystem';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 import * as _ from 'lodash';
 
 @IonicPage()
@@ -28,7 +29,6 @@ export class QuizSolarsystemPage {
   quizID: any;
   userpercentage: number = 0;
 
-
   userProgressID: FirebaseObjectObservable<any>;
   userProgressIDArr = [];
   userProgressKey = [];
@@ -40,11 +40,20 @@ export class QuizSolarsystemPage {
 
   imagename:string;
   wrongAnswers: any[] = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataSolarsystemProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
+
+  //new
+  theme: string;
+  selectedTheme:String;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataSolarsystemProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase, private settings: SettingsProvider) {
 
   }
 
   ionViewDidLoad() {
+    //new
+    this.theme = this.navParams.get('theme');
+    console.log("Received theme: " + this.theme);
+
     this.slides.lockSwipes(true);
     this.dataService.load().then((data) => {
       data.map((question) => {
@@ -55,9 +64,17 @@ export class QuizSolarsystemPage {
       });
       this.questions = this.shuffledQuestions;
     });
-
   }
 
+  //new
+  changeTheme() {
+    if(this.theme === "night-theme") {
+      this.settings.setActiveTheme('night-theme');
+    }
+    else {
+      this.settings.setActiveTheme('day-theme');
+    }
+  }
 
   nextSlide() {
     this.slides.lockSwipes(false);
@@ -203,11 +220,12 @@ export class QuizSolarsystemPage {
         })
       })
     }
-
+    this.changeTheme(); //new
     this.navCtrl.pop();
   }
 
   restartQuiz() {
+    this.wrongAnswers = [];
     this.score = 0;
     this.slides.lockSwipes(false);
     this.slides.slideTo(1, 1000);
@@ -225,6 +243,7 @@ export class QuizSolarsystemPage {
   }
 
   exit() {
+    this.changeTheme(); //new
     this.navCtrl.pop();
   }
 }

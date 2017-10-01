@@ -123,6 +123,7 @@ export class SettingsPage {
 
   updatePassword() {
     let alert = this.alertCtrl.create({
+      title:"Change Password",
       inputs: [
         {
           name: 'oldPassword',
@@ -159,9 +160,6 @@ export class SettingsPage {
               });
               alert.present();
             }
-        /*     else if (data.newPassword == null || data.oldPassword == null || data.confirmPassword == null ){
-              console.log("Please enter credentials");
-            } */
             else if (data.newPassword != data.confirmPassword) {
               let alert = this.alertCtrl.create({
                 message: "Password does not match the confirm password!",

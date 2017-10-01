@@ -1,12 +1,13 @@
 import { QuizTsunamiPage } from './../quiz-tsunami/quiz-tsunami';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, Navbar, ToastController } from 'ionic-angular';
 import { SettingsPage} from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/database';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 
 /**
  * Generated class for the LessonNaturalTsunamiPage page.
@@ -20,6 +21,7 @@ import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/dat
   templateUrl: 'lesson-natural-tsunami.html',
 })
 export class LessonNaturalTsunamiPage {
+  @ViewChild(Navbar) navBar: Navbar;
   allTracks: any[];
   arrayTest = [];
   currentUser;
@@ -29,12 +31,13 @@ export class LessonNaturalTsunamiPage {
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
+  selectedTheme:String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -73,6 +76,13 @@ export class LessonNaturalTsunamiPage {
       src: '../assets/sounds/Tsunami.mp3',
     }
     ]; */
+
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
+  }
+
+  //new
+  changeTheme(){
+    this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
@@ -95,7 +105,20 @@ export class LessonNaturalTsunamiPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LessonNaturalTsunamiPage');
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      if (this.playingAudio === true) {
+
+          this.smartAudio.pause('tsunami');
+          this.playingAudio = !this.playingAudio;
+          let toast = this.toastCtrl.create({
+            message: 'Audio Stopped',
+            duration: 1500
+          });
+          toast.present();
+      }
+        this.navCtrl.pop();
+
+    }
   }
 
   SettingsPage(){
@@ -126,34 +149,12 @@ export class LessonNaturalTsunamiPage {
   }
 
   universeQuiz(){
-    this.navCtrl.push(QuizTsunamiPage)
-    /* var checker = 1;
-    if(checker == 1){
-      let alert = this.alertCtrl.create({
-        title: 'Retake Quiz',
-        message: 'Do you want to retake Quiz?',
-        buttons: [
-          {
-            text: 'Yes',
-            handler: () => {
-              console.log('Yes clicked');
-            }
-          },
-          {
-            text: 'No',
-            role: 'cancel',
-            handler: () => {
-              console.log('No clicked');
-            }
-          }
-
-        ]
-      });
-      alert.present();
-    }else {
-    this.navCtrl.push(QuizPage)
-    } */
-
+    //new
+    let data = {
+      theme: this.selectedTheme
+    };
+    this.navCtrl.push(QuizTsunamiPage, data);
+    this.changeTheme();
   }
 
 

@@ -1,12 +1,13 @@
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { QuizPage } from './../quiz/quiz';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Navbar, IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, ToastController } from 'ionic-angular';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import { SettingsPage} from '../settings/settings';
+import { SettingsPage } from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
-import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 
 @IonicPage()
 @Component({
@@ -15,21 +16,23 @@ import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/dat
 })
 
 export class LessonEarthUniversePage {
+  @ViewChild(Navbar) navBar: Navbar;
   allTracks: any[];
   arrayTest = [];
   currentUser;
-  fontSize:any;
-  fontVal:any;
+  fontSize: any;
+  fontVal: any;
   learningStyleObject2: FirebaseObjectObservable<any>;
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
+  selectedTheme: String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, public toastCtrl: ToastController, private settings: SettingsProvider) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -65,204 +68,218 @@ export class LessonEarthUniversePage {
       });
     });
 
-    //this.myTracks = [{
-    //  src: '../assets/sounds/Universe.mp3',
-    //}
-    //];
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
+  }
+
+  //new
+  changeTheme() {
+    this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
 
-  playAudio(){
-    if(this.playingAudio === false){
+  playAudio() {
+    if (this.playingAudio === false) {
       this.smartAudio.play('universe');
       this.playingAudio = !this.playingAudio;
-      console.log("playing");
+      let toast = this.toastCtrl.create({
+        message: 'Audio Playing',
+        duration: 1500
+      });
+      toast.present();
     }
     else {
       this.smartAudio.pause('universe');
       this.playingAudio = !this.playingAudio;
-      console.log("pause");
+      let toast = this.toastCtrl.create({
+        message: 'Audio Paused',
+        duration: 1500
+      });
+      toast.present();
     }
   }
 
-  playVideo(){
-    this.youtube.openVideo('wNDGgL73ihY');
-  }
-  regularShare(){
-    // share(message, subject, file, url)
-    this.socialSharing.shareViaFacebook("Universe Formation Lesson",null,"https://adaptlearn.herokuapp.com/lesson1/universeformation.html");
-  }
-
-  universeQuiz(){
-    this.navCtrl.push(QuizPage)
-  }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LessonEarthUniversePage');
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      if (this.playingAudio === true) {
+
+          this.smartAudio.pause('universe');
+          this.playingAudio = !this.playingAudio;
+          let toast = this.toastCtrl.create({
+            message: 'Audio Stopped',
+            duration: 1500
+          });
+          toast.present();
+      }
+        this.navCtrl.pop();
+
+    }
   }
 
-  SettingsPage(){
-    this.navCtrl.push(SettingsPage)
+    playVideo(){
+      this.youtube.openVideo('wNDGgL73ihY');
+    }
+    regularShare(){
+      // share(message, subject, file, url)
+      this.socialSharing.shareViaFacebook("Universe Formation Lesson", null, "https://adaptlearn.herokuapp.com/lesson1/universeformation.html");
+    }
+
+    universeQuiz(){
+      //new
+      let data = {
+        theme: this.selectedTheme
+      };
+      this.navCtrl.push(QuizPage, data);
+      this.changeTheme();
+    }
+
+
+    SettingsPage(){
+      this.navCtrl.push(SettingsPage)
+    }
+
+    openModal(){
+      const myModalOptions: ModalOptions = {
+        enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
+      };
+
+      const myModal: Modal = this.modal.create('FontSizePage', { data: this.fontVal }, myModalOptions);
+
+      //present font size modal
+      myModal.present();
+
+      //will receive value when modal is closed/dismissed
+      myModal.onWillDismiss((fontValue) => {
+        this.fontSize = fontValue;
+        this.fontVal = fontValue;
+        console.log(this.fontVal + " back to page");
+      });
+    }
+
+
+
+    /* //under chapter 1
+    public hide1:boolean=true;
+    public hide1_1:boolean=false;
+    public hide1_2:boolean=false;
+    public hide1_3:boolean=false;
+    public hide1_4:boolean=false;
+    public hide1_5:boolean=false;
+    public hide1_6:boolean=false;
+    public hide1_7:boolean=false;
+    public hide1_8:boolean=false;
+
+      //====start of chapter 1=======
+      public click1(){
+        this.hide1 = !this.hide1;
+        this.hide1_1 = false;
+        this.hide1_2 = false;
+        this.hide1_3 = false;
+        this.hide1_4 = false;
+        this.hide1_5 = false;
+        this.hide1_6 = false;
+        this.hide1_7 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_1(){
+        this.hide1_1 = !this.hide1_1;
+        this.hide1 = false;
+        this.hide1_2 = false;
+        this.hide1_3 = false;
+        this.hide1_4 = false;
+        this.hide1_5 = false;
+        this.hide1_6 = false;
+        this.hide1_7 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_2(){
+        this.hide1_2 = !this.hide1_2;
+        this.hide1 = false;
+        this.hide1_1 = false;
+        this.hide1_3 = false;
+        this.hide1_4 = false;
+        this.hide1_5 = false;
+        this.hide1_6 = false;
+        this.hide1_7 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_3(){
+        this.hide1_3 = !this.hide1_3;
+        this.hide1 = false;
+        this.hide1_1 = false;
+        this.hide1_2 = false;
+        this.hide1_4 = false;
+        this.hide1_5 = false;
+        this.hide1_6 = false;
+        this.hide1_7 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_4(){
+        this.hide1_4 = !this.hide1_4;
+        this.hide1 = false;
+        this.hide1_1 = false;
+        this.hide1_2 = false;
+        this.hide1_3 = false;
+        this.hide1_5 = false;
+        this.hide1_6 = false;
+        this.hide1_7 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_5(){
+        this.hide1_5 = !this.hide1_5;
+        this.hide1 = false;
+        this.hide1_1 = false;
+        this.hide1_2 = false;
+        this.hide1_3 = false;
+        this.hide1_4 = false;
+        this.hide1_6 = false;
+        this.hide1_7 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_6(){
+        this.hide1_6 = !this.hide1_6;
+        this.hide1 = false;
+        this.hide1_1 = false;
+        this.hide1_2 = false;
+        this.hide1_3 = false;
+        this.hide1_4 = false;
+        this.hide1_5 = false;
+        this.hide1_7 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_7(){
+        this.hide1_7 = !this.hide1_7;
+        this.hide1 = false;
+        this.hide1_1 = false;
+        this.hide1_2 = false;
+        this.hide1_3 = false;
+        this.hide1_4 = false;
+        this.hide1_5 = false;
+        this.hide1_6 = false;
+        this.hide1_8 = false;
+      }
+
+      public click1_8(){
+        this.hide1_8 = !this.hide1_8;
+        this.hide1 = false;
+        this.hide1_1 = false;
+        this.hide1_2 = false;
+        this.hide1_3 = false;
+        this.hide1_4 = false;
+        this.hide1_5 = false;
+        this.hide1_6 = false;
+        this.hide1_7 = false;
+      }
+      //====end of chapter 1======= */
+
+
+
+
   }
-
-  openModal(){
-    const myModalOptions: ModalOptions = {
-      enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
-    };
-
-    const myModal: Modal = this.modal.create('FontSizePage', { data:this.fontVal }, myModalOptions);
-
-    //present font size modal
-    myModal.present();
-
-    //will receive value when modal is closed/dismissed
-    myModal.onWillDismiss((fontValue)=>{
-      this.fontSize = fontValue;
-      this.fontVal = fontValue;
-      console.log(this.fontVal + " back to page");
-    });
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* //under chapter 1
-  public hide1:boolean=true;
-  public hide1_1:boolean=false;
-  public hide1_2:boolean=false;
-  public hide1_3:boolean=false;
-  public hide1_4:boolean=false;
-  public hide1_5:boolean=false;
-  public hide1_6:boolean=false;
-  public hide1_7:boolean=false;
-  public hide1_8:boolean=false;
-
-    //====start of chapter 1=======
-    public click1(){
-      this.hide1 = !this.hide1;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
-      this.hide1_7 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_1(){
-      this.hide1_1 = !this.hide1_1;
-      this.hide1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
-      this.hide1_7 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_2(){
-      this.hide1_2 = !this.hide1_2;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
-      this.hide1_7 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_3(){
-      this.hide1_3 = !this.hide1_3;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
-      this.hide1_7 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_4(){
-      this.hide1_4 = !this.hide1_4;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
-      this.hide1_7 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_5(){
-      this.hide1_5 = !this.hide1_5;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_6 = false;
-      this.hide1_7 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_6(){
-      this.hide1_6 = !this.hide1_6;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_7 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_7(){
-      this.hide1_7 = !this.hide1_7;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
-      this.hide1_8 = false;
-    }
-
-    public click1_8(){
-      this.hide1_8 = !this.hide1_8;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
-      this.hide1_7 = false;
-    }
-    //====end of chapter 1======= */
-
-
-
-
-}

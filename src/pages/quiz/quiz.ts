@@ -4,6 +4,7 @@ import { DataProvider } from './../../providers/data/data';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder } from '@angular/forms';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 import * as _ from 'lodash';
 @IonicPage()
 @Component({
@@ -28,8 +29,6 @@ export class QuizPage {
   userpercentage: number = 0;
   wrongAnswers: any[] = [];
 
-
-
   userProgressID: FirebaseObjectObservable<any>;
   userProgressIDArr = [];
   userProgressKey = [];
@@ -41,12 +40,19 @@ export class QuizPage {
 
   imagename: string;
 
+  //new
+  theme: string;
+  selectedTheme:String;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase, private settings: SettingsProvider) {
 
   }
 
   ionViewDidLoad() {
+    //new
+    this.theme = this.navParams.get('theme');
+    console.log("Received theme: " + this.theme);
+
     this.slides.lockSwipes(true);
     this.dataService.load().then((data) => {
       data.map((question) => {
@@ -57,6 +63,16 @@ export class QuizPage {
       });
       this.questions = this.shuffledQuestions;
     });
+  }
+
+  //new
+  changeTheme() {
+    if(this.theme === "night-theme") {
+      this.settings.setActiveTheme('night-theme');
+    }
+    else {
+      this.settings.setActiveTheme('day-theme');
+    }
   }
 
   nextSlide() {
@@ -204,6 +220,7 @@ export class QuizPage {
         })
       })
     }
+    this.changeTheme(); //new
     this.navCtrl.pop();
   }
 
@@ -226,6 +243,7 @@ export class QuizPage {
   }
 
   exit() {
+    this.changeTheme(); //new
     this.navCtrl.pop();
   }
 }

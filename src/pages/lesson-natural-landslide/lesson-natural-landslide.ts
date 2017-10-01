@@ -1,12 +1,13 @@
 import { QuizLslidePage } from './../quiz-lslide/quiz-lslide';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, Navbar, ToastController } from 'ionic-angular';
 import { SettingsPage} from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/database';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 
 /**
  * Generated class for the LessonNaturalLandslidePage page.
@@ -20,6 +21,7 @@ import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/dat
   templateUrl: 'lesson-natural-landslide.html',
 })
 export class LessonNaturalLandslidePage {
+  @ViewChild(Navbar) navBar: Navbar;
   allTracks: any[];
   arrayTest = [];
   currentUser;
@@ -29,13 +31,13 @@ export class LessonNaturalLandslidePage {
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
+  selectedTheme:String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -75,6 +77,13 @@ export class LessonNaturalLandslidePage {
       src: '../assets/sounds/Landslides.mp3',
     }
     ]; */
+
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
+  }
+
+  //new
+  changeTheme(){
+    this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
@@ -97,7 +106,20 @@ export class LessonNaturalLandslidePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LessonNaturalLandslidePage');
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      if (this.playingAudio === true) {
+
+          this.smartAudio.pause('landslide');
+          this.playingAudio = !this.playingAudio;
+          let toast = this.toastCtrl.create({
+            message: 'Audio Stopped',
+            duration: 1500
+          });
+          toast.present();
+      }
+        this.navCtrl.pop();
+
+    }
   }
 
   SettingsPage(){
@@ -128,7 +150,12 @@ export class LessonNaturalLandslidePage {
   }
 
   universeQuiz(){
-    this.navCtrl.push(QuizLslidePage)
+    //new
+    let data = {
+      theme: this.selectedTheme
+    };
+    this.navCtrl.push(QuizLslidePage, data);
+    this.changeTheme();
   }
 
   //under chapter 1

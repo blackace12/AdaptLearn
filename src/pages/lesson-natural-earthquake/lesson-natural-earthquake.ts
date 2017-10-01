@@ -1,12 +1,13 @@
 import { QuizEquakePage } from './../quiz-equake/quiz-equake';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions   } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, Navbar, ToastController } from 'ionic-angular';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SettingsPage} from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import { AngularFireDatabase,  FirebaseObjectObservable} from 'angularfire2/database';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 
 @IonicPage()
 
@@ -15,6 +16,7 @@ import { AngularFireDatabase,  FirebaseObjectObservable} from 'angularfire2/data
   templateUrl: 'lesson-natural-earthquake.html',
 })
 export class LessonNaturalEarthquakePage {
+  @ViewChild(Navbar) navBar: Navbar;
   allTracks: any[];
   arrayTest = [];
   currentUser;
@@ -24,13 +26,13 @@ export class LessonNaturalEarthquakePage {
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
+  selectedTheme:String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -70,6 +72,13 @@ export class LessonNaturalEarthquakePage {
     //  src: '../assets/sounds/Earthquake.mp3',
     //}
     //];
+
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
+  }
+
+  //new
+  changeTheme(){
+    this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
@@ -84,6 +93,24 @@ export class LessonNaturalEarthquakePage {
       this.smartAudio.pause('earthquake');
       this.playingAudio = !this.playingAudio;
       console.log("pause");
+    }
+  }
+
+
+  ionViewDidLoad() {
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      if (this.playingAudio === true) {
+
+          this.smartAudio.pause('earthquake');
+          this.playingAudio = !this.playingAudio;
+          let toast = this.toastCtrl.create({
+            message: 'Audio Stopped',
+            duration: 1500
+          });
+          toast.present();
+      }
+        this.navCtrl.pop();
+
     }
   }
 
@@ -120,14 +147,16 @@ export class LessonNaturalEarthquakePage {
   }
 
   universeQuiz(){
-    this.navCtrl.push(QuizEquakePage)
+    //new
+    let data = {
+      theme: this.selectedTheme
+    };
+    this.navCtrl.push(QuizEquakePage, data);
+    this.changeTheme();
    }
 
 
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LessonNaturalEarthquakePage');
-  }
 
   //under chapter 1
   public hide1:boolean=true;

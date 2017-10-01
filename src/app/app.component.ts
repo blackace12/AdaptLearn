@@ -62,7 +62,7 @@ export class MyApp {
       smartAudio.preload('earthSystem', 'assets/sounds/EarthSystem.mp3');
       smartAudio.preload('earthquake', 'assets/sounds/Earthquake.mp3');
       smartAudio.preload('volcano', 'assets/sounds/Volcano.mp3');
-      smartAudio.preload('landslide', 'assets/sounds/Landslide.mp3');
+      smartAudio.preload('landslide', 'assets/sounds/Landslides.mp3');
       smartAudio.preload('tsunami', 'assets/sounds/Tsunami.mp3');
       smartAudio.preload('mitigation', 'assets/sounds/Mitigation.mp3');
     });

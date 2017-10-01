@@ -37,7 +37,7 @@ export class LearnertestPage {
       'In school you preferred art, technical drawing, and geometry.',
       'You are a tinkerer. You like pulling things apart, and they usually go back together OK. You can easily follow instructions represented in diagrams.'];
 
-    this.AudioList = ['Jingles, themes or parts of songs pop into your head at rando',
+    this.AudioList = ['Jingles, themes or parts of songs pop into your head at random',
       'You like listening to music - in the car, studying, at work (if possible!).',
       'Music was your favourite subject at school.',
       'You use rhythm or rhyme to remember things, eg phone numbers, passwords, other little sayings.',
@@ -49,7 +49,7 @@ export class LearnertestPage {
       'Music evokes strong emotions and images as you listen to it. Music is prominent in your recall of memories.']
 
     this.VerbalList = ['In regular conversation you frequently use references to other things you have heard or read.',
-      'English, languages and literature were favourite subjects at school.',
+      'English, languages and literature were your favourite subjects at school.',
       'You love telling stories, metaphors or anecdotes.',
       'You have a great vocabulary, and like using the right word at the right time.',
       'You easily express yourself, whether its verbal or written. You can give clear explanations to others.',
@@ -59,7 +59,7 @@ export class LearnertestPage {
       'You easily absorb information through reading, audiocassettes or lectures. The actual words come back to you easily.',
       'You can easily visualize (see in your mind) objects, buildings, scenarios etc. from descriptions or plans.']
 
-    this.PhysicalList = ['You love sport and exercise.',
+    this.PhysicalList = ['You love sports and exercise.',
       'You use lots of hand gestures or other physical body language when communicating with others.',
       'You like making models, or working out jigsaws.',
       'In school you liked sports, wood or metal working, craft, sculptures, pottery.',
@@ -98,7 +98,7 @@ export class LearnertestPage {
       'You prefer to study or work alone.',
       'You spend time alone to reflect and think about important aspects of your life.',
       'You keep a journal or personal diary to record your thoughts.',
-      'You would prefer to holiday on a deserted island rather than a resort or cruise ship with lots of other people around.',
+      'You would prefer to go on holiday on a deserted island rather than a resort or cruise ship with lots of other people around.',
       'You read self-help books, or have been to self-help workshops or done similar work to learn more about yourself.',
       'You prefer to work for yourself - or you have thought a lot about it.',
       'You think independently. You know how you think and you make up your own mind. You understand your own strengths and weaknesses.']

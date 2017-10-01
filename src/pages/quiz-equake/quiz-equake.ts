@@ -2,9 +2,9 @@ import { FormBuilder } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { DataEquakeProvider } from './../../providers/data-equake/data-equake';
-
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 import * as _ from 'lodash';
 @IonicPage()
 @Component({
@@ -28,7 +28,6 @@ export class QuizEquakePage {
     quizID: any;
     userpercentage: number = 0;
 
-
     userProgressID: FirebaseObjectObservable<any>;
     userProgressIDArr = [];
     userProgressKey = [];
@@ -40,11 +39,20 @@ export class QuizEquakePage {
 
     imagename:string;
     wrongAnswers: any[] = [];
-    constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataEquakeProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
+
+    //new
+    theme: string;
+    selectedTheme:String;
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public alertCtrl: AlertController, public dataService: DataEquakeProvider, public afAuth: AngularFireAuth, public af: AngularFireDatabase, private settings: SettingsProvider) {
 
     }
 
     ionViewDidLoad() {
+      //new
+      this.theme = this.navParams.get('theme');
+      console.log("Received theme: " + this.theme);
+
       this.slides.lockSwipes(true);
       this.dataService.load().then((data) => {
         data.map((question) => {
@@ -55,9 +63,17 @@ export class QuizEquakePage {
         });
         this.questions = this.shuffledQuestions;
       });
-
     }
 
+    //new
+    changeTheme() {
+      if(this.theme === "night-theme") {
+        this.settings.setActiveTheme('night-theme');
+      }
+      else {
+        this.settings.setActiveTheme('day-theme');
+      }
+    }
 
     nextSlide() {
       this.slides.lockSwipes(false);
@@ -207,10 +223,12 @@ export class QuizEquakePage {
         })
       })
     }
+      this.changeTheme(); //new
       this.navCtrl.pop();
     }
 
     restartQuiz() {
+      this.wrongAnswers = [];
       this.score = 0;
       this.slides.lockSwipes(false);
       this.slides.slideTo(1, 1000);
@@ -228,6 +246,7 @@ export class QuizEquakePage {
     }
 
     exit(){
+      this.changeTheme(); //new
       this.navCtrl.pop();
     }
   }

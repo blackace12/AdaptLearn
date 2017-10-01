@@ -2,14 +2,15 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { QuizAstronomyPage } from './../quiz-astronomy/quiz-astronomy';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, ToastController, Navbar } from 'ionic-angular';
 import { SettingsPage } from '../settings/settings';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import {
   AngularFireDatabase,
   FirebaseObjectObservable
 } from 'angularfire2/database';
+import { SettingsProvider } from "../../providers/settings/settings"; //new
 
 
 /**
@@ -24,6 +25,7 @@ import {
   templateUrl: 'lesson-earth-astronomy.html',
 })
 export class LessonEarthAstronomyPage {
+  @ViewChild(Navbar) navBar: Navbar;
   allTracks: any[];
   arrayTest = [];
   currentUser;
@@ -33,13 +35,13 @@ export class LessonEarthAstronomyPage {
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
+  selectedTheme:String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, public toastCtrl:ToastController, private settings: SettingsProvider) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -75,10 +77,12 @@ export class LessonEarthAstronomyPage {
       });
     });
 
-   //this.myTracks = [{
-   //   src: '../assets/sounds/Astronomy.mp3',
-   // }
-   // ];
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
+  }
+
+  //new
+  changeTheme(){
+    this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
@@ -87,14 +91,40 @@ export class LessonEarthAstronomyPage {
     if(this.playingAudio === false){
       this.smartAudio.play('astronomy');
       this.playingAudio = !this.playingAudio;
-      console.log("playing");
+      let toast = this.toastCtrl.create({
+        message: 'Audio Playing',
+        duration: 1500
+      });
+      toast.present();
     }
     else {
       this.smartAudio.pause('astronomy');
       this.playingAudio = !this.playingAudio;
-      console.log("pause");
+      let toast = this.toastCtrl.create({
+        message: 'Audio Stopped',
+        duration: 1500
+      });
+      toast.present();
     }
   }
+
+  ionViewDidLoad() {
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      if (this.playingAudio === true) {
+
+          this.smartAudio.pause('astronomy');
+          this.playingAudio = !this.playingAudio;
+          let toast = this.toastCtrl.create({
+            message: 'Audio Stopped',
+            duration: 1500
+          });
+          toast.present();
+      }
+        this.navCtrl.pop();
+
+    }
+  }
+
 
   playVideo() {
     this.youtube.openVideo('ld75W1dz-h0');
@@ -106,11 +136,14 @@ export class LessonEarthAstronomyPage {
   }
 
   universeQuiz() {
-    this.navCtrl.push(QuizAstronomyPage);
+    //new
+    let data = {
+      theme: this.selectedTheme
+    };
+    this.navCtrl.push(QuizAstronomyPage, data);
+    this.changeTheme();
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LessonEarthAstronomyPage');
-  }
+
 
   SettingsPage() {
     this.navCtrl.push(SettingsPage)
