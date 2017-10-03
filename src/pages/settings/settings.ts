@@ -93,18 +93,16 @@ export class SettingsPage {
               buttons: [
                 {
                   text: "Ok",
-                  role: 'cancel',
+                  handler: data =>{
+                    this.auth.logoutUser().then(() => {
+                      this.navCtrl.setRoot(LoginPage);
+                    });
+                  }
                 }
               ]
             });
             alert.present();
-            this.auth.logoutUser().then(() => {
-              this.navCtrl.setRoot(LoginPage);
-            });
-
-
           }
-
         },
         {
           text: 'No',
@@ -113,7 +111,6 @@ export class SettingsPage {
             console.log('No clicked');
           }
         }
-
       ]
     });
     alert.present();
@@ -143,7 +140,10 @@ export class SettingsPage {
       ],
       buttons: [
         {
-          text: 'Cancel',
+
+            text: "Cancel",
+            role: 'Cancel'
+
         },
         {
           text: 'Save',
@@ -154,7 +154,7 @@ export class SettingsPage {
                 buttons: [
                   {
                     text: "Ok",
-                    role: 'cancel'
+                    role:"Cancel"
                   }
                 ]
               });
@@ -166,7 +166,7 @@ export class SettingsPage {
                 buttons: [
                   {
                     text: "Ok",
-                    role: 'cancel'
+                    role:"Cancel"
                   }
                 ]
               });
@@ -178,7 +178,7 @@ export class SettingsPage {
                   buttons: [
                     {
                       text: "Ok",
-                      role: 'cancel'
+                      role: 'Cancel'
                     }
                   ]
                 });

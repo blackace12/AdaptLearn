@@ -81,7 +81,7 @@ export class MyApp {
             this.checkerTest.push(snapshot.val());
           });
 
-          if (this.checkerTest[2] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
+          if (this.checkerTest[2] == "false" || this.checkerTest[3] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
             this.nav.setRoot(HomePage);
           }
           else if (this.checkerTest[0] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
@@ -98,10 +98,10 @@ export class MyApp {
             this.nav.setRoot(SplashscreenPage);
           }
         })
-        authObserver.unsubscribe();
+        //authObserver.unsubscribe();
       } else {
         this.rootPage = LoginPage;
-        authObserver.unsubscribe();
+        //authObserver.unsubscribe();
       }
     });
   }

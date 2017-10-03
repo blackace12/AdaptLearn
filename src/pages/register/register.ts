@@ -45,6 +45,7 @@ export class RegisterPage {
                 text: 'OK',
                 handler: () => {
                   this.navCtrl.setRoot(LoginPage);
+
                 }
               }
             ]
