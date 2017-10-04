@@ -157,6 +157,32 @@ export class LessonNaturalVolcanoPage {
     this.changeTheme();
    }
 
+   volcanoSlides = [
+    {
+      image: "./assets/svg/Volcano/1.svg",
+    },
+    {
+      image: "./assets/svg/Volcano/2.svg",
+    },
+    {
+      image: "./assets/svg/Volcano/3.svg",
+    },
+    {
+      image: "./assets/svg/Volcano/4.svg",
+    },
+    {
+      image: "./assets/svg/Volcano/5.svg",
+    },
+    {
+      image: "./assets/svg/Volcano/6.svg",
+    },
+    {
+      image: "./assets/svg/Volcano/7.svg",
+    },
+    {
+      image: "./assets/svg/Volcano/8.svg",
+    }
+  ];
 
 
   //under chapter 1

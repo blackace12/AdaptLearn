@@ -1,8 +1,9 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseObjectObservable, AngularFireDatabase } from 'angularfire2/database';
 
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Navbar } from 'ionic-angular';
 import { LessonNaturalPage } from './../lesson-natural/lesson-natural';
 import { LessonEarthPage } from './../lesson-earth/lesson-earth';
 import { LessonMitadaptPage } from './../lesson-mitadapt/lesson-mitadapt';
@@ -19,13 +20,14 @@ import { SettingsPage } from '../settings/settings';
   templateUrl: 'lesson.html',
 })
 export class LessonPage {
+  @ViewChild(Navbar) navBar: Navbar;
   currentUser: any;
   hazardsUnlocked: any;
   mitAdaptUnlocked: any;
   lessonStatus: FirebaseObjectObservable<any>;
   arrayTest = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public scrnOrnt: ScreenOrientation) {
     this.currentUser = this.afAuth.auth.currentUser.uid;
 
     this.lessonStatus = this.af.object("/UserProgress/" + this.currentUser + '/', { preserveSnapshot: true });
@@ -128,6 +130,11 @@ export class LessonPage {
       duration: 1000
     });
     this.navCtrl.push(LessonMitadaptPage);
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
     loader.present();
   }
 

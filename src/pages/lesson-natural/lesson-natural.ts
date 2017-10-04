@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseObjectObservable, AngularFireDatabase } from 'angularfire2/database';
 import { LessonNaturalEarthquakePage } from './../lesson-natural-earthquake/lesson-natural-earthquake';
@@ -5,8 +6,8 @@ import { LessonNaturalVolcanoPage } from './../lesson-natural-volcano/lesson-nat
 import { LessonNaturalLandslidePage } from './../lesson-natural-landslide/lesson-natural-landslide';
 import { LessonNaturalTsunamiPage } from './../lesson-natural-tsunami/lesson-natural-tsunami';
 import { SettingsPage} from '../settings/settings';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Navbar } from 'ionic-angular';
 
 
 @IonicPage()
@@ -15,6 +16,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
   templateUrl: 'lesson-natural.html',
 })
 export class LessonNaturalPage {
+  @ViewChild(Navbar) navBar: Navbar;
   currentUser: any;
   lessonUnlocked: any;
   lessonUnlocked2: any;
@@ -22,7 +24,8 @@ export class LessonNaturalPage {
   lessonStatus: FirebaseObjectObservable<any>;
   arrayTest = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public scrnOrnt: ScreenOrientation) {
     this.currentUser = this.afAuth.auth.currentUser.uid;
 
     this.lessonStatus = this.af.object("/UserProgress/" + this.currentUser + '/', { preserveSnapshot: true });
@@ -124,22 +127,65 @@ export class LessonNaturalPage {
   }
 
   earthquakesLesson(){
+    let loader = this.loadingCtrl.create({
+      content: "Loading lesson content...",
+      duration: 1500
+    });
     this.navCtrl.push(LessonNaturalEarthquakePage)
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
+    loader.present();
   }
 
   volcanoLesson(){
+    let loader = this.loadingCtrl.create({
+      content: "Loading lesson content...",
+      duration: 1500
+    });
     this.navCtrl.push(LessonNaturalVolcanoPage)
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
+    loader.present();
   }
 
   landslidesLesson(){
+    let loader = this.loadingCtrl.create({
+      content: "Loading lesson content...",
+      duration: 1500
+    });
     this.navCtrl.push(LessonNaturalLandslidePage)
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
+    loader.present();
   }
 
   tsunamiLesson(){
+    let loader = this.loadingCtrl.create({
+      content: "Loading lesson content...",
+      duration: 1500
+    });
     this.navCtrl.push(LessonNaturalTsunamiPage)
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
+    loader.present();
   }
 
   ionViewDidLoad() {
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      this.scrnOrnt.unlock();
+    }
     console.log('ionViewDidLoad LessonNaturalPage');
   }
 

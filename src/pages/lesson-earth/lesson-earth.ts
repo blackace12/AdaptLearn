@@ -1,7 +1,8 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Navbar } from 'ionic-angular';
 import { LessonEarthSolarsystemPage } from './../lesson-earth-solarsystem/lesson-earth-solarsystem';
 import { LessonEarthUniversePage } from './../lesson-earth-universe/lesson-earth-universe';
 import { LessonEarthEarthsystemPage } from './../lesson-earth-earthsystem/lesson-earth-earthsystem';
@@ -21,7 +22,7 @@ export class LessonEarthPage {
   lessonStatus: FirebaseObjectObservable<any>;
   arrayTest = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public scrnOrnt: ScreenOrientation) {
     this.currentUser = this.afAuth.auth.currentUser.uid;
 
     this.lessonStatus = this.af.object("/UserProgress/" + this.currentUser + '/', { preserveSnapshot: true });
@@ -121,6 +122,7 @@ export class LessonEarthPage {
   }
 
   ionViewDidLoad() {
+
     console.log('ionViewDidLoad LessonEarthPage');
   }
 
@@ -129,11 +131,17 @@ export class LessonEarthPage {
   }
 
   universeLesson() {
+
     let loader = this.loadingCtrl.create({
       content: "Loading lesson content...",
       duration: 1500
     });
     this.navCtrl.push(LessonEarthUniversePage);
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
     loader.present();
   }
 
@@ -143,6 +151,11 @@ export class LessonEarthPage {
       duration: 1500
     });
     this.navCtrl.push(LessonEarthAstronomyPage);
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
     loader.present();
   }
 
@@ -152,6 +165,11 @@ export class LessonEarthPage {
       duration: 1500
     });
     this.navCtrl.push(LessonEarthSolarsystemPage);
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
     loader.present();
   }
 
@@ -161,6 +179,11 @@ export class LessonEarthPage {
       duration: 1500
     });
     this.navCtrl.push(LessonEarthEarthsystemPage);
+    try {
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    } catch (error){
+      console.log (error);
+    }
     loader.present();
   }
 }

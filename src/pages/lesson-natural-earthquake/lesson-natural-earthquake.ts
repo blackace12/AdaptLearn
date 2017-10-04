@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { QuizEquakePage } from './../quiz-equake/quiz-equake';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Component, ViewChild } from '@angular/core';
@@ -32,7 +33,7 @@ export class LessonNaturalEarthquakePage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -109,6 +110,8 @@ export class LessonNaturalEarthquakePage {
           });
           toast.present();
       }
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
 
     }
@@ -154,6 +157,27 @@ export class LessonNaturalEarthquakePage {
     this.navCtrl.push(QuizEquakePage, data);
     this.changeTheme();
    }
+
+   equakeSlides = [
+    {
+      image: "./assets/svg/Equake/1.svg",
+    },
+    {
+      image: "./assets/svg/Equake/2.svg",
+    },
+    {
+      image: "./assets/svg/Equake/3.svg",
+    },
+    {
+      image: "./assets/svg/Equake/4.svg",
+    },
+    {
+      image: "./assets/svg/Equake/5.svg",
+    },
+    {
+      image: "./assets/svg/Equake/6.svg",
+    }
+  ];
 
 
 

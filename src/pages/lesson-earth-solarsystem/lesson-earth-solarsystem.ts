@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { QuizSolarsystemPage } from './../quiz-solarsystem/quiz-solarsystem';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -37,7 +38,7 @@ export class LessonEarthSolarsystemPage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -113,7 +114,9 @@ export class LessonEarthSolarsystemPage {
           });
           toast.present();
       }
-        this.navCtrl.pop();
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+      this.navCtrl.pop();
 
     }
   }
@@ -157,6 +160,129 @@ export class LessonEarthSolarsystemPage {
       console.log(this.fontVal + " back to page");
     });
   }
+
+  solarSlides = [
+    {
+      image: "./assets/svg/Solar/1.svg",
+    },
+    {
+      image: "./assets/svg/Solar/2.svg",
+    },
+    {
+      image: "./assets/svg/Solar/3.svg",
+    },
+    {
+      image: "./assets/svg/Solar/4.svg",
+    },
+    {
+      image: "./assets/svg/Solar/5.svg",
+    },
+    {
+      image: "./assets/svg/Solar/6.svg",
+    },
+    {
+      image: "./assets/svg/Solar/7.svg",
+    },
+    {
+      image: "./assets/svg/Solar/8.svg",
+    },
+    {
+      image: "./assets/svg/Solar/9.svg",
+    },
+    {
+      image: "./assets/svg/Solar/10.svg",
+    },
+    {
+      image: "./assets/svg/Solar/11.svg",
+    },
+    {
+      image: "./assets/svg/Solar/12.svg",
+    },
+    {
+      image: "./assets/svg/Solar/13.svg",
+    },
+    {
+      image: "./assets/svg/Solar/14.svg",
+    },
+    {
+      image: "./assets/svg/Solar/15.svg",
+    },
+    {
+      image: "./assets/svg/Solar/16.svg",
+    },
+    {
+      image: "./assets/svg/Solar/17.svg",
+    },
+    {
+      image: "./assets/svg/Solar/18.svg",
+    },
+    {
+      image: "./assets/svg/Solar/19.svg",
+    },
+    {
+      image: "./assets/svg/Solar/20.svg",
+    },
+    {
+      image: "./assets/svg/Solar/21.svg",
+    },
+    {
+      image: "./assets/svg/Solar/22.svg",
+    },
+    {
+      image: "./assets/svg/Solar/23.svg",
+    },
+    {
+      image: "./assets/svg/Solar/24.svg",
+    },
+    {
+      image: "./assets/svg/Solar/25.svg",
+    },
+    {
+      image: "./assets/svg/Solar/26.svg",
+    },
+    {
+      image: "./assets/svg/Solar/27.svg",
+    },
+    {
+      image: "./assets/svg/Solar/28.svg",
+    },
+    {
+      image: "./assets/svg/Solar/29.svg",
+    },
+    {
+      image: "./assets/svg/Solar/30.svg",
+    },
+    {
+      image: "./assets/svg/Solar/31.svg",
+    },
+    {
+      image: "./assets/svg/Solar/32.svg",
+    },
+    {
+      image: "./assets/svg/Solar/33.svg",
+    },
+    {
+      image: "./assets/svg/Solar/34.svg",
+    },
+    {
+      image: "./assets/svg/Solar/35.svg",
+    },
+    {
+      image: "./assets/svg/Solar/36.svg",
+    },
+    {
+      image: "./assets/svg/Solar/37.svg",
+    },
+    {
+      image: "./assets/svg/Solar/38.svg",
+    },
+    {
+      image: "./assets/svg/Solar/39.svg",
+    },
+    {
+      image: "./assets/svg/Solar/40.svg",
+    }
+  ];
 
 
   //under chapter 2

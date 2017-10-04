@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { QuizTsunamiPage } from './../quiz-tsunami/quiz-tsunami';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -37,7 +38,7 @@ export class LessonNaturalTsunamiPage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -72,11 +73,6 @@ export class LessonNaturalTsunamiPage {
         }
       });
     });
-    /* this.myTracks = [{
-      src: '../assets/sounds/Tsunami.mp3',
-    }
-    ]; */
-
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
   }
 
@@ -116,6 +112,8 @@ export class LessonNaturalTsunamiPage {
           });
           toast.present();
       }
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
 
     }
@@ -156,6 +154,34 @@ export class LessonNaturalTsunamiPage {
     this.navCtrl.push(QuizTsunamiPage, data);
     this.changeTheme();
   }
+
+
+  tsunamiSlides = [
+    {
+      image: "./assets/svg/Tsunami/1.svg",
+    },
+    {
+      image: "./assets/svg/Tsunami/2.svg",
+    },
+    {
+      image: "./assets/svg/Tsunami/3.svg",
+    },
+    {
+      image: "./assets/svg/Tsunami/4.svg",
+    },
+    {
+      image: "./assets/svg/Tsunami/5.svg",
+    },
+    {
+      image: "./assets/svg/Tsunami/6.svg",
+    },
+    {
+      image: "./assets/svg/Tsunami/7.svg",
+    },
+    {
+      image: "./assets/svg/Tsunami/8.svg",
+    }
+  ];
 
 
   //under chapter 1

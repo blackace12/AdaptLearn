@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
@@ -41,7 +42,7 @@ export class LessonEarthAstronomyPage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, public toastCtrl:ToastController, private settings: SettingsProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, public toastCtrl:ToastController, private settings: SettingsProvider, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -111,7 +112,6 @@ export class LessonEarthAstronomyPage {
   ionViewDidLoad() {
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-
           this.smartAudio.pause('astronomy');
           this.playingAudio = !this.playingAudio;
           let toast = this.toastCtrl.create({
@@ -120,6 +120,8 @@ export class LessonEarthAstronomyPage {
           });
           toast.present();
       }
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
 
     }
@@ -166,6 +168,70 @@ export class LessonEarthAstronomyPage {
       console.log(this.fontVal + " back to page");
     });
   }
+
+
+  astronomySlides = [
+    {
+      image: "./assets/svg/Astronomy/1.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/2.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/3.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/4.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/5.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/6.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/7.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/8.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/9.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/10.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/11.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/12.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/13.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/14.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/15.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/16.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/17.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/18.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/19.svg",
+    },
+    {
+      image: "./assets/svg/Astronomy/20.svg",
+    }
+  ];
 
   //under chapter 4
   public hide4: boolean = true;

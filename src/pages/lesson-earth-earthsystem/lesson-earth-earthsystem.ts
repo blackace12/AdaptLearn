@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { QuizEarthsytemPage } from './../quiz-earthsystem/quiz-earthsystem';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
@@ -40,7 +41,7 @@ export class LessonEarthEarthsystemPage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -75,11 +76,6 @@ export class LessonEarthEarthsystemPage {
         }
       });
     });
-
-    //this.myTracks = [{
-    //  src: '../assets/sounds/EarthSystem.mp3',
-    //}
-    //];
 
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
   }
@@ -116,6 +112,8 @@ export class LessonEarthEarthsystemPage {
           });
           toast.present();
       }
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
 
     }
@@ -162,6 +160,39 @@ export class LessonEarthEarthsystemPage {
       console.log(this.fontVal + " back to page");
     });
   }
+
+  earthSlides = [
+    {
+      image: "./assets/svg/Earth/1.svg",
+    },
+    {
+      image: "./assets/svg/Earth/2.svg",
+    },
+    {
+      image: "./assets/svg/Earth/3.svg",
+    },
+    {
+      image: "./assets/svg/Earth/4.svg",
+    },
+    {
+      image: "./assets/svg/Earth/5.svg",
+    },
+    {
+      image: "./assets/svg/Earth/6.svg",
+    },
+    {
+      image: "./assets/svg/Earth/7.svg",
+    },
+    {
+      image: "./assets/svg/Earth/8.svg",
+    },
+    {
+      image: "./assets/svg/Earth/9.svg",
+    },
+    {
+      image: "./assets/svg/Earth/10.svg",
+    }
+  ];
 
   //under chapter 1
     public hide1:boolean=true;

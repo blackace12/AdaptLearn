@@ -22,95 +22,136 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="chapter">
-    <button ion-item (click)="click1()">
+
+  <div *ngFor="let styleElement of styles">
+    <ion-slides pager *ngIf="styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+      <ion-slide *ngFor="let slide of earthSlides">
+        <br>
+        <img [src]="slide.image" class="slide-image" />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+  <div *ngFor="let styleElement of styles">
+    <div *ngIf="styleElement.first == 'Verbal' || styleElement.second == 'Verbal' || styleElement.third == 'Verbal'">
+      <div class="chapter">
+        <button ion-item (click)="click1()">
       Earth Systems
     </button>
-    <ion-card *ngIf="hide1">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-        Everything in Earth's system can be placed into one of four major subsystems: land, water, living things, or air. These four subsystems are called "spheres." Specifically, they are the "lithosphere" (land), "hydrosphere" (water), "biosphere" (living things), and "atmosphere" (air). Each of these four spheres can be further divided into sub-spheres. To keep things simple in this module, there will be no distinction among the sub-spheres of any of the four major spheres.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_1()">
+        <ion-card *ngIf="hide1">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Everything in Earth's system can be placed into one of four major subsystems: land, water, living things, or air. These four
+              subsystems are called "spheres." Specifically, they are the "lithosphere" (land), "hydrosphere" (water), "biosphere"
+              (living things), and "atmosphere" (air). Each of these four spheres can be further divided into sub-spheres.
+              To keep things simple in this module, there will be no distinction among the sub-spheres of any of the four
+              major spheres.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_1()">
       Litosphere
     </button>
-    <ion-card *ngIf="hide1_1">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-        The lithosphere contains all of the cold, hard solid land of the planet's crust (surface), the semi-solid land underneath the crust, and the liquid land near the center of the planet. *The surface of the lithosphere is very uneven. There are high mountain ranges like the Rockies and Andes , huge plains or flat areas like those in Texas, Iowa, and Brazil, and deep valleys along the ocean floor.
-        <br>
-        The solid, semi-solid, and liquid land of the lithosphere form layers that are physically and chemically different. If someone were to cut through Earth to its center, these layers would be revealed like the layers of an onion. The outermost layer of the lithosphere consists of loose soil rich in nutrients, oxygen, and silicon. Beneath that layer lies a very thin, solid crust of oxygen and silicon. Next is a thick, semi-solid mantle of oxygen, silicon, iron, and magnesium. Below that is a liquid outer core of nickel and iron. At the center of Earth is a solid inner core of nickel and iron.
-        <br>
-        Note: The word "lithosphere" can take on different meanings depending on the speaker and the audience. For example, many geologists--scientists who study the geologic formations of Earth--reserve the word "lithosphere" to mean only the cold, hard surface of Earth, not the entire inside of the planet. For the purpose of this module, however, there will be no distinction among the various layers of land. The word "lithosphere" will be used in reference to all land in Earth's system.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_2()">
+        <ion-card *ngIf="hide1_1">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              The lithosphere contains all of the cold, hard solid land of the planet's crust (surface), the semi-solid land underneath
+              the crust, and the liquid land near the center of the planet. *The surface of the lithosphere is very uneven.
+              There are high mountain ranges like the Rockies and Andes , huge plains or flat areas like those in Texas,
+              Iowa, and Brazil, and deep valleys along the ocean floor.
+              <br> The solid, semi-solid, and liquid land of the lithosphere form layers that are physically and chemically
+              different. If someone were to cut through Earth to its center, these layers would be revealed like the layers
+              of an onion. The outermost layer of the lithosphere consists of loose soil rich in nutrients, oxygen, and silicon.
+              Beneath that layer lies a very thin, solid crust of oxygen and silicon. Next is a thick, semi-solid mantle
+              of oxygen, silicon, iron, and magnesium. Below that is a liquid outer core of nickel and iron. At the center
+              of Earth is a solid inner core of nickel and iron.
+              <br> Note: The word "lithosphere" can take on different meanings depending on the speaker and the audience.
+              For example, many geologists--scientists who study the geologic formations of Earth--reserve the word "lithosphere"
+              to mean only the cold, hard surface of Earth, not the entire inside of the planet. For the purpose of this
+              module, however, there will be no distinction among the various layers of land. The word "lithosphere" will
+              be used in reference to all land in Earth's system.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_2()">
       Hydrosphere
     </button>
-    <ion-card *ngIf="hide1_2">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-        The hydrosphere contains all the solid, liquid, and gaseous water of the planet. **It ranges from 10 to 20 kilometers in thickness. The hydrosphere extends from Earth's surface downward several kilometers into the lithosphere and upward about 12 kilometers into the atmosphere.
-        <br>
-        A small portion of the water in the hydrosphere is fresh (non-salty). This water flows as precipitation from the atmosphere down to Earth's surface, as rivers and streams along Earth's surface, and as groundwater beneath Earth's surface. Most of Earth's fresh water, however, is frozen.
-        <br>
-        Ninety-seven percent of Earth's water is salty. The salty water collects in deep valleys along Earth's surface. These large collections of salty water are referred to as oceans. The image above depicts the different temperatures one would find on oceans' surfaces. Water near the poles is very cold, while water near the equator is very warm. The differences in temperature cause water to change physical states. Extremely low temperatures like those found at the poles cause water to freeze into a solid such as a polar icecap, a glacier, or an iceberg. Extremely high temperatures like those found at the equator cause water to evaporate into a gas.
-        <br>
-        Note: Some scientists place frozen water--glaciers, ice caps, and icebergs--in its own sphere called the "cryosphere." For the purpose of this module, however, frozen water will be included as part of the hydrosphere. The word "hydrosphere" will be used in reference to all water in Earth's system.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_3()">
+        <ion-card *ngIf="hide1_2">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              The hydrosphere contains all the solid, liquid, and gaseous water of the planet. **It ranges from 10 to 20 kilometers in
+              thickness. The hydrosphere extends from Earth's surface downward several kilometers into the lithosphere and
+              upward about 12 kilometers into the atmosphere.
+              <br> A small portion of the water in the hydrosphere is fresh (non-salty). This water flows as precipitation
+              from the atmosphere down to Earth's surface, as rivers and streams along Earth's surface, and as groundwater
+              beneath Earth's surface. Most of Earth's fresh water, however, is frozen.
+              <br> Ninety-seven percent of Earth's water is salty. The salty water collects in deep valleys along Earth's
+              surface. These large collections of salty water are referred to as oceans. The image above depicts the different
+              temperatures one would find on oceans' surfaces. Water near the poles is very cold, while water near the equator
+              is very warm. The differences in temperature cause water to change physical states. Extremely low temperatures
+              like those found at the poles cause water to freeze into a solid such as a polar icecap, a glacier, or an iceberg.
+              Extremely high temperatures like those found at the equator cause water to evaporate into a gas.
+              <br> Note: Some scientists place frozen water--glaciers, ice caps, and icebergs--in its own sphere called the
+              "cryosphere." For the purpose of this module, however, frozen water will be included as part of the hydrosphere.
+              The word "hydrosphere" will be used in reference to all water in Earth's system.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_3()">
       Biosphere
     </button>
-    <ion-card *ngIf="hide1_3">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-        The biosphere contains all the planet's living things. This sphere includes all of the microorganisms, plants, and animals of Earth.
-        <br>
-        Within the biosphere, living things form ecological communities based on the physical surroundings of an area. These communities are referred to as biomes. Deserts, grasslands, and tropical rainforests are three of the many types of biomes that exist within the biosphere.
-        <br>
-        It is impossible to detect from space each individual organism within the biosphere. However, biomes can be seen from space. For example, the image above distinguishes between lands covered with plants and those that are not.
-        <br>
-        Note: Some scientists place humans in their own sphere called the "anthrosphere." For the purpose of this module, however, humans will be included as part of the biosphere. The word "biosphere" will be used in reference to all living things in Earth's system.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_4()">
+        <ion-card *ngIf="hide1_3">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              The biosphere contains all the planet's living things. This sphere includes all of the microorganisms, plants, and animals
+              of Earth.
+              <br> Within the biosphere, living things form ecological communities based on the physical surroundings of
+              an area. These communities are referred to as biomes. Deserts, grasslands, and tropical rainforests are three
+              of the many types of biomes that exist within the biosphere.
+              <br> It is impossible to detect from space each individual organism within the biosphere. However, biomes can
+              be seen from space. For example, the image above distinguishes between lands covered with plants and those
+              that are not.
+              <br> Note: Some scientists place humans in their own sphere called the "anthrosphere." For the purpose of this
+              module, however, humans will be included as part of the biosphere. The word "biosphere" will be used in reference
+              to all living things in Earth's system.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_4()">
       Atmosphere
     </button>
-    <ion-card *ngIf="hide1_4">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-        The atmosphere contains all the air in Earth's system. It extends from less than 1 m below the planet's surface to more than 10,000 km above the planet's surface. The upper portion of the atmosphere protects the organisms of the biosphere from the sun's ultraviolet radiation. It also absorbs and emits heat. When air temperature in the lower portion of this sphere changes, weather occurs. As air in the lower atmosphere is heated or cooled, it moves around the planet. The result can be as simple as a breeze or as complex as a tornado.
-        <br>
-        Note: The atmosphere is made up of many layers that differ in chemical composition and temperature. For the purpose of this module, however, we will not differentiate among the layers of the atmosphere. The word "atmosphere" will be used in reference to all of the layers.
-        </p>
-      </ion-card-content>
-    </ion-card>
+        <ion-card *ngIf="hide1_4">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              The atmosphere contains all the air in Earth's system. It extends from less than 1 m below the planet's surface to more than
+              10,000 km above the planet's surface. The upper portion of the atmosphere protects the organisms of the biosphere
+              from the sun's ultraviolet radiation. It also absorbs and emits heat. When air temperature in the lower portion
+              of this sphere changes, weather occurs. As air in the lower atmosphere is heated or cooled, it moves around
+              the planet. The result can be as simple as a breeze or as complex as a tornado.
+              <br> Note: The atmosphere is made up of many layers that differ in chemical composition and temperature. For
+              the purpose of this module, however, we will not differentiate among the layers of the atmosphere. The word
+              "atmosphere" will be used in reference to all of the layers.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
   </div>
 
   <ion-fab right bottom *ngFor="let styleElement of styles">
     <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
     <ion-fab-list side="left">
       <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
-        <!--<audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
-          <audio-track-play dark [audioTrack]="audio">
-          </audio-track-play>
-        </audio-track>-->
+
         <ion-icon name="volume-up"></ion-icon>
       </button>
 
-      <button ion-fab color="primary" (click)="regularShare()"
-      *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="primary" (click)="regularShare()" *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
 
       <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
 
-      <button ion-fab color="primary" (click)="playVideo()"
-      *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+      <button ion-fab color="primary" (click)="playVideo()" *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
           <ion-icon name="logo-youtube"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>

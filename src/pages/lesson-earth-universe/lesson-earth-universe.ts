@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { QuizPage } from './../quiz/quiz';
 import { Component, ViewChild } from '@angular/core';
@@ -32,7 +33,15 @@ export class LessonEarthUniversePage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, public toastCtrl: ToastController, private settings: SettingsProvider) {
+
+  _options:any;
+  greeting: string;
+  testSlides: string[] = [];
+  @ViewChild('mySlider') mySlider: any;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, public toastCtrl: ToastController, private settings: SettingsProvider, public scrnOrnt: ScreenOrientation) {
+
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -69,7 +78,60 @@ export class LessonEarthUniversePage {
     });
 
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
+
   }
+
+
+  universeSlides = [
+    {
+      image: "./assets/svg/Universe/1.svg",
+    },
+    {
+      image: "./assets/svg/Universe/2.svg",
+    },
+    {
+      image: "./assets/svg/Universe/3.svg",
+    },
+    {
+      image: "./assets/svg/Universe/4.svg",
+    },
+    {
+      image: "./assets/svg/Universe/5.svg",
+    },
+    {
+      image: "./assets/svg/Universe/6.svg",
+    },
+    {
+      image: "./assets/svg/Universe/7.svg",
+    },
+    {
+      image: "./assets/svg/Universe/8.svg",
+    },
+    {
+      image: "./assets/svg/Universe/9.svg",
+    },
+    {
+      image: "./assets/svg/Universe/10.svg",
+    },
+    {
+      image: "./assets/svg/Universe/11.svg",
+    },
+    {
+      image: "./assets/svg/Universe/12.svg",
+    },
+    {
+      image: "./assets/svg/Universe/13.svg",
+    },
+    {
+      image: "./assets/svg/Universe/14.svg",
+    },
+    {
+      image: "./assets/svg/Universe/15.svg",
+    },
+    {
+      image: "./assets/svg/Universe/16.svg",
+    },
+  ];
 
   //new
   changeTheme() {
@@ -111,7 +173,9 @@ export class LessonEarthUniversePage {
           });
           toast.present();
       }
-        this.navCtrl.pop();
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+      this.navCtrl.pop();
 
     }
   }
@@ -158,7 +222,10 @@ export class LessonEarthUniversePage {
 
 
 
-    /* //under chapter 1
+
+
+
+     //under chapter 1
     public hide1:boolean=true;
     public hide1_1:boolean=false;
     public hide1_2:boolean=false;
@@ -277,9 +344,7 @@ export class LessonEarthUniversePage {
         this.hide1_6 = false;
         this.hide1_7 = false;
       }
-      //====end of chapter 1======= */
-
-
+      //====end of chapter 1=======
 
 
   }

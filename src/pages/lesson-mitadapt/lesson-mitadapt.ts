@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { QuizMitadaptPage } from './../quiz-mitadapt/quiz-mitadapt';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -37,7 +38,7 @@ export class LessonMitadaptPage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -108,6 +109,8 @@ export class LessonMitadaptPage {
           });
           toast.present();
       }
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
 
     }
@@ -152,6 +155,26 @@ export class LessonMitadaptPage {
     this.changeTheme();
  }
 
+ mitadaptSlides = [
+  {
+    image: "./assets/svg/Mitigation/1.svg",
+  },
+  {
+    image: "./assets/svg/Mitigation/2.svg",
+  },
+  {
+    image: "./assets/svg/Mitigation/3.svg",
+  },
+  {
+    image: "./assets/svg/Mitigation/4.svg",
+  },
+  {
+    image: "./assets/svg/Mitigation/5.svg",
+  },
+  {
+    image: "./assets/svg/Mitigation/6.svg",
+  }
+];
 
 
   //under chapter 1

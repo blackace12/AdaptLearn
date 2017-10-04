@@ -1,9 +1,3 @@
-<!--
-  Generated template for the LessonMitadaptPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Mitigation and Adaptation</ion-title>
@@ -22,33 +16,71 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="chapter">
-    <button ion-item (click)="click1()">
+
+  <div *ngFor="let styleElement of styles">
+    <ion-slides pager *ngIf="styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+      <ion-slide *ngFor="let slide of mitadaptSlides">
+        <br>
+        <img [src]="slide.image" class="slide-image" />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+
+  <div *ngFor="let styleElement of styles">
+    <div *ngIf="styleElement.first == 'Verbal' || styleElement.second == 'Verbal' || styleElement.third == 'Verbal'">
+
+
+      <div class="chapter">
+        <button ion-item (click)="click1()">
       Mitigation
     </button>
-    <ion-card *ngIf="hide1">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-        Reducing climate change – involves reducing the flow of heat-trapping greenhouse gases into the atmosphere, either by reducing sources of these gases (for example, the burning of fossil fuels for electricity, heat or transport) or enhancing the “sinks” that accumulate and store these gases (such as the oceans, forests and soil). The goal of mitigation is to avoid significant human interference with the climate system, and “stabilize greenhouse gas levels in a timeframe sufficient to allow ecosystems to adapt naturally to climate change, ensure that food production is not threatened and to enable economic development to proceed in a sustainable manner” (from the 2014 report on Mitigation of Climate Change from the United Nations Intergovernmental Panel on Climate Change, page 4).
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click2()">
+        <ion-card *ngIf="hide1">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Reducing climate change – involves reducing the flow of heat-trapping greenhouse gases into the atmosphere, either by reducing
+              sources of these gases (for example, the burning of fossil fuels for electricity, heat or transport) or enhancing
+              the “sinks” that accumulate and store these gases (such as the oceans, forests and soil). The goal of mitigation
+              is to avoid significant human interference with the climate system, and “stabilize greenhouse gas levels in
+              a timeframe sufficient to allow ecosystems to adapt naturally to climate change, ensure that food production
+              is not threatened and to enable economic development to proceed in a sustainable manner” (from the 2014 report
+              on Mitigation of Climate Change from the United Nations Intergovernmental Panel on Climate Change, page 4).
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click2()">
       Adaptation
     </button>
-    <ion-card *ngIf="hide2">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-        Adapting to life in a changing climate – involves adjusting to actual or expected future climate. The goal is to reduce our vulnerability to the harmful effects of climate change (like sea-level encroachment, more intense extreme weather events or food insecurity). It also encompasses making the most of any potential beneficial opportunities associated with climate change (for example, longer growing seasons or increased yields in some regions).
-        <br>
-        Throughout history, people and societies have adjusted to and coped with changes in climate and extremes with varying degrees of success. Climate change (drought in particular) has been at least partly responsible for the rise and fall of civilizations. Earth’s climate has been relatively stable for the past 12,000 years and this stability has been crucial for the development of our modern civilization and life as we know it. Modern life is tailored to the stable climate we have become accustomed to. As our climate changes, we will have to learn to adapt. The faster the climate changes, the harder it could be.
-        <br>
-        While climate change is a global issue, it is felt on a local scale. Cities and municipalities are therefore at the frontline of adaptation. In the absence of national or international climate policy direction, cities and local communities around the world have been focusing on solving their own climate problems. They are working to build flood defenses, plan for heatwaves and higher temperatures, install water-permeable pavements to better deal with floods and stormwater and improve water storage and use.
-        <br>
-        According to the 2014 report on Climate Change Impacts, Adaptation and Vulnerability (page 8) from the United Nations Intergovernmental Panel on Climate Change, governments at various levels are also getting better at adaptation. Climate change is starting to be factored into a variety of development plans: how to manage the increasingly extreme disasters we are seeing and their associated risks, how to protect coastlines and deal with sea-level encroachment, how to best manage land and forests, how to deal with and plan for reduced water availability, how to develop resilient crop varieties and how to protect energy and public infrastructure.
-        </p>
-      </ion-card-content>
-    </ion-card>
+        <ion-card *ngIf="hide2">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Adapting to life in a changing climate – involves adjusting to actual or expected future climate. The goal is to reduce our
+              vulnerability to the harmful effects of climate change (like sea-level encroachment, more intense extreme weather
+              events or food insecurity). It also encompasses making the most of any potential beneficial opportunities associated
+              with climate change (for example, longer growing seasons or increased yields in some regions).
+              <br> Throughout history, people and societies have adjusted to and coped with changes in climate and extremes
+              with varying degrees of success. Climate change (drought in particular) has been at least partly responsible
+              for the rise and fall of civilizations. Earth’s climate has been relatively stable for the past 12,000 years
+              and this stability has been crucial for the development of our modern civilization and life as we know it.
+              Modern life is tailored to the stable climate we have become accustomed to. As our climate changes, we will
+              have to learn to adapt. The faster the climate changes, the harder it could be.
+              <br> While climate change is a global issue, it is felt on a local scale. Cities and municipalities are therefore
+              at the frontline of adaptation. In the absence of national or international climate policy direction, cities
+              and local communities around the world have been focusing on solving their own climate problems. They are working
+              to build flood defenses, plan for heatwaves and higher temperatures, install water-permeable pavements to better
+              deal with floods and stormwater and improve water storage and use.
+              <br> According to the 2014 report on Climate Change Impacts, Adaptation and Vulnerability (page 8) from the
+              United Nations Intergovernmental Panel on Climate Change, governments at various levels are also getting better
+              at adaptation. Climate change is starting to be factored into a variety of development plans: how to manage
+              the increasingly extreme disasters we are seeing and their associated risks, how to protect coastlines and
+              deal with sea-level encroachment, how to best manage land and forests, how to deal with and plan for reduced
+              water availability, how to develop resilient crop varieties and how to protect energy and public infrastructure.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
   </div>
 
 
@@ -57,20 +89,14 @@
     <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
     <ion-fab-list side="left">
       <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
-        <!--<audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
-          <audio-track-play dark [audioTrack]="audio">
-          </audio-track-play>
-        </audio-track>-->
         <ion-icon name="volume-up"></ion-icon>
       </button>
 
-      <button ion-fab color="primary" (click)="regularShare()"
-      *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="primary" (click)="regularShare()" *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
 
       <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
 
-      <button ion-fab color="primary" (click)="playVideo()"
-      *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+      <button ion-fab color="primary" (click)="playVideo()" *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
           <ion-icon name="logo-youtube"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>

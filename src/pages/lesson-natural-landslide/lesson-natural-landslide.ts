@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { QuizLslidePage } from './../quiz-lslide/quiz-lslide';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -37,7 +38,7 @@ export class LessonNaturalLandslidePage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -117,6 +118,8 @@ export class LessonNaturalLandslidePage {
           });
           toast.present();
       }
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
 
     }
@@ -157,6 +160,33 @@ export class LessonNaturalLandslidePage {
     this.navCtrl.push(QuizLslidePage, data);
     this.changeTheme();
   }
+
+  lslideSlides = [
+    {
+      image: "./assets/svg/Landslide/1.svg",
+    },
+    {
+      image: "./assets/svg/Landslide/2.svg",
+    },
+    {
+      image: "./assets/svg/Landslide/3.svg",
+    },
+    {
+      image: "./assets/svg/Landslide/4.svg",
+    },
+    {
+      image: "./assets/svg/Landslide/5.svg",
+    },
+    {
+      image: "./assets/svg/Landslide/6.svg",
+    },
+    {
+      image: "./assets/svg/Landslide/7.svg",
+    },
+    {
+      image: "./assets/svg/Landslide/8.svg",
+    }
+  ];
 
   //under chapter 1
     public hide1:boolean=false;

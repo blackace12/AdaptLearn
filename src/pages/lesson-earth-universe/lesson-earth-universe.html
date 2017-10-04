@@ -17,17 +17,21 @@
   </ion-header>
 
   <ion-content padding>
-      <ion-slides>
-        <ion-slide>
-            <img src="assets/img/Universe.svg" width="250px" height="150px" />
-        </ion-slide>
-      </ion-slides>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- pager -->
+      <div *ngFor="let styleElement of styles">
+      <ion-slides pager *ngIf="styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+          <ion-slide *ngFor="let slide of universeSlides">
+           <br>
+           <img [src]="slide.image" class="slide-image" />
+         </ion-slide>
+       </ion-slides>
+      </div>
 
 
 
-    <!--  <button ion-item (click)="click1()">
+      <div *ngFor="let styleElement of styles">
+        <div *ngIf="styleElement.first == 'Verbal' || styleElement.second == 'Verbal' || styleElement.third == 'Verbal'">
+     <button ion-item (click)="click1()">
       In the Beginning
     </button>
     <ion-card *ngIf="hide1">
@@ -240,8 +244,9 @@
           Many galaxies, also packed with stars, are thousands of times further away. Space is huge!
         </p>
       </ion-card-content>
-    </ion-card> -->
-
+    </ion-card>
+    </div>
+  </div>
 
     <ion-fab right bottom *ngFor="let styleElement of styles">
       <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
