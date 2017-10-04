@@ -52,10 +52,6 @@ export class HomePage {
       ],
       buttons: [
         {
-          text: "Cancel",
-          role: 'Cancel'
-        },
-        {
           text: 'Save',
           handler: data => {
 
