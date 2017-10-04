@@ -1,4 +1,3 @@
-/* import { NameValidator } from './../../validators/name'; */
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -44,8 +43,7 @@ export class RegisterPage {
               {
                 text: 'OK',
                 handler: () => {
-                  this.navCtrl.setRoot(LoginPage);
-
+                  this.navCtrl.push(LoginPage);
                 }
               }
             ]
