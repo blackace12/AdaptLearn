@@ -1,116 +1,127 @@
+
 {
     "questions": [
 
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "Astronomy Questions",
-            "answers": [
-                {"answer": "Non-living Things", "correct": false, "selected": false},
-                {"answer": "Living Things", "correct": true, "selected": false},
-                {"answer": "None of the above", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/universe.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It is the only world that supports life.",
-            "answers": [
-                {"answer": "Mars", "correct": false, "selected": false},
-                {"answer": "Universe", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "It was a water world with small areas of dry land",
-            "answers": [
-                {"answer": "Old Earth", "correct": false, "selected": false},
-                {"answer": "Young Earth", "correct": false, "selected": false},
-                {"answer": "Earth", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/earth.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
-            "answers": [
-                {"answer": "5 million years", "correct": false, "selected": false},
-                {"answer": "3300 million years", "correct": false, "selected": false},
-                {"answer": "3800 million years", "correct": true, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        },
-        {
-            "flashCardFront": "<img src='assets/images/animals.png' />",
-            "flashCardBack": "",
-            "flashCardFlipped": false,
-            "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
-            "answers": [
-                {"answer": "Living things", "correct": true, "selected": false},
-                {"answer": "Non-living things", "correct": false, "selected": false},
-                {"answer": "Cells", "correct": false, "selected": false}
-            ]
-        }
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It involves reducing the flow of heat-trapping greenhouse gases into the atmosphere.",
+                    "answers": [
+                        {"answer": "Adaptation", "correct": false, "selected": false},
+                        {"answer": "Realization", "correct": false, "selected": false},
+                        {"answer": "Mitigation", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Mitigation"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "It involves adjusting to actual or expected future climate.",
+                    "answers": [
+                        {"answer": "Analyzation", "correct": false, "selected": false},
+                        {"answer": "Adaptation", "correct": true, "selected": false},
+                        {"answer": "Mitigation", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Adaptation"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Cities and municipalities are  ________ of adaptation.",
+                    "answers": [
+                        {"answer": "Sources", "correct": false, "selected": false},
+                        {"answer": "Frontlines", "correct": true, "selected": false},
+                        {"answer": "Objectives", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Frontlines"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Governments at various levels are also getting better at ______.",
+                    "answers": [
+                        {"answer": "Adaptation", "correct": true, "selected": false},
+                        {"answer": "Mitigation", "correct": false, "selected": false},
+                        {"answer": "Formation", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Adaptation"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Throughout history,  people and societies have ________ to and coped with changes and extremes with varying degrees of success.",
+                    "answers": [
+                        {"answer": "Mitigated", "correct": false, "selected": false},
+                        {"answer": "Migrated", "correct": false, "selected": false},
+                        {"answer": "Adapted", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Adapted"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Has been at least partly responsible for the rise and fall of civilizations.",
+                    "answers": [
+                        {"answer": "Climate change", "correct": true, "selected": false},
+                        {"answer": "Radiation", "correct": false, "selected": false},
+                        {"answer": "Technology", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Climate change"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Modern life is _______ to the stable climate we have become accustomed to.",
+                    "answers": [
+                        {"answer": "Established", "correct": false, "selected": false},
+                        {"answer": "Tailored", "correct": true, "selected": false},
+                        {"answer": "Unfamiliar", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Tailored"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Its goal is to avoid significant human interference with the climate system, and stabilize greenhouse gas levels in a timeframe sufficient to allow ecosystems to adapt naturally to climate change.",
+                    "answers": [
+                        {"answer": "Adaptation", "correct": false, "selected": false},
+                        {"answer": "Actualization", "correct": false, "selected": false},
+                        {"answer": "Mitigation", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"Mitigation"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "Earth’s climate has been relatively stable for the past _________ years.",
+                    "answers": [
+                        {"answer": "15,000", "correct": false, "selected": false},
+                        {"answer": "2,000", "correct": false, "selected": false},
+                        {"answer": "12,000", "correct": true, "selected": false}
+                    ],
+                    "correctAnswer":"12,000"
+                },
+                {
+                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardBack": "",
+                    "flashCardFlipped": false,
+                    "questionText": "While climate change is a global issue, it is felt on a ________ scale..",
+                    "answers": [
+                        {"answer": "National", "correct": false, "selected": false},
+                        {"answer": "Local", "correct": true, "selected": false},
+                        {"answer": "International", "correct": false, "selected": false}
+                    ],
+                    "correctAnswer":"Local"
+                }
 
-    ]
+                ]
 }
