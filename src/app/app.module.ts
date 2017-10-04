@@ -85,7 +85,8 @@ import { DataMitadaptProvider } from '../providers/data-mitadapt/data-mitadapt';
 import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
 import { NativeAudio } from '@ionic-native/native-audio';
 
-
+//Screen orientation
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBjCiXPIBAfdBrQzVpfiR975VLhvVouUyc",
@@ -149,6 +150,7 @@ const firebaseConfig = {
     AngularFireOfflineModule,
     AngularFireAuthModule,
     HttpModule,
+
   ],
 
   bootstrap: [IonicApp],
@@ -191,7 +193,8 @@ const firebaseConfig = {
     QuizVolcanoPage,
     QuizEquakePage,
     QuizMitadaptPage,
-    QuizEarthsytemPage
+    QuizEarthsytemPage,
+
   ],
 
   providers: [
@@ -213,7 +216,8 @@ const firebaseConfig = {
     DataVolcanoProvider,
     DataMitadaptProvider,
     SmartAudioProvider,
-    NativeAudio
-  ]
+    NativeAudio,
+    ScreenOrientation
+    ]
 })
 export class AppModule { }
