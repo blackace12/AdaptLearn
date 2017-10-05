@@ -95,6 +95,7 @@ export class SettingsPage {
                   text: "Ok",
                   handler: data =>{
                     this.auth.logoutUser().then(() => {
+                      this.changeToNight();
                       this.navCtrl.setRoot(LoginPage);
                     });
                   }
@@ -184,6 +185,7 @@ export class SettingsPage {
                 });
                 alert.present();
                 this.navCtrl.setRoot(LoginPage);
+                this.changeToNight();
               }, error => {
                 this.loading.dismiss().then(() => {
                   let alert = this.alertCtrl.create({
@@ -213,5 +215,11 @@ export class SettingsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
+  }
+
+  changeToNight() {
+    if(this.selectedTheme === 'night-theme'){
+      this.settings.setActiveTheme('day-theme');
+    }
   }
 }
