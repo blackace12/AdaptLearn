@@ -79,11 +79,11 @@ export class QuizEquakePage {
       this.slides.lockSwipes(false);
       this.slides.slideNext();
       this.slides.lockSwipes(true);
-      if (this.score>=7) {
-        this.imagename = "../assets/img/pass.png";
+      if (this.score >= 7) {
+        this.imagename = "./assets/img/pass.png";
       }
       else {
-        this.imagename = "../assets/img/fail.jpg";
+        this.imagename = "./assets/img/fail.png";
       }
     }
 

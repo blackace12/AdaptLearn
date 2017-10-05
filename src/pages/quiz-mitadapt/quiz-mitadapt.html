@@ -35,9 +35,14 @@
   </ion-slide>
 
   <ion-slide *ngFor="let incorrect of wrongAnswers;let i=index" class="correction">
+    <div class="resultimg">
+      <img src="assets/img/check.png">
+    </div>
     <h5>Question: {{incorrect.questionA}}</h5>
-    <h6><ion-icon name="close" color="danger"></ion-icon> You Answer: {{incorrect.answer}}</h6>
-    <h6><ion-icon name="checkmark" color="secondary"></ion-icon> Answer: {{incorrect.correctAnswer}}</h6>
+    <h6>
+      <ion-icon name="close" color="danger"></ion-icon> You Answer: {{incorrect.answer}}</h6>
+    <h6>
+      <ion-icon name="checkmark" color="secondary"></ion-icon> Answer: {{incorrect.correctAnswer}}</h6>
     <button ion-button clear color="dark" (click)="error()"> <ion-icon name="arrow-forward"></ion-icon></button>
   </ion-slide>
 

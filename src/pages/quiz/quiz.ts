@@ -80,10 +80,10 @@ export class QuizPage {
     this.slides.slideNext();
     this.slides.lockSwipes(true);
     if (this.score >= 7) {
-      this.imagename = "../assets/img/pass.png";
+      this.imagename = "./assets/img/pass.png";
     }
     else {
-      this.imagename = "../assets/img/fail.jpg";
+      this.imagename = "./assets/img/fail.png";
     }
   }
 
