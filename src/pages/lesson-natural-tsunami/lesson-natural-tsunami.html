@@ -9,9 +9,11 @@
     <ion-title>Tsunami</ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only item-right (click)="openModal()">
-        A
-      </button>
+      <div *ngIf="font">
+        <button ion-button icon-only item-right (click)="openModal()">
+          A
+        </button>
+      </div>
     </ion-buttons>
     <ion-buttons end>
       <button ion-button icon-only item-right (click)="SettingsPage()">
@@ -24,31 +26,17 @@
 <ion-content padding>
 
   <div *ngFor="let styleElement of styles">
-    <ion-slides *ngIf="styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual' ||
-
-        styleElement.first == 'Visual' && styleElement.first == 'Verbal' ||
-        styleElement.first == 'Visual' && styleElement.second == 'Verbal' ||
-        styleElement.first == 'Visual' && styleElement.third == 'Verbal' ||
-        styleElement.second == 'Visual' && styleElement.first == 'Verbal' ||
-        styleElement.second == 'Visual' && styleElement.second == 'Verbal' ||
-        styleElement.second == 'Visual' && styleElement.third == 'Verbal' ||
-        styleElement.third == 'Visual' && styleElement.first == 'Verbal' ||
-        styleElement.third == 'Visual' && styleElement.second == 'Verbal' ||
-        styleElement.third == 'Visual' && styleElement.third == 'Verbal'
-
-        ">
-      <ion-slide *ngFor="let slide of tsunamiSlides">
-        <br>
-        <img [src]="slide.image" class="slide-image" />
-      </ion-slide>
-    </ion-slides>
-  </div>
+    <ion-slides *ngIf="visual">
+        <ion-slide *ngFor="let slide of tsunamiSlides">
+          <br>
+          <img [src]="slide.image" class="slide-image" />
+        </ion-slide>
+      </ion-slides>
+    </div>
 
 
-
-  <div *ngFor="let styleElement of styles">
-    <div *ngIf="styleElement.first == 'Verbal' || styleElement.second == 'Verbal' || styleElement.third == 'Verbal'">
-
+    <div *ngFor="let styleElement of styles">
+      <div *ngIf="verbal">
       <div class="chapter">
         <button ion-item (click)="click1()">
       What causes a tsunami?

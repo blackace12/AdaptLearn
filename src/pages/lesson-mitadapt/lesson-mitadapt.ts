@@ -37,7 +37,7 @@ export class LessonMitadaptPage {
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
-
+  first; second; third:string;
   constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
@@ -68,7 +68,9 @@ export class LessonMitadaptPage {
                 third: this.arrayTest[2].style
               },
             ];
-            console.log(this.arrayTest[0].style);
+            this.first = this.arrayTest[0].style;
+            this.second = this.arrayTest[1].style;
+            this.third = this.arrayTest[2].style;
           }
         }
       });
@@ -98,6 +100,7 @@ export class LessonMitadaptPage {
   }
 
   ionViewDidLoad() {
+    this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
 
@@ -151,6 +154,44 @@ export class LessonMitadaptPage {
 
     this.navCtrl.push(QuizMitadaptPage, data);
     this.changeTheme();
+ }
+
+ public font:boolean=false; //hide
+ public verbal:boolean=false;
+ public visual:boolean=false;
+
+ toShow() {
+   // if learning style = Verbal only show verbal
+   if(this.first === "Verbal" && this.first != "Visual" ||
+     this.second === "Verbal" && this.first != "Visual" ||
+     this.third === "Verbal" && this.first != "Visual" ||
+     this.first === "Verbal" && this.second != "Visual" ||
+     this.second === "Verbal" && this.second != "Visual" ||
+     this.third === "Verbal" && this.second != "Visual" ||
+     this.first === "Verbal" && this.third != "Visual" ||
+     this.second === "Verbal" && this.third != "Visual" ||
+     this.third != "Visual" && this.third === "Verbal" ||
+     this.first === "Verbal"|| this.second === "Verbal" || this.third === "Verbal") {
+       this.verbal = true;
+       this.font = true;
+       this.visual = false;
+   }
+
+   //if learning style = verbal & visual or visual then show visual hide font
+   if(this.first === "Verbal" && this.first === "Visual" ||
+     this.second === "Verbal" && this.first === "Visual" ||
+     this.third === "Verbal" && this.first === "Visual" ||
+     this.first === "Verbal" && this.second === "Visual" ||
+     this.second === "Verbal" && this.second === "Visual" ||
+     this.third === "Verbal" && this.second === "Visual" ||
+     this.first === "Verbal" && this.third === "Visual" ||
+     this.second === "Verbal" && this.third === "Visual" ||
+     //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+     this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
+       this.visual = true;
+       this.verbal = false;
+       this.font = false;
+   }
  }
 
  mitadaptSlides = [

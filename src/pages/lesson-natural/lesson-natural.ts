@@ -251,9 +251,6 @@ export class LessonNaturalPage {
   }
 
   ionViewDidLoad() {
-    this.navBar.backButtonClick = (e: UIEvent) => {
-      this.scrnOrnt.unlock();
-    }
     console.log('ionViewDidLoad LessonNaturalPage');
   }
 
