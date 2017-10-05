@@ -36,4 +36,34 @@
     </ion-list>
 
   </ion-card>
+
+<!-- REKT -->
+<div class="progress">
+    <h2><p ng-class="{width: barsize}" style="text-align: center;">Your progress</p></h2>
+    <p>Overall Progress - {{tracker}}%</p>
+    <div class="meter" style="width: 300px;">
+      <span [style.width]="tracker + '%'" style="text-align: center;">
+      </span>
+    </div>
+    <br />
+    <p>Lesson 1 Progress - {{l1prog}}%</p>
+    <div class="meter" style="width: 300px;">
+      <span [style.width]="l1prog + '%'" style="text-align: center;">
+       </span>
+    </div>
+    <br />
+    <p>Lesson 2 Progress - {{l2prog}}%</p>
+    <div class="meter" style="width: 300px;">
+      <span [style.width]="l2prog + '%'" style="text-align: center;">
+       </span>
+    </div>
+    <br />
+    <p>Lesson 3 Progress - {{l3prog}}%</p>
+    <div class="meter" style="width: 300px;">
+      <span [style.width]="l3prog + '%'" style="text-align: center;">
+       </span>
+    </div>
+</div>
+<!-- /REKT -->
+
 </ion-content>

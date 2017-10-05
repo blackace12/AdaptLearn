@@ -158,7 +158,7 @@ export class QuizEarthsytemPage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Earth System", Passed: true, Score: this.score, ProgressRate: 40
+            Chapter_Quiz: "Earth System", Passed: true, Score: this.score, ProgressRate: 4
           }
         ).key;
         console.log(this.quizID);
@@ -168,14 +168,14 @@ export class QuizEarthsytemPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Earth System",
           Passed: true, Score: this.score,
-          ProgressRate: 40
+          ProgressRate: 4
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Earth System", Passed: false, Score: this.score, ProgressRate: 40
+            Chapter_Quiz: "Earth System", Passed: false, Score: this.score, ProgressRate: 4
           }
         ).key;
         console.log(this.quizID);
@@ -183,7 +183,7 @@ export class QuizEarthsytemPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Earth System",
           Passed: true, Score: this.score,
-          ProgressRate: 40
+          ProgressRate: 4
         });
       }
       console.log("Eto yun");

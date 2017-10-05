@@ -28,6 +28,13 @@ export class ProfilePage {
     userLearningID: FirebaseObjectObservable<any>
     userProgress: FirebaseObjectObservable<any>
     scores: any[] = [];
+    key: any[] = [];
+    tracks: any[] = [];
+    tracker: number;
+    l1prog: number;
+    l2prog: number;
+    l3prog: number;
+    UserProgressTotal: FirebaseObjectObservable<any>;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFireDatabase, afAuth: AngularFireAuth, public modalCtrl: ModalController, public alertCtrl: AlertController) {
 
@@ -36,6 +43,51 @@ export class ProfilePage {
         this.learningStyleObject = af.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
         this.userLearningID = af.object('/Users/' + this.currentUser, { preserveSnapshot: true });
+
+        this.userProgress = af.object('/UserProgress/' + this.currentUser + '/', { preserveSnapshot: true });
+            this.userProgress.subscribe(snapshots => {
+                snapshots.forEach(snapshot => {
+                this.userScores.push(snapshot.val());
+                this.key = snapshot.key;
+                });
+
+        /* User Progress */
+
+        this.UserProgressTotal = af.object('/UserProgress/' + this.currentUser + '/' + this.key + '/' + '/ProgressRate/', { preserveSnapshot: true });
+        this.UserProgressTotal.subscribe(snapshoters => {
+            this.tracks.push(snapshoters.val());
+            this.tracker = Math.ceil(((100 / 9) * this.tracks[0]));
+
+            if ( this.tracks[0] < 5 ){
+                this.l1prog = ((100 / 4) * this.tracks[0]);
+                this.l1prog = Math.ceil(this.l1prog);
+            } else if ( this.tracks[0] > 4) {
+                this.l1prog = 100;
+            } else {
+                this.l1prog = 0;
+            }
+
+            if ( this.l1prog == 100 ){
+                if ( this.tracks[0] < 9 ){
+                    this.l2prog = (this.tracks[0] - 4);
+                    this.l2prog = ( 100 / 4 ) * this.l2prog;
+                } else if ( this.tracks[0] == 9) {
+                    this.l2prog = 100;
+                }
+            } else {
+                this.l2prog = 0;
+            }
+
+            if ( this.l2prog == 100 ){
+                if ( this.tracks[0] < 9 ){
+                    this.l3prog = 100;
+                }
+            } else {
+                this.l3prog = 0;
+            }
+        })
+
+        /* End User Progress */
 
         this.learningStyleObject.subscribe(snapshots => {
             snapshots.forEach(snapshot => {
@@ -101,16 +153,6 @@ export class ProfilePage {
                 }
             })
         });
-
-
-        // Retrieving of Quiz Scores:
-        this.userProgress = af.object('/UserProgress/' + this.currentUser + '/', { preserveSnapshot: true });
-
-        this.userProgress.subscribe(snapshots => {
-            snapshots.forEach(snapshot => {
-                this.userScores.push(snapshot.val());
-            });
-            console.log(this.userScores);
 
             /* for (var i = 0; i <= 8; i++) {
                 if (this.userScores.length <= i) {

@@ -152,7 +152,7 @@ export class QuizSolarsystemPage {
       if (this.score >= 7) {
         this.quizID = this.quizAstronomy.push(
           {
-            Chapter_Quiz: "Solar System", Passed: true, Score: this.score, ProgressRate: 30
+            Chapter_Quiz: "Solar System", Passed: true, Score: this.score, ProgressRate: 3
           }
         ).key;
         console.log(this.quizID);
@@ -162,14 +162,14 @@ export class QuizSolarsystemPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Solar System",
           Passed: true, Score: this.score,
-          ProgressRate: 30
+          ProgressRate: 3
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizAstronomy.push(
           {
-            Chapter_Quiz: "Solar System", Passed: false, Score: this.score, ProgressRate: 30
+            Chapter_Quiz: "Solar System", Passed: false, Score: this.score, ProgressRate: 3
           }
         ).key;
         console.log(this.quizID);
@@ -177,7 +177,7 @@ export class QuizSolarsystemPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Solar System",
           Passed: true, Score: this.score,
-          ProgressRate: 30
+          ProgressRate: 3
         });
       }
       //Edit Here

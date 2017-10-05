@@ -154,7 +154,7 @@ export class QuizLslidePage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Landslide", Passed: true, Score: this.score, ProgressRate: 70
+            Chapter_Quiz: "Landslide", Passed: true, Score: this.score, ProgressRate: 7
           }
         ).key;
         console.log(this.quizID);
@@ -164,14 +164,14 @@ export class QuizLslidePage {
           QuizID: this.quizID,
           Chapter_Quiz: "Landslide",
           Passed: true, Score: this.score,
-          ProgressRate: 70
+          ProgressRate: 7
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Landslide", Passed: false, Score: this.score, ProgressRate: 70
+            Chapter_Quiz: "Landslide", Passed: false, Score: this.score, ProgressRate: 7
           }
         ).key;
         console.log(this.quizID);
@@ -179,7 +179,7 @@ export class QuizLslidePage {
           QuizID: this.quizID,
           Chapter_Quiz: "Landslide",
           Passed: true, Score: this.score,
-          ProgressRate: 70
+          ProgressRate: 7
         });
       }
       console.log("Eto yun");

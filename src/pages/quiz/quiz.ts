@@ -152,7 +152,7 @@ export class QuizPage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Universe Formation", Passed: true, Score: this.score, ProgressRate: 10
+            Chapter_Quiz: "Universe Formation", Passed: true, Score: this.score, ProgressRate: 1
           }
         ).key;
         console.log(this.quizID);
@@ -161,14 +161,14 @@ export class QuizPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Universe Formation",
           Passed: true, Score: this.score,
-          ProgressRate: 10
+          ProgressRate: 1
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Universe Formation", Passed: false, Score: this.score, ProgressRate: 10
+            Chapter_Quiz: "Universe Formation", Passed: false, Score: this.score, ProgressRate: 1
           }
         ).key;
         console.log(this.quizID);
@@ -176,7 +176,7 @@ export class QuizPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Universe Formation",
           Passed: true, Score: this.score,
-          ProgressRate: 10
+          ProgressRate: 1
         });
       }
       console.log("Eto yun");

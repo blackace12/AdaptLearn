@@ -153,7 +153,7 @@ export class QuizAstronomyPage {
       if (this.score >= 7) {
         this.quizID = this.quizAstronomy.push(
           {
-            Chapter_Quiz: "Astronomy", Passed: true, Score: this.score, ProgressRate: 20
+            Chapter_Quiz: "Astronomy", Passed: true, Score: this.score, ProgressRate: 2
           }
         ).key;
         console.log(this.quizID);
@@ -162,14 +162,14 @@ export class QuizAstronomyPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Astronomy",
           Passed: true, Score: this.score,
-          ProgressRate: 20
+          ProgressRate: 2
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizAstronomy.push(
           {
-            Chapter_Quiz: "Astronomy", Passed: false, Score: this.score, ProgressRate: 20
+            Chapter_Quiz: "Astronomy", Passed: false, Score: this.score, ProgressRate: 2
           }
         ).key;
         console.log(this.quizID);
@@ -177,7 +177,7 @@ export class QuizAstronomyPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Astronomy",
           Passed: true, Score: this.score,
-          ProgressRate: 20
+          ProgressRate: 2
         });
       }
       console.log("Eto yun");

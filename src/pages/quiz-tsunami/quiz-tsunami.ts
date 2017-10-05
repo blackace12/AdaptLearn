@@ -153,7 +153,7 @@ export class QuizTsunamiPage {
       if (this.score >= 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Tsunami", Passed: true, Score: this.score, ProgressRate: 80
+            Chapter_Quiz: "Tsunami", Passed: true, Score: this.score, ProgressRate: 8
           }
         ).key;
         console.log(this.quizID);
@@ -163,14 +163,14 @@ export class QuizTsunamiPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Tsunami",
           Passed: true, Score: this.score,
-          ProgressRate: 80
+          ProgressRate: 8
         });
       }
 
       else if (this.score < 7) {
         this.quizID = this.quizUniverse.push(
           {
-            Chapter_Quiz: "Tsunami", Passed: false, Score: this.score, ProgressRate: 80
+            Chapter_Quiz: "Tsunami", Passed: false, Score: this.score, ProgressRate: 8
           }
         ).key;
         console.log(this.quizID);
@@ -178,7 +178,7 @@ export class QuizTsunamiPage {
           QuizID: this.quizID,
           Chapter_Quiz: "Tsunami",
           Passed: true, Score: this.score,
-          ProgressRate: 80
+          ProgressRate: 8
         });
       }
       console.log("Eto yun");
