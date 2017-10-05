@@ -19,7 +19,19 @@
 
 
   <div *ngFor="let styleElement of styles">
-    <ion-slides  *ngIf="styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
+    <ion-slides *ngIf="styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual' ||
+
+        styleElement.first == 'Visual' && styleElement.first == 'Verbal' ||
+        styleElement.first == 'Visual' && styleElement.second == 'Verbal' ||
+        styleElement.first == 'Visual' && styleElement.third == 'Verbal' ||
+        styleElement.second == 'Visual' && styleElement.first == 'Verbal' ||
+        styleElement.second == 'Visual' && styleElement.second == 'Verbal' ||
+        styleElement.second == 'Visual' && styleElement.third == 'Verbal' ||
+        styleElement.third == 'Visual' && styleElement.first == 'Verbal' ||
+        styleElement.third == 'Visual' && styleElement.second == 'Verbal' ||
+        styleElement.third == 'Visual' && styleElement.third == 'Verbal'
+
+        ">
       <ion-slide *ngFor="let slide of equakeSlides">
         <br>
         <img [src]="slide.image" class="slide-image" />
