@@ -1,4 +1,4 @@
-
+import { LoginPage } from '../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
@@ -40,8 +40,9 @@ export class ForgotpasswordPage {
               text: "Ok",
               role: 'cancel',
               handler: () => {
-                this.navCtrl.pop();
+                this.navCtrl.push(LoginPage);
               }
+
             }
           ]
         });
