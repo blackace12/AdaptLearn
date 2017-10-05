@@ -103,11 +103,6 @@ export class LessonMitadaptPage {
 
           this.smartAudio.pause('mitigation');
           this.playingAudio = !this.playingAudio;
-          let toast = this.toastCtrl.create({
-            message: 'Audio Stopped',
-            duration: 1500
-          });
-          toast.present();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -151,6 +146,9 @@ export class LessonMitadaptPage {
     let data = {
       theme: this.selectedTheme
     };
+    this.scrnOrnt.unlock();
+    this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+
     this.navCtrl.push(QuizMitadaptPage, data);
     this.changeTheme();
  }

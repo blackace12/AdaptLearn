@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { QuizVolcanoPage } from './../quiz-volcano/quiz-volcano';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -37,7 +38,7 @@ export class LessonNaturalVolcanoPage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -72,11 +73,6 @@ export class LessonNaturalVolcanoPage {
         }
       });
     });
-    /* this.myTracks = [{
-      src: '../assets/sounds/Volcano.mp3',
-    }
-    ]; */
-
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
   }
 
@@ -106,12 +102,9 @@ export class LessonNaturalVolcanoPage {
 
           this.smartAudio.pause('volcano');
           this.playingAudio = !this.playingAudio;
-          let toast = this.toastCtrl.create({
-            message: 'Audio Stopped',
-            duration: 1500
-          });
-          toast.present();
       }
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
 
     }
@@ -153,6 +146,8 @@ export class LessonNaturalVolcanoPage {
     let data = {
       theme: this.selectedTheme
     };
+    this.scrnOrnt.unlock();
+    this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
     this.navCtrl.push(QuizVolcanoPage, data);
     this.changeTheme();
    }

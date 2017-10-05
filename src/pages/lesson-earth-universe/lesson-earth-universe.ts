@@ -34,12 +34,6 @@ export class LessonEarthUniversePage {
   userLearningID: FirebaseObjectObservable<any>
 
 
-  _options:any;
-  greeting: string;
-  testSlides: string[] = [];
-  @ViewChild('mySlider') mySlider: any;
-
-
   constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, public toastCtrl: ToastController, private settings: SettingsProvider, public scrnOrnt: ScreenOrientation) {
 
     this.currentUser = afAuth.auth.currentUser.uid;
@@ -167,11 +161,6 @@ export class LessonEarthUniversePage {
 
           this.smartAudio.pause('universe');
           this.playingAudio = !this.playingAudio;
-          let toast = this.toastCtrl.create({
-            message: 'Audio Stopped',
-            duration: 1500
-          });
-          toast.present();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -193,6 +182,8 @@ export class LessonEarthUniversePage {
       let data = {
         theme: this.selectedTheme
       };
+      this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
       this.navCtrl.push(QuizPage, data);
       this.changeTheme();
     }

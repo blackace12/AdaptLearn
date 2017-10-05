@@ -101,12 +101,7 @@ export class LessonEarthAstronomyPage {
     else {
       this.smartAudio.pause('astronomy');
       this.playingAudio = !this.playingAudio;
-      let toast = this.toastCtrl.create({
-        message: 'Audio Stopped',
-        duration: 1500
-      });
-      toast.present();
-    }
+     }
   }
 
   ionViewDidLoad() {
@@ -114,16 +109,10 @@ export class LessonEarthAstronomyPage {
       if (this.playingAudio === true) {
           this.smartAudio.pause('astronomy');
           this.playingAudio = !this.playingAudio;
-          let toast = this.toastCtrl.create({
-            message: 'Audio Stopped',
-            duration: 1500
-          });
-          toast.present();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
         this.navCtrl.pop();
-
     }
   }
 
@@ -142,6 +131,9 @@ export class LessonEarthAstronomyPage {
     let data = {
       theme: this.selectedTheme
     };
+       this.scrnOrnt.unlock();
+      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+
     this.navCtrl.push(QuizAstronomyPage, data);
     this.changeTheme();
   }

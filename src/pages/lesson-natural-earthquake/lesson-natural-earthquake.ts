@@ -69,11 +69,6 @@ export class LessonNaturalEarthquakePage {
       });
     });
 
-    //this.myTracks = [{
-    //  src: '../assets/sounds/Earthquake.mp3',
-    //}
-    //];
-
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
   }
 
@@ -104,11 +99,6 @@ export class LessonNaturalEarthquakePage {
 
           this.smartAudio.pause('earthquake');
           this.playingAudio = !this.playingAudio;
-          let toast = this.toastCtrl.create({
-            message: 'Audio Stopped',
-            duration: 1500
-          });
-          toast.present();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -154,6 +144,9 @@ export class LessonNaturalEarthquakePage {
     let data = {
       theme: this.selectedTheme
     };
+    this.scrnOrnt.unlock();
+    this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+
     this.navCtrl.push(QuizEquakePage, data);
     this.changeTheme();
    }

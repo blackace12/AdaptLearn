@@ -27,6 +27,21 @@ export class LessonPage {
   lessonStatus: FirebaseObjectObservable<any>;
   arrayTest = [];
 
+
+    //FOR VISUAL
+    fontSize: any;
+    fontVal: any;
+    learningStyleObject2: FirebaseObjectObservable<any>;
+    learningStyleObject: FirebaseObjectObservable<any>;
+    selectedTheme: String; //new
+    styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
+    styles: any[] = [];
+    user = [];
+    userLearningID: FirebaseObjectObservable<any>
+
+    checkVisual;
+    visual = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public scrnOrnt: ScreenOrientation) {
     this.currentUser = this.afAuth.auth.currentUser.uid;
 
@@ -94,6 +109,48 @@ export class LessonPage {
         }
       }
     });
+
+
+  //GETTING THE VISUAL
+  this.learningStyleObject = af.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
+
+      this.learningStyleObject.subscribe(snapshots => {
+        snapshots.forEach(snapshot => {
+          this.user.push(snapshot.key);
+        });
+
+        this.userLearningID = af.object('/UserStyle/' + this.user[0], { preserveSnapshot: true });
+
+        this.learningStyleObject2 = af.object('/LearningStyle/' + this.currentUser + '/' + this.user[0], { preserveSnapshot: true });
+
+        this.learningStyleObject2.subscribe(snapshots => {
+          snapshots.forEach(snapshot => {
+            console.log(snapshot.key);
+            this.visual.push(snapshot.val());
+          });
+
+          console.log(this.visual);
+          this.visual.sort(function (a, b) {
+            return parseInt(b.value) - parseInt(a.value);
+          });
+          for (var i = 0; i <= this.styleArray.length - 1; i++) {
+            if (this.visual[0].style == this.styleArray[i]) {
+              if (this.visual[0].style == "Visual") {
+                this.checkVisual = this.visual[0].style;
+                console.log("1" + this.checkVisual);
+              } else if (this.visual[1].style == "Visual") {
+                this.checkVisual = this.visual[1].style;
+                console.log("2" +this.checkVisual)
+              } else if (this.visual[2].style == "Visual") {
+                this.checkVisual = this.visual[2].style;
+                console.log("3" + this.checkVisual)
+              }
+            }
+          }
+        });
+      });
+
+
   }
 
   ionViewDidLoad() {
@@ -125,16 +182,18 @@ export class LessonPage {
   }
 
   mitadaptLesson() {
+    if (this.checkVisual == 'Visual'){
+      try {
+        this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+      } catch (error){
+        console.log (error);
+      }
+    }
     let loader = this.loadingCtrl.create({
       content: "Loading Lessons...",
       duration: 1000
     });
     this.navCtrl.push(LessonMitadaptPage);
-    try {
-      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
-    } catch (error){
-      console.log (error);
-    }
     loader.present();
   }
 
