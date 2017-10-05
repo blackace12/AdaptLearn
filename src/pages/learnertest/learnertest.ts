@@ -116,484 +116,484 @@ export class LearnertestPage {
   }
 
   //Assigns every select to the appropriate variable
-visualSelect(i, btn){
-  if (i === 0) {
-    this.Visual0 = btn;
-  } else if (i === 1) {
-    this.Visual1 = btn;
-  } else if (i === 2) {
-    this.Visual2 = btn;
-  } else if (i === 3) {
-    this.Visual3 = btn;
-  } else if (i === 4) {
-    this.Visual4 = btn;
-  } else if (i === 5) {
-    this.Visual5 = btn;
-  } else if (i === 6) {
-    this.Visual6 = btn;
-  } else if (i === 7) {
-    this.Visual7 = btn;
-  } else if (i === 8) {
-    this.Visual8 = btn;
-  } else if (i === 9) {
-    this.Visual9 = btn;
+  visualSelect(i, btn) {
+    if (i === 0) {
+      this.Visual0 = btn;
+    } else if (i === 1) {
+      this.Visual1 = btn;
+    } else if (i === 2) {
+      this.Visual2 = btn;
+    } else if (i === 3) {
+      this.Visual3 = btn;
+    } else if (i === 4) {
+      this.Visual4 = btn;
+    } else if (i === 5) {
+      this.Visual5 = btn;
+    } else if (i === 6) {
+      this.Visual6 = btn;
+    } else if (i === 7) {
+      this.Visual7 = btn;
+    } else if (i === 8) {
+      this.Visual8 = btn;
+    } else if (i === 9) {
+      this.Visual9 = btn;
+    }
+    this.visualNull();
   }
-  this.visualNull();
-}
 
-//Checks if a radio button is not selected for a question
-visualNull(){
-  if (this.Visual0 != undefined && this.Visual1 != undefined && this.Visual2 != undefined && this.Visual3 != undefined && this.Visual4 != undefined && this.Visual5 != undefined && this.Visual6 != undefined && this.Visual7 != undefined && this.Visual8 != undefined && this.Visual9 != undefined) {
-    this.nextDisabled = false;
+  //Checks if a radio button is not selected for a question
+  visualNull() {
+    if (this.Visual0 != undefined && this.Visual1 != undefined && this.Visual2 != undefined && this.Visual3 != undefined && this.Visual4 != undefined && this.Visual5 != undefined && this.Visual6 != undefined && this.Visual7 != undefined && this.Visual8 != undefined && this.Visual9 != undefined) {
+      this.nextDisabled = false;
+    }
   }
-}
 
-audioSelect(i, btn){
-  if (i === 0) {
-    this.Audio0 = btn;
-  } else if (i === 1) {
-    this.Audio1 = btn;
-  } else if (i === 2) {
-    this.Audio2 = btn;
-  } else if (i === 3) {
-    this.Audio3 = btn;
-  } else if (i === 4) {
-    this.Audio4 = btn;
-  } else if (i === 5) {
-    this.Audio5 = btn;
-  } else if (i === 6) {
-    this.Audio6 = btn;
-  } else if (i === 7) {
-    this.Audio7 = btn;
-  } else if (i === 8) {
-    this.Audio8 = btn;
-  } else if (i === 9) {
-    this.Audio9 = btn;
+  audioSelect(i, btn) {
+    if (i === 0) {
+      this.Audio0 = btn;
+    } else if (i === 1) {
+      this.Audio1 = btn;
+    } else if (i === 2) {
+      this.Audio2 = btn;
+    } else if (i === 3) {
+      this.Audio3 = btn;
+    } else if (i === 4) {
+      this.Audio4 = btn;
+    } else if (i === 5) {
+      this.Audio5 = btn;
+    } else if (i === 6) {
+      this.Audio6 = btn;
+    } else if (i === 7) {
+      this.Audio7 = btn;
+    } else if (i === 8) {
+      this.Audio8 = btn;
+    } else if (i === 9) {
+      this.Audio9 = btn;
+    }
+    this.audioNull();
   }
-  this.audioNull();
-}
 
-audioNull(){
-  if (this.Audio0 != undefined && this.Audio1 != undefined && this.Audio2 != undefined && this.Audio3 != undefined && this.Audio4 != undefined && this.Audio5 != undefined && this.Audio6 != undefined && this.Audio7 != undefined && this.Audio8 != undefined && this.Audio9 != undefined) {
-    this.nextDisabled = false;
+  audioNull() {
+    if (this.Audio0 != undefined && this.Audio1 != undefined && this.Audio2 != undefined && this.Audio3 != undefined && this.Audio4 != undefined && this.Audio5 != undefined && this.Audio6 != undefined && this.Audio7 != undefined && this.Audio8 != undefined && this.Audio9 != undefined) {
+      this.nextDisabled = false;
+    }
   }
-}
 
-verbalSelect(i, btn){
-  if (i === 0) {
-    this.Verbal0 = btn;
-  } else if (i === 1) {
-    this.Verbal1 = btn;
-  } else if (i === 2) {
-    this.Verbal2 = btn;
-  } else if (i === 3) {
-    this.Verbal3 = btn;
-  } else if (i === 4) {
-    this.Verbal4 = btn;
-  } else if (i === 5) {
-    this.Verbal5 = btn;
-  } else if (i === 6) {
-    this.Verbal6 = btn;
-  } else if (i === 7) {
-    this.Verbal7 = btn;
-  } else if (i === 8) {
-    this.Verbal8 = btn;
-  } else if (i === 9) {
-    this.Verbal9 = btn;
+  verbalSelect(i, btn) {
+    if (i === 0) {
+      this.Verbal0 = btn;
+    } else if (i === 1) {
+      this.Verbal1 = btn;
+    } else if (i === 2) {
+      this.Verbal2 = btn;
+    } else if (i === 3) {
+      this.Verbal3 = btn;
+    } else if (i === 4) {
+      this.Verbal4 = btn;
+    } else if (i === 5) {
+      this.Verbal5 = btn;
+    } else if (i === 6) {
+      this.Verbal6 = btn;
+    } else if (i === 7) {
+      this.Verbal7 = btn;
+    } else if (i === 8) {
+      this.Verbal8 = btn;
+    } else if (i === 9) {
+      this.Verbal9 = btn;
+    }
+    this.verbalNull();
   }
-  this.verbalNull();
-}
 
-verbalNull(){
-  if (this.Verbal0 != undefined && this.Verbal1 != undefined && this.Verbal2 != undefined && this.Verbal3 != undefined && this.Verbal4 != undefined && this.Verbal5 != undefined && this.Verbal6 != undefined && this.Verbal7 != undefined && this.Verbal8 != undefined && this.Verbal9 != undefined) {
-    this.nextDisabled = false;
+  verbalNull() {
+    if (this.Verbal0 != undefined && this.Verbal1 != undefined && this.Verbal2 != undefined && this.Verbal3 != undefined && this.Verbal4 != undefined && this.Verbal5 != undefined && this.Verbal6 != undefined && this.Verbal7 != undefined && this.Verbal8 != undefined && this.Verbal9 != undefined) {
+      this.nextDisabled = false;
+    }
   }
-}
 
-physicalSelect(i, btn){
-  if (i === 0) {
-    this.Physical0 = btn;
-  } else if (i === 1) {
-    this.Physical1 = btn;
-  } else if (i === 2) {
-    this.Physical2 = btn;
-  } else if (i === 3) {
-    this.Physical3 = btn;
-  } else if (i === 4) {
-    this.Physical4 = btn;
-  } else if (i === 5) {
-    this.Physical5 = btn;
-  } else if (i === 6) {
-    this.Physical6 = btn;
-  } else if (i === 7) {
-    this.Physical7 = btn;
-  } else if (i === 8) {
-    this.Physical8 = btn;
-  } else if (i === 9) {
-    this.Physical9 = btn;
+  physicalSelect(i, btn) {
+    if (i === 0) {
+      this.Physical0 = btn;
+    } else if (i === 1) {
+      this.Physical1 = btn;
+    } else if (i === 2) {
+      this.Physical2 = btn;
+    } else if (i === 3) {
+      this.Physical3 = btn;
+    } else if (i === 4) {
+      this.Physical4 = btn;
+    } else if (i === 5) {
+      this.Physical5 = btn;
+    } else if (i === 6) {
+      this.Physical6 = btn;
+    } else if (i === 7) {
+      this.Physical7 = btn;
+    } else if (i === 8) {
+      this.Physical8 = btn;
+    } else if (i === 9) {
+      this.Physical9 = btn;
+    }
+    this.physicalNull();
   }
-  this.physicalNull();
-}
 
-physicalNull(){
-  if (this.Physical0 != undefined && this.Physical1 != undefined && this.Physical2 != undefined && this.Physical3 != undefined && this.Physical4 != undefined && this.Physical5 != undefined && this.Physical6 != undefined && this.Physical7 != undefined && this.Physical8 != undefined && this.Physical9 != undefined) {
-    this.nextDisabled = false;
+  physicalNull() {
+    if (this.Physical0 != undefined && this.Physical1 != undefined && this.Physical2 != undefined && this.Physical3 != undefined && this.Physical4 != undefined && this.Physical5 != undefined && this.Physical6 != undefined && this.Physical7 != undefined && this.Physical8 != undefined && this.Physical9 != undefined) {
+      this.nextDisabled = false;
+    }
   }
-}
 
-logicalSelect(i, btn){
-  if (i === 0) {
-    this.Logical0 = btn;
-  } else if (i === 1) {
-    this.Logical1 = btn;
-  } else if (i === 2) {
-    this.Logical2 = btn;
-  } else if (i === 3) {
-    this.Logical3 = btn;
-  } else if (i === 4) {
-    this.Logical4 = btn;
-  } else if (i === 5) {
-    this.Logical5 = btn;
-  } else if (i === 6) {
-    this.Logical6 = btn;
-  } else if (i === 7) {
-    this.Logical7 = btn;
-  } else if (i === 8) {
-    this.Logical8 = btn;
-  } else if (i === 9) {
-    this.Logical9 = btn;
+  logicalSelect(i, btn) {
+    if (i === 0) {
+      this.Logical0 = btn;
+    } else if (i === 1) {
+      this.Logical1 = btn;
+    } else if (i === 2) {
+      this.Logical2 = btn;
+    } else if (i === 3) {
+      this.Logical3 = btn;
+    } else if (i === 4) {
+      this.Logical4 = btn;
+    } else if (i === 5) {
+      this.Logical5 = btn;
+    } else if (i === 6) {
+      this.Logical6 = btn;
+    } else if (i === 7) {
+      this.Logical7 = btn;
+    } else if (i === 8) {
+      this.Logical8 = btn;
+    } else if (i === 9) {
+      this.Logical9 = btn;
+    }
+    this.logicalNull();
   }
-  this.logicalNull();
-}
 
-logicalNull(){
-  if (this.Logical0 != undefined && this.Logical1 != undefined && this.Logical2 != undefined && this.Logical3 != undefined && this.Logical4 != undefined && this.Logical5 != undefined && this.Logical6 != undefined && this.Logical7 != undefined && this.Logical8 != undefined && this.Logical9 != undefined) {
-    this.nextDisabled = false;
+  logicalNull() {
+    if (this.Logical0 != undefined && this.Logical1 != undefined && this.Logical2 != undefined && this.Logical3 != undefined && this.Logical4 != undefined && this.Logical5 != undefined && this.Logical6 != undefined && this.Logical7 != undefined && this.Logical8 != undefined && this.Logical9 != undefined) {
+      this.nextDisabled = false;
+    }
   }
-}
 
-socialSelect(i, btn){
-  if (i === 0) {
-    this.Social0 = btn;
-  } else if (i === 1) {
-    this.Social1 = btn;
-  } else if (i === 2) {
-    this.Social2 = btn;
-  } else if (i === 3) {
-    this.Social3 = btn;
-  } else if (i === 4) {
-    this.Social4 = btn;
-  } else if (i === 5) {
-    this.Social5 = btn;
-  } else if (i === 6) {
-    this.Social6 = btn;
-  } else if (i === 7) {
-    this.Social7 = btn;
-  } else if (i === 8) {
-    this.Social8 = btn;
-  } else if (i === 9) {
-    this.Social9 = btn;
+  socialSelect(i, btn) {
+    if (i === 0) {
+      this.Social0 = btn;
+    } else if (i === 1) {
+      this.Social1 = btn;
+    } else if (i === 2) {
+      this.Social2 = btn;
+    } else if (i === 3) {
+      this.Social3 = btn;
+    } else if (i === 4) {
+      this.Social4 = btn;
+    } else if (i === 5) {
+      this.Social5 = btn;
+    } else if (i === 6) {
+      this.Social6 = btn;
+    } else if (i === 7) {
+      this.Social7 = btn;
+    } else if (i === 8) {
+      this.Social8 = btn;
+    } else if (i === 9) {
+      this.Social9 = btn;
+    }
+    this.socialNull();
   }
-  this.socialNull();
-}
 
-socialNull(){
-  if (this.Social0 != undefined && this.Social1 != undefined && this.Social2 != undefined && this.Social3 != undefined && this.Social4 != undefined && this.Social5 != undefined && this.Social6 != undefined && this.Social7 != undefined && this.Social8 != undefined && this.Social9 != undefined) {
-    this.nextDisabled = false;
+  socialNull() {
+    if (this.Social0 != undefined && this.Social1 != undefined && this.Social2 != undefined && this.Social3 != undefined && this.Social4 != undefined && this.Social5 != undefined && this.Social6 != undefined && this.Social7 != undefined && this.Social8 != undefined && this.Social9 != undefined) {
+      this.nextDisabled = false;
+    }
   }
-}
 
-solitarySelect(i, btn){
-  if (i === 0) {
-    this.Solitary0 = btn;
-  } else if (i === 1) {
-    this.Solitary1 = btn;
-  } else if (i === 2) {
-    this.Solitary2 = btn;
-  } else if (i === 3) {
-    this.Solitary3 = btn;
-  } else if (i === 4) {
-    this.Solitary4 = btn;
-  } else if (i === 5) {
-    this.Solitary5 = btn;
-  } else if (i === 6) {
-    this.Solitary6 = btn;
-  } else if (i === 7) {
-    this.Solitary7 = btn;
-  } else if (i === 8) {
-    this.Solitary8 = btn;
-  } else if (i === 9) {
-    this.Solitary9 = btn;
+  solitarySelect(i, btn) {
+    if (i === 0) {
+      this.Solitary0 = btn;
+    } else if (i === 1) {
+      this.Solitary1 = btn;
+    } else if (i === 2) {
+      this.Solitary2 = btn;
+    } else if (i === 3) {
+      this.Solitary3 = btn;
+    } else if (i === 4) {
+      this.Solitary4 = btn;
+    } else if (i === 5) {
+      this.Solitary5 = btn;
+    } else if (i === 6) {
+      this.Solitary6 = btn;
+    } else if (i === 7) {
+      this.Solitary7 = btn;
+    } else if (i === 8) {
+      this.Solitary8 = btn;
+    } else if (i === 9) {
+      this.Solitary9 = btn;
+    }
+    this.solitaryNull();
   }
-  this.solitaryNull();
-}
 
-solitaryNull(){
-  if (this.Solitary0 != undefined && this.Solitary1 != undefined && this.Solitary2 != undefined && this.Solitary3 != undefined && this.Solitary4 != undefined && this.Solitary5 != undefined && this.Solitary6 != undefined && this.Solitary7 != undefined && this.Solitary8 != undefined && this.Solitary9 != undefined) {
-    //this.nextDisabled = false;
-    this.SolitaryTotal();
-    this.submitDisabled = false;
+  solitaryNull() {
+    if (this.Solitary0 != undefined && this.Solitary1 != undefined && this.Solitary2 != undefined && this.Solitary3 != undefined && this.Solitary4 != undefined && this.Solitary5 != undefined && this.Solitary6 != undefined && this.Solitary7 != undefined && this.Solitary8 != undefined && this.Solitary9 != undefined) {
+      //this.nextDisabled = false;
+      this.SolitaryTotal();
+      this.submitDisabled = false;
+    }
   }
-}
 
-  public VisualTotal(){
-  this.visualTotal = this.Visual0 + this.Visual1 + this.Visual2 + this.Visual3 + this.Visual4 + this.Visual5 + this.Visual6 + this.Visual7 + this.Visual8 + this.Visual9;
-  console.log("Visual Total:" + this.visualTotal);
-  this.visualTwo = 0;
-  if (this.Visual0 === 2) {
-    this.visualTwo += 1;
+  public VisualTotal() {
+    this.visualTotal = this.Visual0 + this.Visual1 + this.Visual2 + this.Visual3 + this.Visual4 + this.Visual5 + this.Visual6 + this.Visual7 + this.Visual8 + this.Visual9;
+    console.log("Visual Total:" + this.visualTotal);
+    this.visualTwo = 0;
+    if (this.Visual0 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual1 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual2 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual3 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual4 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual5 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual6 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual7 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual8 === 2) {
+      this.visualTwo += 1;
+    }
+    if (this.Visual9 === 2) {
+      this.visualTwo += 1;
+    }
+    console.log("Visual 2s: " + this.visualTwo);
   }
-  if (this.Visual1 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual2 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual3 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual4 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual5 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual6 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual7 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual8 === 2) {
-    this.visualTwo += 1;
-  }
-  if (this.Visual9 === 2) {
-    this.visualTwo += 1;
-  }
-  console.log("Visual 2s: " + this.visualTwo);
-}
 
-  public AudioTotal(){
-  this.audioTotal = this.Audio0 + this.Audio1 + this.Audio2 + this.Audio3 + this.Audio4 + this.Audio5 + this.Audio6 + this.Audio7 + this.Audio8 + this.Audio9;
-  this.audioTwo = 0;
-  console.log("Audio Total:" + this.audioTotal);
-  if (this.Audio0 === 2) {
-    this.audioTwo += 1;
+  public AudioTotal() {
+    this.audioTotal = this.Audio0 + this.Audio1 + this.Audio2 + this.Audio3 + this.Audio4 + this.Audio5 + this.Audio6 + this.Audio7 + this.Audio8 + this.Audio9;
+    this.audioTwo = 0;
+    console.log("Audio Total:" + this.audioTotal);
+    if (this.Audio0 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio1 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio2 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio3 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio4 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio5 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio6 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio7 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio8 === 2) {
+      this.audioTwo += 1;
+    }
+    if (this.Audio9 === 2) {
+      this.audioTwo += 1;
+    }
+    console.log("Audio 2s: " + this.audioTwo);
   }
-  if (this.Audio1 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio2 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio3 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio4 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio5 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio6 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio7 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio8 === 2) {
-    this.audioTwo += 1;
-  }
-  if (this.Audio9 === 2) {
-    this.audioTwo += 1;
-  }
-  console.log("Audio 2s: " + this.audioTwo);
-}
 
-  public VerbalTotal(){
-  this.verbalTotal = this.Verbal0 + this.Verbal1 + this.Verbal2 + this.Verbal3 + this.Verbal4 + this.Verbal5 + this.Verbal6 + this.Verbal7 + this.Verbal8 + this.Verbal9;
-  console.log("Verbal Total:" + this.verbalTotal);
-  this.verbalTwo = 0;
-  if (this.Verbal0 === 2) {
-    this.verbalTwo += 1;
+  public VerbalTotal() {
+    this.verbalTotal = this.Verbal0 + this.Verbal1 + this.Verbal2 + this.Verbal3 + this.Verbal4 + this.Verbal5 + this.Verbal6 + this.Verbal7 + this.Verbal8 + this.Verbal9;
+    console.log("Verbal Total:" + this.verbalTotal);
+    this.verbalTwo = 0;
+    if (this.Verbal0 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal1 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal2 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal3 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal4 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal5 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal6 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal7 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal8 === 2) {
+      this.verbalTwo += 1;
+    }
+    if (this.Verbal9 === 2) {
+      this.verbalTwo += 1;
+    }
+    console.log("Verbal 2s: " + this.verbalTwo);
   }
-  if (this.Verbal1 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal2 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal3 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal4 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal5 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal6 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal7 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal8 === 2) {
-    this.verbalTwo += 1;
-  }
-  if (this.Verbal9 === 2) {
-    this.verbalTwo += 1;
-  }
-  console.log("Verbal 2s: " + this.verbalTwo);
-}
 
-  public PhysicalTotal(){
-  this.physicalTotal = this.Physical0 + this.Physical1 + this.Physical2 + this.Physical3 + this.Physical4 + this.Physical5 + this.Physical6 + this.Physical7 + this.Physical8 + this.Physical9;
-  console.log("Physical Total:" + this.physicalTotal);
-  this.physicalTwo = 0;
-  if (this.Physical0 === 2) {
-    this.physicalTwo += 1;
+  public PhysicalTotal() {
+    this.physicalTotal = this.Physical0 + this.Physical1 + this.Physical2 + this.Physical3 + this.Physical4 + this.Physical5 + this.Physical6 + this.Physical7 + this.Physical8 + this.Physical9;
+    console.log("Physical Total:" + this.physicalTotal);
+    this.physicalTwo = 0;
+    if (this.Physical0 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical1 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical2 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical3 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical4 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical5 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical6 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical7 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical8 === 2) {
+      this.physicalTwo += 1;
+    }
+    if (this.Physical9 === 2) {
+      this.physicalTwo += 1;
+    }
+    console.log("Physical 2s: " + this.physicalTwo);
   }
-  if (this.Physical1 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical2 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical3 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical4 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical5 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical6 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical7 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical8 === 2) {
-    this.physicalTwo += 1;
-  }
-  if (this.Physical9 === 2) {
-    this.physicalTwo += 1;
-  }
-  console.log("Physical 2s: " + this.physicalTwo);
-}
 
-  public LogicalTotal(){
-  this.logicalTotal = this.Logical0 + this.Logical1 + this.Logical2 + this.Logical3 + this.Logical4 + this.Logical5 + this.Logical6 + this.Logical7 + this.Logical8 + this.Logical9;
-  console.log("Logical Total:" + this.logicalTotal);
-  this.logicalTwo = 0;
-  if (this.Logical0 === 2) {
-    this.logicalTwo += 1;
+  public LogicalTotal() {
+    this.logicalTotal = this.Logical0 + this.Logical1 + this.Logical2 + this.Logical3 + this.Logical4 + this.Logical5 + this.Logical6 + this.Logical7 + this.Logical8 + this.Logical9;
+    console.log("Logical Total:" + this.logicalTotal);
+    this.logicalTwo = 0;
+    if (this.Logical0 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical1 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical2 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical3 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical4 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical5 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical6 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical7 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical8 === 2) {
+      this.logicalTwo += 1;
+    }
+    if (this.Logical9 === 2) {
+      this.logicalTwo += 1;
+    }
+    console.log("Logical 2s: " + this.logicalTwo);
   }
-  if (this.Logical1 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical2 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical3 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical4 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical5 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical6 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical7 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical8 === 2) {
-    this.logicalTwo += 1;
-  }
-  if (this.Logical9 === 2) {
-    this.logicalTwo += 1;
-  }
-  console.log("Logical 2s: " + this.logicalTwo);
-}
 
-  public SocialTotal(){
-  this.socialTotal = this.Social0 + this.Social1 + this.Social2 + this.Social3 + this.Social4 + this.Social5 + this.Social6 + this.Social7 + this.Social8 + this.Social9;
-  console.log("Social Total:" + this.socialTotal);
-  this.socialTwo = 0;
-  if (this.Social0 === 2) {
-    this.socialTwo += 1;
+  public SocialTotal() {
+    this.socialTotal = this.Social0 + this.Social1 + this.Social2 + this.Social3 + this.Social4 + this.Social5 + this.Social6 + this.Social7 + this.Social8 + this.Social9;
+    console.log("Social Total:" + this.socialTotal);
+    this.socialTwo = 0;
+    if (this.Social0 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social1 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social2 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social3 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social4 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social5 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social6 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social7 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social8 === 2) {
+      this.socialTwo += 1;
+    }
+    if (this.Social9 === 2) {
+      this.socialTwo += 1;
+    }
+    console.log("Social 2s: " + this.socialTwo);
   }
-  if (this.Social1 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social2 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social3 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social4 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social5 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social6 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social7 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social8 === 2) {
-    this.socialTwo += 1;
-  }
-  if (this.Social9 === 2) {
-    this.socialTwo += 1;
-  }
-  console.log("Social 2s: " + this.socialTwo);
-}
 
-  public SolitaryTotal(){
-  this.solitaryTotal = this.Solitary0 + this.Solitary1 + this.Solitary2 + this.Solitary3 + this.Solitary4 + this.Solitary5 + this.Solitary6 + this.Solitary7 + this.Solitary8 + this.Solitary9;
-  console.log("Solitary Total:" + this.solitaryTotal);
-  this.solitaryTwo = 0;
-  if (this.Solitary0 === 2) {
-    this.solitaryTwo += 1;
+  public SolitaryTotal() {
+    this.solitaryTotal = this.Solitary0 + this.Solitary1 + this.Solitary2 + this.Solitary3 + this.Solitary4 + this.Solitary5 + this.Solitary6 + this.Solitary7 + this.Solitary8 + this.Solitary9;
+    console.log("Solitary Total:" + this.solitaryTotal);
+    this.solitaryTwo = 0;
+    if (this.Solitary0 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary1 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary2 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary3 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary4 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary5 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary6 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary7 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary8 === 2) {
+      this.solitaryTwo += 1;
+    }
+    if (this.Solitary9 === 2) {
+      this.solitaryTwo += 1;
+    }
+    console.log("Solitary 2s: " + this.solitaryTwo);
   }
-  if (this.Solitary1 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary2 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary3 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary4 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary5 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary6 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary7 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary8 === 2) {
-    this.solitaryTwo += 1;
-  }
-  if (this.Solitary9 === 2) {
-    this.solitaryTwo += 1;
-  }
-  console.log("Solitary 2s: " + this.solitaryTwo);
-}
 
   /* Hide learning styles test by group */
   public hideNext: boolean = true;
@@ -607,214 +607,227 @@ solitaryNull(){
   public hide7: boolean = false;
 
   public page1() {
-  this.hide1 = true;
-  this.hide2 = false;
-  this.hide3 = false;
-  this.hide4 = false;
-  this.hide5 = false;
-  this.hide6 = false;
-  this.hide7 = false;
-}
+    this.hide1 = true;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+  }
 
   public page2() {
-  this.hide2 = true;
-  this.hide1 = false;
-  this.hide3 = false;
-  this.hide4 = false;
-  this.hide5 = false;
-  this.hide6 = false;
-  this.hide7 = false;
+    this.hide2 = true;
+    this.hide1 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
 
-}
+  }
 
   public page3() {
-  this.hide3 = true;
-  this.hide1 = false;
-  this.hide2 = false;
-  this.hide4 = false;
-  this.hide5 = false;
-  this.hide6 = false;
-  this.hide7 = false;
-}
+    this.hide3 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+  }
 
   public page4() {
-  this.hide4 = true;
-  this.hide1 = false;
-  this.hide2 = false;
-  this.hide3 = false;
-  this.hide5 = false;
-  this.hide6 = false;
-  this.hide7 = false;
-}
+    this.hide4 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+  }
 
   public page5() {
-  this.hide5 = true;
-  this.hide1 = false;
-  this.hide2 = false;
-  this.hide3 = false;
-  this.hide4 = false;
-  this.hide6 = false;
-  this.hide7 = false;
-}
+    this.hide5 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+  }
 
   public page6() {
-  this.hide6 = true;
-  this.hide1 = false;
-  this.hide2 = false;
-  this.hide3 = false;
-  this.hide4 = false;
-  this.hide5 = false;
-  this.hide7 = false;
-}
+    this.hide6 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide7 = false;
+  }
 
   public page7() {
-  this.hide7 = true;
-  this.hide1 = false;
-  this.hide2 = false;
-  this.hide3 = false;
-  this.hide4 = false;
-  this.hide5 = false;
-  this.hide6 = false;
-}
+    this.hide7 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+  }
 
   public currentpage = 1;
 
   public next() {
-  this.nextDisabled = true;
-  this.VisualTotal();
-  this.AudioTotal();
-  this.VerbalTotal();
-  this.PhysicalTotal();
-  this.LogicalTotal();
-  this.SocialTotal();
-  this.SolitaryTotal();
-  if (this.currentpage != 7) {
-    this.currentpage += 1;
-    console.log("Current Page:" + this.currentpage);
-    if (this.currentpage == 1) {
-      this.page1();
-    } else if (this.currentpage == 2) {
-      this.page2();
-    } else if (this.currentpage == 3) {
-      this.page3();
-    } else if (this.currentpage == 4) {
-      this.page4();
-    } else if (this.currentpage == 5) {
-      this.page5();
-    } else if (this.currentpage == 6) {
-      this.page6();
-    } else if (this.currentpage == 7) {
-      this.page7();
-      this.hideNext = !this.hideNext
-      this.hideSubmit = !this.hideSubmit;
-    }
-  }
-}
-
-style1; style2; temp: any;
-
-submit(){
-  var AudioTotal = this.audioTotal;
-  var LogicalTotal = this.logicalTotal;
-  var PhysicalTotal = this.physicalTotal;
-  var SocialTotal = this.socialTotal;
-  var SolitaryTotal = this.solitaryTotal;
-  var VerbalTotal = this.verbalTotal;
-  var VisualTotal = this.visualTotal;
-
-  var visualTwo = this.visualTwo;
-  var audioTwo = this.audioTwo;
-  var verbalTwo = this.verbalTwo;
-  var physicalTwo = this.physicalTwo;
-  var logicalTwo = this.logicalTwo;
-  var socialTwo = this.socialTwo;
-  var solitaryTwo = this.solitaryTwo;
-
-  var total = [
-    { style: 'Visual', value: VisualTotal, twos: visualTwo },
-    { style: 'Auditory', value: AudioTotal, twos: audioTwo },
-    { style: 'Verbal', value: VerbalTotal, twos: verbalTwo },
-    { style: 'Physical', value: PhysicalTotal, twos: physicalTwo },
-    { style: 'Logical', value: LogicalTotal, twos: logicalTwo },
-    { style: 'Social', value: SocialTotal, twos: socialTwo },
-    { style: 'Solitary', value: SolitaryTotal, twos: solitaryTwo }
-  ];
-
-  console.log("Unsorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
-  console.log("Unsorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
-  console.log("Unsorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
-  console.log("Unsorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
-  console.log("Unsorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
-  console.log("Unsorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
-  console.log("Unsorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
-  console.log("================================");
-
-  total.sort(function (a, b) {
-    return b.value - a.value;
-  });
-
-  console.log("Sorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
-  console.log("Sorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
-  console.log("Sorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
-  console.log("Sorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
-  console.log("Sorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
-  console.log("Sorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
-  console.log("Sorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
-  console.log("================================");
-
-  this.style2 = 1;
-  for (this.style1 = 0; this.style1 < total.length; this.style1++) {
-    console.log(this.style1 + " " + this.style2);
-    if (total[this.style1].value === total[this.style2].value) { //check if value is equal to next style
-      if (total[this.style2].twos > total[this.style1].twos) { //check if next style is greater than current style
-        this.temp = total[this.style1];
-        total[this.style1] = total[this.style2];
-        total[this.style2] = this.temp;
-        this.temp = 0;
+    this.nextDisabled = true;
+    this.VisualTotal();
+    this.AudioTotal();
+    this.VerbalTotal();
+    this.PhysicalTotal();
+    this.LogicalTotal();
+    this.SocialTotal();
+    this.SolitaryTotal();
+    if (this.currentpage != 7) {
+      this.currentpage += 1;
+      console.log("Current Page:" + this.currentpage);
+      if (this.currentpage == 1) {
+        this.page1();
+      } else if (this.currentpage == 2) {
+        this.page2();
+      } else if (this.currentpage == 3) {
+        this.page3();
+      } else if (this.currentpage == 4) {
+        this.page4();
+      } else if (this.currentpage == 5) {
+        this.page5();
+      } else if (this.currentpage == 6) {
+        this.page6();
+      } else if (this.currentpage == 7) {
+        this.page7();
+        this.hideNext = !this.hideNext
+        this.hideSubmit = !this.hideSubmit;
       }
-    }
-    if (this.style2 != 6) {
-      this.style2++;
     }
   }
 
-  console.log("Sorted with twos: " + total[0].style + " " + total[0].value + " " + total[0].twos);
-  console.log("Sorted with twos: " + total[1].style + " " + total[1].value + " " + total[1].twos);
-  console.log("Sorted with twos: " + total[2].style + " " + total[2].value + " " + total[2].twos);
-  console.log("Sorted with twos: " + total[3].style + " " + total[3].value + " " + total[3].twos);
-  console.log("Sorted with twos: " + total[4].style + " " + total[4].value + " " + total[4].twos);
-  console.log("Sorted with twos: " + total[5].style + " " + total[5].value + " " + total[5].twos);
-  console.log("Sorted with twos: " + total[6].style + " " + total[6].value + " " + total[6].twos);
+  style1; style2; temp: any;
 
-  //const checker = true;
+  submit() {
+    var AudioTotal = this.audioTotal;
+    var LogicalTotal = this.logicalTotal;
+    var PhysicalTotal = this.physicalTotal;
+    var SocialTotal = this.socialTotal;
+    var SolitaryTotal = this.solitaryTotal;
+    var VerbalTotal = this.verbalTotal;
+    var VisualTotal = this.visualTotal;
 
-  let confirm = this.alertCtrl.create({
-    title: 'Confirm form Submission?',
-    buttons: [{
-      text: 'No',
-      handler: () => {
-        console.log('No Clicked');
+    var visualTwo = this.visualTwo;
+    var audioTwo = this.audioTwo;
+    var verbalTwo = this.verbalTwo;
+    var physicalTwo = this.physicalTwo;
+    var logicalTwo = this.logicalTwo;
+    var socialTwo = this.socialTwo;
+    var solitaryTwo = this.solitaryTwo;
+
+    var total = [
+      { style: 'Visual', value: VisualTotal, twos: visualTwo },
+      { style: 'Auditory', value: AudioTotal, twos: audioTwo },
+      { style: 'Verbal', value: VerbalTotal, twos: verbalTwo },
+      { style: 'Physical', value: PhysicalTotal, twos: physicalTwo },
+      { style: 'Logical', value: LogicalTotal, twos: logicalTwo },
+      { style: 'Social', value: SocialTotal, twos: socialTwo },
+      { style: 'Solitary', value: SolitaryTotal, twos: solitaryTwo }
+    ];
+
+    console.log("Unsorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
+    console.log("Unsorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
+    console.log("Unsorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
+    console.log("Unsorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
+    console.log("Unsorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
+    console.log("Unsorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
+    console.log("Unsorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
+    console.log("================================");
+
+    total.sort(function (a, b) {
+      return b.value - a.value;
+    });
+
+    console.log("Sorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
+    console.log("Sorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
+    console.log("Sorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
+    console.log("Sorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
+    console.log("Sorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
+    console.log("Sorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
+    console.log("Sorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
+    console.log("================================");
+
+    this.style2 = 1;
+    for (this.style1 = 0; this.style1 < total.length; this.style1++) {
+      console.log(this.style1 + " " + this.style2);
+      if (total[this.style1].value === total[this.style2].value) { //check if value is equal to next style
+        if (total[this.style2].twos > total[this.style1].twos) { //check if next style is greater than current style
+          this.temp = total[this.style1];
+          total[this.style1] = total[this.style2];
+          total[this.style2] = this.temp;
+          this.temp = 0;
+        }
       }
-    },
-    {
-      text: 'Yes',
-      handler: data => {
-        this.learningStyles.push(
-          [
-            { style: total[0].style, value: total[0].value },
-            { style: total[1].style, value: total[1].value },
-            { style: total[2].style, value: total[2].value },
-            { style: total[3].style, value: total[3].value },
-            { style: total[4].style, value: total[4].value },
-            { style: total[5].style, value: total[5].value },
-            { style: total[6].style, value: total[6].value }]
-        );
-        this.userChecker.update(this.currentUser, { Checker: 'true' });
-        this.navCtrl.push(SplashscreenPage);
+      if (this.style2 != 6) {
+        this.style2++;
       }
     }
-    ]
-  });
-  confirm.present();
-}
+
+    console.log("Sorted with twos: " + total[0].style + " " + total[0].value + " " + total[0].twos);
+    console.log("Sorted with twos: " + total[1].style + " " + total[1].value + " " + total[1].twos);
+    console.log("Sorted with twos: " + total[2].style + " " + total[2].value + " " + total[2].twos);
+    console.log("Sorted with twos: " + total[3].style + " " + total[3].value + " " + total[3].twos);
+    console.log("Sorted with twos: " + total[4].style + " " + total[4].value + " " + total[4].twos);
+    console.log("Sorted with twos: " + total[5].style + " " + total[5].value + " " + total[5].twos);
+    console.log("Sorted with twos: " + total[6].style + " " + total[6].value + " " + total[6].twos);
+
+    //const checker = true;
+
+    let confirm = this.alertCtrl.create({
+      title: 'Confirm form Submission?',
+      buttons: [{
+        text: 'No',
+        handler: () => {
+          console.log('No Clicked');
+        }
+      },
+      {
+        text: 'Yes',
+        handler: data => {
+          this.learningStyles.push(
+            [
+              { style: total[0].style, value: total[0].value },
+              { style: total[1].style, value: total[1].value },
+              { style: total[2].style, value: total[2].value },
+              { style: total[3].style, value: total[3].value },
+              { style: total[4].style, value: total[4].value },
+              { style: total[5].style, value: total[5].value },
+              { style: total[6].style, value: total[6].value }]
+          );
+          this.userChecker.update(this.currentUser, { Checker: 'true' });
+          this.navCtrl.push(SplashscreenPage);
+          let confirm = this.alertCtrl.create({
+            title: 'Welcome to AdaptLearn',
+            message: '<p>Your learning content are based on your top three learning style which you can see in the home page. Click the images for more information about the learning style.</p>',
+            buttons: [
+              {
+                text: 'Ok',
+                handler: () => {
+                  console.log('Agree clicked');
+                }
+              }
+            ]
+          });
+          confirm.present();
+        }
+      }
+      ]
+    });
+    confirm.present();
+  }
 }
