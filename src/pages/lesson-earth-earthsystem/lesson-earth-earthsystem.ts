@@ -5,7 +5,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, Navbar, ToastController } from 'ionic-angular';
-import { SettingsPage} from '../settings/settings';
+import { SettingsPage } from '../settings/settings';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import {
   AngularFireDatabase,
@@ -29,19 +29,19 @@ export class LessonEarthEarthsystemPage {
   allTracks: any[];
   arrayTest = [];
   currentUser;
-  fontSize:any;
-  fontVal:any;
+  fontSize: any;
+  fontVal: any;
   learningStyleObject2: FirebaseObjectObservable<any>;
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
-  selectedTheme:String; //new
+  selectedTheme: String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
-  first; second; third:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
+  first; second; third: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, private settings: SettingsProvider, public toastCtrl: ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -83,14 +83,14 @@ export class LessonEarthEarthsystemPage {
   }
 
   //new
-  changeTheme(){
+  changeTheme() {
     this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
 
-  playAudio(){
-    if(this.playingAudio === false){
+  playAudio() {
+    if (this.playingAudio === false) {
       this.smartAudio.play('earthSystem');
       this.playingAudio = !this.playingAudio;
       console.log("playing");
@@ -107,26 +107,26 @@ export class LessonEarthEarthsystemPage {
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
 
-          this.smartAudio.pause('earthSystem');
-          this.playingAudio = !this.playingAudio;
+        this.smartAudio.pause('earthSystem');
+        this.playingAudio = !this.playingAudio;
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
-        this.navCtrl.pop();
+      this.navCtrl.pop();
 
     }
   }
 
-  playVideo(){
+  playVideo() {
     this.youtube.openVideo('VMxjzWHbyFM');
   }
 
-  regularShare(){
+  regularShare() {
     // share(message, subject, file, url)
     this.socialSharing.shareViaFacebook("Earth System Lesson", null, "https://adaptlearn.herokuapp.com/lesson1/earthsystems.html");
   }
 
-  universeQuiz(){
+  universeQuiz() {
     //new
     let data = {
       theme: this.selectedTheme
@@ -140,35 +140,35 @@ export class LessonEarthEarthsystemPage {
 
 
 
-  SettingsPage(){
+  SettingsPage() {
     this.navCtrl.push(SettingsPage)
   }
 
-  openModal(){
+  openModal() {
     const myModalOptions: ModalOptions = {
       enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
     };
 
-    const myModal: Modal = this.modal.create('FontSizePage', { data:this.fontVal }, myModalOptions);
+    const myModal: Modal = this.modal.create('FontSizePage', { data: this.fontVal }, myModalOptions);
 
     //present font size modal
     myModal.present();
 
     //will receive value when modal is closed/dismissed
-    myModal.onWillDismiss((fontValue)=>{
+    myModal.onWillDismiss((fontValue) => {
       this.fontSize = fontValue;
       this.fontVal = fontValue;
       console.log(this.fontVal + " back to page");
     });
   }
 
-  public font:boolean=false; //hide
-  public verbal:boolean=false;
-  public visual:boolean=false;
+  public font: boolean = false; //hide
+  public verbal: boolean = false;
+  public visual: boolean = false;
 
   toShow() {
     // if learning style = Verbal only show verbal
-    if(this.first === "Verbal" && this.first != "Visual" ||
+    if (this.first === "Verbal" && this.first != "Visual" ||
       this.second === "Verbal" && this.first != "Visual" ||
       this.third === "Verbal" && this.first != "Visual" ||
       this.first === "Verbal" && this.second != "Visual" ||
@@ -177,14 +177,14 @@ export class LessonEarthEarthsystemPage {
       this.first === "Verbal" && this.third != "Visual" ||
       this.second === "Verbal" && this.third != "Visual" ||
       this.third != "Visual" && this.third === "Verbal" ||
-      this.first === "Verbal"|| this.second === "Verbal" || this.third === "Verbal") {
-        this.verbal = true;
-        this.font = true;
-        this.visual = false;
+      this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+      this.verbal = true;
+      this.font = true;
+      this.visual = false;
     }
 
     //if learning style = verbal & visual or visual then show visual hide font
-    if(this.first === "Verbal" && this.first === "Visual" ||
+    if (this.first === "Verbal" && this.first === "Visual" ||
       this.second === "Verbal" && this.first === "Visual" ||
       this.third === "Verbal" && this.first === "Visual" ||
       this.first === "Verbal" && this.second === "Visual" ||
@@ -193,10 +193,10 @@ export class LessonEarthEarthsystemPage {
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
       //this.third === "Verbal" && this.third === "Visual" || error i dont know why
-      this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
-        this.visual = true;
-        this.verbal = false;
-        this.font = false;
+      this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+      this.visual = true;
+      this.verbal = false;
+      this.font = false;
     }
   }
 
@@ -234,52 +234,52 @@ export class LessonEarthEarthsystemPage {
   ];
 
   //under chapter 1
-    public hide1:boolean=true;
-    public hide1_1:boolean=false;
-    public hide1_2:boolean=false;
-    public hide1_3:boolean=false;
-    public hide1_4:boolean=false;
+  public hide1: boolean = true;
+  public hide1_1: boolean = false;
+  public hide1_2: boolean = false;
+  public hide1_3: boolean = false;
+  public hide1_4: boolean = false;
 
-    //====start of chapter 1=======
-    public click1(){
-      this.hide1 = !this.hide1;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-    }
+  //====start of chapter 1=======
+  public click1() {
+    this.hide1 = !this.hide1;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+  }
 
-    public click1_1(){
-      this.hide1_1 = !this.hide1_1;
-      this.hide1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-    }
+  public click1_1() {
+    this.hide1_1 = !this.hide1_1;
+    this.hide1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+  }
 
-    public click1_2(){
-      this.hide1_2 = !this.hide1_2;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-    }
+  public click1_2() {
+    this.hide1_2 = !this.hide1_2;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+  }
 
-    public click1_3(){
-      this.hide1_3 = !this.hide1_3;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_4 = false;
-    }
+  public click1_3() {
+    this.hide1_3 = !this.hide1_3;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_4 = false;
+  }
 
-    public click1_4(){
-      this.hide1_4 = !this.hide1_4;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-    }
+  public click1_4() {
+    this.hide1_4 = !this.hide1_4;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+  }
 
-    //====end of chapter 1=======
+  //====end of chapter 1=======
 }

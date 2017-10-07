@@ -13,13 +13,6 @@ import {
 } from 'angularfire2/database';
 import { SettingsProvider } from "../../providers/settings/settings"; //new
 
-
-/**
- * Generated class for the LessonEarthAstronomyPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-lesson-earth-astronomy',
@@ -30,19 +23,19 @@ export class LessonEarthAstronomyPage {
   allTracks: any[];
   arrayTest = [];
   currentUser;
-  fontSize:any;
-  fontVal:any;
+  fontSize: any;
+  fontVal: any;
   learningStyleObject2: FirebaseObjectObservable<any>;
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
-  selectedTheme:String; //new
+  selectedTheme: String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
-  first; second; third:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, public toastCtrl:ToastController, private settings: SettingsProvider, public scrnOrnt: ScreenOrientation) {
+  first; second; third: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, public toastCtrl: ToastController, private settings: SettingsProvider, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -84,14 +77,14 @@ export class LessonEarthAstronomyPage {
   }
 
   //new
-  changeTheme(){
+  changeTheme() {
     this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
 
-  playAudio(){
-    if(this.playingAudio === false){
+  playAudio() {
+    if (this.playingAudio === false) {
       this.smartAudio.play('astronomy');
       this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
@@ -103,22 +96,21 @@ export class LessonEarthAstronomyPage {
     else {
       this.smartAudio.pause('astronomy');
       this.playingAudio = !this.playingAudio;
-     }
+    }
   }
 
   ionViewDidLoad() {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-          this.smartAudio.pause('astronomy');
-          this.playingAudio = !this.playingAudio;
+        this.smartAudio.pause('astronomy');
+        this.playingAudio = !this.playingAudio;
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
-        this.navCtrl.pop();
+      this.navCtrl.pop();
     }
   }
-
 
   playVideo() {
     this.youtube.openVideo('ld75W1dz-h0');
@@ -134,43 +126,42 @@ export class LessonEarthAstronomyPage {
     let data = {
       theme: this.selectedTheme
     };
-       this.scrnOrnt.unlock();
-      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+    this.scrnOrnt.unlock();
+    this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
 
     this.navCtrl.push(QuizAstronomyPage, data);
     this.changeTheme();
   }
 
-
   SettingsPage() {
     this.navCtrl.push(SettingsPage)
   }
 
-  openModal(){
+  openModal() {
     const myModalOptions: ModalOptions = {
       enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
     };
 
-    const myModal: Modal = this.modal.create('FontSizePage', { data:this.fontVal }, myModalOptions);
+    const myModal: Modal = this.modal.create('FontSizePage', { data: this.fontVal }, myModalOptions);
 
     //present font size modal
     myModal.present();
 
     //will receive value when modal is closed/dismissed
-    myModal.onWillDismiss((fontValue)=>{
+    myModal.onWillDismiss((fontValue) => {
       this.fontSize = fontValue;
       this.fontVal = fontValue;
       console.log(this.fontVal + " back to page");
     });
   }
 
-  public font:boolean=false; //hide
-  public verbal:boolean=false;
-  public visual:boolean=false;
+  public font: boolean = false; //hide
+  public verbal: boolean = false;
+  public visual: boolean = false;
 
   toShow() {
     // if learning style = Verbal only show verbal
-    if(this.first === "Verbal" && this.first != "Visual" ||
+    if (this.first === "Verbal" && this.first != "Visual" ||
       this.second === "Verbal" && this.first != "Visual" ||
       this.third === "Verbal" && this.first != "Visual" ||
       this.first === "Verbal" && this.second != "Visual" ||
@@ -179,14 +170,14 @@ export class LessonEarthAstronomyPage {
       this.first === "Verbal" && this.third != "Visual" ||
       this.second === "Verbal" && this.third != "Visual" ||
       this.third != "Visual" && this.third === "Verbal" ||
-      this.first === "Verbal"|| this.second === "Verbal" || this.third === "Verbal") {
-        this.verbal = true;
-        this.font = true;
-        this.visual = false;
+      this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+      this.verbal = true;
+      this.font = true;
+      this.visual = false;
     }
 
     //if learning style = verbal & visual or visual then show visual hide font
-    if(this.first === "Verbal" && this.first === "Visual" ||
+    if (this.first === "Verbal" && this.first === "Visual" ||
       this.second === "Verbal" && this.first === "Visual" ||
       this.third === "Verbal" && this.first === "Visual" ||
       this.first === "Verbal" && this.second === "Visual" ||
@@ -195,10 +186,10 @@ export class LessonEarthAstronomyPage {
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
       //this.third === "Verbal" && this.third === "Visual" || error i dont know why
-      this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
-        this.visual = true;
-        this.verbal = false;
-        this.font = false;
+      this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+      this.visual = true;
+      this.verbal = false;
+      this.font = false;
     }
   }
 

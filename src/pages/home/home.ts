@@ -3,7 +3,7 @@ import { LearnertestPage } from './../learnertest/learnertest';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { Component } from '@angular/core';
-import { NavController, ModalController, AlertController, LoadingController, Loading, ToastController } from 'ionic-angular';
+import { NavController, ModalController, AlertController, ToastController } from 'ionic-angular';
 
 
 @Component({
@@ -11,19 +11,18 @@ import { NavController, ModalController, AlertController, LoadingController, Loa
   templateUrl: 'home.html'
 })
 export class HomePage {
-  currentUser: any;
   introSlides: FirebaseListObservable<any>;
-  public loading: Loading;
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController, af: AngularFireDatabase, afAuth: AngularFireAuth, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public toastCtrl: ToastController) {
+  currentUser: any;
+
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public alertCtrl: AlertController,public toastCtrl: ToastController) {
     this.introSlides = af.list('/Users/');
     this.currentUser = afAuth.auth.currentUser.uid;
-
   }
 
   slides = [
     {
       title: "Welcome to AdaptLearn!",
-      description: "A <b>Multi-modal Hybrid Learning Application</b> designed to generate multimodal adaptive learning content based on the user’s learning style.",
+      description: "A<b>Multi-modal Hybrid Learning Application</b> designed to generate multimodal adaptive learning content based on your learning style.",
       image: "./assets/img/adapt2.png",
     },
     {
@@ -32,8 +31,8 @@ export class HomePage {
       image: "./assets/img/2nd.png"
     },
     {
-      title: "Result?",
-      description: "The <b>Learning content</b> would be presented in a way that fits your learning style.",
+      title: "Learning Content",
+      description: "The combination of your top 3 learning styles will be the basis in the presentation of the learning content.",
       image: "./assets/img/3rd.png"
     }
   ];
@@ -46,7 +45,7 @@ export class HomePage {
       inputs: [
         {
           name: 'name',
-          placeholder: 'Name',
+          placeholder: 'Enter Name',
           type: 'text'
         },
       ],

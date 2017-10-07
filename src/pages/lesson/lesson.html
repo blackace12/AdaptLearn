@@ -4,19 +4,17 @@
       <ion-icon name="menu"></ion-icon>
      Lesson
     </button>
-
     <ion-buttons end>
       <button ion-button icon-only item-right (click)="SettingsPage()">
         <ion-icon name="cog" ></ion-icon>
       </button>
     </ion-buttons>
-
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-item >
-  <button ion-item no-lines (click)="earthLesson();">
+  <ion-item>
+    <button ion-item no-lines (click)="earthLesson();">
       <img src="assets/img/LEStructure.svg" width="35px" >  Origin and structure of the Earth
   </button>
   </ion-item>
@@ -25,16 +23,13 @@
     <button no-lines [disabled]="x.valid" ion-item (click)="naturalLesson()">
         <ion-icon *ngIf="x.valid == true" name="{{x.name}}"></ion-icon>
         <img *ngIf="x.valid == false" src="assets/img/LHazards.svg" width="35px"> Natural Hazards
-  </button>
+    </button>
   </ion-item>
-
 
   <ion-item *ngFor="let y of mitAdaptUnlocked">
     <button ion-item no-lines [disabled]="y.valid" (click)="mitadaptLesson()">
       <ion-icon *ngIf="y.valid == true" name="{{y.name}}"></ion-icon>
       <img *ngIf="y.valid == false" src="assets/img/LMitigation.svg" width="35px">  Mitigation and Adaptation
-  </button>
+    </button>
   </ion-item>
-
-
 </ion-content>

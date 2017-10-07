@@ -2,7 +2,6 @@
   <ion-header>
     <ion-navbar color="primary">
       <ion-title>Universe Formation</ion-title>
-
       <ion-buttons end>
         <div *ngIf="font">
           <button ion-button icon-only item-right (click)="openModal()">
@@ -19,9 +18,8 @@
   </ion-header>
 
   <ion-content padding>
-    <!-- pager -->
     <div *ngFor="let styleElement of styles">
-    <ion-slides *ngIf="visual">
+      <ion-slides *ngIf="visual">
         <ion-slide *ngFor="let slide of universeSlides">
           <br>
           <img [src]="slide.image" class="slide-image" />
@@ -31,239 +29,241 @@
 
 
 
-  <div *ngFor="let styleElement of styles">
-    <div *ngIf="verbal">
-     <button ion-item (click)="click1()">
+    <div *ngFor="let styleElement of styles">
+      <div *ngIf="verbal">
+        <button ion-item (click)="click1()">
       In the Beginning
     </button>
-    <ion-card *ngIf="hide1">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          Living things breathe, feed, grow and leave offspring. They range from the simplest single-celled bacteria to plants, birds,
-          animals and humans. Earth is the only world we know that supports life. No one knows how life began. It seems to
-          involve the coming together of certain chemicals. But what changes these chemicals into life-forms is a mystery.
-          <br> Studies of ancient rocks have shown that life began on Earth about 3 800 million years ago. At that time,
-          the Earth was a very unfriendly place. The air was dense and poisonous. Comets and meteorites were raining down
-          on the planet.
-          <br> The young Earth was a water world with small areas of dry land. Many scientists think that life began in the
-          lakes and oceans. Many of the ingredients from which life started may have been brought by comets and meteorites.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_1()">
+        <ion-card *ngIf="hide1">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Living things breathe, feed, grow and leave offspring. They range from the simplest single-celled bacteria to plants, birds,
+              animals and humans. Earth is the only world we know that supports life. No one knows how life began. It seems
+              to involve the coming together of certain chemicals. But what changes these chemicals into life-forms is a
+              mystery.
+              <br> Studies of ancient rocks have shown that life began on Earth about 3 800 million years ago. At that time,
+              the Earth was a very unfriendly place. The air was dense and poisonous. Comets and meteorites were raining
+              down on the planet.
+              <br> The young Earth was a water world with small areas of dry land. Many scientists think that life began
+              in the lakes and oceans. Many of the ingredients from which life started may have been brought by comets and
+              meteorites.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_1()">
       Did life begin in the oceans?
     </button>
-    <ion-card *ngIf="hide1_1">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          Lightning and ultraviolet light from the Sun may have split the hydrogen-rich gases in the atmosphere. Energy may also have
-          come from hot springs on the seabed, known as ‘black smokers’. Over time, the simple chemicals joined to become
-          larger, more complex chemicals.
-          <br> Once these chemicals collected in the oceans or lakes, they formed an 'organic soup'. One day, an accident
-          occurred. A molecule began to make copies of itself. Earth had sprung to life.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_2()">
+        <ion-card *ngIf="hide1_1">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Lightning and ultraviolet light from the Sun may have split the hydrogen-rich gases in the atmosphere. Energy may also have
+              come from hot springs on the seabed, known as ‘black smokers’. Over time, the simple chemicals joined to become
+              larger, more complex chemicals.
+              <br> Once these chemicals collected in the oceans or lakes, they formed an 'organic soup'. One day, an accident
+              occurred. A molecule began to make copies of itself. Earth had sprung to life.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_2()">
       The Big Bang Theory
     </button>
-    <ion-card *ngIf="hide1_2">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          Most astronomers believe the Universe began in a Big Bang about 14 billion years ago. At that time, the entire Universe was
-          inside a bubble that was thousands of times smaller than a pinhead. It was hotter and denser than anything we can
-          imagine.
-          <br> Then it suddenly exploded. The Universe that we know was born. Time, space and matter all began with the Big
-          Bang. In a fraction of a second, the Universe grew from smaller than a single atom to bigger than a galaxy. And
-          it kept on growing at a fantastic rate. It is still expanding today.
-          <br> As the Universe expanded and cooled, energy changed into particles of matter and antimatter. These two opposite
-          types of particles largely destroyed each other. But some matter survived. More stable particles called protons
-          and neutrons started to form when the Universe was one second old. Over the next three minutes, the temperature
-          dropped below 1 billion degrees Celsius. It was now cool enough for the protons and neutrons to come together,
-          forming hydrogen and helium nuclei.
-          <br> After 300 000 years, the Universe had cooled to about 3000 degrees. Atomic nuclei could finally capture electrons
-          to form atoms. The Universe filled with clouds of hydrogen and helium gas.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_3()">
+        <ion-card *ngIf="hide1_2">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Most astronomers believe the Universe began in a Big Bang about 14 billion years ago. At that time, the entire Universe was
+              inside a bubble that was thousands of times smaller than a pinhead. It was hotter and denser than anything
+              we can imagine.
+              <br> Then it suddenly exploded. The Universe that we know was born. Time, space and matter all began with the
+              Big Bang. In a fraction of a second, the Universe grew from smaller than a single atom to bigger than a galaxy.
+              And it kept on growing at a fantastic rate. It is still expanding today.
+              <br> As the Universe expanded and cooled, energy changed into particles of matter and antimatter. These two
+              opposite types of particles largely destroyed each other. But some matter survived. More stable particles called
+              protons and neutrons started to form when the Universe was one second old. Over the next three minutes, the
+              temperature dropped below 1 billion degrees Celsius. It was now cool enough for the protons and neutrons to
+              come together, forming hydrogen and helium nuclei.
+              <br> After 300 000 years, the Universe had cooled to about 3000 degrees. Atomic nuclei could finally capture
+              electrons to form atoms. The Universe filled with clouds of hydrogen and helium gas.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_3()">
       The Birth of Galaxies
     </button>
-    <ion-card *ngIf="hide1_3">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          We cannot see anything that happened during the first 300 000 years of the Universe. Scientists try to work it out from their
-          knowledge of atomic particles and from computer models.
-          <br> The only direct evidence of the Big Bang itself is a faint glow in space. Spacecraft and telescopes on balloons
-          see this as a patchy pattern of slightly warmer and cooler gas all around us. These ripples also show where the
-          hydrogen clouds were slightly denser.
-          <br> As millions of years passed, the dense areas pulled in material because they had more gravity. Finally, about
-          100 million years after the Big Bang, the gas became hot and dense enough for the first stars to form.
-          <br> New stars were being born at a rate 10 times higher than in the present-day Universe. Large clusters of stars
-          soon became the first galaxies.
-          <br> The Hubble Space Telescope and powerful ground-based telescopes are now beginning to find galaxies that were
-          created about one billion years after the Big Bang. These small galaxies were much closer together than galaxies
-          are today. Collisions were common. Like two flames moving towards each other, they merged into bigger galaxies.
-          Our Milky Way galaxy came together in this way.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_4()">
+        <ion-card *ngIf="hide1_3">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              We cannot see anything that happened during the first 300 000 years of the Universe. Scientists try to work it out from their
+              knowledge of atomic particles and from computer models.
+              <br> The only direct evidence of the Big Bang itself is a faint glow in space. Spacecraft and telescopes on
+              balloons see this as a patchy pattern of slightly warmer and cooler gas all around us. These ripples also show
+              where the hydrogen clouds were slightly denser.
+              <br> As millions of years passed, the dense areas pulled in material because they had more gravity. Finally,
+              about 100 million years after the Big Bang, the gas became hot and dense enough for the first stars to form.
+              <br> New stars were being born at a rate 10 times higher than in the present-day Universe. Large clusters of
+              stars soon became the first galaxies.
+              <br> The Hubble Space Telescope and powerful ground-based telescopes are now beginning to find galaxies that
+              were created about one billion years after the Big Bang. These small galaxies were much closer together than
+              galaxies are today. Collisions were common. Like two flames moving towards each other, they merged into bigger
+              galaxies. Our Milky Way galaxy came together in this way.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_4()">
       What is Space?
     </button>
-    <ion-card *ngIf="hide1_4">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          In space, no one can hear you scream. This is because there is no air in space – it is a vacuum. Sound waves cannot travel
-          through a vacuum.
-          <br> 'Outer space' begins about 100 km above the Earth, where the shell of air around our planet disappears. With
-          no air to scatter sunlight and produce a blue sky, space appears as a black blanket dotted with stars.
-          <br> Space is usually regarded as being completely empty. But this is not true. The vast gaps between the stars
-          and planets are filled with huge amounts of thinly spread gas and dust. Even the emptiest parts of space contain
-          at least a few hundred atoms or molecules per cubic metre.
-          <br> Space is also filled with many forms of radiation that are dangerous to astronauts. Much of this infrared
-          and ultraviolet radiation comes from the Sun. High energy X-rays, gamma rays and cosmic rays–particles travelling
-          close to the speed of light–arrive from distant star systems.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_5()">
+        <ion-card *ngIf="hide1_4">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              In space, no one can hear you scream. This is because there is no air in space – it is a vacuum. Sound waves cannot travel
+              through a vacuum.
+              <br> 'Outer space' begins about 100 km above the Earth, where the shell of air around our planet disappears.
+              With no air to scatter sunlight and produce a blue sky, space appears as a black blanket dotted with stars.
+              <br> Space is usually regarded as being completely empty. But this is not true. The vast gaps between the stars
+              and planets are filled with huge amounts of thinly spread gas and dust. Even the emptiest parts of space contain
+              at least a few hundred atoms or molecules per cubic metre.
+              <br> Space is also filled with many forms of radiation that are dangerous to astronauts. Much of this infrared
+              and ultraviolet radiation comes from the Sun. High energy X-rays, gamma rays and cosmic rays–particles travelling
+              close to the speed of light–arrive from distant star systems.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_5()">
       The Universe
     </button>
-    <ion-card *ngIf="hide1_5">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          The Universe is everything we can touch, feel, sense, measure or detect. It includes living things, planets, stars, galaxies,
-          dust clouds, light, and even time. Before the birth of the Universe, time, space and matter did not exist.
-          <br> The Universe contains billions of galaxies each containing millions or billions of stars. The space between
-          the stars and galaxies is largely empty. However, even places far from stars and planets contain scattered particles
-          of dust or a few hydrogen atoms per cubic centimeter. Space is also filled with radiation (e.g. light and heat),
-          magnetic fields and high energy particles (e.g. cosmic rays).
-          <br> The Universe is incredibly huge. It would take a modern jet fighter more than a million years to reach the
-          nearest star to the Sun. Travelling at the speed of light (300,000 km per second), it would take 100,000 years
-          to cross our Milky Way galaxy alone.
-          <br> No one knows the exact size of the Universe, because we cannot see the edge – if there is one. All we do know
-          is that the visible Universe is at least 93 billion light years across. (A light year is the distance light travels
-          in one year – about 9 trillion km.)
-          <br> The Universe has not always been the same size. Scientists believe it began in a Big Bang, which took place
-          nearly 14 billion years ago. Since then, the Universe has been expanding outward at very high speed. So the area
-          of space we now see is billions of times bigger than it was when the Universe was very young. The galaxies are
-          also moving further apart as the space between them expands.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_6()">
+        <ion-card *ngIf="hide1_5">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              The Universe is everything we can touch, feel, sense, measure or detect. It includes living things, planets, stars, galaxies,
+              dust clouds, light, and even time. Before the birth of the Universe, time, space and matter did not exist.
+              <br> The Universe contains billions of galaxies each containing millions or billions of stars. The space between
+              the stars and galaxies is largely empty. However, even places far from stars and planets contain scattered
+              particles of dust or a few hydrogen atoms per cubic centimeter. Space is also filled with radiation (e.g. light
+              and heat), magnetic fields and high energy particles (e.g. cosmic rays).
+              <br> The Universe is incredibly huge. It would take a modern jet fighter more than a million years to reach
+              the nearest star to the Sun. Travelling at the speed of light (300,000 km per second), it would take 100,000
+              years to cross our Milky Way galaxy alone.
+              <br> No one knows the exact size of the Universe, because we cannot see the edge – if there is one. All we
+              do know is that the visible Universe is at least 93 billion light years across. (A light year is the distance
+              light travels in one year – about 9 trillion km.)
+              <br> The Universe has not always been the same size. Scientists believe it began in a Big Bang, which took
+              place nearly 14 billion years ago. Since then, the Universe has been expanding outward at very high speed.
+              So the area of space we now see is billions of times bigger than it was when the Universe was very young. The
+              galaxies are also moving further apart as the space between them expands.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_6()">
       Black Holes
     </button>
-    <ion-card *ngIf="hide1_6">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          Black holes are the strangest objects in the Universe. A black hole does not have a surface, like a planet or star. Instead,
-          it is a region of space where matter has collapsed in on itself. This catastrophic collapse results in a huge amount
-          of mass being concentrated in an incredibly small area. The gravitational pull of this region is so great that
-          nothing can escape – not even light.
-          <br> Although black holes cannot be seen, we know they exist from the way they affect nearby dust, stars and galaxies.
-          Many of them are surrounded by discs of material. As the discs swirl around them like a whirlpool, they become
-          extremely hot and give off X-rays.
-          <br> Black holes come in many different sizes. Many of them are only a few times more massive than the Sun. These
-          'stellar-mass' black holes form when a heavyweight star, about 10 times heavier than the Sun, ends its life in
-          a supernova explosion. What is left of the star – still several solar masses - collapses into an area only a few
-          kilometres across.
-          <br> Most galaxies, including the Milky Way, have super massive black holes at their centres. These may be millions
-          or billions of times heavier than our Sun. Super massive black holes also power active galaxies and ancient galaxies
-          known as quasars. Quasars may be hundreds of times brighter than even the largest ordinary galaxies.
-          <br> Objects that fall into black holes are literally stretched to breaking point. An astronaut who ventured too
-          close and was sucked into a black hole would be pulled apart by the overpowering gravity.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_7()">
+        <ion-card *ngIf="hide1_6">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Black holes are the strangest objects in the Universe. A black hole does not have a surface, like a planet or star. Instead,
+              it is a region of space where matter has collapsed in on itself. This catastrophic collapse results in a huge
+              amount of mass being concentrated in an incredibly small area. The gravitational pull of this region is so
+              great that nothing can escape – not even light.
+              <br> Although black holes cannot be seen, we know they exist from the way they affect nearby dust, stars and
+              galaxies. Many of them are surrounded by discs of material. As the discs swirl around them like a whirlpool,
+              they become extremely hot and give off X-rays.
+              <br> Black holes come in many different sizes. Many of them are only a few times more massive than the Sun.
+              These 'stellar-mass' black holes form when a heavyweight star, about 10 times heavier than the Sun, ends its
+              life in a supernova explosion. What is left of the star – still several solar masses - collapses into an area
+              only a few kilometres across.
+              <br> Most galaxies, including the Milky Way, have super massive black holes at their centres. These may be
+              millions or billions of times heavier than our Sun. Super massive black holes also power active galaxies and
+              ancient galaxies known as quasars. Quasars may be hundreds of times brighter than even the largest ordinary
+              galaxies.
+              <br> Objects that fall into black holes are literally stretched to breaking point. An astronaut who ventured
+              too close and was sucked into a black hole would be pulled apart by the overpowering gravity.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_7()">
       The Myster of the Dark Universe
     </button>
-    <ion-card *ngIf="hide1_7">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          Ordinary matter makes up everything we can see, smell or touch. This matter – which is made from atoms – also makes up planets
-          and stars.
-          <br> All objects made of atoms pull on each other according to how much matter they contain. This is the effect
-          of gravity and is why a small, low mass object such as an apple falls towards a much more massive object - the
-          Earth.
-          <br> Astronomers believe that there must also be another kind of invisible "dark matter" which is spread throughout
-          the Universe. By studying the Milky Way and many distant galaxies, they have found that visible matter alone cannot
-          account for how fast stars rotate in them. On its own, normal matter would not be able to create enough gravity
-          to hold these galaxies together.
-          <br> Scientists can also tell that there is some unknown material in the space between the stars, because its gravitational
-          pull influences the path of starlight travelling towards Earth. Matter – both ordinary and dark - can act like
-          a magnifying glass, bending and distorting light from galaxies and clusters behind it. Astronomers can use this
-          effect, called gravitational lensing, to map the distribution of dark matter.
-          <br> Only about 15% of the matter in the Universe is made of atoms. The remainder is dark matter. However, no one
-          knows what dark matter is made of. We do know that it does not absorb, emit or reflect light, because none of our
-          scientific instruments can directly detect it.
-          <br> Many scientists believe that most dark matter is some unknown subatomic (smaller than an atom) particle that
-          interacts only very weakly with normal matter. If this is true, billions of these particles will have passed through
-          your body by the time you finish reading this article. Experiments buried deep underground may one day measure
-          the presence of one such particle passing through, finally solving the mystery of what dark matter really is.
-        </p>
-      </ion-card-content>
-    </ion-card>
-    <button ion-item (click)="click1_8()">
+        <ion-card *ngIf="hide1_7">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Ordinary matter makes up everything we can see, smell or touch. This matter – which is made from atoms – also makes up planets
+              and stars.
+              <br> All objects made of atoms pull on each other according to how much matter they contain. This is the effect
+              of gravity and is why a small, low mass object such as an apple falls towards a much more massive object -
+              the Earth.
+              <br> Astronomers believe that there must also be another kind of invisible "dark matter" which is spread throughout
+              the Universe. By studying the Milky Way and many distant galaxies, they have found that visible matter alone
+              cannot account for how fast stars rotate in them. On its own, normal matter would not be able to create enough
+              gravity to hold these galaxies together.
+              <br> Scientists can also tell that there is some unknown material in the space between the stars, because its
+              gravitational pull influences the path of starlight travelling towards Earth. Matter – both ordinary and dark
+              - can act like a magnifying glass, bending and distorting light from galaxies and clusters behind it. Astronomers
+              can use this effect, called gravitational lensing, to map the distribution of dark matter.
+              <br> Only about 15% of the matter in the Universe is made of atoms. The remainder is dark matter. However,
+              no one knows what dark matter is made of. We do know that it does not absorb, emit or reflect light, because
+              none of our scientific instruments can directly detect it.
+              <br> Many scientists believe that most dark matter is some unknown subatomic (smaller than an atom) particle
+              that interacts only very weakly with normal matter. If this is true, billions of these particles will have
+              passed through your body by the time you finish reading this article. Experiments buried deep underground may
+              one day measure the presence of one such particle passing through, finally solving the mystery of what dark
+              matter really is.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <button ion-item (click)="click1_8()">
       Cosmic Distances
     </button>
-    <ion-card *ngIf="hide1_8">
-      <ion-card-content>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          Space is huge. It is so immense that is very difficult to imagine the distances involved, even between the objects in our
-          local neighbourhood, the Solar System. If astronomers used kilometres to describe these distances they would have
-          to use very big numbers. Therefore, to simplify things, and to make the numbers smaller and easier to handle, different
-          measurements are used.
-        </p>
-        <ion-card-header>
-          The astronomical unit
-        </ion-card-header>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          The distance between the Earth and the Sun is about one hundred and fifty million kilometres. This is a big number, and so
-          astronomers use the astronomical unit to describe this distance. One astronomical unit, or ‘au’, is the distance
-          between the Earth and the Sun. It is used to compare the distances of other bodies in the Solar System, such as
-          the Sun, the planets, comets, and asteroids.
-        </p>
-        <ion-card-header>
-          Light Year
-        </ion-card-header>
-        <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
-          What about beyond our Solar System? How far is it to the next nearest star, Proxima Centauri? Proxima Centauri is about 38
-          000 000 000 000 km (thirty eight million million kilometres) away. It is such a long way away, that if a spacecraft
-          travelled to this star it could take around 75 000 years to get there.
-          <br> Using the astronomical unit to describe the distances of stars (and objects outside our Solar System), doesn’t
-          really help to give small numbers for astronomers to work with. Promixa Centauri is a distance of roughly 265 000
-          au. Another unit is needed! So to measure the distance (to at least the nearest stars to us), light years can be
-          used.
-          <br> Light is the fastest thing we know. Through space, light can travel at a speed of nearly 300 000 km/s. A light
-          year is the distance that light can travel in one year, which is 9 461 000 000 000 kilometres! To travel this distance
-          to the next closest star to the Solar System, light takes around 4.2 years, therefore astronomers say that Proxima
-          Centauri is 4.2 light years away.
-          <br> That is just the nearest star. The night sky is filled with stars in our Galaxy, the Milky Way. The nearest
-          large galaxy to the Milky Way is an enormous two and a half million light years away. That’s just the nearest!
-          Many galaxies, also packed with stars, are thousands of times further away. Space is huge!
-        </p>
-      </ion-card-content>
-    </ion-card>
+        <ion-card *ngIf="hide1_8">
+          <ion-card-content>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              Space is huge. It is so immense that is very difficult to imagine the distances involved, even between the objects in our
+              local neighbourhood, the Solar System. If astronomers used kilometres to describe these distances they would
+              have to use very big numbers. Therefore, to simplify things, and to make the numbers smaller and easier to
+              handle, different measurements are used.
+            </p>
+            <ion-card-header>
+              The astronomical unit
+            </ion-card-header>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              The distance between the Earth and the Sun is about one hundred and fifty million kilometres. This is a big number, and so
+              astronomers use the astronomical unit to describe this distance. One astronomical unit, or ‘au’, is the distance
+              between the Earth and the Sun. It is used to compare the distances of other bodies in the Solar System, such
+              as the Sun, the planets, comets, and asteroids.
+            </p>
+            <ion-card-header>
+              Light Year
+            </ion-card-header>
+            <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
+              What about beyond our Solar System? How far is it to the next nearest star, Proxima Centauri? Proxima Centauri is about 38
+              000 000 000 000 km (thirty eight million million kilometres) away. It is such a long way away, that if a spacecraft
+              travelled to this star it could take around 75 000 years to get there.
+              <br> Using the astronomical unit to describe the distances of stars (and objects outside our Solar System),
+              doesn’t really help to give small numbers for astronomers to work with. Promixa Centauri is a distance of roughly
+              265 000 au. Another unit is needed! So to measure the distance (to at least the nearest stars to us), light
+              years can be used.
+              <br> Light is the fastest thing we know. Through space, light can travel at a speed of nearly 300 000 km/s.
+              A light year is the distance that light can travel in one year, which is 9 461 000 000 000 kilometres! To travel
+              this distance to the next closest star to the Solar System, light takes around 4.2 years, therefore astronomers
+              say that Proxima Centauri is 4.2 light years away.
+              <br> That is just the nearest star. The night sky is filled with stars in our Galaxy, the Milky Way. The nearest
+              large galaxy to the Milky Way is an enormous two and a half million light years away. That’s just the nearest!
+              Many galaxies, also packed with stars, are thousands of times further away. Space is huge!
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
     </div>
-  </div>
 
     <ion-fab right bottom *ngFor="let styleElement of styles">
       <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
       <ion-fab-list side="left">
+        <button ion-fab color="secondary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
+
+
         <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
-          <!--<audio-track #audio *ngFor="let track of myTracks"  [track]="track" (onFinish)="onTrackFinished($event)">
-            <audio-track-play dark [audioTrack]="audio">
-            </audio-track-play>
-          </audio-track>-->
           <ion-icon name="volume-up"></ion-icon>
         </button>
 
         <button ion-fab color="primary" (click)="regularShare()" *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
 
-        <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
 
         <button ion-fab color="primary" (click)="playVideo()" *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
             <ion-icon name="logo-youtube"></ion-icon></button>

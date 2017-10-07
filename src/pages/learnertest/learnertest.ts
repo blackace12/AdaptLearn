@@ -26,7 +26,7 @@ export class LearnertestPage {
   userChecker: any;
   learningStyles: FirebaseListObservable<any>;
 
-  constructor(public navCtrl: NavController, af: AngularFireDatabase, afAuth: AngularFireAuth, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public alertCtrl: AlertController) {
     this.VisualList = ['You can easily visualize objects, buildings, situations, etc. from plans or descriptions.', 'You navigate well and use maps with ease. You rarely get lost. You have a good sense of direction. You usually know which way is north.',
       'You like using a camera or video camera to capture the world around you.',
       'You like visual arts, painting, sculpture. You like jigsaws and mazes.',
@@ -740,27 +740,27 @@ export class LearnertestPage {
       { style: 'Solitary', value: SolitaryTotal, twos: solitaryTwo }
     ];
 
-    console.log("Unsorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
+  /*   console.log("Unsorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
     console.log("Unsorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
     console.log("Unsorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
     console.log("Unsorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
     console.log("Unsorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
     console.log("Unsorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
     console.log("Unsorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
-    console.log("================================");
+    console.log("================================"); */
 
     total.sort(function (a, b) {
       return b.value - a.value;
     });
 
-    console.log("Sorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
+   /*  console.log("Sorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
     console.log("Sorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
     console.log("Sorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
     console.log("Sorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
     console.log("Sorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
     console.log("Sorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
     console.log("Sorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
-    console.log("================================");
+    console.log("================================"); */
 
     this.style2 = 1;
     for (this.style1 = 0; this.style1 < total.length; this.style1++) {
@@ -778,13 +778,13 @@ export class LearnertestPage {
       }
     }
 
-    console.log("Sorted with twos: " + total[0].style + " " + total[0].value + " " + total[0].twos);
+    /* console.log("Sorted with twos: " + total[0].style + " " + total[0].value + " " + total[0].twos);
     console.log("Sorted with twos: " + total[1].style + " " + total[1].value + " " + total[1].twos);
     console.log("Sorted with twos: " + total[2].style + " " + total[2].value + " " + total[2].twos);
     console.log("Sorted with twos: " + total[3].style + " " + total[3].value + " " + total[3].twos);
     console.log("Sorted with twos: " + total[4].style + " " + total[4].value + " " + total[4].twos);
     console.log("Sorted with twos: " + total[5].style + " " + total[5].value + " " + total[5].twos);
-    console.log("Sorted with twos: " + total[6].style + " " + total[6].value + " " + total[6].twos);
+    console.log("Sorted with twos: " + total[6].style + " " + total[6].value + " " + total[6].twos); */
 
     //const checker = true;
 

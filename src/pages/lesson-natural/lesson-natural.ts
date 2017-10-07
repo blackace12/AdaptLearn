@@ -5,7 +5,7 @@ import { LessonNaturalEarthquakePage } from './../lesson-natural-earthquake/less
 import { LessonNaturalVolcanoPage } from './../lesson-natural-volcano/lesson-natural-volcano';
 import { LessonNaturalLandslidePage } from './../lesson-natural-landslide/lesson-natural-landslide';
 import { LessonNaturalTsunamiPage } from './../lesson-natural-tsunami/lesson-natural-tsunami';
-import { SettingsPage} from '../settings/settings';
+import { SettingsPage } from '../settings/settings';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Navbar } from 'ionic-angular';
 
@@ -55,12 +55,12 @@ export class LessonNaturalPage {
       });
       console.log(this.arrayTest.length);
 
-        if (this.arrayTest.length == 3 || this.arrayTest.length == 4) {
-          this.lessonUnlocked = [{
-            name: "lock",
-            valid: true,
-          }];
-          console.log('Undefined')
+      if (this.arrayTest.length == 3 || this.arrayTest.length == 4) {
+        this.lessonUnlocked = [{
+          name: "lock",
+          valid: true,
+        }];
+        console.log('Undefined')
 
       }
 
@@ -136,7 +136,7 @@ export class LessonNaturalPage {
       }
     });
 
-      //GETTING THE VISUAL
+    //GETTING THE VISUAL
     this.learningStyleObject = af.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
     this.learningStyleObject.subscribe(snapshots => {
@@ -165,7 +165,7 @@ export class LessonNaturalPage {
               console.log("1" + this.checkVisual);
             } else if (this.visual[1].style == "Visual") {
               this.checkVisual = this.visual[1].style;
-              console.log("2" +this.checkVisual)
+              console.log("2" + this.checkVisual)
             } else if (this.visual[2].style == "Visual") {
               this.checkVisual = this.visual[2].style;
               console.log("3" + this.checkVisual)
@@ -178,16 +178,16 @@ export class LessonNaturalPage {
 
 
 
-  SettingsPage(){
+  SettingsPage() {
     this.navCtrl.push(SettingsPage)
   }
 
-  earthquakesLesson(){
-    if (this.checkVisual == 'Visual'){
+  earthquakesLesson() {
+    if (this.checkVisual == 'Visual') {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
-      } catch (error){
-        console.log (error);
+      } catch (error) {
+        console.log(error);
       }
     }
     let loader = this.loadingCtrl.create({
@@ -199,12 +199,12 @@ export class LessonNaturalPage {
     loader.present();
   }
 
-  volcanoLesson(){
-    if (this.checkVisual == 'Visual'){
+  volcanoLesson() {
+    if (this.checkVisual == 'Visual') {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
-      } catch (error){
-        console.log (error);
+      } catch (error) {
+        console.log(error);
       }
     }
     let loader = this.loadingCtrl.create({
@@ -216,12 +216,12 @@ export class LessonNaturalPage {
     loader.present();
   }
 
-  landslidesLesson(){
-    if (this.checkVisual == 'Visual'){
+  landslidesLesson() {
+    if (this.checkVisual == 'Visual') {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
-      } catch (error){
-        console.log (error);
+      } catch (error) {
+        console.log(error);
       }
     }
     let loader = this.loadingCtrl.create({
@@ -233,12 +233,12 @@ export class LessonNaturalPage {
     loader.present();
   }
 
-  tsunamiLesson(){
-    if (this.checkVisual == 'Visual'){
+  tsunamiLesson() {
+    if (this.checkVisual == 'Visual') {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
-      } catch (error){
-        console.log (error);
+      } catch (error) {
+        console.log(error);
       }
     }
     let loader = this.loadingCtrl.create({

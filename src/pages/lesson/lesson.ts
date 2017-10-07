@@ -3,17 +3,12 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseObjectObservable, AngularFireDatabase } from 'angularfire2/database';
 
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Navbar } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController, Navbar } from 'ionic-angular';
 import { LessonNaturalPage } from './../lesson-natural/lesson-natural';
 import { LessonEarthPage } from './../lesson-earth/lesson-earth';
 import { LessonMitadaptPage } from './../lesson-mitadapt/lesson-mitadapt';
 import { SettingsPage } from '../settings/settings';
-/**
- * Generated class for the LessonPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-lesson',
@@ -28,21 +23,16 @@ export class LessonPage {
   arrayTest = [];
 
 
-    //FOR VISUAL
-    fontSize: any;
-    fontVal: any;
-    learningStyleObject2: FirebaseObjectObservable<any>;
-    learningStyleObject: FirebaseObjectObservable<any>;
-    selectedTheme: String; //new
-    styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
-    styles: any[] = [];
-    user = [];
-    userLearningID: FirebaseObjectObservable<any>
+  //FOR VISUAL
+  learningStyleObject2: FirebaseObjectObservable<any>;
+  learningStyleObject: FirebaseObjectObservable<any>;
+  styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
+  user = [];
+  userLearningID: FirebaseObjectObservable<any>
+  checkVisual;
+  visual = [];
 
-    checkVisual;
-    visual = [];
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public scrnOrnt: ScreenOrientation) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public scrnOrnt: ScreenOrientation) {
     this.currentUser = this.afAuth.auth.currentUser.uid;
 
     this.lessonStatus = this.af.object("/UserProgress/" + this.currentUser + '/', { preserveSnapshot: true });
@@ -55,7 +45,7 @@ export class LessonPage {
       console.log(this.arrayTest.length);
 
       //2
-      if (this.arrayTest.length == 0 || this.arrayTest.length == 1 || this.arrayTest.length == 2 || this.arrayTest.length == 3 ) {
+      if (this.arrayTest.length == 0 || this.arrayTest.length == 1 || this.arrayTest.length == 2 || this.arrayTest.length == 3) {
         this.hazardsUnlocked = [{
           name: "lock",
           valid: true,
@@ -89,7 +79,6 @@ export class LessonPage {
         }];
         console.log('Undefined')
       }
-
       else if (this.arrayTest !== null) {
         for (var i = 0; i < this.arrayTest.length; i++) {
           if (this.arrayTest[i].Chapter_Quiz == "Tsunami" && this.arrayTest[i].Passed == true) {
@@ -110,47 +99,39 @@ export class LessonPage {
       }
     });
 
+    this.learningStyleObject = af.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
-  //GETTING THE VISUAL
-  this.learningStyleObject = af.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
-
-      this.learningStyleObject.subscribe(snapshots => {
+    this.learningStyleObject.subscribe(snapshots => {
+      snapshots.forEach(snapshot => {
+        this.user.push(snapshot.key);
+      });
+      this.userLearningID = af.object('/UserStyle/' + this.user[0], { preserveSnapshot: true });
+      this.learningStyleObject2 = af.object('/LearningStyle/' + this.currentUser + '/' + this.user[0], { preserveSnapshot: true });
+      this.learningStyleObject2.subscribe(snapshots => {
         snapshots.forEach(snapshot => {
-          this.user.push(snapshot.key);
+          console.log(snapshot.key);
+          this.visual.push(snapshot.val());
         });
-
-        this.userLearningID = af.object('/UserStyle/' + this.user[0], { preserveSnapshot: true });
-
-        this.learningStyleObject2 = af.object('/LearningStyle/' + this.currentUser + '/' + this.user[0], { preserveSnapshot: true });
-
-        this.learningStyleObject2.subscribe(snapshots => {
-          snapshots.forEach(snapshot => {
-            console.log(snapshot.key);
-            this.visual.push(snapshot.val());
-          });
-
-          console.log(this.visual);
-          this.visual.sort(function (a, b) {
-            return parseInt(b.value) - parseInt(a.value);
-          });
-          for (var i = 0; i <= this.styleArray.length - 1; i++) {
-            if (this.visual[0].style == this.styleArray[i]) {
-              if (this.visual[0].style == "Visual") {
-                this.checkVisual = this.visual[0].style;
-                console.log("1" + this.checkVisual);
-              } else if (this.visual[1].style == "Visual") {
-                this.checkVisual = this.visual[1].style;
-                console.log("2" +this.checkVisual)
-              } else if (this.visual[2].style == "Visual") {
-                this.checkVisual = this.visual[2].style;
-                console.log("3" + this.checkVisual)
-              }
+        console.log(this.visual);
+        this.visual.sort(function (a, b) {
+          return parseInt(b.value) - parseInt(a.value);
+        });
+        for (var i = 0; i <= this.styleArray.length - 1; i++) {
+          if (this.visual[0].style == this.styleArray[i]) {
+            if (this.visual[0].style == "Visual") {
+              this.checkVisual = this.visual[0].style;
+              console.log("1" + this.checkVisual);
+            } else if (this.visual[1].style == "Visual") {
+              this.checkVisual = this.visual[1].style;
+              console.log("2" + this.checkVisual)
+            } else if (this.visual[2].style == "Visual") {
+              this.checkVisual = this.visual[2].style;
+              console.log("3" + this.checkVisual)
             }
           }
-        });
+        }
       });
-
-
+    });
   }
 
   ionViewDidLoad() {
@@ -170,7 +151,6 @@ export class LessonPage {
     loader.present();
   }
 
-
   naturalLesson() {
     let loader = this.loadingCtrl.create({
       content: "Loading Lessons...",
@@ -178,15 +158,14 @@ export class LessonPage {
     });
     this.navCtrl.push(LessonNaturalPage);
     loader.present();
-
   }
 
   mitadaptLesson() {
-    if (this.checkVisual == 'Visual'){
+    if (this.checkVisual == 'Visual') {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
-      } catch (error){
-        console.log (error);
+      } catch (error) {
+        console.log(error);
       }
     }
     let loader = this.loadingCtrl.create({
@@ -196,5 +175,4 @@ export class LessonPage {
     this.navCtrl.push(LessonMitadaptPage);
     loader.present();
   }
-
 }

@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
-import { SettingsPage} from '../settings/settings';
+import { IonicPage, NavController, ViewController } from 'ionic-angular';
+import { SettingsPage } from '../settings/settings';
 
-/**
- * Generated class for the KinestheticLearnerInstructionPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-kinesthetic-learner-instruction',
@@ -15,14 +9,14 @@ import { SettingsPage} from '../settings/settings';
 })
 export class KinestheticLearnerInstructionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad KinestheticLearnerInstructionPage');
   }
-  
-  SettingsPage(){
+
+  SettingsPage() {
     this.navCtrl.push(SettingsPage)
   }
 

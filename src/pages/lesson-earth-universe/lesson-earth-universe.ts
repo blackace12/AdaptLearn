@@ -32,9 +32,7 @@ export class LessonEarthUniversePage {
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
-  first; second; third:string;
-
-
+  first; second; third: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, public toastCtrl: ToastController, private settings: SettingsProvider, public scrnOrnt: ScreenOrientation) {
 
@@ -83,8 +81,6 @@ export class LessonEarthUniversePage {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val); //new
 
   }
-
-
 
   universeSlides = [
     {
@@ -155,6 +151,7 @@ export class LessonEarthUniversePage {
       toast.present();
     }
     else {
+
       this.smartAudio.pause('universe');
       this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
@@ -170,8 +167,8 @@ export class LessonEarthUniversePage {
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
 
-          this.smartAudio.pause('universe');
-          this.playingAudio = !this.playingAudio;
+        this.smartAudio.pause('universe');
+        this.playingAudio = !this.playingAudio;
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -180,207 +177,209 @@ export class LessonEarthUniversePage {
     }
   }
 
-    playVideo(){
-      this.youtube.openVideo('wNDGgL73ihY');
-    }
-    regularShare(){
-      // share(message, subject, file, url)
-      this.socialSharing.shareViaFacebook("Universe Formation Lesson", null, "https://adaptlearn.herokuapp.com/lesson1/universeformation.html");
-    }
-
-    universeQuiz(){
-      //new
-      let data = {
-        theme: this.selectedTheme
-      };
-      this.navCtrl.push(QuizPage, data);
-      this.changeTheme();
-    }
-
-
-    SettingsPage(){
-      this.navCtrl.push(SettingsPage)
-    }
-
-    openModal(){
-      const myModalOptions: ModalOptions = {
-        enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
-      };
-
-      const myModal: Modal = this.modal.create('FontSizePage', { data: this.fontVal }, myModalOptions);
-
-      //present font size modal
-      myModal.present();
-
-      //will receive value when modal is closed/dismissed
-      myModal.onWillDismiss((fontValue) => {
-        this.fontSize = fontValue;
-        this.fontVal = fontValue;
-        console.log(this.fontVal + " back to page");
-      });
-    }
-
-    public font:boolean=false; //hide
-    public verbal:boolean=false;
-    public visual:boolean=false;
-
-    toShow() {
-      // if learning style = Verbal only show verbal
-      if(this.first === "Verbal" && this.first != "Visual" ||
-        this.second === "Verbal" && this.first != "Visual" ||
-        this.third === "Verbal" && this.first != "Visual" ||
-        this.first === "Verbal" && this.second != "Visual" ||
-        this.second === "Verbal" && this.second != "Visual" ||
-        this.third === "Verbal" && this.second != "Visual" ||
-        this.first === "Verbal" && this.third != "Visual" ||
-        this.second === "Verbal" && this.third != "Visual" ||
-        this.third != "Visual" && this.third === "Verbal" ||
-        this.first === "Verbal"|| this.second === "Verbal" || this.third === "Verbal") {
-          this.verbal = true;
-          this.font = true;
-          this.visual = false;
-      }
-
-      //if learning style = verbal & visual or visual then show visual hide font
-      if(this.first === "Verbal" && this.first === "Visual" ||
-        this.second === "Verbal" && this.first === "Visual" ||
-        this.third === "Verbal" && this.first === "Visual" ||
-        this.first === "Verbal" && this.second === "Visual" ||
-        this.second === "Verbal" && this.second === "Visual" ||
-        this.third === "Verbal" && this.second === "Visual" ||
-        this.first === "Verbal" && this.third === "Visual" ||
-        this.second === "Verbal" && this.third === "Visual" ||
-        //this.third === "Verbal" && this.third === "Visual" || error i dont know why
-        this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
-          this.visual = true;
-          this.verbal = false;
-          this.font = false;
-      }
-    }
-
-
-
-
-     //under chapter 1
-    public hide1:boolean=true;
-    public hide1_1:boolean=false;
-    public hide1_2:boolean=false;
-    public hide1_3:boolean=false;
-    public hide1_4:boolean=false;
-    public hide1_5:boolean=false;
-    public hide1_6:boolean=false;
-    public hide1_7:boolean=false;
-    public hide1_8:boolean=false;
-
-      //====start of chapter 1=======
-      public click1(){
-        this.hide1 = !this.hide1;
-        this.hide1_1 = false;
-        this.hide1_2 = false;
-        this.hide1_3 = false;
-        this.hide1_4 = false;
-        this.hide1_5 = false;
-        this.hide1_6 = false;
-        this.hide1_7 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_1(){
-        this.hide1_1 = !this.hide1_1;
-        this.hide1 = false;
-        this.hide1_2 = false;
-        this.hide1_3 = false;
-        this.hide1_4 = false;
-        this.hide1_5 = false;
-        this.hide1_6 = false;
-        this.hide1_7 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_2(){
-        this.hide1_2 = !this.hide1_2;
-        this.hide1 = false;
-        this.hide1_1 = false;
-        this.hide1_3 = false;
-        this.hide1_4 = false;
-        this.hide1_5 = false;
-        this.hide1_6 = false;
-        this.hide1_7 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_3(){
-        this.hide1_3 = !this.hide1_3;
-        this.hide1 = false;
-        this.hide1_1 = false;
-        this.hide1_2 = false;
-        this.hide1_4 = false;
-        this.hide1_5 = false;
-        this.hide1_6 = false;
-        this.hide1_7 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_4(){
-        this.hide1_4 = !this.hide1_4;
-        this.hide1 = false;
-        this.hide1_1 = false;
-        this.hide1_2 = false;
-        this.hide1_3 = false;
-        this.hide1_5 = false;
-        this.hide1_6 = false;
-        this.hide1_7 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_5(){
-        this.hide1_5 = !this.hide1_5;
-        this.hide1 = false;
-        this.hide1_1 = false;
-        this.hide1_2 = false;
-        this.hide1_3 = false;
-        this.hide1_4 = false;
-        this.hide1_6 = false;
-        this.hide1_7 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_6(){
-        this.hide1_6 = !this.hide1_6;
-        this.hide1 = false;
-        this.hide1_1 = false;
-        this.hide1_2 = false;
-        this.hide1_3 = false;
-        this.hide1_4 = false;
-        this.hide1_5 = false;
-        this.hide1_7 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_7(){
-        this.hide1_7 = !this.hide1_7;
-        this.hide1 = false;
-        this.hide1_1 = false;
-        this.hide1_2 = false;
-        this.hide1_3 = false;
-        this.hide1_4 = false;
-        this.hide1_5 = false;
-        this.hide1_6 = false;
-        this.hide1_8 = false;
-      }
-
-      public click1_8(){
-        this.hide1_8 = !this.hide1_8;
-        this.hide1 = false;
-        this.hide1_1 = false;
-        this.hide1_2 = false;
-        this.hide1_3 = false;
-        this.hide1_4 = false;
-        this.hide1_5 = false;
-        this.hide1_6 = false;
-        this.hide1_7 = false;
-      }
-      //====end of chapter 1=======
-
-
+  playVideo() {
+    this.youtube.openVideo('wNDGgL73ihY');
   }
+  regularShare() {
+    // share(message, subject, file, url)
+    this.socialSharing.shareViaFacebook("Universe Formation Lesson", null, "https://adaptlearn.herokuapp.com/lesson1/universeformation.html");
+  }
+
+  universeQuiz() {
+    //new
+    let data = {
+      theme: this.selectedTheme
+    };
+    this.scrnOrnt.unlock();
+    this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+    this.navCtrl.push(QuizPage, data);
+    this.changeTheme();
+  }
+
+
+  SettingsPage() {
+    this.navCtrl.push(SettingsPage)
+  }
+
+  openModal() {
+    const myModalOptions: ModalOptions = {
+      enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
+    };
+
+    const myModal: Modal = this.modal.create('FontSizePage', { data: this.fontVal }, myModalOptions);
+
+    //present font size modal
+    myModal.present();
+
+    //will receive value when modal is closed/dismissed
+    myModal.onWillDismiss((fontValue) => {
+      this.fontSize = fontValue;
+      this.fontVal = fontValue;
+      console.log(this.fontVal + " back to page");
+    });
+  }
+
+  public font: boolean = false; //hide
+  public verbal: boolean = false;
+  public visual: boolean = false;
+
+  toShow() {
+    // if learning style = Verbal only show verbal
+    if (this.first === "Verbal" && this.first != "Visual" ||
+      this.second === "Verbal" && this.first != "Visual" ||
+      this.third === "Verbal" && this.first != "Visual" ||
+      this.first === "Verbal" && this.second != "Visual" ||
+      this.second === "Verbal" && this.second != "Visual" ||
+      this.third === "Verbal" && this.second != "Visual" ||
+      this.first === "Verbal" && this.third != "Visual" ||
+      this.second === "Verbal" && this.third != "Visual" ||
+      this.third != "Visual" && this.third === "Verbal" ||
+      this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+      this.verbal = true;
+      this.font = true;
+      this.visual = false;
+    }
+
+    //if learning style = verbal & visual or visual then show visual hide font
+    if (this.first === "Verbal" && this.first === "Visual" ||
+      this.second === "Verbal" && this.first === "Visual" ||
+      this.third === "Verbal" && this.first === "Visual" ||
+      this.first === "Verbal" && this.second === "Visual" ||
+      this.second === "Verbal" && this.second === "Visual" ||
+      this.third === "Verbal" && this.second === "Visual" ||
+      this.first === "Verbal" && this.third === "Visual" ||
+      this.second === "Verbal" && this.third === "Visual" ||
+      //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+      this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+      this.visual = true;
+      this.verbal = false;
+      this.font = false;
+    }
+  }
+
+
+
+
+  //under chapter 1
+  public hide1: boolean = true;
+  public hide1_1: boolean = false;
+  public hide1_2: boolean = false;
+  public hide1_3: boolean = false;
+  public hide1_4: boolean = false;
+  public hide1_5: boolean = false;
+  public hide1_6: boolean = false;
+  public hide1_7: boolean = false;
+  public hide1_8: boolean = false;
+
+  //====start of chapter 1=======
+  public click1() {
+    this.hide1 = !this.hide1;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+    this.hide1_5 = false;
+    this.hide1_6 = false;
+    this.hide1_7 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_1() {
+    this.hide1_1 = !this.hide1_1;
+    this.hide1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+    this.hide1_5 = false;
+    this.hide1_6 = false;
+    this.hide1_7 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_2() {
+    this.hide1_2 = !this.hide1_2;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+    this.hide1_5 = false;
+    this.hide1_6 = false;
+    this.hide1_7 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_3() {
+    this.hide1_3 = !this.hide1_3;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_4 = false;
+    this.hide1_5 = false;
+    this.hide1_6 = false;
+    this.hide1_7 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_4() {
+    this.hide1_4 = !this.hide1_4;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_5 = false;
+    this.hide1_6 = false;
+    this.hide1_7 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_5() {
+    this.hide1_5 = !this.hide1_5;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+    this.hide1_6 = false;
+    this.hide1_7 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_6() {
+    this.hide1_6 = !this.hide1_6;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+    this.hide1_5 = false;
+    this.hide1_7 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_7() {
+    this.hide1_7 = !this.hide1_7;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+    this.hide1_5 = false;
+    this.hide1_6 = false;
+    this.hide1_8 = false;
+  }
+
+  public click1_8() {
+    this.hide1_8 = !this.hide1_8;
+    this.hide1 = false;
+    this.hide1_1 = false;
+    this.hide1_2 = false;
+    this.hide1_3 = false;
+    this.hide1_4 = false;
+    this.hide1_5 = false;
+    this.hide1_6 = false;
+    this.hide1_7 = false;
+  }
+  //====end of chapter 1=======
+
+
+}

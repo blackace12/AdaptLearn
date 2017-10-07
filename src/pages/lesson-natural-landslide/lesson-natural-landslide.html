@@ -1,9 +1,3 @@
-<!--
-  Generated template for the LessonNaturalLandslidePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Landslide</ion-title>
@@ -27,17 +21,17 @@
 
   <div *ngFor="let styleElement of styles">
     <ion-slides *ngIf="visual">
-        <ion-slide *ngFor="let slide of lslideSlides">
-          <br>
-          <img [src]="slide.image" class="slide-image" />
-        </ion-slide>
-      </ion-slides>
-    </div>
+      <ion-slide *ngFor="let slide of lslideSlides">
+        <br>
+        <img [src]="slide.image" class="slide-image" />
+      </ion-slide>
+    </ion-slides>
+  </div>
 
 
 
-    <div *ngFor="let styleElement of styles">
-      <div *ngIf="verbal">
+  <div *ngFor="let styleElement of styles">
+    <div *ngIf="verbal">
       <div class="chapter">
         <button ion-item (click)="click1()">
       Landslides
@@ -124,13 +118,13 @@
   <ion-fab right bottom *ngFor="let styleElement of styles">
     <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>
     <ion-fab-list side="left">
+      <button ion-fab color="secondary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
+
       <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
         <ion-icon name="volume-up"></ion-icon>
       </button>
 
       <button ion-fab color="primary" (click)="regularShare()" *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
-
-      <button ion-fab color="primary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
 
       <button ion-fab color="primary" (click)="playVideo()" *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
           <ion-icon name="logo-youtube"></ion-icon></button>

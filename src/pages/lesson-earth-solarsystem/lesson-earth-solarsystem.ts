@@ -7,15 +7,9 @@ import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptio
 import { SettingsPage } from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
-import { AngularFireDatabase,  FirebaseObjectObservable} from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { SettingsProvider } from "../../providers/settings/settings"; //new
 
-/**
- * Generated class for the LessonEarthSolarsystemPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-lesson-earth-solarsystem',
@@ -26,19 +20,19 @@ export class LessonEarthSolarsystemPage {
   allTracks: any[];
   arrayTest = [];
   currentUser;
-  fontSize:any;
-  fontVal:any;
+  fontSize: any;
+  fontVal: any;
   learningStyleObject2: FirebaseObjectObservable<any>;
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
-  selectedTheme:String; //new
+  selectedTheme: String; //new
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
   userLearningID: FirebaseObjectObservable<any>
-  first; second; third:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing,af:AngularFireDatabase, private modal: ModalController, public youtube:YoutubeVideoPlayer,db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio:SmartAudioProvider, private settings: SettingsProvider, public toastCtrl:ToastController, public scrnOrnt: ScreenOrientation) {
+  first; second; third: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, af: AngularFireDatabase, private modal: ModalController, public youtube: YoutubeVideoPlayer, db: AngularFireDatabase, afAuth: AngularFireAuth, public smartAudio: SmartAudioProvider, private settings: SettingsProvider, public toastCtrl: ToastController, public scrnOrnt: ScreenOrientation) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.learningStyleObject = db.object('/LearningStyle/' + this.currentUser, { preserveSnapshot: true });
 
@@ -81,14 +75,14 @@ export class LessonEarthSolarsystemPage {
   }
 
   //new
-  changeTheme(){
+  changeTheme() {
     this.settings.setActiveTheme('day-theme');
   }
 
   playingAudio: boolean = false;
 
-  playAudio(){
-    if(this.playingAudio === false){
+  playAudio() {
+    if (this.playingAudio === false) {
       this.smartAudio.play('solarSystem');
       this.playingAudio = !this.playingAudio;
       console.log("playing");
@@ -105,8 +99,8 @@ export class LessonEarthSolarsystemPage {
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
 
-          this.smartAudio.pause('solarSystem');
-          this.playingAudio = !this.playingAudio;
+        this.smartAudio.pause('solarSystem');
+        this.playingAudio = !this.playingAudio;
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -115,7 +109,7 @@ export class LessonEarthSolarsystemPage {
     }
   }
 
-  playVideo(){
+  playVideo() {
     this.youtube.openVideo('fzWSBaAYtWs');
   }
 
@@ -145,7 +139,7 @@ export class LessonEarthSolarsystemPage {
       enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
     };
 
-    const myModal: Modal = this.modal.create('FontSizePage', { data:this.fontVal }, myModalOptions);
+    const myModal: Modal = this.modal.create('FontSizePage', { data: this.fontVal }, myModalOptions);
 
     //present font size modal
     myModal.present();
@@ -158,13 +152,13 @@ export class LessonEarthSolarsystemPage {
     });
   }
 
-  public font:boolean=false; //hide
-  public verbal:boolean=false;
-  public visual:boolean=false;
+  public font: boolean = false; //hide
+  public verbal: boolean = false;
+  public visual: boolean = false;
 
   toShow() {
     // if learning style = Verbal only show verbal
-    if(this.first === "Verbal" && this.first != "Visual" ||
+    if (this.first === "Verbal" && this.first != "Visual" ||
       this.second === "Verbal" && this.first != "Visual" ||
       this.third === "Verbal" && this.first != "Visual" ||
       this.first === "Verbal" && this.second != "Visual" ||
@@ -173,14 +167,14 @@ export class LessonEarthSolarsystemPage {
       this.first === "Verbal" && this.third != "Visual" ||
       this.second === "Verbal" && this.third != "Visual" ||
       this.third != "Visual" && this.third === "Verbal" ||
-      this.first === "Verbal"|| this.second === "Verbal" || this.third === "Verbal") {
-        this.verbal = true;
-        this.font = true;
-        this.visual = false;
+      this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+      this.verbal = true;
+      this.font = true;
+      this.visual = false;
     }
 
     //if learning style = verbal & visual or visual then show visual hide font
-    if(this.first === "Verbal" && this.first === "Visual" ||
+    if (this.first === "Verbal" && this.first === "Visual" ||
       this.second === "Verbal" && this.first === "Visual" ||
       this.third === "Verbal" && this.first === "Visual" ||
       this.first === "Verbal" && this.second === "Visual" ||
@@ -189,10 +183,10 @@ export class LessonEarthSolarsystemPage {
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
       //this.third === "Verbal" && this.third === "Visual" || error i dont know why
-      this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
-        this.visual = true;
-        this.verbal = false;
-        this.font = false;
+      this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+      this.visual = true;
+      this.verbal = false;
+      this.font = false;
     }
   }
 
