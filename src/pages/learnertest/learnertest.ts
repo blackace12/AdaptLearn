@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Content, NavController, AlertController } from 'ionic-angular';
+import { Content, NavController, AlertController, Nav } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SplashscreenPage } from './../splashscreen/splashscreen';
@@ -10,7 +10,7 @@ import { SplashscreenPage } from './../splashscreen/splashscreen';
 })
 export class LearnertestPage {
   @ViewChild(Content) content: Content;
-
+  @ViewChild(Nav) nav: Nav;
   VisualList; AudioList; VerbalList; PhysicalList; LogicalList; SocialList; SolitaryList: string[];
   visualTotal; visualTwo; Visual0; Visual1; Visual2; Visual3; Visual4; Visual5; Visual6; Visual7; Visual8; Visual9: number;
   auduioTotal; audioTwo; Audio0; Audio1; Audio2; Audio3; Audio4; Audio5; Audio6; Audio7; Audio8; Audio9: number;
@@ -788,44 +788,29 @@ export class LearnertestPage {
 
     //const checker = true;
 
+
+    this.learningStyles.push(
+      [
+        { style: total[0].style, value: total[0].value },
+        { style: total[1].style, value: total[1].value },
+        { style: total[2].style, value: total[2].value },
+        { style: total[3].style, value: total[3].value },
+        { style: total[4].style, value: total[4].value },
+        { style: total[5].style, value: total[5].value },
+        { style: total[6].style, value: total[6].value }]
+    );
+    this.userChecker.update(this.currentUser, { Checker: 'true' });
+    this.navCtrl.setRoot(SplashscreenPage);
     let confirm = this.alertCtrl.create({
-      title: 'Confirm form Submission?',
-      buttons: [{
-        text: 'No',
-        handler: () => {
-          console.log('No Clicked');
+      title: 'Welcome to AdaptLearn',
+      message: '<p>Your learning content are based on your top three learning style which you can see in the home page. Click the images for more information about the learning style.</p>',
+      buttons: [
+        {
+          text: 'Ok',
+          handler: () => {
+            console.log('oki');
+          }
         }
-      },
-      {
-        text: 'Yes',
-        handler: data => {
-          this.learningStyles.push(
-            [
-              { style: total[0].style, value: total[0].value },
-              { style: total[1].style, value: total[1].value },
-              { style: total[2].style, value: total[2].value },
-              { style: total[3].style, value: total[3].value },
-              { style: total[4].style, value: total[4].value },
-              { style: total[5].style, value: total[5].value },
-              { style: total[6].style, value: total[6].value }]
-          );
-          this.userChecker.update(this.currentUser, { Checker: 'true' });
-          this.navCtrl.push(SplashscreenPage);
-          let confirm = this.alertCtrl.create({
-            title: 'Welcome to AdaptLearn',
-            message: '<p>Your learning content are based on your top three learning style which you can see in the home page. Click the images for more information about the learning style.</p>',
-            buttons: [
-              {
-                text: 'Ok',
-                handler: () => {
-                  console.log('Agree clicked');
-                }
-              }
-            ]
-          });
-          confirm.present();
-        }
-      }
       ]
     });
     confirm.present();
