@@ -801,18 +801,6 @@ export class LearnertestPage {
     );
     this.userChecker.update(this.currentUser, { Checker: 'true' });
     this.navCtrl.setRoot(SplashscreenPage);
-    let confirm = this.alertCtrl.create({
-      title: 'Welcome to AdaptLearn',
-      message: '<p>Your learning content are based on your top three learning style which you can see in the home page. Click the images for more information about the learning style.</p>',
-      buttons: [
-        {
-          text: 'Ok',
-          handler: () => {
-            console.log('oki');
-          }
-        }
-      ]
-    });
-    confirm.present();
+
   }
 }
