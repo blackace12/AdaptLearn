@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
 import { EmailValidator } from '../../validators/email';
 import { LoginPage } from '../login/login';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 @IonicPage()
 @Component({
@@ -16,7 +17,7 @@ export class RegisterPage {
 
   constructor(public navCtrl: NavController, public authData: AuthProvider,
     public formBuilder: FormBuilder, public loadingCtrl: LoadingController,
-    public alertCtrl: AlertController, public navParams: NavParams) {
+    public alertCtrl: AlertController, public navParams: NavParams, public emailComposer: EmailComposer) {
 
     this.signupForm = formBuilder.group({
     /*   name:['', Validators.compose([Validators.required, NameValidator.isValid])], */
@@ -36,6 +37,19 @@ export class RegisterPage {
     } else {
       this.authData.signupUser(this.signupForm.value.email, this.signupForm.value.password)
         .then(() => {
+        /*   this.emailComposer.isAvailable().then((available: boolean) =>{
+            if(available) {
+              let email = {
+                to: this.signupForm.value.email,
+                cc: 'noreply@adaptlearn-d2fde.firebaseapp.com',
+                subject: 'Cordova Icons',
+                body: this.signupForm.value.email + " you have successfully registered an account to AdaptLearn! Learning is one thing, but learning with assistance and accordance to your learning style is something else. By utilizing AdaptLearn for your learning needs, you will be able to experience a much more efficient and fun learning environment.",
+                isHtml: true
+              };
+              this.emailComposer.open(email);
+            }
+           }); */
+
           let alert = this.alertCtrl.create({
             title: 'Registration Successful',
             subTitle: 'Please login to continue.',

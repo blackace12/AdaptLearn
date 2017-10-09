@@ -1,11 +1,11 @@
+import { ListPage } from '../list/list';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { FirebaseObjectObservable, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseObjectObservable, AngularFireDatabase} from 'angularfire2/database';
 import { AuthProvider } from './../../providers/auth/auth';
 import { Component, ViewChild } from '@angular/core';
 import {MenuController, Platform,  Nav,  AlertController,  NavController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { ListPage } from '../list/list';
 import { ProfilePage } from '../profile/profile';
 import { LessonPage } from '../lesson/lesson';
 import { LoginPage } from '../login/login';
@@ -98,9 +98,6 @@ export class SplashscreenPage {
   }
 
 
-  ionViewDidLoad(){
-    this.menuCtrl.enable(true, "myMenu");
-  }
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

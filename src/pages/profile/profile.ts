@@ -57,7 +57,7 @@ export class ProfilePage {
         this.UserProgressTotal.subscribe(snapshoters => {
             this.tracks.push(snapshoters.val());
             this.tracker = Math.ceil(((100 / 9) * this.tracks[0]));
-
+            console.log(this.tracks[0]);
             if ( this.tracks[0] < 5 ){
                 this.l1prog = ((100 / 4) * this.tracks[0]);
                 this.l1prog = Math.ceil(this.l1prog);
@@ -79,7 +79,9 @@ export class ProfilePage {
             }
 
             if ( this.l2prog == 100 ){
-                if ( this.tracks[0] < 9 ){
+                if ( this.tracks[0] == 8 ){
+                    this.l3prog = 90;
+                } else if (this.tracks[0] == 9){
                     this.l3prog = 100;
                 }
             } else {

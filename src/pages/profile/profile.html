@@ -18,52 +18,50 @@
   <h4 class="chartTitle"> Learning Style Overview </h4>
   <chart type="chart" style="display:block;" [options]="chartOptions"></chart>
 
-  <ion-card>
-    <ion-list>
-      <div *ngFor="let score of userScores;">
-        <ion-card-header>
-          {{score.Chapter_Quiz}}
-        </ion-card-header>
-        <button ion-item *ngIf="score.Score != null">
-        <ion-icon name="planet" item-start></ion-icon>
-       {{score.Score}}
-      </button>
-        <button ion-item *ngIf="score === null || score === undefined || score.length === 0">
-        <ion-icon name="planet" item-start></ion-icon>
-        <p>No Score</p>
-      </button>
-      </div>
-    </ion-list>
+  <h4 style="text-align:center">Quiz Scores</h4>
+  <ion-row wrap>
 
-  </ion-card>
+    <ion-col col-4 *ngFor="let score of userScores;">
+      <ion-card style="text-align:center">
+        <p color="secondary">{{score.Chapter_Quiz}}</p>
+        <p color="danger">Score: &nbsp;{{score.Score}}</p>
+      </ion-card>
+    </ion-col>
 
-<!-- REKT -->
-<div class="progress">
-    <h2><p ng-class="{width: barsize}" style="text-align: center;">Your progress</p></h2>
+    <ion-col *ngIf="userscores == null" style="text-align:center">
+        <h5>No Scores yet</h5>
+    </ion-col>
+  </ion-row>
+
+  <!-- REKT -->
+  <div class="progress">
+    <h4>
+      <p ng-class="{width: barsize}" style="text-align: center;">Lesson Progress</p>
+    </h4>
     <p>Overall Progress - {{tracker}}%</p>
     <div class="meter" style="width: 300px;">
       <span [style.width]="tracker + '%'" style="text-align: center;">
       </span>
     </div>
     <br />
-    <p>Lesson 1 Progress - {{l1prog}}%</p>
+    <p>Universe Origin - {{l1prog}}%</p>
     <div class="meter" style="width: 300px;">
       <span [style.width]="l1prog + '%'" style="text-align: center;">
        </span>
     </div>
     <br />
-    <p>Lesson 2 Progress - {{l2prog}}%</p>
+    <p>Natural Hazards - {{l2prog}}%</p>
     <div class="meter" style="width: 300px;">
       <span [style.width]="l2prog + '%'" style="text-align: center;">
        </span>
     </div>
     <br />
-    <p>Lesson 3 Progress - {{l3prog}}%</p>
+    <p>Mitigation and Adaptation - {{l3prog}}%</p>
     <div class="meter" style="width: 300px;">
       <span [style.width]="l3prog + '%'" style="text-align: center;">
        </span>
     </div>
-</div>
-<!-- /REKT -->
+  </div>
+  <!-- /REKT -->
 
 </ion-content>

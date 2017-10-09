@@ -16,6 +16,7 @@ import { Network } from '@ionic-native/network';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
+
   rootPage: any;
   selectedTheme: String;
   UserChecker: FirebaseListObservable<any>;
@@ -95,7 +96,7 @@ export class MyApp {
               cssClass: "toast-success"
             })
             toast.present();
-            this.rootPage = SplashscreenPage;
+            this.nav.setRoot(SplashscreenPage);
           }
         })
         authObserver.unsubscribe();

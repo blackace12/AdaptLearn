@@ -1,8 +1,5 @@
-<button ion-button menuToggle>
-    <ion-icon name="menu"></ion-icon>
-    Home
-  </button>
-<ion-menu [content]="content" type="overlay" >
+
+<ion-menu [content]="content">
     <ion-content>
       <ion-item style="background-color:#00aced" *ngFor = "let styleElement of styles">
          <div *ngIf = "styleElement && styleElement.user && styleElement.title" >
@@ -25,7 +22,7 @@
     </ion-content>
 
   </ion-menu>
-  <ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 
 
 

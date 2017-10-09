@@ -11,7 +11,6 @@ import { DataProvider } from './../providers/data/data';
 import { LessonNaturalTsunamiPage } from './../pages/lesson-natural-tsunami/lesson-natural-tsunami';
 import { LessonMitadaptPage } from './../pages/lesson-mitadapt/lesson-mitadapt';
 import { LessonEarthEarthsystemPage } from './../pages/lesson-earth-earthsystem/lesson-earth-earthsystem';
-import { ProfileModalPage } from './../pages/profile-modal/profile-modal';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -87,7 +86,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 
 //Screen orientation
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
-
+import { EmailComposer } from '@ionic-native/email-composer';
 const firebaseConfig = {
   apiKey: "AIzaSyBjCiXPIBAfdBrQzVpfiR975VLhvVouUyc",
   authDomain: "adaptlearn-d2fde.firebaseapp.com",
@@ -126,7 +125,7 @@ const firebaseConfig = {
     LessonNaturalLandslidePage,
     LessonNaturalEarthquakePage,
     LessonNaturalVolcanoPage,
-    ProfileModalPage,
+
     LessonEarthEarthsystemPage,
     LessonMitadaptPage,
     LessonNaturalTsunamiPage,
@@ -182,7 +181,6 @@ const firebaseConfig = {
     LessonNaturalLandslidePage,
     LessonNaturalEarthquakePage,
     LessonNaturalVolcanoPage,
-    ProfileModalPage,
     LessonEarthEarthsystemPage,
     LessonMitadaptPage,
     LessonNaturalTsunamiPage,
@@ -217,7 +215,8 @@ const firebaseConfig = {
     DataMitadaptProvider,
     SmartAudioProvider,
     NativeAudio,
-    ScreenOrientation
+    ScreenOrientation,
+    EmailComposer
     ]
 })
 export class AppModule { }
