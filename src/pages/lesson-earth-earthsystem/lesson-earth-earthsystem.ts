@@ -118,7 +118,7 @@ export class LessonEarthEarthsystemPage {
   }
 
   playVideo() {
-    this.youtube.openVideo('VMxjzWHbyFM');
+    this.youtube.openVideo('N7TReqdgw0Q');
   }
 
   regularShare() {

@@ -113,7 +113,7 @@ export class LessonEarthAstronomyPage {
   }
 
   playVideo() {
-    this.youtube.openVideo('ld75W1dz-h0');
+    this.youtube.openVideo('OMDMvSsyxqg');
   }
 
   regularShare() {

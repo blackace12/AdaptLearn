@@ -1,7 +1,7 @@
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { QuizPage } from './../quiz/quiz';
-import { TriviaUniversePage } from './../trivia-universe/trivia-universe';
+import { TriviaUniversePage } from './../trivia-universe/trivia-universe'
 import { Component, ViewChild } from '@angular/core';
 import { Navbar, IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, ToastController } from 'ionic-angular';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -152,6 +152,7 @@ export class LessonEarthUniversePage {
       toast.present();
     }
     else {
+
       this.smartAudio.pause('universe');
       this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
@@ -178,7 +179,7 @@ export class LessonEarthUniversePage {
   }
 
   playVideo() {
-    this.youtube.openVideo('wNDGgL73ihY');
+    this.youtube.openVideo('pcOxhdu5gh8');
   }
   regularShare() {
     // share(message, subject, file, url)
@@ -197,7 +198,7 @@ export class LessonEarthUniversePage {
   }
 
   trivia() {
-    this.navCtrl.push(TriviaUniversePage);
+    this.navCtrl.push(TriviaUniversePage)
   }
 
   SettingsPage() {

@@ -163,7 +163,18 @@ export class SettingsPage {
             }
             else if (data.newPassword != data.confirmPassword) {
               let alert = this.alertCtrl.create({
-                message: "Password does not match the confirm password!",
+                message: "Password does not match!",
+                buttons: [
+                  {
+                    text: "Ok",
+                    role:"Cancel"
+                  }
+                ]
+              });
+              alert.present();
+            } else if (data.newPassword.length > 16){
+              let alert = this.alertCtrl.create({
+                message: "Password must not be greater than 16 characters.",
                 buttons: [
                   {
                     text: "Ok",

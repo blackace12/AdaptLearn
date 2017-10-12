@@ -99,7 +99,7 @@ export class LessonNaturalTsunamiPage {
   }
 
   playVideo(){
-    this.youtube.openVideo('Wx9vPv-T51I');
+    this.youtube.openVideo('DZZFPCY6RlE');
   }
 
   ionViewDidLoad() {

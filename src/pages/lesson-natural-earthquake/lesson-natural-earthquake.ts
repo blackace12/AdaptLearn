@@ -111,7 +111,7 @@ export class LessonNaturalEarthquakePage {
   }
 
   playVideo(){
-    this.youtube.openVideo('dJpIU1rSOFY');
+    this.youtube.openVideo('6HgxiYBkh3U');
   }
 
 

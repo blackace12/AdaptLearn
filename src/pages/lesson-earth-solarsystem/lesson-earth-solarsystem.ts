@@ -110,7 +110,7 @@ export class LessonEarthSolarsystemPage {
   }
 
   playVideo() {
-    this.youtube.openVideo('fzWSBaAYtWs');
+    this.youtube.openVideo('gubsXJXqAWc');
   }
 
   regularShare() {

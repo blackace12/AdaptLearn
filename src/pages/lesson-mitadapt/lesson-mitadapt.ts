@@ -110,7 +110,7 @@ export class LessonMitadaptPage {
   }
 
   playVideo() {
-    this.youtube.openVideo('YX8VQIJVpTg');
+    this.youtube.openVideo('zl42nHerP2Y');
   }
   SettingsPage() {
     this.navCtrl.push(SettingsPage)

@@ -115,7 +115,7 @@ export class LessonNaturalVolcanoPage {
   }
 
   playVideo(){
-    this.youtube.openVideo('lAmqsMQG3RM');
+    this.youtube.openVideo('DZZFPCY6RlE');
   }
 
   SettingsPage(){
