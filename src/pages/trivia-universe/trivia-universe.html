@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Trivias</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides>
+    <ion-slide *ngFor="let slide of trivia;">
+      <h5>{{slide.title}}</h5>
+      <div class="triviaimg">
+        <img [src]="slide.image">
+      </div>
+      <p>{{slide.description}}</p>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
