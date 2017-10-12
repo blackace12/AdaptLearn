@@ -5,8 +5,10 @@ import { QuizVolcanoPage } from './../pages/quiz-volcano/quiz-volcano';
 import { QuizTsunamiPage } from './../pages/quiz-tsunami/quiz-tsunami';
 import { QuizLslidePage } from './../pages/quiz-lslide/quiz-lslide';
 import { QuizSolarsystemPage } from './../pages/quiz-solarsystem/quiz-solarsystem';
-
 import { QuizAstronomyPage } from './../pages/quiz-astronomy/quiz-astronomy';
+
+import { TriviaUniversePage } from './../pages/trivia-universe/trivia-universe';
+
 import { DataProvider } from './../providers/data/data';
 import { LessonNaturalTsunamiPage } from './../pages/lesson-natural-tsunami/lesson-natural-tsunami';
 import { LessonMitadaptPage } from './../pages/lesson-mitadapt/lesson-mitadapt';
@@ -137,7 +139,9 @@ const firebaseConfig = {
     QuizVolcanoPage,
     QuizEquakePage,
     QuizMitadaptPage,
-    QuizEarthsytemPage
+    QuizEarthsytemPage,
+
+    TriviaUniversePage
   ],
 
   imports: [
@@ -192,7 +196,7 @@ const firebaseConfig = {
     QuizEquakePage,
     QuizMitadaptPage,
     QuizEarthsytemPage,
-
+    TriviaUniversePage
   ],
 
   providers: [

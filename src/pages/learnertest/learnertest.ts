@@ -799,8 +799,13 @@ export class LearnertestPage {
         { style: total[5].style, value: total[5].value },
         { style: total[6].style, value: total[6].value }]
     );
-    this.userChecker.update(this.currentUser, { Checker: 'true' });
+    //this.userChecker.update(this.currentUser, { Checker: 'true' });
+    const alert = this.alertCtrl.create({
+      title: 'Welcome!',
+      subTitle: 'The first three pictures presented are your top three learning styles. Your learning content will be based on these styles. Tap the images for more information.',
+      buttons: ['OK']
+    });
+    alert.present();
     this.navCtrl.setRoot(SplashscreenPage);
-
   }
 }
