@@ -152,7 +152,8 @@ export class LessonNaturalTsunamiPage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('Wx9vPv-T51I');
+    this.youtube.openVideo('DZZFPCY6RlE');
+
   }
 
   ionViewDidLoad() {
@@ -452,7 +453,6 @@ export class LessonNaturalTsunamiPage {
       this.audio6();
     }
   }
-
   public page7(){
     this.hide7 = true;
     this.hide1 = false;
@@ -466,3 +466,4 @@ export class LessonNaturalTsunamiPage {
     }
   }
 }
+

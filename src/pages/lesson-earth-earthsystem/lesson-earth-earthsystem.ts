@@ -167,10 +167,12 @@ export class LessonEarthEarthsystemPage {
   }
 
   playVideo() {
+
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('VMxjzWHbyFM');
+
+    this.youtube.openVideo('N7TReqdgw0Q');
   }
 
   regularShare() {
@@ -400,3 +402,4 @@ export class LessonEarthEarthsystemPage {
   }
   
 }
+

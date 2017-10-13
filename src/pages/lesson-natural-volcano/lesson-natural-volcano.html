@@ -26,7 +26,7 @@
 <ion-content padding>
 
   <div *ngFor="let styleElement of styles">
-    <ion-slides *ngIf="visual">
+    <ion-slides pager *ngIf="visual">
         <ion-slide *ngFor="let slide of volcanoSlides">
           <br>
           <img [src]="slide.image" class="slide-image" />

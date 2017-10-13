@@ -141,10 +141,12 @@ export class LessonNaturalLandslidePage {
   }
 
   playVideo(){
+
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('mknStAMia0Q');
+    this.youtube.openVideo('6tSnA9I6uL4');
+
   }
 
   ionViewDidLoad() {

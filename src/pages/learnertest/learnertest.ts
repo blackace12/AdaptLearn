@@ -740,27 +740,11 @@ export class LearnertestPage {
       { style: 'Solitary', value: SolitaryTotal, twos: solitaryTwo }
     ];
 
-  /*   console.log("Unsorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
-    console.log("Unsorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
-    console.log("Unsorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
-    console.log("Unsorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
-    console.log("Unsorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
-    console.log("Unsorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
-    console.log("Unsorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
-    console.log("================================"); */
 
     total.sort(function (a, b) {
       return b.value - a.value;
     });
 
-   /*  console.log("Sorted: " + total[0].style + " " + total[0].value + " " + total[0].twos);
-    console.log("Sorted: " + total[1].style + " " + total[1].value + " " + total[1].twos);
-    console.log("Sorted: " + total[2].style + " " + total[2].value + " " + total[2].twos);
-    console.log("Sorted: " + total[3].style + " " + total[3].value + " " + total[3].twos);
-    console.log("Sorted: " + total[4].style + " " + total[4].value + " " + total[4].twos);
-    console.log("Sorted: " + total[5].style + " " + total[5].value + " " + total[5].twos);
-    console.log("Sorted: " + total[6].style + " " + total[6].value + " " + total[6].twos);
-    console.log("================================"); */
 
     this.style2 = 1;
     for (this.style1 = 0; this.style1 < total.length; this.style1++) {
@@ -777,20 +761,23 @@ export class LearnertestPage {
         this.style2++;
       }
     }
+    let alert = this.alertCtrl.create({
+      title: 'Welcome!',
+      subTitle: 'The first three pictures presented are your top three learning styles. Your learning content will be based on these styles. Tap the images for more information.',
+      buttons: [
+        {
+          text: 'OK',
+          handler: data => {
+            this.userChecker.update(this.currentUser,{ Checker: 'true' })
+          }
+        }
+      ]
 
-    /* console.log("Sorted with twos: " + total[0].style + " " + total[0].value + " " + total[0].twos);
-    console.log("Sorted with twos: " + total[1].style + " " + total[1].value + " " + total[1].twos);
-    console.log("Sorted with twos: " + total[2].style + " " + total[2].value + " " + total[2].twos);
-    console.log("Sorted with twos: " + total[3].style + " " + total[3].value + " " + total[3].twos);
-    console.log("Sorted with twos: " + total[4].style + " " + total[4].value + " " + total[4].twos);
-    console.log("Sorted with twos: " + total[5].style + " " + total[5].value + " " + total[5].twos);
-    console.log("Sorted with twos: " + total[6].style + " " + total[6].value + " " + total[6].twos); */
-
-    //const checker = true;
+    });
 
 
     this.learningStyles.push(
-      [
+     [
         { style: total[0].style, value: total[0].value },
         { style: total[1].style, value: total[1].value },
         { style: total[2].style, value: total[2].value },
@@ -799,13 +786,8 @@ export class LearnertestPage {
         { style: total[5].style, value: total[5].value },
         { style: total[6].style, value: total[6].value }]
     );
-    //this.userChecker.update(this.currentUser, { Checker: 'true' });
-    const alert = this.alertCtrl.create({
-      title: 'Welcome!',
-      subTitle: 'The first three pictures presented are your top three learning styles. Your learning content will be based on these styles. Tap the images for more information.',
-      buttons: ['OK']
-    });
+
+    this.navCtrl.setRoot(SplashscreenPage)
     alert.present();
-    this.navCtrl.setRoot(SplashscreenPage);
   }
 }

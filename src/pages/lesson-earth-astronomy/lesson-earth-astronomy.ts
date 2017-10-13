@@ -194,7 +194,8 @@ export class LessonEarthAstronomyPage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('ld75W1dz-h0');
+    this.youtube.openVideo('OMDMvSsyxqg');
+
   }
 
   regularShare() {

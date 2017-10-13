@@ -167,10 +167,11 @@ export class LessonNaturalVolcanoPage {
   }
 
   playVideo(){
+
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('lAmqsMQG3RM');
+   this.youtube.openVideo('DZZFPCY6RlE');
   }
 
   SettingsPage(){
@@ -426,4 +427,6 @@ export class LessonNaturalVolcanoPage {
         this.audio6();
       }
     }
+
 }
+

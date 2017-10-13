@@ -183,10 +183,13 @@ export class LessonEarthSolarsystemPage {
   }
 
   playVideo() {
+
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('fzWSBaAYtWs');
+
+    this.youtube.openVideo('gubsXJXqAWc');
+
   }
 
   regularShare() {
