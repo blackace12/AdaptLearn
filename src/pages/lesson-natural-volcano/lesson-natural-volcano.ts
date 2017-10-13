@@ -272,69 +272,69 @@ export class LessonNaturalVolcanoPage {
   ];
 
   public pauseAudio() {
-    this.smartAudio.pause('earthSystem');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem3');
-    this.smartAudio.pause('earthSystem4');
-    this.smartAudio.pause('earthSystem5');
-    this.smartAudio.pause('earthSystem6');
+    this.smartAudio.pause('volcano');
+    this.smartAudio.pause('volcano1');
+    this.smartAudio.pause('volcano2');
+    this.smartAudio.pause('volcano3');
+    this.smartAudio.pause('volcano4');
+    this.smartAudio.pause('volcano5');
+    this.smartAudio.pause('volcano6');
     this.playingAudio = false;
     this.playByPart = false;
   }
 
   public audio1() {
-    this.smartAudio.play('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem3');
-    this.smartAudio.pause('earthSystem4');
-    this.smartAudio.pause('earthSystem5');
-    this.smartAudio.pause('earthSystem6');
+    this.smartAudio.play('volcano1');
+    this.smartAudio.pause('volcano2');
+    this.smartAudio.pause('volcano3');
+    this.smartAudio.pause('volcano4');
+    this.smartAudio.pause('volcano5');
+    this.smartAudio.pause('volcano6');
     console.log("Playing part 1");
   }
   public audio2() {
-    this.smartAudio.play('earthSystem2');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem3');
-    this.smartAudio.pause('earthSystem4');
-    this.smartAudio.pause('earthSystem5');
-    this.smartAudio.pause('earthSystem6');
+    this.smartAudio.play('volcano2');
+    this.smartAudio.pause('volcano1');
+    this.smartAudio.pause('volcano3');
+    this.smartAudio.pause('volcano4');
+    this.smartAudio.pause('volcano5');
+    this.smartAudio.pause('volcano6');
     console.log("Playing part 2");
   }
   public audio3() {
-    this.smartAudio.play('earthSystem3');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem4');
-    this.smartAudio.pause('earthSystem5');
-    this.smartAudio.pause('earthSystem6');
+    this.smartAudio.play('volcano3');
+    this.smartAudio.pause('volcano1');
+    this.smartAudio.pause('volcano2');
+    this.smartAudio.pause('volcano4');
+    this.smartAudio.pause('volcano5');
+    this.smartAudio.pause('volcano6');
     console.log("Playing part 3");
   }
   public audio4() {
-    this.smartAudio.play('earthSystem4');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem3');
-    this.smartAudio.pause('earthSystem5');
-    this.smartAudio.pause('earthSystem6');
+    this.smartAudio.play('volcano4');
+    this.smartAudio.pause('volcano1');
+    this.smartAudio.pause('volcano2');
+    this.smartAudio.pause('volcano3');
+    this.smartAudio.pause('volcano5');
+    this.smartAudio.pause('volcano6');
     console.log("Playing part 4");
   }
   public audio5() {
-    this.smartAudio.play('earthSystem5');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem3');
-    this.smartAudio.pause('earthSystem4');
-    this.smartAudio.pause('earthSystem6');
+    this.smartAudio.play('volcano5');
+    this.smartAudio.pause('volcano1');
+    this.smartAudio.pause('volcano2');
+    this.smartAudio.pause('volcano3');
+    this.smartAudio.pause('volcano4');
+    this.smartAudio.pause('volcano6');
     console.log("Playing part 5");
   }
   public audio6() {
-    this.smartAudio.play('earthSystem6');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem3');
-    this.smartAudio.pause('earthSystem4');
-    this.smartAudio.pause('earthSystem5');
+    this.smartAudio.play('volcano6');
+    this.smartAudio.pause('volcano1');
+    this.smartAudio.pause('volcano2');
+    this.smartAudio.pause('volcano3');
+    this.smartAudio.pause('volcano4');
+    this.smartAudio.pause('volcano5');
     console.log("Playing part 6");
   }
 

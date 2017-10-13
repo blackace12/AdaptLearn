@@ -234,30 +234,30 @@ export class LessonNaturalEarthquakePage {
    }
 
    public pauseAudio() {
-    this.smartAudio.pause('earthSystem');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.pause('earthquake');
+    this.smartAudio.pause('earthquake1');
+    this.smartAudio.pause('earthquake2');
+    this.smartAudio.pause('earthquake3');
     this.playingAudio = false;
     this.playByPart = false;
   }
 
   public audio1() {
-    this.smartAudio.play('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
-    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.play('earthquake1');
+    this.smartAudio.pause('earthquake2');
+    this.smartAudio.pause('earthquake3');
     console.log("Playing part 1");
   }
   public audio2() {
-    this.smartAudio.play('earthSystem2');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.play('earthquake2');
+    this.smartAudio.pause('earthquake1');
+    this.smartAudio.pause('earthquake3');
     console.log("Playing part 2");
   }
   public audio3() {
-    this.smartAudio.play('earthSystem3');
-    this.smartAudio.pause('earthSystem1');
-    this.smartAudio.pause('earthSystem2');
+    this.smartAudio.play('earthquake3');
+    this.smartAudio.pause('earthquake1');
+    this.smartAudio.pause('earthquake2');
     console.log("Playing part 3");
   }
 
