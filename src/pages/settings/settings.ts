@@ -1,3 +1,4 @@
+import { ReferencePage } from './../reference/reference';
 import { LoginPage } from './../login/login';
 import { AuthProvider } from './../../providers/auth/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -222,6 +223,10 @@ export class SettingsPage {
       ]
     });
     alert.present();
+  }
+
+  References() {
+    this.navCtrl.push(ReferencePage);
   }
 
   ionViewDidLoad() {

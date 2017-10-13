@@ -82,12 +82,14 @@ export class MyApp {
             this.checkerTest.push(snapshot.val());
           });
 
-          if (this.checkerTest[2] == "false" || this.checkerTest[2] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
+          if (this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail || this.checkerTest[2] == "false" || this.checkerTest[2] == "false" ) {
             this.nav.setRoot(HomePage);
           }
+
           else if (this.checkerTest[0] == "false" || this.checkerTest == undefined || this.checkerTest[0] == this.currentEmail) {
             this.nav.setRoot(LearnertestPage);
           }
+
           else if (this.checkerTest[0] == "true") {
             let toast = this.toastCtrl.create({
               message: 'Welcome Back!',

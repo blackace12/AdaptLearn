@@ -32,7 +32,10 @@ export class ListPage {
   currentUser;
   currentEmail;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, db: AngularFireDatabase, afAuth: AngularFireAuth) {
+  userChecker: any;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public db: AngularFireDatabase, afAuth: AngularFireAuth) {
 
 
     this.currentUser = afAuth.auth.currentUser.uid;
@@ -112,6 +115,11 @@ export class ListPage {
     });
 
   }
+
+  /* ionViewDidLoad(){
+    this.userChecker = this.db.list('/Users/');
+    this.userChecker.set(this.currentUser, { Checker: 'true' });
+  } */
 
   commonMethod(methodName) {
     this[methodName]();
