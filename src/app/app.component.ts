@@ -110,12 +110,42 @@ export class MyApp {
       smartAudio.preload('earthSystem4', 'assets/sounds/Earth System/Earth System - Biosphere.mp3');
       smartAudio.preload('earthSystem5', 'assets/sounds/Earth System/Earth System - Atmosphere.mp3');
 
-
+      //Earthquake Audio
       smartAudio.preload('earthquake', 'assets/sounds/Earthquake.mp3');
+      smartAudio.preload('earthquake1', 'assets/sounds/Earthquake/Earthquake - What is an earthquake.mp3');
+      smartAudio.preload('earthquake2', 'assets/sounds/Earthquake/Earthquake - What causes earthquakes and where do they happen.mp3');
+      smartAudio.preload('earthquake3', 'assets/sounds/Earthquake/Earthquake - Why does the earth shake when there is an earthquake.mp3');
+
+      //Volcanic Eruption Audio
       smartAudio.preload('volcano', 'assets/sounds/Volcano.mp3');
+      smartAudio.preload('volcano1', 'assets/sounds/Volcano/Volcano - What is a volcano.mp3');
+      smartAudio.preload('volcano2', 'assets/sounds/Volcano/Volcano - How are volcanoes formed.mp3');
+      smartAudio.preload('volcano3', 'assets/sounds/Volcano/Volcano - What are the different stages of volcanoes.mp3');
+      smartAudio.preload('volcano4', 'assets/sounds/Volcano/Volcano - Why do volcanoes erupt.mp3');
+      smartAudio.preload('volcano5', 'assets/sounds/Volcano/Volcano - What are plate tectonics.mp3');
+      smartAudio.preload('volcano6', 'assets/sounds/Volcano/Volcano - Different types of volcanoes.mp3');
+
+      //Landslide Audio
       smartAudio.preload('landslide', 'assets/sounds/Landslides.mp3');
+      smartAudio.preload('landslide1', 'assets/sounds/Landslides/Landslides - Landslides.mp3');
+      smartAudio.preload('landslide2', 'assets/sounds/Landslides/Landslides - Several causes of landslides.mp3');
+      smartAudio.preload('landslide3', 'assets/sounds/Landslides/Landslides - People and Landslides.mp3');
+      smartAudio.preload('landslide4', 'assets/sounds/Landslides/Landslides - Submarine Landslides.mp3');
+
+      //Tsunami Audio
       smartAudio.preload('tsunami', 'assets/sounds/Tsunami.mp3');
+      smartAudio.preload('tsunami1', 'assets/sounds/Tsunami/Tsunami - What causes a tsunami.mp3');
+      smartAudio.preload('tsunami2', 'assets/sounds/Tsunami/Tsunami - Subduction zones are potential tsunami locatons.mp3');
+      smartAudio.preload('tsunami3', 'assets/sounds/Tsunami/Tsunami - Accumulated seismic energy.mp3');
+      smartAudio.preload('tsunami4', 'assets/sounds/Tsunami/Tsunami - Earthquake causes tsunami.mp3');
+      smartAudio.preload('tsunami5', 'assets/sounds/Tsunami/Tsunami - Tsunami races away from the epicenter.mp3');
+      smartAudio.preload('tsunami6', 'assets/sounds/Tsunami/Tsunami - Tsunamis travel rapidly across ocean basin.mp3');
+      smartAudio.preload('tsunami7', 'assets/sounds/Tsunami/Tsunami - Tsunami wave train.mp3');
+      
+      //Mitigation and Adaptation Audio
       smartAudio.preload('mitigation', 'assets/sounds/Mitigation.mp3');
+      smartAudio.preload('mitigation1', 'assets/sounds/Mitigation and Adaptation/Mitigation.mp3');
+      smartAudio.preload('mitigation2', 'assets/sounds/Mitigation and Adaptation/Adaptation.mp3');
     });
 
     const authObserver = afAuth.authState.subscribe(user => {
