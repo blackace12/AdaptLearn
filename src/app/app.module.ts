@@ -53,6 +53,7 @@ import { QuizPage } from '../pages/quiz/quiz';
 import { ProfilePage } from '../pages/profile/profile';
 
 import { LessonPage } from '../pages/lesson/lesson';
+import { ReferencePage } from '../pages/reference/reference';
 
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
@@ -156,7 +157,8 @@ const firebaseConfig = {
     TriviaVolcanoPage,
     TriviaLandslidePage,
     TriviaTsunamiPage,
-    TriviaMitadaptPage
+    TriviaMitadaptPage,
+    ReferencePage
   ],
 
   imports: [
@@ -220,7 +222,8 @@ const firebaseConfig = {
     TriviaVolcanoPage,
     TriviaLandslidePage,
     TriviaTsunamiPage,
-    TriviaMitadaptPage
+    TriviaMitadaptPage,
+    ReferencePage
   ],
 
   providers: [
