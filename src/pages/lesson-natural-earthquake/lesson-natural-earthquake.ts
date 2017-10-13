@@ -92,7 +92,7 @@ export class LessonNaturalEarthquakePage {
         this.third === "Verbal" && this.second === "Visual" ||
         this.first === "Verbal" && this.third === "Visual" ||
         this.second === "Verbal" && this.third === "Visual" ||
-        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||
         this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
           this.smartAudio.play('earthquake');
       }
@@ -317,5 +317,4 @@ export class LessonNaturalEarthquakePage {
 
   //====end of chapter 1=======
 
-}
 

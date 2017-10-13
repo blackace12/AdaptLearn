@@ -96,7 +96,7 @@ export class LessonNaturalTsunamiPage {
         this.third === "Verbal" && this.second === "Visual" ||
         this.first === "Verbal" && this.third === "Visual" ||
         this.second === "Verbal" && this.third === "Visual" ||
-        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||
         this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
           this.smartAudio.play('tsunami');
       }
@@ -220,7 +220,7 @@ export class LessonNaturalTsunamiPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      this.third === "Verbal" && this.third.valueOf() === "Visual" || 
+      this.third === "Verbal" && this.third.valueOf() === "Visual" ||
       this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
         this.visual = true;
         this.verbal = false;
@@ -406,7 +406,7 @@ export class LessonNaturalTsunamiPage {
       this.audio3();
     }
   }
-  
+
   public page4(){
     this.hide4 = true;
     this.hide1 = false;
@@ -432,7 +432,7 @@ export class LessonNaturalTsunamiPage {
       this.audio5();
     }
   }
-  
+
   public page6(){
     this.hide6 = true;
     this.hide1 = false;
@@ -458,7 +458,3 @@ export class LessonNaturalTsunamiPage {
     }
   }
 }
-
-    //====end of chapter 1=======
-}
-

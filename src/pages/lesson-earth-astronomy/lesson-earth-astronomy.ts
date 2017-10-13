@@ -94,7 +94,7 @@ export class LessonEarthAstronomyPage {
         this.third === "Verbal" && this.second === "Visual" ||
         this.first === "Verbal" && this.third === "Visual" ||
         this.second === "Verbal" && this.third === "Visual" ||
-        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||
         this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
           this.smartAudio.play('astronomy');
         }
@@ -152,7 +152,7 @@ export class LessonEarthAstronomyPage {
             else if (this.hide14 === true) {
               this.audio14();
             }
-          } 
+          }
       this.playingAudio = true;
       let toast = this.toastCtrl.create({
         message: 'Audio Playing',
@@ -262,7 +262,7 @@ export class LessonEarthAstronomyPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      this.third === "Verbal" && this.third.valueOf() === "Visual" || 
+      this.third === "Verbal" && this.third.valueOf() === "Visual" ||
       this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
       this.visual = true;
       this.verbal = false;
@@ -888,13 +888,4 @@ export class LessonEarthAstronomyPage {
       this.audio14();
     }
   }
-}
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-  }
-  //====end of chapter 5=======
 }
