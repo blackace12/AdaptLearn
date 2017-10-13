@@ -10,24 +10,30 @@
 
 <ion-content padding>
 
-  <ion-list>
-    <ion-item>
+  <ion-list no-lines>
+    <ion-item no-lines>
       <button ion-button block (click)="toggleAppTheme()">{{title}}</button>
     </ion-item>
 
-    <ion-item>
+    <ion-item no-lines>
       <button ion-button block (click)="updatePassword()">Change Password</button>
     </ion-item>
 
-    <ion-item>
-        <button ion-button block (click)="Reset()">Reset Account</button>
+    <ion-item no-lines>
+      <button ion-button block (click)="Reset()">Reset Account</button>
     </ion-item>
 
   </ion-list>
 
 
-  <ion-item>
-    <button ion-button block (click)="References()">About Application</button>
-</ion-item>
+
 
 </ion-content>
+
+<ion-footer padding>
+  <ion-list no-lines>
+    <ion-item no-lines>
+      <button ion-button block (click)="References()">About Application</button>
+    </ion-item>
+  </ion-list>
+</ion-footer>
