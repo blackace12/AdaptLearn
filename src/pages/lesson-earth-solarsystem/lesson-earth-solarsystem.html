@@ -613,22 +613,18 @@
     <ion-fab-list side="left">
       <button ion-fab color="secondary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
 
+      <button ion-fab color="primary" (click)="trivia()" *ngIf="styleElement.first == 'Logical' || styleElement.second == 'Logical' || styleElement.third == 'Logical'">
+        <ion-icon name="bulb"></ion-icon>
+      </button>
+      
       <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
-
-          <ion-icon name="volume-up"></ion-icon>
-        </button>
+        <ion-icon name="volume-up"></ion-icon>
+      </button>
 
       <button ion-fab color="primary" (click)="regularShare()" *ngIf="styleElement.first == 'Social' || styleElement.second == 'Social' || styleElement.third == 'Social'"><ion-icon name="logo-facebook"></ion-icon></button>
 
-
-
       <button ion-fab color="primary" (click)="playVideo()" *ngIf="styleElement.first == 'Physical' || styleElement.second == 'Physical' || styleElement.third == 'Physical' || styleElement.first == 'Visual' || styleElement.second == 'Visual' || styleElement.third == 'Visual'">
-            <ion-icon name="logo-youtube"></ion-icon></button>
+        <ion-icon name="logo-youtube"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
-
-
-
-
-
 </ion-content>

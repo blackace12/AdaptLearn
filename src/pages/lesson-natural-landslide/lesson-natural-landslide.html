@@ -118,6 +118,10 @@
     <ion-fab-list side="left">
       <button ion-fab color="secondary" (click)="universeQuiz()"><ion-icon name="paper"></ion-icon></button>
 
+      <button ion-fab color="primary" (click)="trivia()" *ngIf="styleElement.first == 'Logical' || styleElement.second == 'Logical' || styleElement.third == 'Logical'">
+        <ion-icon name="bulb"></ion-icon>
+      </button>
+      
       <button ion-fab color="primary" (click)="playAudio()" *ngIf="styleElement.first == 'Auditory' || styleElement.second == 'Auditory' || styleElement.third == 'Auditory'">
         <ion-icon name="volume-up"></ion-icon>
       </button>

@@ -5,6 +5,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, Navbar, ToastController } from 'ionic-angular';
 import { SettingsPage } from '../settings/settings';
+import { TriviaSolarsystemPage } from '../trivia-solarsystem/trivia-solarsystem';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
@@ -172,6 +173,13 @@ export class LessonEarthSolarsystemPage {
       this.navCtrl.pop();
 
     }
+  }
+
+  trivia() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
+    this.navCtrl.push(TriviaSolarsystemPage);
   }
 
   playVideo() {

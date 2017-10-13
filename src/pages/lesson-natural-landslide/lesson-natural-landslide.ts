@@ -5,6 +5,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, Navbar, ToastController } from 'ionic-angular';
 import { SettingsPage} from '../settings/settings';
+import { TriviaLandslidePage } from '../trivia-landslide/trivia-landslide';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import { AngularFireDatabase,   FirebaseObjectObservable} from 'angularfire2/database';
@@ -221,6 +222,13 @@ export class LessonNaturalLandslidePage {
   regularShare(){
     // share(message, subject, file, url)
     this.socialSharing.shareViaFacebook("Landslide Lesson", null, "https://adaptlearn.herokuapp.com/lesson2/landslide.html");
+  }
+
+  trivia() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
+    this.navCtrl.push(TriviaLandslidePage);
   }
 
   universeQuiz(){

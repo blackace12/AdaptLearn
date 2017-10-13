@@ -8,6 +8,14 @@ import { QuizSolarsystemPage } from './../pages/quiz-solarsystem/quiz-solarsyste
 import { QuizAstronomyPage } from './../pages/quiz-astronomy/quiz-astronomy';
 
 import { TriviaUniversePage } from './../pages/trivia-universe/trivia-universe';
+import { TriviaAstronomyPage } from './../pages/trivia-astronomy/trivia-astronomy';
+import { TriviaSolarsystemPage } from './../pages/trivia-solarsystem/trivia-solarsystem';
+import { TriviaEarthsystemPage } from './../pages/trivia-earthsystem/trivia-earthsystem';
+import { TriviaEarthquakePage } from './../pages/trivia-earthquake/trivia-earthquake';
+import { TriviaVolcanoPage } from './../pages/trivia-volcano/trivia-volcano';
+import { TriviaLandslidePage } from './../pages/trivia-landslide/trivia-landslide';
+import { TriviaTsunamiPage } from './../pages/trivia-tsunami/trivia-tsunami';
+import { TriviaMitadaptPage } from './../pages/trivia-mitadapt/trivia-mitadapt';
 
 import { DataProvider } from './../providers/data/data';
 import { LessonNaturalTsunamiPage } from './../pages/lesson-natural-tsunami/lesson-natural-tsunami';
@@ -127,7 +135,6 @@ const firebaseConfig = {
     LessonNaturalLandslidePage,
     LessonNaturalEarthquakePage,
     LessonNaturalVolcanoPage,
-
     LessonEarthEarthsystemPage,
     LessonMitadaptPage,
     LessonNaturalTsunamiPage,
@@ -141,7 +148,15 @@ const firebaseConfig = {
     QuizMitadaptPage,
     QuizEarthsytemPage,
 
-    TriviaUniversePage
+    TriviaUniversePage,
+    TriviaAstronomyPage,
+    TriviaSolarsystemPage,
+    TriviaEarthsystemPage,
+    TriviaEarthquakePage,
+    TriviaVolcanoPage,
+    TriviaLandslidePage,
+    TriviaTsunamiPage,
+    TriviaMitadaptPage
   ],
 
   imports: [
@@ -196,7 +211,16 @@ const firebaseConfig = {
     QuizEquakePage,
     QuizMitadaptPage,
     QuizEarthsytemPage,
-    TriviaUniversePage
+
+    TriviaUniversePage,
+    TriviaAstronomyPage,
+    TriviaSolarsystemPage,
+    TriviaEarthsystemPage,
+    TriviaEarthquakePage,
+    TriviaVolcanoPage,
+    TriviaLandslidePage,
+    TriviaTsunamiPage,
+    TriviaMitadaptPage
   ],
 
   providers: [

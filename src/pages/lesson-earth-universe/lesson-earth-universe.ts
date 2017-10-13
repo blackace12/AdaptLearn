@@ -258,7 +258,7 @@ export class LessonEarthUniversePage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.navCtrl.push(TriviaUniversePage)
+    this.navCtrl.push(TriviaUniversePage);
   }
   
   SettingsPage() {
