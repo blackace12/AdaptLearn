@@ -198,7 +198,7 @@ export class LessonEarthUniversePage {
             this.audio9();
           }
         } 
-      this.playingAudio = !this.playingAudio;
+      this.playingAudio = true;
       let toast = this.toastCtrl.create({
         message: 'Audio Playing',
         duration: 1500
@@ -208,7 +208,6 @@ export class LessonEarthUniversePage {
     else {
       this.pauseAudio();
       console.log("Stopped Audio");
-      this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
         message: 'Audio Paused',
         duration: 1500
@@ -333,7 +332,7 @@ export class LessonEarthUniversePage {
     this.smartAudio.pause('universe7');
     this.smartAudio.pause('universe8');
     this.smartAudio.pause('universe9');
-    this.playingAudio = !this.playingAudio;
+    this.playingAudio = false;
   }
 
   public audio1() {

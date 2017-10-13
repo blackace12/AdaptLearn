@@ -153,7 +153,7 @@ export class LessonEarthAstronomyPage {
               this.audio14();
             }
           } 
-      this.playingAudio = !this.playingAudio;
+      this.playingAudio = true;
       let toast = this.toastCtrl.create({
         message: 'Audio Playing',
         duration: 1500
@@ -162,7 +162,6 @@ export class LessonEarthAstronomyPage {
     }
     else {
       this.pauseAudio();
-      this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
         message: 'Audio Paused',
         duration: 1500
@@ -262,7 +261,7 @@ export class LessonEarthAstronomyPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+      this.third === "Verbal" && this.third.valueOf() === "Visual" || 
       this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
       this.visual = true;
       this.verbal = false;
@@ -286,7 +285,7 @@ export class LessonEarthAstronomyPage {
     this.smartAudio.pause('astronomy12');
     this.smartAudio.pause('astronomy13');
     this.smartAudio.pause('astronomy14');
-    this.playingAudio = !this.playingAudio;
+    this.playingAudio = false;
   }
 
   public audio1() {

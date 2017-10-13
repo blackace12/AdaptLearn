@@ -88,6 +88,19 @@ export class MyApp {
 
       //Solar System Audio
       smartAudio.preload('solarSystem', 'assets/sounds/SolarSystem.mp3');
+      smartAudio.preload('solarSystem1', 'assets/sounds/Solar System/Solar System - Our nearest star.mp3');
+      smartAudio.preload('solarSystem2', 'assets/sounds/Solar System/Solar System - The Sun.mp3');
+      smartAudio.preload('solarSystem3', 'assets/sounds/Solar System/Solar System - The Solar System and its planets.mp3');
+      smartAudio.preload('solarSystem4', 'assets/sounds/Solar System/Solar System - Mercury.mp3');
+      smartAudio.preload('solarSystem5', 'assets/sounds/Solar System/Solar System - Venus.mp3');
+      smartAudio.preload('solarSystem6', 'assets/sounds/Solar System/Solar System - Earth Traveler in Space.mp3');
+      smartAudio.preload('solarSystem7', 'assets/sounds/Solar System/Solar System - Mars the red planet.mp3');
+      smartAudio.preload('solarSystem8', 'assets/sounds/Solar System/Solar System - Jupiter.mp3');
+      smartAudio.preload('solarSystem9', 'assets/sounds/Solar System/Solar System - Saturn the gas giant.mp3');
+      smartAudio.preload('solarSystem10', 'assets/sounds/Solar System/Solar System - Uranus.mp3');
+      smartAudio.preload('solarSystem11', 'assets/sounds/Solar System/Solar System - Neptune.mp3');
+      smartAudio.preload('solarSystem12', 'assets/sounds/Solar System/Solar System - Pluto.mp3');
+      smartAudio.preload('solarSystem13', 'assets/sounds/Solar System/Solar System - The Kiuper Belt.mp3');
 
       //Earth System Audio
       smartAudio.preload('earthSystem', 'assets/sounds/EarthSystem.mp3');
