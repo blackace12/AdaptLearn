@@ -206,16 +206,7 @@ export class LessonEarthUniversePage {
       toast.present();
     }
     else {
-      this.smartAudio.pause('universe');
-      this.smartAudio.pause('universe1');
-      this.smartAudio.pause('universe2');
-      this.smartAudio.pause('universe3');
-      this.smartAudio.pause('universe4');
-      this.smartAudio.pause('universe5');
-      this.smartAudio.pause('universe6');
-      this.smartAudio.pause('universe7');
-      this.smartAudio.pause('universe8');
-      this.smartAudio.pause('universe9');
+      this.pauseAudio();
       console.log("Stopped Audio");
       this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
@@ -230,17 +221,7 @@ export class LessonEarthUniversePage {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-        this.smartAudio.pause('universe');
-        this.smartAudio.pause('universe1');
-        this.smartAudio.pause('universe2');
-        this.smartAudio.pause('universe3');
-        this.smartAudio.pause('universe4');
-        this.smartAudio.pause('universe5');
-        this.smartAudio.pause('universe6');
-        this.smartAudio.pause('universe7');
-        this.smartAudio.pause('universe8');
-        this.smartAudio.pause('universe9');
-        this.playingAudio = !this.playingAudio;
+        this.pauseAudio();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -250,6 +231,9 @@ export class LessonEarthUniversePage {
   }
 
   playVideo() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     this.youtube.openVideo('wNDGgL73ihY');
   }
   regularShare() {
@@ -258,6 +242,9 @@ export class LessonEarthUniversePage {
   }
 
   universeQuiz() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     //new
     let data = {
       theme: this.selectedTheme
@@ -269,6 +256,9 @@ export class LessonEarthUniversePage {
   }
 
   trivia() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     this.navCtrl.push(TriviaUniversePage)
   }
   
@@ -330,6 +320,20 @@ export class LessonEarthUniversePage {
       this.verbal = false;
       this.font = false;
     }
+  }
+
+  public pauseAudio() {
+    this.smartAudio.pause('universe');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    this.playingAudio = !this.playingAudio;
   }
 
   public audio1() {
