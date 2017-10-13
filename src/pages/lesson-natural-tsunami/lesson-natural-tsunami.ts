@@ -84,31 +84,82 @@ export class LessonNaturalTsunamiPage {
   }
 
   playingAudio: boolean = false;
+  playByPart: boolean = false;
 
   playAudio(){
     if(this.playingAudio === false){
-      this.smartAudio.play('tsunami');
-      this.playingAudio = !this.playingAudio;
+      if (this.first === "Verbal" && this.first === "Visual" ||
+        this.second === "Verbal" && this.first === "Visual" ||
+        this.third === "Verbal" && this.first === "Visual" ||
+        this.first === "Verbal" && this.second === "Visual" ||
+        this.second === "Verbal" && this.second === "Visual" ||
+        this.third === "Verbal" && this.second === "Visual" ||
+        this.first === "Verbal" && this.third === "Visual" ||
+        this.second === "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+          this.smartAudio.play('tsunami');
+      }
+      else if (this.first === "Verbal" && this.first != "Visual" ||
+        this.second === "Verbal" && this.first != "Visual" ||
+        this.third === "Verbal" && this.first != "Visual" ||
+        this.first === "Verbal" && this.second != "Visual" ||
+        this.second === "Verbal" && this.second != "Visual" ||
+        this.third === "Verbal" && this.second != "Visual" ||
+        this.first === "Verbal" && this.third != "Visual" ||
+        this.second === "Verbal" && this.third != "Visual" ||
+        this.third != "Visual" && this.third === "Verbal" ||
+        this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+          this.playByPart = true;
+          console.log('enable audio by part');
+          if (this.hide1 === true) {
+            this.audio1();
+          }
+          else if (this.hide2 === true) {
+            this.audio2();
+          }
+          else if (this.hide3 === true) {
+            this.audio3();
+          }
+          else if (this.hide4 === true) {
+            this.audio4();
+          }
+          else if (this.hide5 === true) {
+            this.audio5();
+          }
+          else if (this.hide6 === true) {
+            this.audio6();
+          }
+          else if (this.hide7 === true) {
+            this.audio7();
+          }
+        }
+      this.playingAudio = true;
       console.log("playing");
     }
     else {
-      this.smartAudio.pause('tsunami');
-      this.playingAudio = !this.playingAudio;
-      console.log("pause");
+      this.pauseAudio();
+      let toast = this.toastCtrl.create({
+        message: 'Audio Paused',
+        duration: 1500
+      });
+      toast.present();
     }
   }
 
   playVideo(){
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     this.youtube.openVideo('DZZFPCY6RlE');
+
   }
 
   ionViewDidLoad() {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-
-          this.smartAudio.pause('tsunami');
-          this.playingAudio = !this.playingAudio;
+        this.pauseAudio();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -169,7 +220,7 @@ export class LessonNaturalTsunamiPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+      this.third === "Verbal" && this.third.valueOf() === "Visual" || 
       this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
         this.visual = true;
         this.verbal = false;
@@ -183,6 +234,9 @@ export class LessonNaturalTsunamiPage {
   }
 
   universeQuiz(){
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     //new
     let data = {
       theme: this.selectedTheme
@@ -222,86 +276,189 @@ export class LessonNaturalTsunamiPage {
     }
   ];
 
+  public pauseAudio() {
+    this.smartAudio.pause('tsunami');
+    this.smartAudio.pause('tsunami1');
+    this.smartAudio.pause('tsunami2');
+    this.smartAudio.pause('tsunami3');
+    this.smartAudio.pause('tsunami4');
+    this.smartAudio.pause('tsunami5');
+    this.smartAudio.pause('tsunami6');
+    this.smartAudio.pause('tsunami7');
+    this.playingAudio = false;
+    this.playByPart = false;
+  }
 
-  //under chapter 1
-    public hide1:boolean=true;
-    public hide1_1:boolean=false;
-    public hide1_2:boolean=false;
-    public hide1_3:boolean=false;
-    public hide1_4:boolean=false;
-    public hide1_5:boolean=false;
-    public hide1_6:boolean=false;
+  public audio1() {
+    this.smartAudio.play('tsunami1');
+    this.smartAudio.pause('tsunami2');
+    this.smartAudio.pause('tsunami3');
+    this.smartAudio.pause('tsunami4');
+    this.smartAudio.pause('tsunami5');
+    this.smartAudio.pause('tsunami6');
+    this.smartAudio.pause('tsunami7');
+    console.log("Playing part 1");
+  }
+  public audio2() {
+    this.smartAudio.play('tsunami2');
+    this.smartAudio.pause('tsunami1');
+    this.smartAudio.pause('tsunami3');
+    this.smartAudio.pause('tsunami4');
+    this.smartAudio.pause('tsunami5');
+    this.smartAudio.pause('tsunami6');
+    this.smartAudio.pause('tsunami7');
+    console.log("Playing part 2");
+  }
+  public audio3() {
+    this.smartAudio.play('tsunami3');
+    this.smartAudio.pause('tsunami1');
+    this.smartAudio.pause('tsunami2');
+    this.smartAudio.pause('tsunami4');
+    this.smartAudio.pause('tsunami5');
+    this.smartAudio.pause('tsunami6');
+    this.smartAudio.pause('tsunami7');
+    console.log("Playing part 3");
+  }
+  public audio4() {
+    this.smartAudio.play('tsunami4');
+    this.smartAudio.pause('tsunami1');
+    this.smartAudio.pause('tsunami2');
+    this.smartAudio.pause('tsunami3');
+    this.smartAudio.pause('tsunami5');
+    this.smartAudio.pause('tsunami6');
+    this.smartAudio.pause('tsunami7');
+    console.log("Playing part 4");
+  }
+  public audio5() {
+    this.smartAudio.play('tsunami5');
+    this.smartAudio.pause('tsunami1');
+    this.smartAudio.pause('tsunami2');
+    this.smartAudio.pause('tsunami3');
+    this.smartAudio.pause('tsunami4');
+    this.smartAudio.pause('tsunami6');
+    this.smartAudio.pause('tsunami7');
+    console.log("Playing part 5");
+  }
+  public audio6() {
+    this.smartAudio.play('tsunami6');
+    this.smartAudio.pause('tsunami1');
+    this.smartAudio.pause('tsunami2');
+    this.smartAudio.pause('tsunami3');
+    this.smartAudio.pause('tsunami4');
+    this.smartAudio.pause('tsunami5');
+    this.smartAudio.pause('tsunami7');
+    console.log("Playing part 6");
+  }
+  public audio7() {
+    this.smartAudio.play('tsunami7');
+    this.smartAudio.pause('tsunami1');
+    this.smartAudio.pause('tsunami2');
+    this.smartAudio.pause('tsunami3');
+    this.smartAudio.pause('tsunami4');
+    this.smartAudio.pause('tsunami5');
+    this.smartAudio.pause('tsunami6');
+    console.log("Playing part 7");
+  }
 
-    //====start of chapter 1=======
-    public click1(){
-      this.hide1 = !this.hide1;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
+  public hide1:boolean=true;
+  public hide2:boolean=false;
+  public hide3:boolean=false;
+  public hide4:boolean=false;
+  public hide5:boolean=false;
+  public hide6:boolean=false;
+  public hide7:boolean=false;
+
+  public page1(){
+    this.hide1 = true;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    if (this.playByPart === true) {
+      this.audio1();
     }
+  }
 
-    public click1_1(){
-      this.hide1_1 = !this.hide1_1;
-      this.hide1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
+  public page2(){
+    this.hide2 = true;
+    this.hide1 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    if (this.playByPart === true) {
+      this.audio2();
     }
+  }
 
-    public click1_2(){
-      this.hide1_2 = !this.hide1_2;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
+  public page3(){
+    this.hide3 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    if (this.playByPart === true) {
+      this.audio3();
     }
+  }
+  
+  public page4(){
+    this.hide4 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    if (this.playByPart === true) {
+      this.audio4();
+    }
+  }
 
-    public click1_3(){
-      this.hide1_3 = !this.hide1_3;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
+  public page5(){
+    this.hide5 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    if (this.playByPart === true) {
+      this.audio5();
     }
-
-    public click1_4(){
-      this.hide1_4 = !this.hide1_4;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_5 = false;
-      this.hide1_6 = false;
+  }
+  
+  public page6(){
+    this.hide6 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide7 = false;
+    if (this.playByPart === true) {
+      this.audio6();
     }
-
-    public click1_5(){
-      this.hide1_5 = !this.hide1_5;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_6 = false;
+  }
+  public page7(){
+    this.hide7 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    if (this.playByPart === true) {
+      this.audio7();
     }
-
-    public click1_6(){
-      this.hide1_6 = !this.hide1_6;
-      this.hide1 = false;
-      this.hide1_1 = false;
-      this.hide1_2 = false;
-      this.hide1_3 = false;
-      this.hide1_4 = false;
-      this.hide1_5 = false;
-    }
+  }
+}
 
     //====end of chapter 1=======
 }
+

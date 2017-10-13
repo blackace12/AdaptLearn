@@ -80,17 +80,54 @@ export class LessonNaturalEarthquakePage {
   }
 
   playingAudio: boolean = false;
+  playByPart: boolean = false;
 
   playAudio(){
     if(this.playingAudio === false){
-      this.smartAudio.play('earthquake');
-      this.playingAudio = !this.playingAudio;
+      if (this.first === "Verbal" && this.first === "Visual" ||
+        this.second === "Verbal" && this.first === "Visual" ||
+        this.third === "Verbal" && this.first === "Visual" ||
+        this.first === "Verbal" && this.second === "Visual" ||
+        this.second === "Verbal" && this.second === "Visual" ||
+        this.third === "Verbal" && this.second === "Visual" ||
+        this.first === "Verbal" && this.third === "Visual" ||
+        this.second === "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+          this.smartAudio.play('earthquake');
+      }
+      else if (this.first === "Verbal" && this.first != "Visual" ||
+        this.second === "Verbal" && this.first != "Visual" ||
+        this.third === "Verbal" && this.first != "Visual" ||
+        this.first === "Verbal" && this.second != "Visual" ||
+        this.second === "Verbal" && this.second != "Visual" ||
+        this.third === "Verbal" && this.second != "Visual" ||
+        this.first === "Verbal" && this.third != "Visual" ||
+        this.second === "Verbal" && this.third != "Visual" ||
+        this.third != "Visual" && this.third === "Verbal" ||
+        this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+          this.playByPart = true;
+          console.log('enable audio by part');
+          if (this.hide1 === true) {
+            this.audio1();
+          }
+          else if (this.hide2 === true) {
+            this.audio2();
+          }
+          else if (this.hide3 === true) {
+            this.audio3();
+          }
+        }
+      this.playingAudio = true;
       console.log("playing");
     }
     else {
-      this.smartAudio.pause('earthquake');
-      this.playingAudio = !this.playingAudio;
-      console.log("pause");
+      this.pauseAudio();
+      let toast = this.toastCtrl.create({
+        message: 'Audio Paused',
+        duration: 1500
+      });
+      toast.present();
     }
   }
 
@@ -99,9 +136,7 @@ export class LessonNaturalEarthquakePage {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-
-          this.smartAudio.pause('earthquake');
-          this.playingAudio = !this.playingAudio;
+        this.pauseAudio();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -111,6 +146,9 @@ export class LessonNaturalEarthquakePage {
   }
 
   playVideo(){
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     this.youtube.openVideo('6HgxiYBkh3U');
   }
 
@@ -143,6 +181,9 @@ export class LessonNaturalEarthquakePage {
   }
 
   universeQuiz(){
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     //new
     let data = {
       theme: this.selectedTheme
@@ -184,13 +225,41 @@ export class LessonNaturalEarthquakePage {
        this.third === "Verbal" && this.second === "Visual" ||
        this.first === "Verbal" && this.third === "Visual" ||
        this.second === "Verbal" && this.third === "Visual" ||
-       //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+       this.third === "Verbal" && this.third.valueOf() === "Visual" ||
        this.first === "Visual"|| this.second === "Visual" || this.third === "Visual") {
          this.visual = true;
          this.verbal = false;
          this.font = false;
      }
    }
+
+   public pauseAudio() {
+    this.smartAudio.pause('earthquake');
+    this.smartAudio.pause('earthquake1');
+    this.smartAudio.pause('earthquake2');
+    this.smartAudio.pause('earthquake3');
+    this.playingAudio = false;
+    this.playByPart = false;
+  }
+
+  public audio1() {
+    this.smartAudio.play('earthquake1');
+    this.smartAudio.pause('earthquake2');
+    this.smartAudio.pause('earthquake3');
+    console.log("Playing part 1");
+  }
+  public audio2() {
+    this.smartAudio.play('earthquake2');
+    this.smartAudio.pause('earthquake1');
+    this.smartAudio.pause('earthquake3');
+    console.log("Playing part 2");
+  }
+  public audio3() {
+    this.smartAudio.play('earthquake3');
+    this.smartAudio.pause('earthquake1');
+    this.smartAudio.pause('earthquake2');
+    console.log("Playing part 3");
+  }
 
    equakeSlides = [
     {
@@ -213,33 +282,40 @@ export class LessonNaturalEarthquakePage {
     }
   ];
 
-
-
-
-  //under chapter 1
   public hide1:boolean=true;
-  public hide1_1:boolean=false;
-  public hide1_2:boolean=false;
+  public hide2:boolean=false;
+  public hide3:boolean=false;
 
-  //====start of chapter 1=======
-  public click1(){
+  public page1(){
     this.hide1 = !this.hide1;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    if (this.playByPart === true) {
+      this.audio1();
+    }
   }
 
-  public click1_1(){
-    this.hide1_1 = !this.hide1_1;
+  public page2(){
+    this.hide2 = !this.hide3;
     this.hide1 = false;
-    this.hide1_2 = false;
+    this.hide3 = false;
+    if (this.playByPart === true) {
+      this.audio2();
+    }
   }
 
-  public click1_2(){
-    this.hide1_2 = !this.hide1_2;
+  public page3(){
+    this.hide3 = !this.hide3;
     this.hide1 = false;
-    this.hide1_1 = false;
+    this.hide2 = false;
+    if (this.playByPart === true) {
+      this.audio3();
+    }
   }
+
+}
 
   //====end of chapter 1=======
 
 }
+

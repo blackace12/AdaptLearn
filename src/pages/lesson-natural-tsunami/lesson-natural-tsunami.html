@@ -34,11 +34,10 @@
       </ion-slides>
     </div>
 
-
     <div *ngFor="let styleElement of styles">
       <div *ngIf="verbal">
       <div class="chapter">
-        <button ion-item (click)="click1()">
+        <button ion-item (click)="page1()">
       What causes a tsunami?
     </button>
         <ion-card *ngIf="hide1">
@@ -51,10 +50,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_1()">
+        <button ion-item (click)="page2()">
       Subduction Zones are Potential Tsunami Locations
     </button>
-        <ion-card *ngIf="hide1_1">
+        <ion-card *ngIf="hide2">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Most tsunamis are caused by earthquakes generated in a subduction zone, an area where an oceanic plate is being forced down
@@ -64,10 +63,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_2()">
+        <button ion-item (click)="page3()">
       Accumulated Seismic Energy
     </button>
-        <ion-card *ngIf="hide1_2">
+        <ion-card *ngIf="hide3">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               As the stuck plate continues to descend into the mantle, the motion causes a slow distortion of the overriding plate. The
@@ -76,10 +75,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_3()">
+        <button ion-item (click)="page4()">
       Earthquake causes Tsunami
     </button>
-        <ion-card *ngIf="hide1_3">
+        <ion-card *ngIf="hide4">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Energy accumulates in the overriding plate until it exceeds the frictional forces between the two stuck plates. When this
@@ -89,10 +88,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_4()">
+        <button ion-item (click)="page5()">
       Tsunami Races Away From The Epicenter
     </button>
-        <ion-card *ngIf="hide1_4">
+        <ion-card *ngIf="hide5">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The moving wave begins travelling out from where the earthquake has occurred. Some of the water travels out and across the
@@ -100,10 +99,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_5()">
+        <button ion-item (click)="page6()">
       Tsunamis Travel Rapidly Across Ocean Basin
     </button>
-        <ion-card *ngIf="hide1_5">
+        <ion-card *ngIf="hide6">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Tsunamis travel swiftly across the open ocean. The map on this page shows how a tsunami produced by an earthquake along the
@@ -112,10 +111,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_6()">
+        <button ion-item (click)="page7()">
       Tsunami “Wave Train”
     </button>
-        <ion-card *ngIf="hide1_6">
+        <ion-card *ngIf="hide7">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Many people have the mistaken belief that tsunamis are single waves. They are not. Instead tsunamis are "wave trains" consisting

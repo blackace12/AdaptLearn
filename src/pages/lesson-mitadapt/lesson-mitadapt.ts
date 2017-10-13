@@ -80,17 +80,51 @@ export class LessonMitadaptPage {
   }
 
   playingAudio: boolean = false;
+  playByPart: boolean = false;
 
   playAudio() {
     if (this.playingAudio === false) {
-      this.smartAudio.play('mitigation');
-      this.playingAudio = !this.playingAudio;
+      if (this.first === "Verbal" && this.first === "Visual" ||
+        this.second === "Verbal" && this.first === "Visual" ||
+        this.third === "Verbal" && this.first === "Visual" ||
+        this.first === "Verbal" && this.second === "Visual" ||
+        this.second === "Verbal" && this.second === "Visual" ||
+        this.third === "Verbal" && this.second === "Visual" ||
+        this.first === "Verbal" && this.third === "Visual" ||
+        this.second === "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+          this.smartAudio.play('mitigation');
+      }
+      else if (this.first === "Verbal" && this.first != "Visual" ||
+        this.second === "Verbal" && this.first != "Visual" ||
+        this.third === "Verbal" && this.first != "Visual" ||
+        this.first === "Verbal" && this.second != "Visual" ||
+        this.second === "Verbal" && this.second != "Visual" ||
+        this.third === "Verbal" && this.second != "Visual" ||
+        this.first === "Verbal" && this.third != "Visual" ||
+        this.second === "Verbal" && this.third != "Visual" ||
+        this.third != "Visual" && this.third === "Verbal" ||
+        this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+          this.playByPart = true;
+          console.log('enable audio by part');
+          if (this.hide1 === true) {
+            this.audio1();
+          }
+          else if (this.hide2 === true) {
+            this.audio2();
+          }
+      }
+      this.playingAudio = true;
       console.log("playing");
     }
     else {
-      this.smartAudio.pause('mitigation');
-      this.playingAudio = !this.playingAudio;
-      console.log("pause");
+      this.pauseAudio();
+      let toast = this.toastCtrl.create({
+        message: 'Audio Paused',
+        duration: 1500
+      });
+      toast.present();
     }
   }
 
@@ -98,9 +132,7 @@ export class LessonMitadaptPage {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-
-        this.smartAudio.pause('mitigation');
-        this.playingAudio = !this.playingAudio;
+        this.pauseAudio();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -110,7 +142,11 @@ export class LessonMitadaptPage {
   }
 
   playVideo() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     this.youtube.openVideo('zl42nHerP2Y');
+
   }
   SettingsPage() {
     this.navCtrl.push(SettingsPage)
@@ -140,6 +176,9 @@ export class LessonMitadaptPage {
   }
 
   universeQuiz() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     //new
     let data = {
       theme: this.selectedTheme
@@ -181,7 +220,7 @@ export class LessonMitadaptPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+      this.third === "Verbal" && this.third.valueOf() === "Visual" ||
       this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
       this.visual = true;
       this.verbal = false;
@@ -210,21 +249,42 @@ export class LessonMitadaptPage {
     }
   ];
 
+  public pauseAudio() {
+    this.smartAudio.pause('mitigation');
+    this.smartAudio.pause('mitigation1');
+    this.smartAudio.pause('mitigation2');
+    this.playingAudio = false;
+    this.playByPart = false;
+  }
 
-  //under chapter 1
+  public audio1() {
+    this.smartAudio.play('mitigation1');
+    this.smartAudio.pause('mitigation2');
+    console.log("Playing part 1");
+  }
+  public audio2() {
+    this.smartAudio.play('mitigation2');
+    this.smartAudio.pause('mitigation1');
+    console.log("Playing part 2");
+  }
+
   public hide1: boolean = true;
   public hide2: boolean = false;
 
-  //====start of chapter 1=======
-  public click1() {
-    this.hide1 = !this.hide1;
+  public page1() {
+    this.hide1 = true;
     this.hide2 = false;
+    if (this.playByPart === true) {
+      this.audio1();
+    }
   }
 
-  public click2() {
-    this.hide2 = !this.hide2;
+  public page2() {
+    this.hide2 = true;
     this.hide1 = false;
+    if (this.playByPart === true) {
+      this.audio2();
+    }
   }
-  //====start of chapter 1=======
 
 }

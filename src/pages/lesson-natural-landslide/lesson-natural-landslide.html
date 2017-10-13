@@ -28,12 +28,10 @@
     </ion-slides>
   </div>
 
-
-
   <div *ngFor="let styleElement of styles">
     <div *ngIf="verbal">
       <div class="chapter">
-        <button ion-item (click)="click1()">
+        <button ion-item (click)="page1()">
       Landslides
     </button>
         <ion-card *ngIf="hide1">
@@ -47,10 +45,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_1()">
+        <button ion-item (click)="page2()">
       Several common causes of landslides are:
     </button>
-        <ion-card *ngIf="hide1_1">
+        <ion-card *ngIf="hide2">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Water: Perhaps the most common trigger of a landslide, water reduces the friction between the bedrock and the overlying sediment,
@@ -67,10 +65,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_2()">
+        <button ion-item (click)="page3()">
       People and Landslides
     </button>
-        <ion-card *ngIf="hide1_2">
+        <ion-card *ngIf="hide3">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Humans make landslides more likely through activities like deforestation, overgrazing, mining and road-building. Remember
@@ -97,10 +95,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_3()">
+        <button ion-item (click)="page4()">
       Submarine Landslides
     </button>
-        <ion-card *ngIf="hide1_3">
+        <ion-card *ngIf="hide4">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Did you know that landslides can even occur underwater? Such underwater landslides are known as submarine landslides and

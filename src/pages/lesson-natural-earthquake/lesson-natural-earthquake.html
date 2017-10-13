@@ -32,7 +32,7 @@
   <div *ngFor="let styleElement of styles">
     <div *ngIf="verbal">
       <div class="chapter">
-        <button ion-item (click)="click1()">
+        <button ion-item (click)="page1()">
       What is an earthquake?
     </button>
         <ion-card *ngIf="hide1">
@@ -49,10 +49,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_1()">
+        <button ion-item (click)="page2()">
       What causes earthquakes and where do they happen?
     </button>
-        <ion-card *ngIf="hide1_1">
+        <ion-card *ngIf="hide2">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The earth has four major layers: the inner core, outer core, mantle and crust. The crust and the top of the mantle make up
@@ -66,10 +66,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_2()">
+        <button ion-item (click)="page3()">
       Why does the Earth shake when there is an earthquake?
     </button>
-        <ion-card *ngIf="hide1_2">
+        <ion-card *ngIf="hide3">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               While the edges of faults are stuck together, and the rest of the block is moving, the energy that would normally cause the

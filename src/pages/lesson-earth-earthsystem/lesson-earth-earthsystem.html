@@ -28,7 +28,7 @@
   <div *ngFor="let styleElement of styles">
     <div *ngIf="verbal">
       <div class="chapter">
-        <button ion-item (click)="click1()">
+        <button ion-item (click)="page1()">
       Earth Systems
     </button>
         <ion-card *ngIf="hide1">
@@ -42,10 +42,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_1()">
+        <button ion-item (click)="page2()">
       Litosphere
     </button>
-        <ion-card *ngIf="hide1_1">
+        <ion-card *ngIf="hide2">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The lithosphere contains all of the cold, hard solid land of the planet's crust (surface), the semi-solid land underneath
@@ -66,10 +66,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_2()">
+        <button ion-item (click)="page3()">
       Hydrosphere
     </button>
-        <ion-card *ngIf="hide1_2">
+        <ion-card *ngIf="hide3">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The hydrosphere contains all the solid, liquid, and gaseous water of the planet. **It ranges from 10 to 20 kilometers in
@@ -90,10 +90,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_3()">
+        <button ion-item (click)="page4()">
       Biosphere
     </button>
-        <ion-card *ngIf="hide1_3">
+        <ion-card *ngIf="hide4">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The biosphere contains all the planet's living things. This sphere includes all of the microorganisms, plants, and animals
@@ -110,10 +110,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_4()">
+        <button ion-item (click)="page5()">
       Atmosphere
     </button>
-        <ion-card *ngIf="hide1_4">
+        <ion-card *ngIf="hide5">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The atmosphere contains all the air in Earth's system. It extends from less than 1 m below the planet's surface to more than

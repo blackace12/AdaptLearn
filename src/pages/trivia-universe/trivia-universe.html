@@ -1,3 +1,8 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Trivias</ion-title>
@@ -7,11 +12,11 @@
 <ion-content padding>
   <ion-slides>
     <ion-slide *ngFor="let slide of trivia;">
-      <h5>{{slide.title}}</h5>
+      <h4 class="triviaTitle">{{slide.title}}</h4>
       <div class="triviaimg">
         <img [src]="slide.image">
       </div>
-      <p>{{slide.description}}</p>
+      <p class="triviaText">{{slide.description}}</p>
     </ion-slide>
   </ion-slides>
 </ion-content>

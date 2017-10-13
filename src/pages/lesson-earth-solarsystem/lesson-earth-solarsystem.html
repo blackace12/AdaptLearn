@@ -29,10 +29,10 @@
     <div *ngIf="verbal">
 
       <div class="chapter">
-        <button ion-item (click)="click2()">
+        <button ion-item (click)="page1()">
       Our Nearest Star
     </button>
-        <ion-card *ngIf="hide2">
+        <ion-card *ngIf="hide1">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The Sun is our nearest star. The Sun provides us with light and heat. It also gives out dangerous ultraviolet light which
@@ -53,10 +53,10 @@
               <p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click2_1()">
+        <button ion-item (click)="page2()">
       The Sun
     </button>
-        <ion-card *ngIf="hide2_1">
+        <ion-card *ngIf="hide2">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Special instruments known as spectrographs tell us that the Sun is made almost entirely of two gases, hydrogen and helium.
@@ -80,7 +80,7 @@
         </ion-card>
       </div>
       <div class="chapter">
-        <button ion-item (click)="click3()">
+        <button ion-item (click)="page3()">
           The Solar System And Its Planets
         </button>
         <ion-card *ngIf="hide3">
@@ -106,10 +106,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_1()">
+        <button ion-item (click)="page4()">
           Mercury
         </button>
-        <ion-card *ngIf="hide3_1">
+        <ion-card *ngIf="hide4">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Mercury is the first planet from the Sun. It is not very easy to observe since it is always close to the Sun in the sky.
@@ -151,10 +151,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_2()">
+        <button ion-item (click)="page5()">
           Venus
         </button>
-        <ion-card *ngIf="hide3_2">
+        <ion-card *ngIf="hide5">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Venus is the second planet from the Sun, so it is always fairly close to the Sun in the sky. It appears as a brilliant morning
@@ -180,10 +180,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_3()">
+        <button ion-item (click)="page6()">
           Earth - Traveller In Space
         </button>
-        <ion-card *ngIf="hide3_3">
+        <ion-card *ngIf="hide6">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Everyone on Earth is a traveller through space. First, the Earth zooms around the Sun at a speed of 30 km/s – 45 times faster
@@ -247,10 +247,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_4()">
+        <button ion-item (click)="page7()">
           Mars the Red Planet
       </button>
-        <ion-card *ngIf="hide3_4">
+        <ion-card *ngIf="hide7">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Mars is often called the 'Red Planet' because it appears in the sky as an orange-red star. The colour caused the ancient
@@ -372,10 +372,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_5()">
+        <button ion-item (click)="page8()">
           Jupiter
         </button>
-        <ion-card *ngIf="hide3_5">
+        <ion-card *ngIf="hide8">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Beyond the asteroid belt is Jupiter, the fifth planet from the Sun. Everything about Jupiter is large. It is so big that
@@ -397,10 +397,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_6()">
+        <button ion-item (click)="page9()">
           Saturn The Gas Giant
         </button>
-        <ion-card *ngIf="hide3_6">
+        <ion-card *ngIf="hide9">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Saturn is the sixth planet from the Sun. It was thought to be the furthest of the planets until the telescope was invented.
@@ -502,10 +502,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_7()">
+        <button ion-item (click)="page10()">
           Uranus
       </button>
-        <ion-card *ngIf="hide3_7">
+        <ion-card *ngIf="hide10">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Uranus is the seventh planet from the Sun. It was discovered by William Herschel in 1781.
@@ -529,10 +529,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_8()">
+        <button ion-item (click)="page11()">
           Neptune
         </button>
-        <ion-card *ngIf="hide3_8">
+        <ion-card *ngIf="hide11">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Neptune was discovered in 1846 by Johann Galle, an astronomer at the Berlin Observatory. Galle knew where to look because
@@ -553,10 +553,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_9()">
+        <button ion-item (click)="page12()">
           Pluto
         </button>
-        <ion-card *ngIf="hide3_9">
+        <ion-card *ngIf="hide12">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Pluto was discovered in 1930 by 24 year-old Clyde Tombaugh, who was using a special machine to compare photos of the sky.
@@ -577,10 +577,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click3_10()">
+        <button ion-item (click)="page13()">
           The Kuiper Belt
         </button>
-        <ion-card *ngIf="hide3_10">
+        <ion-card *ngIf="hide13">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Modern telescopes have revealed hundreds of icy objects beyond the orbit of Neptune, in a region known as the Kuiper Belt.

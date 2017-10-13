@@ -35,12 +35,10 @@
       </ion-slides>
     </div>
 
-
-
     <div *ngFor="let styleElement of styles">
       <div *ngIf="verbal">
       <div class="chapter">
-        <button ion-item (click)="click1()">
+        <button ion-item (click)="page1()">
       What is a volcano?
     </button>
         <ion-card *ngIf="hide1">
@@ -54,10 +52,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_1()">
+        <button ion-item (click)="page2()">
       How are volcanoes formed?
     </button>
-        <ion-card *ngIf="hide1_1">
+        <ion-card *ngIf="hide2">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Volcanoes are formed when magma from within the Earth's upper mantle works its way to the surface. At the surface, it erupts
@@ -65,10 +63,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_2()">
+        <button ion-item (click)="page3()">
       What are the different stages of volcanoes?
     </button>
-        <ion-card *ngIf="hide1_2">
+        <ion-card *ngIf="hide3">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Scientists have categorized volcanoes into three main categories: active, dormant, and extinct. An active volcano is one
@@ -78,10 +76,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_3()">
+        <button ion-item (click)="page4()">
       Why do volcanoes erupt?
     </button>
-        <ion-card *ngIf="hide1_3">
+        <ion-card *ngIf="hide4">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The Earth's crust is made up of huge slabs called plates, which fit together like a jigsaw puzzle. These plates sometimes
@@ -90,10 +88,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_4()">
+        <button ion-item (click)="page5()">
       What are plate tectonics?
     </button>
-        <ion-card *ngIf="hide1_4">
+        <ion-card *ngIf="hide5">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               The theory of plate tectonics is a interesting story of continents drifting from place to place breaking apart, colliding,
@@ -104,10 +102,10 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <button ion-item (click)="click1_5()">
+        <button ion-item (click)="page6()">
       Different types of volcanoes
     </button>
-        <ion-card *ngIf="hide1_5">
+        <ion-card *ngIf="hide6">
           <ion-card-content>
             <p class="fontSize" [ngClass]="{size1: fontSize===1, size2: fontSize===2, size3: fontSize===3, size4: fontSize===4, size5: fontSize===5}">
               Cinder Cones - Cinder cones are circular or oval cones made up of small fragments of lava from a single vent that have been
@@ -127,7 +125,6 @@
       </div>
     </div>
   </div>
-
 
   <ion-fab right bottom *ngFor="let styleElement of styles">
     <button ion-fab color="primary"><ion-icon name="more"></ion-icon></button>

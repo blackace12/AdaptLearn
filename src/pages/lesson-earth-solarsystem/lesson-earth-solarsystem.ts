@@ -80,17 +80,84 @@ export class LessonEarthSolarsystemPage {
   }
 
   playingAudio: boolean = false;
+  playByPart: boolean = false;
 
   playAudio() {
     if (this.playingAudio === false) {
-      this.smartAudio.play('solarSystem');
-      this.playingAudio = !this.playingAudio;
+      if (this.first === "Verbal" && this.first === "Visual" ||
+        this.second === "Verbal" && this.first === "Visual" ||
+        this.third === "Verbal" && this.first === "Visual" ||
+        this.first === "Verbal" && this.second === "Visual" ||
+        this.second === "Verbal" && this.second === "Visual" ||
+        this.third === "Verbal" && this.second === "Visual" ||
+        this.first === "Verbal" && this.third === "Visual" ||
+        this.second === "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+          this.smartAudio.play('solarSystem');
+      }
+      else if (this.first === "Verbal" && this.first != "Visual" ||
+        this.second === "Verbal" && this.first != "Visual" ||
+        this.third === "Verbal" && this.first != "Visual" ||
+        this.first === "Verbal" && this.second != "Visual" ||
+        this.second === "Verbal" && this.second != "Visual" ||
+        this.third === "Verbal" && this.second != "Visual" ||
+        this.first === "Verbal" && this.third != "Visual" ||
+        this.second === "Verbal" && this.third != "Visual" ||
+        this.third != "Visual" && this.third === "Verbal" ||
+        this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+          this.playByPart = true;
+          console.log('enable audio by part');
+          if (this.hide1 === true) {
+            this.audio1();
+          }
+          else if (this.hide2 === true) {
+            this.audio2();
+          }
+          else if (this.hide3 === true) {
+            this.audio3();
+          }
+          else if (this.hide4 === true) {
+            this.audio4();
+          }
+          else if (this.hide5 === true) {
+            this.audio5();
+          }
+          else if (this.hide6 === true) {
+            this.audio6();
+          }
+          else if (this.hide7 === true) {
+            this.audio7();
+          }
+          else if (this.hide8 === true) {
+            this.audio8();
+          }
+          else if (this.hide9 === true) {
+            this.audio9();
+          }
+          else if (this.hide10 === true) {
+            this.audio10();
+          }
+          else if (this.hide11 === true) {
+            this.audio11();
+          }
+          else if (this.hide12 === true) {
+            this.audio12();
+          }
+          else if (this.hide13 === true) {
+            this.audio13();
+          }
+        } 
+      this.playingAudio = true;
       console.log("playing");
     }
     else {
-      this.smartAudio.pause('solarSystem');
-      this.playingAudio = !this.playingAudio;
-      console.log("pause");
+      this.pauseAudio();
+      let toast = this.toastCtrl.create({
+        message: 'Audio Paused',
+        duration: 1500
+      });
+      toast.present();
     }
   }
 
@@ -98,9 +165,7 @@ export class LessonEarthSolarsystemPage {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-
-        this.smartAudio.pause('solarSystem');
-        this.playingAudio = !this.playingAudio;
+        this.pauseAudio();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -110,7 +175,13 @@ export class LessonEarthSolarsystemPage {
   }
 
   playVideo() {
+
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
+
     this.youtube.openVideo('gubsXJXqAWc');
+
   }
 
   regularShare() {
@@ -119,6 +190,9 @@ export class LessonEarthSolarsystemPage {
   }
 
   universeQuiz() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     //new
     let data = {
       theme: this.selectedTheme
@@ -182,12 +256,240 @@ export class LessonEarthSolarsystemPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+      this.third === "Verbal" && this.third.valueOf() === "Visual" || 
       this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
       this.visual = true;
       this.verbal = false;
       this.font = false;
     }
+  }
+
+  public pauseAudio() {
+    this.smartAudio.pause('solarSystem');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    this.playingAudio = false;
+    this.playByPart = false;
+  }
+
+  public audio1() {
+    this.smartAudio.play('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 1");
+  }
+  public audio2() {
+    this.smartAudio.play('solarSystem2');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 2");
+  }
+  public audio3() {
+    this.smartAudio.play('solarSystem3');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 3");
+  }
+  public audio4() {
+    this.smartAudio.play('solarSystem4');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 4");
+  }
+  public audio5() {
+    this.smartAudio.play('solarSystem5');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 5");
+  }
+  public audio6() {
+    this.smartAudio.play('solarSystem6');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 6");
+  }
+  public audio7() {
+    this.smartAudio.play('solarSystem7');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 7");
+  }
+  public audio8() {
+    this.smartAudio.play('solarSystem8');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 8");
+  }
+  public audio9() {
+    this.smartAudio.play('solarSystem9');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 9");
+  }
+  public audio10() {
+    this.smartAudio.play('solarSystem10');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 10");
+  }
+  public audio11() {
+    this.smartAudio.play('solarSystem11');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem12');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 11");
+  }
+  public audio12() {
+    this.smartAudio.play('solarSystem12');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem13');
+    console.log("Playing part 12");
+  }
+  public audio13() {
+    this.smartAudio.play('solarSystem13');
+    this.smartAudio.pause('solarSystem1');
+    this.smartAudio.pause('solarSystem2');
+    this.smartAudio.pause('solarSystem3');
+    this.smartAudio.pause('solarSystem4');
+    this.smartAudio.pause('solarSystem5');
+    this.smartAudio.pause('solarSystem6');
+    this.smartAudio.pause('solarSystem7');
+    this.smartAudio.pause('solarSystem8');
+    this.smartAudio.pause('solarSystem9');
+    this.smartAudio.pause('solarSystem10');
+    this.smartAudio.pause('solarSystem11');
+    this.smartAudio.pause('solarSystem12');
+    console.log("Playing part 13");
   }
 
   solarSlides = [
@@ -313,238 +615,265 @@ export class LessonEarthSolarsystemPage {
     }
   ];
 
-
-  //under chapter 2
-  public hide2: boolean = true;
-  public hide2_1: boolean = false;
-
-  //====start of chapter 2=======
-  public click2() {
-    this.hide2 = !this.hide2;
-    this.hide2_1 = false;
-    this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
-  }
-
-  public click2_1() {
-    this.hide2_1 = !this.hide2_1;
-    this.hide2 = false;
-    this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
-  }
-  //====end of chapter 2=======
-
-  //under chapter 3
+  public hide1: boolean = true;
+  public hide2: boolean = false;
   public hide3: boolean = false;
-  public hide3_1: boolean = false;
-  public hide3_2: boolean = false;
-  public hide3_3: boolean = false;
-  public hide3_4: boolean = false;
-  public hide3_5: boolean = false;
-  public hide3_6: boolean = false;
-  public hide3_7: boolean = false;
-  public hide3_8: boolean = false;
-  public hide3_9: boolean = false;
-  public hide3_10: boolean = false;
+  public hide4: boolean = false;
+  public hide5: boolean = false;
+  public hide6: boolean = false;
+  public hide7: boolean = false;
+  public hide8: boolean = false;
+  public hide9: boolean = false;
+  public hide10: boolean = false;
+  public hide11: boolean = false;
+  public hide12: boolean = false;
+  public hide13: boolean = false;
 
-  //====start of chapter 3=======
-  public click3() {
-    this.hide3 = !this.hide3;
+  public page1() {
+    this.hide1 = true;
     this.hide2 = false;
-    this.hide2_1 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
-  }
-
-  public click3_1() {
-    this.hide3_1 = !this.hide3_1;
-    this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio1();
+    }
   }
 
-  public click3_2() {
-    this.hide3_2 = !this.hide3_2;
-    this.hide2 = false;
-    this.hide2_1 = false;
+  public page2() {
+    this.hide2 = true;
+    this.hide1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio2();
+    }
   }
 
-  public click3_3() {
-    this.hide3_3 = !this.hide3_3;
+  public page3() {
+    this.hide3 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
-    this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio3();
+    }
   }
 
-  public click3_4() {
-    this.hide3_4 = !this.hide3_4;
+  public page4() {
+    this.hide4 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio4();
+    }
   }
 
-  public click3_5() {
-    this.hide3_5 = !this.hide3_5;
+  public page5() {
+    this.hide5 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio5();
+    }
   }
 
-  public click3_6() {
-    this.hide3_6 = !this.hide3_6;
+  public page6() {
+    this.hide6 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio6();
+    }
   }
 
-  public click3_7() {
-    this.hide3_7 = !this.hide3_7;
+  public page7() {
+    this.hide7 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio7();
+    }
   }
 
-  public click3_8() {
-    this.hide3_8 = !this.hide3_8;
+  public page8() {
+    this.hide8 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_9 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio8();
+    }
   }
-
-  public click3_9() {
-    this.hide3_9 = !this.hide3_9;
+  
+  public page9() {
+    this.hide9 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_10 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio9();
+    }
   }
-
-  public click3_10() {
-    this.hide3_10 = !this.hide3_10;
+  
+  public page10() {
+    this.hide10 = true;
+    this.hide1 = false;
     this.hide2 = false;
-    this.hide2_1 = false;
     this.hide3 = false;
-    this.hide3_1 = false;
-    this.hide3_2 = false;
-    this.hide3_3 = false;
-    this.hide3_4 = false;
-    this.hide3_5 = false;
-    this.hide3_6 = false;
-    this.hide3_7 = false;
-    this.hide3_8 = false;
-    this.hide3_9 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio10();
+    }
   }
-  //====end of chapter 3=======
-
-
-
-
+  
+  public page11() {
+    this.hide11 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio11();
+    }
+  }
+  
+  public page12() {
+    this.hide12 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio12();
+    }
+  }
+  
+  public page13() {
+    this.hide13 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    if (this.playByPart === true) {
+      this.audio13();
+    }
+  }
 
 }
