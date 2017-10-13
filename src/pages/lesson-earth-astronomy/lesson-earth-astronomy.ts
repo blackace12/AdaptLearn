@@ -186,7 +186,8 @@ export class LessonEarthAstronomyPage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('ld75W1dz-h0');
+    this.youtube.openVideo('OMDMvSsyxqg');
+
   }
 
   regularShare() {
@@ -887,4 +888,13 @@ export class LessonEarthAstronomyPage {
       this.audio14();
     }
   }
+}
+    this.hide5_1 = false;
+    this.hide5_2 = false;
+    this.hide5_3 = false;
+    this.hide5_4 = false;
+    this.hide5_5 = false;
+    this.hide5_6 = false;
+  }
+  //====end of chapter 5=======
 }

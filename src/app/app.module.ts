@@ -89,6 +89,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 //Screen orientation
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { ReferencePage } from '../pages/reference/reference';
 const firebaseConfig = {
   apiKey: "AIzaSyBjCiXPIBAfdBrQzVpfiR975VLhvVouUyc",
   authDomain: "adaptlearn-d2fde.firebaseapp.com",
@@ -140,8 +141,8 @@ const firebaseConfig = {
     QuizEquakePage,
     QuizMitadaptPage,
     QuizEarthsytemPage,
-
-    TriviaUniversePage
+    TriviaUniversePage,
+    ReferencePage,
   ],
 
   imports: [
@@ -196,7 +197,8 @@ const firebaseConfig = {
     QuizEquakePage,
     QuizMitadaptPage,
     QuizEarthsytemPage,
-    TriviaUniversePage
+    TriviaUniversePage,
+    ReferencePage
   ],
 
   providers: [

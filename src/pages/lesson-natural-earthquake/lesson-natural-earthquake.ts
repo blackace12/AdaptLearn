@@ -149,7 +149,7 @@ export class LessonNaturalEarthquakePage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('dJpIU1rSOFY');
+    this.youtube.openVideo('6HgxiYBkh3U');
   }
 
 
@@ -314,3 +314,8 @@ export class LessonNaturalEarthquakePage {
   }
 
 }
+
+  //====end of chapter 1=======
+
+}
+

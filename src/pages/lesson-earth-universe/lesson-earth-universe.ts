@@ -208,6 +208,10 @@ export class LessonEarthUniversePage {
     else {
       this.pauseAudio();
       console.log("Stopped Audio");
+
+      //this.smartAudio.pause('universe');
+      //this.playingAudio = !this.playingAudio;
+
       let toast = this.toastCtrl.create({
         message: 'Audio Paused',
         duration: 1500
@@ -233,7 +237,8 @@ export class LessonEarthUniversePage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('wNDGgL73ihY');
+    this.youtube.openVideo('pcOxhdu5gh8');
+
   }
   regularShare() {
     // share(message, subject, file, url)
@@ -258,6 +263,7 @@ export class LessonEarthUniversePage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
+
     this.navCtrl.push(TriviaUniversePage)
   }
   
