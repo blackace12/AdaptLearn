@@ -57,10 +57,28 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
+      //Universe Audio
       smartAudio.preload('universe', 'assets/sounds/Universe.mp3');
+      smartAudio.preload('universe1', 'assets/sounds/Universe/Universe - In the Beginning.mp3');
+      smartAudio.preload('universe2', 'assets/sounds/Universe/Universe - Did life begin in the oceans.mp3');
+      smartAudio.preload('universe3', 'assets/sounds/Universe/Universe - The Big Bang theory.mp3');
+      smartAudio.preload('universe4', 'assets/sounds/Universe/Universe - The birth of Galaxies.mp3');
+      smartAudio.preload('universe5', 'assets/sounds/Universe/Universe - What is space.mp3');
+      smartAudio.preload('universe6', 'assets/sounds/Universe/Universe - The Universe.mp3');
+      smartAudio.preload('universe7', 'assets/sounds/Universe/Universe - Black Holes.mp3');
+      smartAudio.preload('universe8', 'assets/sounds/Universe/Universe - The Mystery of the Dark Universe.mp3');
+      smartAudio.preload('universe9', 'assets/sounds/Universe/Universe - Cosmic Distances.mp3');
+
+      //Astronomy Audio
       smartAudio.preload('astronomy', 'assets/sounds/Astronomy.mp3');
+
+      //Solar System Audio
       smartAudio.preload('solarSystem', 'assets/sounds/SolarSystem.mp3');
+
+      //Earth System Audio
       smartAudio.preload('earthSystem', 'assets/sounds/EarthSystem.mp3');
+
+
       smartAudio.preload('earthquake', 'assets/sounds/Earthquake.mp3');
       smartAudio.preload('volcano', 'assets/sounds/Volcano.mp3');
       smartAudio.preload('landslide', 'assets/sounds/Landslides.mp3');

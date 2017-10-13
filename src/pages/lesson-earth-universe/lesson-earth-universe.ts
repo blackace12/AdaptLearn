@@ -140,10 +140,64 @@ export class LessonEarthUniversePage {
   }
 
   playingAudio: boolean = false;
+  playByPart: boolean = false;
 
   playAudio() {
     if (this.playingAudio === false) {
-      this.smartAudio.play('universe');
+      //play whole audio if user is visual and verbal or pure visual
+      if (this.first === "Verbal" && this.first === "Visual" ||
+        this.second === "Verbal" && this.first === "Visual" ||
+        this.third === "Verbal" && this.first === "Visual" ||
+        this.first === "Verbal" && this.second === "Visual" ||
+        this.second === "Verbal" && this.second === "Visual" ||
+        this.third === "Verbal" && this.second === "Visual" ||
+        this.first === "Verbal" && this.third === "Visual" ||
+        this.second === "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+          this.smartAudio.play('universe');
+        }
+      //play by part
+      else if (this.first === "Verbal" && this.first != "Visual" ||
+        this.second === "Verbal" && this.first != "Visual" ||
+        this.third === "Verbal" && this.first != "Visual" ||
+        this.first === "Verbal" && this.second != "Visual" ||
+        this.second === "Verbal" && this.second != "Visual" ||
+        this.third === "Verbal" && this.second != "Visual" ||
+        this.first === "Verbal" && this.third != "Visual" ||
+        this.second === "Verbal" && this.third != "Visual" ||
+        this.third != "Visual" && this.third === "Verbal" ||
+        this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+          this.playByPart = true;
+          console.log('enable audio by part');
+          if (this.hide1 === true) {
+            this.audio1();
+          }
+          else if (this.hide2 === true) {
+            this.audio2();
+          }
+          else if (this.hide3 === true) {
+            this.audio3();
+          }
+          else if (this.hide4 === true) {
+            this.audio4();
+          }
+          else if (this.hide5 === true) {
+            this.audio5();
+          }
+          else if (this.hide6 === true) {
+            this.audio6();
+          }
+          else if (this.hide7 === true) {
+            this.audio7();
+          }
+          else if (this.hide8 === true) {
+            this.audio8();
+          }
+          else if (this.hide9 === true) {
+            this.audio9();
+          }
+        } 
       this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
         message: 'Audio Playing',
@@ -152,8 +206,17 @@ export class LessonEarthUniversePage {
       toast.present();
     }
     else {
-
       this.smartAudio.pause('universe');
+      this.smartAudio.pause('universe1');
+      this.smartAudio.pause('universe2');
+      this.smartAudio.pause('universe3');
+      this.smartAudio.pause('universe4');
+      this.smartAudio.pause('universe5');
+      this.smartAudio.pause('universe6');
+      this.smartAudio.pause('universe7');
+      this.smartAudio.pause('universe8');
+      this.smartAudio.pause('universe9');
+      console.log("Stopped Audio");
       this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
         message: 'Audio Paused',
@@ -167,8 +230,16 @@ export class LessonEarthUniversePage {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-
         this.smartAudio.pause('universe');
+        this.smartAudio.pause('universe1');
+        this.smartAudio.pause('universe2');
+        this.smartAudio.pause('universe3');
+        this.smartAudio.pause('universe4');
+        this.smartAudio.pause('universe5');
+        this.smartAudio.pause('universe6');
+        this.smartAudio.pause('universe7');
+        this.smartAudio.pause('universe8');
+        this.smartAudio.pause('universe9');
         this.playingAudio = !this.playingAudio;
       }
       this.scrnOrnt.unlock();
@@ -253,7 +324,7 @@ export class LessonEarthUniversePage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+      this.third.valueOf() === "Visual" && this.third === "Verbal" ||
       this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
       this.visual = true;
       this.verbal = false;
@@ -261,127 +332,259 @@ export class LessonEarthUniversePage {
     }
   }
 
-
-
-
+  public audio1() {
+    this.smartAudio.play('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 1");
+  }
+  public audio2() {
+    this.smartAudio.play('universe2');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 2");
+  }
+  public audio3(){
+    this.smartAudio.play('universe3');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 3");
+  }
+  public audio4(){
+    this.smartAudio.play('universe4');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 4");
+  }
+  public audio5(){
+    this.smartAudio.play('universe5');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 5");    
+  }
+  public audio6(){
+    this.smartAudio.play('universe6');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 6");    
+  }
+  public audio7(){
+    this.smartAudio.play('universe7');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe8');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 7");    
+  }
+  public audio8(){
+    this.smartAudio.play('universe8');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe9');
+    console.log("Playing part 8");    
+  }
+  public audio9(){
+    this.smartAudio.play('universe9');
+    this.smartAudio.pause('universe1');
+    this.smartAudio.pause('universe2');
+    this.smartAudio.pause('universe3');
+    this.smartAudio.pause('universe4');
+    this.smartAudio.pause('universe5');
+    this.smartAudio.pause('universe6');
+    this.smartAudio.pause('universe7');
+    this.smartAudio.pause('universe8');
+    console.log("Playing part 9");    
+  }
   //under chapter 1
   public hide1: boolean = true;
-  public hide1_1: boolean = false;
-  public hide1_2: boolean = false;
-  public hide1_3: boolean = false;
-  public hide1_4: boolean = false;
-  public hide1_5: boolean = false;
-  public hide1_6: boolean = false;
-  public hide1_7: boolean = false;
-  public hide1_8: boolean = false;
+  public hide2: boolean = false;
+  public hide3: boolean = false;
+  public hide4: boolean = false;
+  public hide5: boolean = false;
+  public hide6: boolean = false;
+  public hide7: boolean = false;
+  public hide8: boolean = false;
+  public hide9: boolean = false;
 
   //====start of chapter 1=======
-  public click1() {
-    this.hide1 = !this.hide1;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
-    this.hide1_5 = false;
-    this.hide1_6 = false;
-    this.hide1_7 = false;
-    this.hide1_8 = false;
+  public page1() {
+    this.hide1 = true;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio1();
+    }
   }
 
-  public click1_1() {
-    this.hide1_1 = !this.hide1_1;
+  public page2() {
+    this.hide2 = true;
     this.hide1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
-    this.hide1_5 = false;
-    this.hide1_6 = false;
-    this.hide1_7 = false;
-    this.hide1_8 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio2();
+    }
   }
 
-  public click1_2() {
-    this.hide1_2 = !this.hide1_2;
+  public page3() {
+    this.hide3 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
-    this.hide1_5 = false;
-    this.hide1_6 = false;
-    this.hide1_7 = false;
-    this.hide1_8 = false;
+    this.hide2 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio3();
+    }
   }
 
-  public click1_3() {
-    this.hide1_3 = !this.hide1_3;
+  public page4() {
+    this.hide4 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_4 = false;
-    this.hide1_5 = false;
-    this.hide1_6 = false;
-    this.hide1_7 = false;
-    this.hide1_8 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio4();
+    }
   }
 
-  public click1_4() {
-    this.hide1_4 = !this.hide1_4;
+  public page5() {
+    this.hide5 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_5 = false;
-    this.hide1_6 = false;
-    this.hide1_7 = false;
-    this.hide1_8 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio5();
+    }
   }
 
-  public click1_5() {
-    this.hide1_5 = !this.hide1_5;
+  public page6() {
+    this.hide6 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
-    this.hide1_6 = false;
-    this.hide1_7 = false;
-    this.hide1_8 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio6();
+    }
   }
 
-  public click1_6() {
-    this.hide1_6 = !this.hide1_6;
+  public page7() {
+    this.hide7 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
-    this.hide1_5 = false;
-    this.hide1_7 = false;
-    this.hide1_8 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio7();
+    }
   }
 
-  public click1_7() {
-    this.hide1_7 = !this.hide1_7;
+  public page8() {
+    this.hide8 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
-    this.hide1_5 = false;
-    this.hide1_6 = false;
-    this.hide1_8 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide9 = false;
+    if (this.playByPart === true) {
+      this.audio8();
+    }
   }
 
-  public click1_8() {
-    this.hide1_8 = !this.hide1_8;
+  public page9() {
+    this.hide9 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
-    this.hide1_5 = false;
-    this.hide1_6 = false;
-    this.hide1_7 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    if (this.playByPart === true) {
+      this.audio9();
+    }
   }
   //====end of chapter 1=======
 
