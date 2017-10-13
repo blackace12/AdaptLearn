@@ -71,6 +71,20 @@ export class MyApp {
 
       //Astronomy Audio
       smartAudio.preload('astronomy', 'assets/sounds/Astronomy.mp3');
+      smartAudio.preload('astronomy1', 'assets/sounds/Astronomy/Astronomy - Star Birth.mp3');
+      smartAudio.preload('astronomy2', 'assets/sounds/Astronomy/Astronomy - Star Death.mp3');
+      smartAudio.preload('astronomy3', 'assets/sounds/Astronomy/Astronomy - Supernova.mp3');
+      smartAudio.preload('astronomy4', 'assets/sounds/Astronomy/Astronomy - Dwarves and Supergiants.mp3');
+      smartAudio.preload('astronomy5', 'assets/sounds/Astronomy/Astronomy - Galaxies.mp3');
+      smartAudio.preload('astronomy6', 'assets/sounds/Astronomy/Astronomy - The Milky Way.mp3');
+      smartAudio.preload('astronomy7', 'assets/sounds/Astronomy/Astronomy - Meteors.mp3');
+      smartAudio.preload('astronomy8', 'assets/sounds/Astronomy/Astronomy - Comets.mp3');
+      smartAudio.preload('astronomy9', 'assets/sounds/Astronomy/Astronomy - Exploring Asterioids.mp3');
+      smartAudio.preload('astronomy10', 'assets/sounds/Astronomy/Astronomy - Meteorites.mp3');
+      smartAudio.preload('astronomy11', 'assets/sounds/Astronomy/Astronomy - Shooting Stars.mp3');
+      smartAudio.preload('astronomy12', 'assets/sounds/Astronomy/Astronomy - SOHO discover thousands of comets.mp3');
+      smartAudio.preload('astronomy13', 'assets/sounds/Astronomy/Astronomy - A Diamond in the Sky.mp3');
+      smartAudio.preload('astronomy14', 'assets/sounds/Astronomy/Astronomy - Rosetta Makes Friends with a comet.mp3');
 
       //Solar System Audio
       smartAudio.preload('solarSystem', 'assets/sounds/SolarSystem.mp3');

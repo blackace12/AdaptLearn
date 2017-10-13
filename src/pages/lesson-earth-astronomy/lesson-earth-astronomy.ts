@@ -82,10 +82,77 @@ export class LessonEarthAstronomyPage {
   }
 
   playingAudio: boolean = false;
+  playByPart: boolean = false;
 
   playAudio() {
     if (this.playingAudio === false) {
-      this.smartAudio.play('astronomy');
+      if (this.first === "Verbal" && this.first === "Visual" ||
+        this.second === "Verbal" && this.first === "Visual" ||
+        this.third === "Verbal" && this.first === "Visual" ||
+        this.first === "Verbal" && this.second === "Visual" ||
+        this.second === "Verbal" && this.second === "Visual" ||
+        this.third === "Verbal" && this.second === "Visual" ||
+        this.first === "Verbal" && this.third === "Visual" ||
+        this.second === "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+          this.smartAudio.play('astronomy');
+        }
+        else if (this.first === "Verbal" && this.first != "Visual" ||
+          this.second === "Verbal" && this.first != "Visual" ||
+          this.third === "Verbal" && this.first != "Visual" ||
+          this.first === "Verbal" && this.second != "Visual" ||
+          this.second === "Verbal" && this.second != "Visual" ||
+          this.third === "Verbal" && this.second != "Visual" ||
+          this.first === "Verbal" && this.third != "Visual" ||
+          this.second === "Verbal" && this.third != "Visual" ||
+          this.third != "Visual" && this.third === "Verbal" ||
+          this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+            this.playByPart = true;
+            console.log('enable audio by part');
+            if (this.hide1 === true) {
+              this.audio1();
+            }
+            else if (this.hide2 === true) {
+              this.audio2();
+            }
+            else if (this.hide3 === true) {
+              this.audio3();
+            }
+            else if (this.hide4 === true) {
+              this.audio4();
+            }
+            else if (this.hide5 === true) {
+              this.audio5();
+            }
+            else if (this.hide6 === true) {
+              this.audio6();
+            }
+            else if (this.hide7 === true) {
+              this.audio7();
+            }
+            else if (this.hide8 === true) {
+              this.audio8();
+            }
+            else if (this.hide9 === true) {
+              this.audio9();
+            }
+            else if (this.hide10 === true) {
+              this.audio10();
+            }
+            else if (this.hide11 === true) {
+              this.audio11();
+            }
+            else if (this.hide12 === true) {
+              this.audio12();
+            }
+            else if (this.hide13 === true) {
+              this.audio13();
+            }
+            else if (this.hide14 === true) {
+              this.audio14();
+            }
+          } 
       this.playingAudio = !this.playingAudio;
       let toast = this.toastCtrl.create({
         message: 'Audio Playing',
@@ -94,8 +161,13 @@ export class LessonEarthAstronomyPage {
       toast.present();
     }
     else {
-      this.smartAudio.pause('astronomy');
+      this.pauseAudio();
       this.playingAudio = !this.playingAudio;
+      let toast = this.toastCtrl.create({
+        message: 'Audio Paused',
+        duration: 1500
+      });
+      toast.present();
     }
   }
 
@@ -103,8 +175,7 @@ export class LessonEarthAstronomyPage {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-        this.smartAudio.pause('astronomy');
-        this.playingAudio = !this.playingAudio;
+        this.pauseAudio();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -113,6 +184,9 @@ export class LessonEarthAstronomyPage {
   }
 
   playVideo() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     this.youtube.openVideo('ld75W1dz-h0');
   }
 
@@ -122,6 +196,9 @@ export class LessonEarthAstronomyPage {
   }
 
   universeQuiz() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     //new
     let data = {
       theme: this.selectedTheme
@@ -193,6 +270,264 @@ export class LessonEarthAstronomyPage {
     }
   }
 
+  public pauseAudio() {
+    this.smartAudio.pause('astronomy');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    this.playingAudio = !this.playingAudio;
+  }
+
+  public audio1() {
+    this.smartAudio.play('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 1");
+  }
+  public audio2() {
+    this.smartAudio.play('astronomy2');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 2");
+  }
+  public audio3() {
+    this.smartAudio.play('astronomy3');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 3");
+  }
+  public audio4() {
+    this.smartAudio.play('astronomy4');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 4");
+  }
+  public audio5() {
+    this.smartAudio.play('astronomy5');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 5");
+  }
+  public audio6() {
+    this.smartAudio.play('astronomy6');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 6");
+  }
+  public audio7() {
+    this.smartAudio.play('astronomy7');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 7");
+  }
+  public audio8() {
+    this.smartAudio.play('astronomy8');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 8");
+  }
+  public audio9() {
+    this.smartAudio.play('astronomy9');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 9");
+  }
+  public audio10() {
+    this.smartAudio.play('astronomy10');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 10");
+  }
+  public audio11() {
+    this.smartAudio.play('astronomy11');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 11");
+  }
+  public audio12() {
+    this.smartAudio.play('astronomy12');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy13');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 12");
+  }
+  public audio13() {
+    this.smartAudio.play('astronomy13');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy14');
+    console.log("Playing part 13");
+  }
+  public audio14() {
+    this.smartAudio.play('astronomy14');
+    this.smartAudio.pause('astronomy1');
+    this.smartAudio.pause('astronomy2');
+    this.smartAudio.pause('astronomy3');
+    this.smartAudio.pause('astronomy4');
+    this.smartAudio.pause('astronomy5');
+    this.smartAudio.pause('astronomy6');
+    this.smartAudio.pause('astronomy7');
+    this.smartAudio.pause('astronomy8');
+    this.smartAudio.pause('astronomy9');
+    this.smartAudio.pause('astronomy10');
+    this.smartAudio.pause('astronomy11');
+    this.smartAudio.pause('astronomy12');
+    this.smartAudio.pause('astronomy13');
+    console.log("Playing part 14");
+  }
+
 
   astronomySlides = [
     {
@@ -257,264 +592,299 @@ export class LessonEarthAstronomyPage {
     }
   ];
 
-  //under chapter 4
-  public hide4: boolean = true;
-  public hide4_1: boolean = false;
-  public hide4_2: boolean = false;
-  public hide4_3: boolean = false;
-  public hide4_4: boolean = false;
-  public hide4_5: boolean = false;
+  public hide1: boolean = true;
+  public hide2: boolean = false;
+  public hide3: boolean = false;
+  public hide4: boolean = false;
+  public hide5: boolean = false;
+  public hide6: boolean = false;
+  public hide7: boolean = false;
+  public hide8: boolean = false;
+  public hide9: boolean = false;
+  public hide10: boolean = false;
+  public hide11: boolean = false;
+  public hide12: boolean = false;
+  public hide13: boolean = false;
+  public hide14: boolean = false;
 
   //====start of chapter 4=======
-  public click4() {
-    this.hide4 = !this.hide4;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
-    this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
-  }
-
-  public click4_1() {
-    this.hide4_1 = !this.hide4_1;
+  public page1() {
+    this.hide1 = true;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio1();
+    }
   }
 
-  public click4_2() {
-    this.hide4_2 = !this.hide4_2;
+  public page2() {
+    this.hide2 = true;
+    this.hide1 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio2();
+    }
   }
 
-  public click4_3() {
-    this.hide4_3 = !this.hide4_3;
+  public page3() {
+    this.hide3 = true;
+    this.hide1 = false;
+    this.hide2 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio3();
+    }
   }
 
-  public click4_4() {
-    this.hide4_4 = !this.hide4_4;
-    this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_5 = false;
+  public page4() {
+    this.hide4 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio4();
+    }
   }
 
-  public click4_5() {
-    this.hide4_5 = !this.hide4_5;
+  public page5() {
+    this.hide5 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio5();
+    }
+  }
+
+  public page6() {
+    this.hide6 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
-  }
-  //====end of chapter 4=======
-
-
-  //under chapter 5
-  public hide5: boolean = false;
-  public hide5_1: boolean = false;
-  public hide5_2: boolean = false;
-  public hide5_3: boolean = false;
-  public hide5_4: boolean = false;
-  public hide5_5: boolean = false;
-  public hide5_6: boolean = false;
-  public hide5_7: boolean = false;
-
-  //====start of chapter 5=======
-  public click5() {
-    this.hide5 = !this.hide5;
-    this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio6();
+    }
   }
 
-  public click5_1() {
-    this.hide5_1 = !this.hide5_1;
+  public page7() {
+    this.hide7 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio7();
+    }
   }
 
-  public click5_2() {
-    this.hide5_2 = !this.hide5_2;
+  public page8() {
+    this.hide8 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio8();
+    }
   }
 
-  public click5_3() {
-    this.hide5_3 = !this.hide5_3;
+  public page9() {
+    this.hide9 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio9();
+    }
   }
 
-  public click5_4() {
-    this.hide5_4 = !this.hide5_4;
+  public page10() {
+    this.hide10 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio10();
+    }
   }
 
-  public click5_5() {
-    this.hide5_5 = !this.hide5_5;
+  public page11() {
+    this.hide11 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_6 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio11();
+    }
   }
 
-  public click5_6() {
-    this.hide5_6 = !this.hide5_6;
+  public page12() {
+    this.hide12 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_7 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide13 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio12();
+    }
   }
 
-  public click5_7() {
-    this.hide5_7 = !this.hide5_7;
+  public page13() {
+    this.hide13 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
     this.hide4 = false;
-    this.hide4_1 = false;
-    this.hide4_2 = false;
-    this.hide4_3 = false;
-    this.hide4_4 = false;
-    this.hide4_5 = false;
     this.hide5 = false;
-    this.hide5_1 = false;
-    this.hide5_2 = false;
-    this.hide5_3 = false;
-    this.hide5_4 = false;
-    this.hide5_5 = false;
-    this.hide5_6 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide14 = false;
+    if (this.playByPart === true) {
+      this.audio13();
+    }
   }
-  //====end of chapter 5=======
+
+  public page14() {
+    this.hide14 = true;
+    this.hide1 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    this.hide6 = false;
+    this.hide7 = false;
+    this.hide8 = false;
+    this.hide9 = false;
+    this.hide10 = false;
+    this.hide11 = false;
+    this.hide12 = false;
+    this.hide13 = false;
+    if (this.playByPart === true) {
+      this.audio14();
+    }
+  }
 }
