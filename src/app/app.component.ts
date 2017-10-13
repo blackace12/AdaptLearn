@@ -104,6 +104,11 @@ export class MyApp {
 
       //Earth System Audio
       smartAudio.preload('earthSystem', 'assets/sounds/EarthSystem.mp3');
+      smartAudio.preload('earthSystem1', 'assets/sounds/Earth System/Earth System - Earth Systems.mp3');
+      smartAudio.preload('earthSystem2', 'assets/sounds/Earth System/Earth System - Lithosphere.mp3');
+      smartAudio.preload('earthSystem3', 'assets/sounds/Earth System/Earth System - Hydrosphere.mp3');
+      smartAudio.preload('earthSystem4', 'assets/sounds/Earth System/Earth System - Biosphere.mp3');
+      smartAudio.preload('earthSystem5', 'assets/sounds/Earth System/Earth System - Atmosphere.mp3');
 
 
       smartAudio.preload('earthquake', 'assets/sounds/Earthquake.mp3');

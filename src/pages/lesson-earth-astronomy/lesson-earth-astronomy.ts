@@ -286,6 +286,7 @@ export class LessonEarthAstronomyPage {
     this.smartAudio.pause('astronomy13');
     this.smartAudio.pause('astronomy14');
     this.playingAudio = false;
+    this.playByPart = false;
   }
 
   public audio1() {

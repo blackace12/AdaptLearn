@@ -277,6 +277,7 @@ export class LessonEarthSolarsystemPage {
     this.smartAudio.pause('solarSystem12');
     this.smartAudio.pause('solarSystem13');
     this.playingAudio = false;
+    this.playByPart = false;
   }
 
   public audio1() {

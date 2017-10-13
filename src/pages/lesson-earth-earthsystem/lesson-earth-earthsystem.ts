@@ -88,17 +88,60 @@ export class LessonEarthEarthsystemPage {
   }
 
   playingAudio: boolean = false;
+  playByPart: boolean = false;
 
   playAudio() {
     if (this.playingAudio === false) {
-      this.smartAudio.play('earthSystem');
-      this.playingAudio = !this.playingAudio;
+      if (this.first === "Verbal" && this.first === "Visual" ||
+        this.second === "Verbal" && this.first === "Visual" ||
+        this.third === "Verbal" && this.first === "Visual" ||
+        this.first === "Verbal" && this.second === "Visual" ||
+        this.second === "Verbal" && this.second === "Visual" ||
+        this.third === "Verbal" && this.second === "Visual" ||
+        this.first === "Verbal" && this.third === "Visual" ||
+        this.second === "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+          this.smartAudio.play('earthSystem');
+      }
+      else if (this.first === "Verbal" && this.first != "Visual" ||
+        this.second === "Verbal" && this.first != "Visual" ||
+        this.third === "Verbal" && this.first != "Visual" ||
+        this.first === "Verbal" && this.second != "Visual" ||
+        this.second === "Verbal" && this.second != "Visual" ||
+        this.third === "Verbal" && this.second != "Visual" ||
+        this.first === "Verbal" && this.third != "Visual" ||
+        this.second === "Verbal" && this.third != "Visual" ||
+        this.third != "Visual" && this.third === "Verbal" ||
+        this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+          this.playByPart = true;
+          console.log('enable audio by part');
+          if (this.hide1 === true) {
+            this.audio1();
+          }
+          else if (this.hide2 === true) {
+            this.audio2();
+          }
+          else if (this.hide3 === true) {
+            this.audio3();
+          }
+          else if (this.hide4 === true) {
+            this.audio4();
+          }
+          else if (this.hide5 === true) {
+            this.audio5();
+          }
+       }
+      this.playingAudio = true;
       console.log("playing");
     }
     else {
-      this.smartAudio.pause('earthSystem');
-      this.playingAudio = !this.playingAudio;
-      console.log("pause");
+      this.pauseAudio();
+      let toast = this.toastCtrl.create({
+        message: 'Audio Paused',
+        duration: 1500
+      });
+      toast.present();
     }
   }
 
@@ -106,9 +149,7 @@ export class LessonEarthEarthsystemPage {
     this.toShow();
     this.navBar.backButtonClick = (e: UIEvent) => {
       if (this.playingAudio === true) {
-
-        this.smartAudio.pause('earthSystem');
-        this.playingAudio = !this.playingAudio;
+        this.pauseAudio();
       }
       this.scrnOrnt.unlock();
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
@@ -118,6 +159,9 @@ export class LessonEarthEarthsystemPage {
   }
 
   playVideo() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     this.youtube.openVideo('VMxjzWHbyFM');
   }
 
@@ -127,6 +171,9 @@ export class LessonEarthEarthsystemPage {
   }
 
   universeQuiz() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
     //new
     let data = {
       theme: this.selectedTheme
@@ -137,8 +184,6 @@ export class LessonEarthEarthsystemPage {
     this.navCtrl.push(QuizEarthsytemPage, data);
     this.changeTheme();
   }
-
-
 
   SettingsPage() {
     this.navCtrl.push(SettingsPage)
@@ -192,12 +237,64 @@ export class LessonEarthEarthsystemPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      //this.third === "Verbal" && this.third === "Visual" || error i dont know why
+      this.third === "Verbal" && this.third.valueOf() === "Visual" || 
       this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
       this.visual = true;
       this.verbal = false;
       this.font = false;
     }
+  }
+
+  public pauseAudio() {
+    this.smartAudio.pause('earthSystem');
+    this.smartAudio.pause('earthSystem1');
+    this.smartAudio.pause('earthSystem2');
+    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.pause('earthSystem4');
+    this.smartAudio.pause('earthSystem5');
+    this.playingAudio = false;
+    this.playByPart = false;
+  }
+
+  public audio1() {
+    this.smartAudio.play('earthSystem1');
+    this.smartAudio.pause('earthSystem2');
+    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.pause('earthSystem4');
+    this.smartAudio.pause('earthSystem5');
+    console.log("Playing part 1");
+  }
+  public audio2() {
+    this.smartAudio.play('earthSystem2');
+    this.smartAudio.pause('earthSystem1');
+    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.pause('earthSystem4');
+    this.smartAudio.pause('earthSystem5');
+    console.log("Playing part 2");
+  }
+  public audio3() {
+    this.smartAudio.play('earthSystem3');
+    this.smartAudio.pause('earthSystem1');
+    this.smartAudio.pause('earthSystem2');
+    this.smartAudio.pause('earthSystem4');
+    this.smartAudio.pause('earthSystem5');
+    console.log("Playing part 3");
+  }
+  public audio4() {
+    this.smartAudio.play('earthSystem4');
+    this.smartAudio.pause('earthSystem1');
+    this.smartAudio.pause('earthSystem2');
+    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.pause('earthSystem5');
+    console.log("Playing part 4");
+  }
+  public audio5() {
+    this.smartAudio.play('earthSystem5');
+    this.smartAudio.pause('earthSystem1');
+    this.smartAudio.pause('earthSystem2');
+    this.smartAudio.pause('earthSystem3');
+    this.smartAudio.pause('earthSystem4');
+    console.log("Playing part 5");
   }
 
   earthSlides = [
@@ -233,53 +330,65 @@ export class LessonEarthEarthsystemPage {
     }
   ];
 
-  //under chapter 1
   public hide1: boolean = true;
-  public hide1_1: boolean = false;
-  public hide1_2: boolean = false;
-  public hide1_3: boolean = false;
-  public hide1_4: boolean = false;
+  public hide2: boolean = false;
+  public hide3: boolean = false;
+  public hide4: boolean = false;
+  public hide5: boolean = false;
 
-  //====start of chapter 1=======
-  public click1() {
-    this.hide1 = !this.hide1;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
+  public page1() {
+    this.hide1 = true;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    if (this.playByPart === true) {
+      this.audio1();
+    }
   }
 
-  public click1_1() {
-    this.hide1_1 = !this.hide1_1;
+  public page2() {
+    this.hide2 = true;
     this.hide1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    if (this.playByPart === true) {
+      this.audio2();
+    }
   }
-
-  public click1_2() {
-    this.hide1_2 = !this.hide1_2;
+  
+  public page3() {
+    this.hide3 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_3 = false;
-    this.hide1_4 = false;
+    this.hide2 = false;
+    this.hide4 = false;
+    this.hide5 = false;
+    if (this.playByPart === true) {
+      this.audio3();
+    }
   }
-
-  public click1_3() {
-    this.hide1_3 = !this.hide1_3;
+  
+  public page4() {
+    this.hide4 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_4 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide5 = false;
+    if (this.playByPart === true) {
+      this.audio4();
+    }
   }
-
-  public click1_4() {
-    this.hide1_4 = !this.hide1_4;
+  
+  public page5() {
+    this.hide5 = true;
     this.hide1 = false;
-    this.hide1_1 = false;
-    this.hide1_2 = false;
-    this.hide1_3 = false;
+    this.hide2 = false;
+    this.hide3 = false;
+    this.hide4 = false;
+    if (this.playByPart === true) {
+      this.audio5();
+    }
   }
-
-  //====end of chapter 1=======
+  
 }

@@ -333,6 +333,7 @@ export class LessonEarthUniversePage {
     this.smartAudio.pause('universe8');
     this.smartAudio.pause('universe9');
     this.playingAudio = false;
+    this.playByPart = false;
   }
 
   public audio1() {
