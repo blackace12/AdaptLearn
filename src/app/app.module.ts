@@ -8,6 +8,14 @@ import { QuizSolarsystemPage } from './../pages/quiz-solarsystem/quiz-solarsyste
 import { QuizAstronomyPage } from './../pages/quiz-astronomy/quiz-astronomy';
 
 import { TriviaUniversePage } from './../pages/trivia-universe/trivia-universe';
+import { TriviaAstronomyPage } from './../pages/trivia-astronomy/trivia-astronomy';
+import { TriviaSolarsystemPage } from './../pages/trivia-solarsystem/trivia-solarsystem';
+import { TriviaEarthsystemPage } from './../pages/trivia-earthsystem/trivia-earthsystem';
+import { TriviaEarthquakePage } from './../pages/trivia-earthquake/trivia-earthquake';
+import { TriviaVolcanoPage } from './../pages/trivia-volcano/trivia-volcano';
+import { TriviaLandslidePage } from './../pages/trivia-landslide/trivia-landslide';
+import { TriviaTsunamiPage } from './../pages/trivia-tsunami/trivia-tsunami';
+import { TriviaMitadaptPage } from './../pages/trivia-mitadapt/trivia-mitadapt';
 
 import { DataProvider } from './../providers/data/data';
 import { LessonNaturalTsunamiPage } from './../pages/lesson-natural-tsunami/lesson-natural-tsunami';
@@ -45,6 +53,7 @@ import { QuizPage } from '../pages/quiz/quiz';
 import { ProfilePage } from '../pages/profile/profile';
 
 import { LessonPage } from '../pages/lesson/lesson';
+import { ReferencePage } from '../pages/reference/reference';
 
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
@@ -89,7 +98,6 @@ import { NativeAudio } from '@ionic-native/native-audio';
 //Screen orientation
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { EmailComposer } from '@ionic-native/email-composer';
-import { ReferencePage } from '../pages/reference/reference';
 const firebaseConfig = {
   apiKey: "AIzaSyBjCiXPIBAfdBrQzVpfiR975VLhvVouUyc",
   authDomain: "adaptlearn-d2fde.firebaseapp.com",
@@ -128,7 +136,6 @@ const firebaseConfig = {
     LessonNaturalLandslidePage,
     LessonNaturalEarthquakePage,
     LessonNaturalVolcanoPage,
-
     LessonEarthEarthsystemPage,
     LessonMitadaptPage,
     LessonNaturalTsunamiPage,
@@ -141,8 +148,17 @@ const firebaseConfig = {
     QuizEquakePage,
     QuizMitadaptPage,
     QuizEarthsytemPage,
+
     TriviaUniversePage,
-    ReferencePage,
+    TriviaAstronomyPage,
+    TriviaSolarsystemPage,
+    TriviaEarthsystemPage,
+    TriviaEarthquakePage,
+    TriviaVolcanoPage,
+    TriviaLandslidePage,
+    TriviaTsunamiPage,
+    TriviaMitadaptPage,
+    ReferencePage
   ],
 
   imports: [
@@ -197,7 +213,16 @@ const firebaseConfig = {
     QuizEquakePage,
     QuizMitadaptPage,
     QuizEarthsytemPage,
+
     TriviaUniversePage,
+    TriviaAstronomyPage,
+    TriviaSolarsystemPage,
+    TriviaEarthsystemPage,
+    TriviaEarthquakePage,
+    TriviaVolcanoPage,
+    TriviaLandslidePage,
+    TriviaTsunamiPage,
+    TriviaMitadaptPage,
     ReferencePage
   ],
 

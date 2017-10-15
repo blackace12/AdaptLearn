@@ -6,6 +6,7 @@ import { QuizAstronomyPage } from './../quiz-astronomy/quiz-astronomy';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, ToastController, Navbar } from 'ionic-angular';
 import { SettingsPage } from '../settings/settings';
+import { TriviaAstronomyPage } from '../trivia-astronomy/trivia-astronomy';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import {
   AngularFireDatabase,
@@ -180,6 +181,13 @@ export class LessonEarthAstronomyPage {
       this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
       this.navCtrl.pop();
     }
+  }
+
+  trivia() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
+    this.navCtrl.push(TriviaAstronomyPage);
   }
 
   playVideo() {
@@ -888,4 +896,5 @@ export class LessonEarthAstronomyPage {
       this.audio14();
     }
   }
+
 }

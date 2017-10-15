@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions } from 'ionic-angular';
 
 /**
  * Generated class for the TriviaUniversePage page.
@@ -14,7 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TriviaUniversePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  fontSize: any;
+  fontVal: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private modal: ModalController) {
   }
 
   trivia = [
@@ -39,6 +42,24 @@ export class TriviaUniversePage {
       description: "If two pieces of the same type of metal touch in space, they will bond and be permanently stuck together - This amazing effect is called cold welding. It happens because the atoms of the individual pieces of metal have no way of knowing that they are different pieces of metal, so the lumps join together. This wouldn't happen on earth because there is air and water separating the pieces. The effect has a lot of implication for spacecraft construction and the future of metal-based construction in vacuums.",
     }
   ];
+
+  openModal() {
+    const myModalOptions: ModalOptions = {
+      enableBackdropDismiss: false //disables dismiss of modal when clicking outside modal
+    };
+
+    const myModal: Modal = this.modal.create('FontSizePage', { data: this.fontVal }, myModalOptions);
+
+    //present font size modal
+    myModal.present();
+
+    //will receive value when modal is closed/dismissed
+    myModal.onWillDismiss((fontValue) => {
+      this.fontSize = fontValue;
+      this.fontVal = fontValue;
+      console.log(this.fontVal + " back to page");
+    });
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TriviaUniversePage');

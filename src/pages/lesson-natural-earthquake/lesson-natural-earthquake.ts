@@ -5,6 +5,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Modal, ModalController, ModalOptions, Navbar, ToastController } from 'ionic-angular';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SettingsPage} from '../settings/settings';
+import { TriviaEarthquakePage } from '../trivia-earthquake/trivia-earthquake';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import { AngularFireDatabase,  FirebaseObjectObservable} from 'angularfire2/database';
@@ -131,6 +132,12 @@ export class LessonNaturalEarthquakePage {
     }
   }
 
+  trivia() {
+    if (this.playingAudio === true) {
+      this.pauseAudio();
+    }
+    this.navCtrl.push(TriviaEarthquakePage);
+  }
 
   ionViewDidLoad() {
     this.toShow();
@@ -314,7 +321,5 @@ export class LessonNaturalEarthquakePage {
   }
 
 }
-
-  //====end of chapter 1=======
 
 
