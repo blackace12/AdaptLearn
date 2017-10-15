@@ -101,7 +101,7 @@ export class LessonEarthEarthsystemPage {
         this.third === "Verbal" && this.second === "Visual" ||
         this.first === "Verbal" && this.third === "Visual" ||
         this.second === "Verbal" && this.third === "Visual" ||
-        this.third.valueOf() === "Verbal" && this.third === "Visual" ||  
+        this.third.valueOf() === "Verbal" && this.third === "Visual" ||
         this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
           this.smartAudio.play('earthSystem');
       }
@@ -247,7 +247,7 @@ export class LessonEarthEarthsystemPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      this.third === "Verbal" && this.third.valueOf() === "Visual" || 
+      this.third === "Verbal" && this.third.valueOf() === "Visual" ||
       this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
       this.visual = true;
       this.verbal = false;
@@ -367,7 +367,7 @@ export class LessonEarthEarthsystemPage {
       this.audio2();
     }
   }
-  
+
   public page3() {
     this.hide3 = true;
     this.hide1 = false;
@@ -378,7 +378,7 @@ export class LessonEarthEarthsystemPage {
       this.audio3();
     }
   }
-  
+
   public page4() {
     this.hide4 = true;
     this.hide1 = false;
@@ -389,7 +389,7 @@ export class LessonEarthEarthsystemPage {
       this.audio4();
     }
   }
-  
+
   public page5() {
     this.hide5 = true;
     this.hide1 = false;
@@ -400,6 +400,5 @@ export class LessonEarthEarthsystemPage {
       this.audio5();
     }
   }
-  
-}
 
+}
