@@ -33,8 +33,9 @@ export class LessonEarthPage {
   user = [];
   userLearningID: FirebaseObjectObservable<any>
 
-  checkVisual;
+  checkVisual:boolean;
   visual = [];
+  first; second; third: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public scrnOrnt: ScreenOrientation) {
     this.currentUser = this.afAuth.auth.currentUser.uid;
@@ -151,20 +152,39 @@ export class LessonEarthPage {
         });
         for (var i = 0; i <= this.styleArray.length - 1; i++) {
           if (this.visual[0].style == this.styleArray[i]) {
-            if (this.visual[0].style == "Visual") {
-              this.checkVisual = this.visual[0].style;
-              console.log("1" + this.checkVisual);
-            } else if (this.visual[1].style == "Visual") {
-              this.checkVisual = this.visual[1].style;
-              console.log("2" + this.checkVisual)
-            } else if (this.visual[2].style == "Visual") {
-              this.checkVisual = this.visual[2].style;
-              console.log("3" + this.checkVisual)
-            }
+            this.first = this.visual[0].style;
+            console.log("First " + this.first);
+            this.second = this.visual[1].style;
+            console.log("Second " + this.second);
+            this.third = this.visual[2].style;
+            console.log("Third " + this.third);
           }
         }
       });
     });
+
+    if (this.first === "Verbal" && this.first === "Visual" ||
+      this.second === "Verbal" && this.first === "Visual" ||
+      this.third === "Verbal" && this.first === "Visual" ||
+      this.first === "Verbal" && this.second === "Visual" ||
+      this.second === "Verbal" && this.second === "Visual" ||
+      this.third === "Verbal" && this.second === "Visual" ||
+      this.first === "Verbal" && this.third === "Visual" ||
+      this.second === "Verbal" && this.third === "Visual" ||
+      this.third === "Visual" && this.third.valueOf() === "Verbal" ||
+      this.first != "Verbal" && this.first === "Visual" ||
+      this.second != "Verbal" && this.first === "Visual" ||
+      this.third != "Verbal" && this.first === "Visual" ||
+      this.first != "Verbal" && this.second === "Visual" ||
+      this.second != "Verbal" && this.second === "Visual" ||
+      this.third != "Verbal" && this.second === "Visual" ||
+      this.first != "Verbal" && this.third === "Visual" ||
+      this.second != "Verbal" && this.third === "Visual" ||
+      this.third === "Visual" && this.third.valueOf() != "Verbal" ) {
+        this.checkVisual = true;
+        console.log(this.checkVisual);
+    }
+
   }
 
   ionViewDidLoad() {
@@ -176,8 +196,13 @@ export class LessonEarthPage {
   }
 
   universeLesson() {
-    if (this.checkVisual == 'Visual') {
-      this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+    if (this.checkVisual == true) {
+      try {
+        this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+        console.log("Landscape");
+      } catch (error) {
+        console.log(error);
+      }
     }
     let loader = this.loadingCtrl.create({
       content: "Loading lesson content...",
@@ -185,10 +210,11 @@ export class LessonEarthPage {
     });
     this.navCtrl.push(LessonEarthUniversePage);
     loader.present();
+    console.log("Loaded Lesson");
   }
 
   astronomyLesson() {
-    if (this.checkVisual == 'Visual') {
+    if (this.checkVisual == true) {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
       } catch (error) {
@@ -204,7 +230,7 @@ export class LessonEarthPage {
   }
 
   solarsystemLesson() {
-    if (this.checkVisual == 'Visual') {
+    if (this.checkVisual == true) {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
       } catch (error) {
@@ -220,7 +246,7 @@ export class LessonEarthPage {
   }
 
   earthsystemLesson() {
-    if (this.checkVisual == 'Visual') {
+    if (this.checkVisual == true) {
       try {
         this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
       } catch (error) {
