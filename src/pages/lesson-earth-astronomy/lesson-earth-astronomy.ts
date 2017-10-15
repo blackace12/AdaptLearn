@@ -87,6 +87,7 @@ export class LessonEarthAstronomyPage {
 
   playAudio() {
     if (this.playingAudio === false) {
+      //play whole audio if user is visual and verbal or pure visual
       if (this.first === "Verbal" && this.first === "Visual" ||
         this.second === "Verbal" && this.first === "Visual" ||
         this.third === "Verbal" && this.first === "Visual" ||
@@ -95,20 +96,20 @@ export class LessonEarthAstronomyPage {
         this.third === "Verbal" && this.second === "Visual" ||
         this.first === "Verbal" && this.third === "Visual" ||
         this.second === "Verbal" && this.third === "Visual" ||
-        this.third.valueOf() === "Verbal" && this.third === "Visual" ||
-        this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
-          this.smartAudio.play('astronomy');
+        this.third.valueOf() === "Visual" && this.third === "Verbal" ||
+        this.first != "Verbal" && this.first === "Visual" ||
+        this.second != "Verbal" && this.first === "Visual" ||
+        this.third != "Verbal" && this.first === "Visual" ||
+        this.first != "Verbal" && this.second === "Visual" ||
+        this.second != "Verbal" && this.second === "Visual" ||
+        this.third != "Verbal" && this.second === "Visual" ||
+        this.first != "Verbal" && this.third === "Visual" ||
+        this.second != "Verbal" && this.third === "Visual" ||
+        this.third.valueOf() === "Visual" && this.third != "Verbal" ) {
+          this.smartAudio.play('universe');
         }
-        else if (this.first === "Verbal" && this.first != "Visual" ||
-          this.second === "Verbal" && this.first != "Visual" ||
-          this.third === "Verbal" && this.first != "Visual" ||
-          this.first === "Verbal" && this.second != "Visual" ||
-          this.second === "Verbal" && this.second != "Visual" ||
-          this.third === "Verbal" && this.second != "Visual" ||
-          this.first === "Verbal" && this.third != "Visual" ||
-          this.second === "Verbal" && this.third != "Visual" ||
-          this.third != "Visual" && this.third === "Verbal" ||
-          this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
+      //play by part
+      else {
             this.playByPart = true;
             console.log('enable audio by part');
             if (this.hide1 === true) {
@@ -245,23 +246,7 @@ export class LessonEarthAstronomyPage {
   public visual: boolean = false;
 
   toShow() {
-    // if learning style = Verbal only show verbal
-    if (this.first === "Verbal" && this.first != "Visual" ||
-      this.second === "Verbal" && this.first != "Visual" ||
-      this.third === "Verbal" && this.first != "Visual" ||
-      this.first === "Verbal" && this.second != "Visual" ||
-      this.second === "Verbal" && this.second != "Visual" ||
-      this.third === "Verbal" && this.second != "Visual" ||
-      this.first === "Verbal" && this.third != "Visual" ||
-      this.second === "Verbal" && this.third != "Visual" ||
-      this.third != "Visual" && this.third === "Verbal" ||
-      this.first === "Verbal" || this.second === "Verbal" || this.third === "Verbal") {
-      this.verbal = true;
-      this.font = true;
-      this.visual = false;
-    }
-
-    //if learning style = verbal & visual or visual then show visual hide font
+    //if learning style = verbal & visual or visual only then show visual hide font
     if (this.first === "Verbal" && this.first === "Visual" ||
       this.second === "Verbal" && this.first === "Visual" ||
       this.third === "Verbal" && this.first === "Visual" ||
@@ -270,11 +255,25 @@ export class LessonEarthAstronomyPage {
       this.third === "Verbal" && this.second === "Visual" ||
       this.first === "Verbal" && this.third === "Visual" ||
       this.second === "Verbal" && this.third === "Visual" ||
-      this.third === "Verbal" && this.third.valueOf() === "Visual" ||
-      this.first === "Visual" || this.second === "Visual" || this.third === "Visual") {
+      this.third.valueOf() === "Visual" && this.third === "Verbal" ||
+      this.first != "Verbal" && this.first === "Visual" ||
+      this.second != "Verbal" && this.first === "Visual" ||
+      this.third != "Verbal" && this.first === "Visual" ||
+      this.first != "Verbal" && this.second === "Visual" ||
+      this.second != "Verbal" && this.second === "Visual" ||
+      this.third != "Verbal" && this.second === "Visual" ||
+      this.first != "Verbal" && this.third === "Visual" ||
+      this.second != "Verbal" && this.third === "Visual" ||
+      this.third.valueOf() === "Visual" && this.third != "Verbal" ) {
       this.visual = true;
       this.verbal = false;
       this.font = false;
+    }
+
+    else {
+      this.verbal = true;
+      this.font = true;
+      this.visual = false;
     }
   }
 
