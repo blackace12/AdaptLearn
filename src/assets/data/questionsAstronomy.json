@@ -3,7 +3,7 @@
     "questions": [
 
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q01.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is where stars are born.",
@@ -15,7 +15,7 @@
                     "correctAnswer":"Nebula"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q02.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the most famous nebula which is just visible with the unaided eye.",
@@ -27,7 +27,7 @@
                     "correctAnswer":"Orion Nebula"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q03.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These start to shrink at their own gravity.",
@@ -39,7 +39,7 @@
                     "correctAnswer":"Hot gas"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q04.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "One teaspoon of material from a white dwarf would weigh up to ______.",
@@ -51,7 +51,7 @@
                     "correctAnswer":"100 tonnes"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q05.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Over billions of years, the __________ cools and becomes invisible.",
@@ -63,7 +63,7 @@
                     "correctAnswer":"Nebula"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q06.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "When the temperature reaches _______ degrees celsius, the clump becomes a new star.",
@@ -75,7 +75,7 @@
                     "correctAnswer":"10 million"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q07.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Located ten thousand light years from Earth.",
@@ -87,7 +87,7 @@
                     "correctAnswer":"Cas A"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q08.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Some supernovas occur when massive stars run out of ________ in their cores.",
@@ -99,7 +99,7 @@
                     "correctAnswer":"Nuclear fuel"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q09.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A red supergiant that is 800 times wider than the Sun.",
@@ -111,7 +111,7 @@
                     "correctAnswer":"Antares"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q10.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The coolest and slowest burning stars.",
@@ -123,7 +123,7 @@
                     "correctAnswer":"Red dwarfs"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q11.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Gigantic groups where nearly all stars belong to.",
@@ -135,7 +135,7 @@
                     "correctAnswer":"Galaxies"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q12.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The Milky Way is shaped like a huge whirlpool that rotates once every ______ million years.",
@@ -147,7 +147,7 @@
                     "correctAnswer":"200"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q13.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Each _______ is very old and contains up to one million stars.",
@@ -159,7 +159,7 @@
                     "correctAnswer":"Globular cluster"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q14.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A large spiral galaxy that is within the so-called Local Group.",
@@ -171,7 +171,7 @@
                     "correctAnswer":"Andromeda"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q15.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Small galaxies which can be seen by the naked eye from countries south of the equator.",
@@ -183,7 +183,7 @@
                     "correctAnswer":"Magellanic clouds"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q16.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The Milky Way belongs to a cluster of at least  _______ galaxies.",
@@ -195,7 +195,7 @@
                     "correctAnswer":"40"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q17.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Small chunks of rock that travel through space.",
@@ -207,7 +207,7 @@
                     "correctAnswer":"Meteoroids"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q18.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Caused by meteorites entering the upper atmosphere at speeds of around 15 km/s.",
@@ -219,7 +219,7 @@
                     "correctAnswer":"Meteors"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q19.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Between Jupiter and Mars where nearly all meteorites come from.",
@@ -231,7 +231,7 @@
                     "correctAnswer":"Asteroid Belt"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q20.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The largest iron meteorite on Earth.",
@@ -243,7 +243,7 @@
                     "correctAnswer":"Hoba"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q21.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "At certain times of the year, Earth passes through a _____.",
@@ -255,7 +255,7 @@
                     "correctAnswer":"Comet trail"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q22.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "What does the word comet mean?",
@@ -267,7 +267,7 @@
                     "correctAnswer":"Hairy Star"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q23.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Spacecraft that was used to discover thousands of small comets that fly over close to the Sun.",
@@ -279,7 +279,7 @@
                     "correctAnswer":"Esa’s SOHO"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q24.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Largest asteroid yet visited by a spacecraft.",
@@ -291,7 +291,7 @@
                     "correctAnswer":"Lutetia"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q25.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "One of the most interesting metal-rich asteroids.",
@@ -303,7 +303,7 @@
                     "correctAnswer":"Vesta"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q26.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are often called shooting stars.",
@@ -315,7 +315,7 @@
                     "correctAnswer":"Meteors"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q27.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The most famous meteor shower which takes place every year between 14 and 20 November.",
@@ -327,7 +327,7 @@
                     "correctAnswer":"Leonid shower"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q28.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The coolest stars in the universe.",
@@ -339,7 +339,7 @@
                     "correctAnswer":"Red stars"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q29.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The hottest stars in the universe.",
@@ -351,7 +351,7 @@
                     "correctAnswer":"Blue stars"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q30.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Stars undergo this process when they die",
@@ -363,7 +363,7 @@
                     "correctAnswer":"Supernova explosion"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q31.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the name of our galaxy.",
@@ -375,7 +375,7 @@
                     "correctAnswer":"The Milky Way"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q32.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Almost everything on Earth is made of elements that come from its stardust.",
@@ -387,7 +387,7 @@
                     "correctAnswer":"Supernova"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q33.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "One of the last supernovas in the Milky Way took place about _____ years ago in the constellation Cassiopeia.",
@@ -399,7 +399,7 @@
                     "correctAnswer":"340"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q34.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Red stars are the coolest, with surface temperatures of around _______ degrees celsius.",
@@ -411,7 +411,7 @@
                     "correctAnswer":"2500"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Astronomy/Q35.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Blue-white stars are the hottest, reaching a sizzling ______ degrees.",

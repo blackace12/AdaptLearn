@@ -2,7 +2,7 @@
     "questions": [
 
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q01.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These breathe, feed, grow, and leave offspring.",
@@ -14,7 +14,7 @@
                     "correctAnswer":"Living Things"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                  "flashCardFront": "<img src='assets/quizimg/Universe/Q02.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the only world that supports life.",
@@ -26,7 +26,7 @@
                     "correctAnswer":"Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                  "flashCardFront": "<img src='assets/quizimg/Universe/Q03.svg'/>",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It was a water world with small areas of dry land",
@@ -38,7 +38,7 @@
                     "correctAnswer":"Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q04.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "According to studies of ancient rocks, life began on Earth about how many years ago?",
@@ -50,7 +50,7 @@
                     "correctAnswer":"3800 million years"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/animals.png' />",
+                  "flashCardFront": "<img src='assets/quizimg/Universe/Q05.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "They range from the simplest single-celled bacteria to plants, animals, and humans.",
@@ -62,7 +62,7 @@
                     "correctAnswer":"Living things"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q06.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Comets and meteors rained down on what planet?",
@@ -74,7 +74,7 @@
                     "correctAnswer":"Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q07.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Many scientists believe that life began here.",
@@ -86,7 +86,7 @@
                     "correctAnswer":"Planet Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q08.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are energy that came from hot springs on the seabed.",
@@ -98,7 +98,7 @@
                     "correctAnswer":"Black smokers"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q09.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the theory of the beginning of the universe.",
@@ -110,7 +110,7 @@
                     "correctAnswer":"The Big Bang Theory"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q10.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Astronomers believe that the universe began how many years ago?",
@@ -122,7 +122,7 @@
                     "correctAnswer":"14 billion years"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q11.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are stable particles that started to form when the universe was one second old.",
@@ -134,7 +134,7 @@
                     "correctAnswer":"Protons and neutrons"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q12.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These two opposite types of particles largely destroyed each other.",
@@ -146,7 +146,7 @@
                     "correctAnswer":"Matter and antimatter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q13.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The universe cooled to how many degrees after the formation of hydrogen and helium nuclei.",
@@ -158,7 +158,7 @@
                     "correctAnswer":"3000 degrees"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q14.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The universe was filled with clouds of what gases?",
@@ -170,7 +170,7 @@
                     "correctAnswer":"Hydrogen and helium gases"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q15.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Together with ground-based telescopes, these telescopes are now beginning to find galaxies that were created about one billion years after the Big Bang.",
@@ -182,7 +182,7 @@
                     "correctAnswer":"The Hubble Space Telescope"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q16.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This begins about 100 km above the Earth, where the shell of air around our planet disappears.",
@@ -194,7 +194,7 @@
                     "correctAnswer":"Outer Space"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q17.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The visible universe is at least how many light years across?",
@@ -206,7 +206,7 @@
                     "correctAnswer":"93 billion light years"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q18.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are considered the strongest objects in the Universe.",
@@ -218,7 +218,7 @@
                     "correctAnswer":"Black holes"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q19.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Objects that fall into black holes are _____.",
@@ -230,7 +230,7 @@
                     "correctAnswer":"Stretched to breaking point"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q20.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "All objects made of atom _______ each other according to how much matter they contain.",
@@ -242,7 +242,7 @@
                     "correctAnswer":"Pull on"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q21.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Only about ____ of the matter in the universe is made up of atoms.",
@@ -254,7 +254,7 @@
                     "correctAnswer":"15%"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q22.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The distance between the Earth and Sun is about _____ kilometres.",
@@ -266,7 +266,7 @@
                     "correctAnswer":"One au"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q23.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The distance used by astronomers to measure the distance to the stars nearest to us.",
@@ -278,7 +278,7 @@
                     "correctAnswer":"Proxima Centauri"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q24.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Unknown subatomic particles that interacts very weakly with normal matter.",
@@ -290,7 +290,7 @@
                     "correctAnswer":"Dark Matter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q25.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It makes up everything we see, smell, and touch.",
@@ -302,7 +302,7 @@
                     "correctAnswer":"Ordinary matter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q26.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the distance in which light travels in a year.",
@@ -314,7 +314,7 @@
                     "correctAnswer":"Light year"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q27.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The universe has been expanding ______ at a very high speed.",
@@ -326,7 +326,7 @@
                     "correctAnswer":"Outward"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q28.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Galaxies are moving _______ as the space between them expands.",
@@ -338,7 +338,7 @@
                     "correctAnswer":"Further apart"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q29.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is everything we can touch, feel, sense, measure and detect.",
@@ -350,7 +350,7 @@
                     "correctAnswer":"The Universe"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q30.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "In most galaxies, including the Milky Way, black holes are usually located where?",
@@ -362,7 +362,7 @@
                     "correctAnswer":"Center"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q31.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It pulls objects even light towards it.",
@@ -374,7 +374,7 @@
                     "correctAnswer":"Black Hole"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q32.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is known as the undiscovered part of the Universe",
@@ -386,7 +386,7 @@
                     "correctAnswer":"Dark Universe"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q33.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Space is filled with many forms of _______ that are dangerous to astronauts.",
@@ -398,7 +398,7 @@
                     "correctAnswer":"Radiation"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q34.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are one hundred times brighter than even the largest ordinary galaxies.",
@@ -410,7 +410,7 @@
                     "correctAnswer":"Quasars"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q35.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These began to make copies of itself and Earth began to sprung life.",
@@ -422,7 +422,7 @@
                     "correctAnswer":"Molecules"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q36.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the only direct evidence of the Big Bang theory in space.",
@@ -434,7 +434,7 @@
                     "correctAnswer":"Faint glow"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q37.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These waves cannot travel through space.",
@@ -446,7 +446,7 @@
                     "correctAnswer":"Sound"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q38.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This was how the Milky Way Galaxy cam together.",
@@ -458,7 +458,7 @@
                     "correctAnswer":"Collision"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q39.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These were common and caused small galaxies to merge with each other to form a bigger galaxy.",
@@ -470,7 +470,7 @@
                     "correctAnswer":"Collision"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q40.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This causes smaller objects to fall towards larger objects.",
@@ -482,7 +482,7 @@
                     "correctAnswer":"Gravity"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q41.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is known as our local neighborhood in the galaxy.",
@@ -494,7 +494,7 @@
                     "correctAnswer":"The Solar System"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q42.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It took about how many years after the Big Bang for the first star to form?",
@@ -506,7 +506,7 @@
                     "correctAnswer":"100 million years"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q43.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These objects differ from size and have other objects surrounding it like a ring.",
@@ -518,7 +518,7 @@
                     "correctAnswer":"Black Holes"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q44.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These make up planets and stars.",
@@ -530,7 +530,7 @@
                     "correctAnswer":"Ordinary matter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q45.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the fastest thing we know.",
@@ -542,7 +542,7 @@
                     "correctAnswer":"Light"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q46.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These all began with the Big Bang.",
@@ -554,7 +554,7 @@
                     "correctAnswer":"Time, space, matter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q47.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Sound wave cannot travel through here because it is like a  vacuum.",
@@ -566,7 +566,7 @@
                     "correctAnswer":"Space"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q48.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This unit is used by astronomers to measure distances in space.",
@@ -578,7 +578,7 @@
                     "correctAnswer":"Proxima Centauri"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q49.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The visible Universe is at least how many light years across?",
@@ -590,7 +590,7 @@
                     "correctAnswer":"93 billion"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/earth.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Universe/Q50.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the unknown part of the Universe.",

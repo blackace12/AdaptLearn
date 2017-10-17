@@ -34,6 +34,16 @@ export class HomePage {
       title: "Learning Content",
       description: "The combination of your top 3 learning styles will be the basis in the presentation of the learning content.",
       image: "./assets/img/3rd.png"
+    },
+    {
+      title: "Home Navigation",
+      description: "",
+      image: "./assets/img/home-instruction.svg"
+    },
+    {
+      title: "Lesson Content",
+      description: "The combination of your top 3 learning styles will be the basis in the presentation of the learning content.",
+      image: "./assets/img/lesson-instruction.svg"
     }
   ];
 
