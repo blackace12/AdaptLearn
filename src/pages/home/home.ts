@@ -36,14 +36,14 @@ export class HomePage {
       image: "./assets/img/3rd.png"
     },
     {
-      title: "Home Navigation",
+      title: "Navigation",
       description: "",
-      image: "./assets/img/home-instruction.svg"
+      image: "./assets/img/home-instruction.png"
     },
     {
       title: "Lesson Content",
       description: "",
-      image: "./assets/img/lesson-instruction.svg"
+      image: "./assets/img/lesson-instruction.png"
     }
   ];
 
