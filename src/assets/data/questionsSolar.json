@@ -2,7 +2,7 @@
     "questions": [
 
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q01.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are special instruments that tell as that the Sun is made almost entirely of two gases, hydrogen and helium.",
@@ -14,7 +14,7 @@
                     "correctAnswer":"Spectrographs"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q02.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The Sun becomes active every ______ years.",
@@ -26,7 +26,7 @@
                     "correctAnswer":"11"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q03.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "When was the last Solar Maximum?",
@@ -38,7 +38,7 @@
                     "correctAnswer":"2001"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q04.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is beyond Mars.",
@@ -50,7 +50,7 @@
                     "correctAnswer":"Sun"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q05.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The surface of the Sun is about ______ degrees Celsius.",
@@ -62,7 +62,7 @@
                     "correctAnswer":"5500"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q06.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "An object which was at least as big as Pluto was discovered very far from the Sun in 2005.",
@@ -74,7 +74,7 @@
                     "correctAnswer":"Eris"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q07.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is made up of the Sun and all of the smaller objects that move around it.",
@@ -86,7 +86,7 @@
                     "correctAnswer":"Solar System"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q08.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "In 2006, the _______ decided that Pluto and Eris must be classed as ‘dwarf planets’.",
@@ -98,7 +98,7 @@
                     "correctAnswer":"International Astronomical Union"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q09.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the first planet from the Sun.",
@@ -110,7 +110,7 @@
                     "correctAnswer":"Mercury"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q10.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It was one of the most complex space missions ever flown.",
@@ -122,7 +122,7 @@
                     "correctAnswer":"Bepi Colombo"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q11.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It appears as a brilliant morning or evening 'star'.",
@@ -134,7 +134,7 @@
                     "correctAnswer":"Venus"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q12.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the second planet from the Sun.",
@@ -146,7 +146,7 @@
                     "correctAnswer":"Venus"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q13.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is considered as Earth’s twin.",
@@ -158,7 +158,7 @@
                     "correctAnswer":"Venus"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q14.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It takes how many days to complete an orbit of the Sun?",
@@ -170,7 +170,7 @@
                     "correctAnswer":"365 day"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q15.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is neither too hot nor too cold for oceans to exist.",
@@ -182,7 +182,7 @@
                     "correctAnswer":"Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q16.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is also called as the Red Planet.",
@@ -194,7 +194,7 @@
                     "correctAnswer":"Mars"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q17.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the third planet from the Sun.",
@@ -206,7 +206,7 @@
                     "correctAnswer":"Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q18.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the largest of the four rocky planets in the solar system.",
@@ -218,7 +218,7 @@
                     "correctAnswer":"Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q19.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the fourth planet from the Sun.",
@@ -230,7 +230,7 @@
                     "correctAnswer":"Mars"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q20.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are the moons that orbit Mars.",
@@ -242,7 +242,7 @@
                     "correctAnswer":"Phobos and Deimos"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q21.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is beyond the asteroid belt and is the fifth planet from the Sun.",
@@ -254,7 +254,7 @@
                     "correctAnswer":"Jupiter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q22.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is known as the Gas Giant",
@@ -266,7 +266,7 @@
                     "correctAnswer":"Saturn"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q23.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "How many moons does Saturn have?",
@@ -278,7 +278,7 @@
                     "correctAnswer":"31"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q24.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This planet is famous as the ‘Lord of the rings’.",
@@ -290,7 +290,7 @@
                     "correctAnswer":"Saturn"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q25.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the seventh planet from the Sun.",
@@ -302,7 +302,7 @@
                     "correctAnswer":"Uranus"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q26.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "He discovered Uranus in 1781.",
@@ -314,7 +314,7 @@
                     "correctAnswer":"William Herschel"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q27.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "How many moons does Uranus have?",
@@ -326,7 +326,7 @@
                     "correctAnswer":"21"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q28.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the eighth planet from the Sun.",
@@ -338,7 +338,7 @@
                     "correctAnswer":"Neptune"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q29.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "When was Neptune discovered?",
@@ -350,7 +350,7 @@
                     "correctAnswer":"1846"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q30.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Neptune has how many rings?",
@@ -362,7 +362,7 @@
                     "correctAnswer":"5"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q31.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the eighth planet from the Sun.",
@@ -374,7 +374,7 @@
                     "correctAnswer":"Pluto"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q32.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Who discovered Pluto?",
@@ -386,7 +386,7 @@
                     "correctAnswer":"Clyde Tombaugh"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q33.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the largest moon of Pluto.",
@@ -398,7 +398,7 @@
                     "correctAnswer":"Charon"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q34.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Region where the family of icy worlds that occupy the space beyond Neptune is found.",
@@ -410,7 +410,7 @@
                     "correctAnswer":"Kuiper Belt"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q35.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "When was the first Kuiper Belt object discovered?",
@@ -422,7 +422,7 @@
                     "correctAnswer":"1992"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q36.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These planets are smaller than the normal planets.",
@@ -434,7 +434,7 @@
                     "correctAnswer":"Dwarf planets"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q37.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Kuiper Belt was named after this Dutch-born astronomer.",
@@ -446,7 +446,7 @@
                     "correctAnswer":"Gerard Kuiper"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q38.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The nickname of 2003 UB313 before it was given the proper name Eris.",
@@ -458,7 +458,7 @@
                     "correctAnswer":"Xena"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q39.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the furthest object seen in the Solar System.",
@@ -470,7 +470,7 @@
                     "correctAnswer":"Eris"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q40.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This planet spins backwards.",
@@ -482,7 +482,7 @@
                     "correctAnswer":"Pluto"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q41.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is Neptune’s largest moon.",
@@ -494,7 +494,7 @@
                     "correctAnswer":"Triton"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q42.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This planet has many active icy volcanoes.",
@@ -506,7 +506,7 @@
                     "correctAnswer":"Neptune"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q43.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A day on Uranus lasts how long?",
@@ -518,7 +518,7 @@
                     "correctAnswer":"17 hours 14 minutes"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q44.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is the second largest moon in the Solar System.",
@@ -530,7 +530,7 @@
                     "correctAnswer":"Titan"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q45.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It is often regarded as an arid world covered in deserts.",
@@ -542,7 +542,7 @@
                     "correctAnswer":"Mars"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q46.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Mars’ moon which means Panic.",
@@ -554,7 +554,7 @@
                     "correctAnswer":"Deimos"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q47.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The temperature here reaches up to 6000 degrees celsius.",
@@ -566,7 +566,7 @@
                     "correctAnswer":"Earth’s core"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q48.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "When the water is heated by the Sun, it changes into a gas also known as ____.",
@@ -578,7 +578,7 @@
                     "correctAnswer":"Water Vapour"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q49.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It takes how many days to complete the orbit of Earth around the Sun?",
@@ -590,7 +590,7 @@
                     "correctAnswer":"365 days"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Solar/Q50.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This planet is named after the winged god of messenger.",

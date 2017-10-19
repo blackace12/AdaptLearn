@@ -42,7 +42,7 @@ export class HomePage {
     },
     {
       title: "Lesson Content",
-      description: "The combination of your top 3 learning styles will be the basis in the presentation of the learning content.",
+      description: "",
       image: "./assets/img/lesson-instruction.svg"
     }
   ];

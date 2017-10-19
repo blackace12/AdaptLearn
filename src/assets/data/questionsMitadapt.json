@@ -3,7 +3,7 @@
     "questions": [
 
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q01.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It involves reducing the flow of heat-trapping greenhouse gases into the atmosphere.",
@@ -15,7 +15,7 @@
                     "correctAnswer":"Mitigation"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q02.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It involves adjusting to actual or expected future climate.",
@@ -27,7 +27,7 @@
                     "correctAnswer":"Adaptation"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q03.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Cities and municipalities are  ________ of adaptation.",
@@ -39,7 +39,7 @@
                     "correctAnswer":"Frontlines"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q04.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Governments at various levels are also getting better at ______.",
@@ -51,7 +51,7 @@
                     "correctAnswer":"Adaptation"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q05.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Throughout history,  people and societies have ________ to and coped with changes and extremes with varying degrees of success.",
@@ -63,7 +63,7 @@
                     "correctAnswer":"Adapted"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q06.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Has been at least partly responsible for the rise and fall of civilizations.",
@@ -75,7 +75,7 @@
                     "correctAnswer":"Climate change"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q07.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Modern life is _______ to the stable climate we have become accustomed to.",
@@ -87,7 +87,7 @@
                     "correctAnswer":"Tailored"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q08.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Its goal is to avoid significant human interference with the climate system, and stabilize greenhouse gas levels in a timeframe sufficient to allow ecosystems to adapt naturally to climate change.",
@@ -99,7 +99,7 @@
                     "correctAnswer":"Mitigation"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q09.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Earth’s climate has been relatively stable for the past _________ years.",
@@ -111,7 +111,7 @@
                     "correctAnswer":"12,000"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/MitAdapt/Q10.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "While climate change is a global issue, it is felt on a ________ scale..",
