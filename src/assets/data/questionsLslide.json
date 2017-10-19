@@ -3,7 +3,7 @@
     "questions": [
 
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_1.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "The most important force holding land surfaces together.",
@@ -15,7 +15,7 @@
                             "correctAnswer":"Frictional Force  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/slide_5/.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "What occurs when gravity overcomes the force of friction?",
@@ -27,7 +27,7 @@
                             "correctAnswer":"Landslides  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_4.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "What is the most common trigger of a landslide?",
@@ -39,7 +39,7 @@
                             "correctAnswer":"Water  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_2.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "The cause of landslides that disrupts the force of friction holding sediments in place.",
@@ -51,7 +51,7 @@
                             "correctAnswer":"Earthquakes  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_2.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "All landscapes are held together by ______ between the sediment cover and the underlying bedrock.",
@@ -63,7 +63,7 @@
                             "correctAnswer":"Friction  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_3.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "What happens when something is introduced to disrupt the friction on an incline?",
@@ -75,7 +75,7 @@
                             "correctAnswer":"Landslide  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_4.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "What is the other name for underwater landslides?",
@@ -87,7 +87,7 @@
                             "correctAnswer":"Submarine Landslides  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_1.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "Which human activity does not cause landslides?",
@@ -99,7 +99,7 @@
                             "correctAnswer":"Water Drainage  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_5.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "Its characteristics make it a fertile starting point for especially destructive landslides.",
@@ -111,7 +111,7 @@
                             "correctAnswer":"Volcanoes  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_3.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "It acts like a glue to prevent the soil from loosening.",
@@ -123,7 +123,7 @@
                             "correctAnswer":"Vegetation  "
                         },
                         {
-                            "flashCardFront": "<img src='assets/images/universe.png' />",
+                            "flashCardFront": "<img src='assets/images/slide_4.png' />",
                             "flashCardBack": "",
                             "flashCardFlipped": false,
                             "questionText": "Which of the following is a good deterrent to landslides?",

@@ -3,7 +3,7 @@
     "questions": [
 
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_4.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is what happens when two blocks of the Earth suddenly slip past one another.",
@@ -15,7 +15,7 @@
                     "correctAnswer":"Earthquake"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_9.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The surface where blocks of the Earth slip.",
@@ -27,7 +27,7 @@
                     "correctAnswer":"Fault"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_3.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The location below the Earth’s surface where the earthquake starts.",
@@ -39,7 +39,7 @@
                     "correctAnswer":"Hypocenter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_13.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The location directly above the hypocenter on the surface of the Earth.",
@@ -51,7 +51,7 @@
                     "correctAnswer":"Epicenter"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_6.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Sometimes, an earthquake has _____.",
@@ -63,7 +63,7 @@
                     "correctAnswer":"Foreshocks"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_7.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The largest main earthquake.",
@@ -75,7 +75,7 @@
                     "correctAnswer":"Mainshock"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_10.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Edges of tectonic plates are called?",
@@ -87,7 +87,7 @@
                     "correctAnswer":"Plate boundaries"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_12.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Layer of Earth that make up a thin skin on the surface of our planet.",
@@ -99,7 +99,7 @@
                     "correctAnswer":"Mantle and crust"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_14.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Smaller earthquakes that occur after a mainshock.",
@@ -111,7 +111,7 @@
                     "correctAnswer":"Aftershock"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_5.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Puzzle pieces that slowly move around.",
@@ -123,7 +123,7 @@
                     "correctAnswer":"Tectonic plates"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/images/quake_8.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The four major layers of Earth.",
