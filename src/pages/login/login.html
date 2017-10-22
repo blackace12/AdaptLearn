@@ -1,8 +1,12 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Passion+One" rel="stylesheet">
+</head>
 <ion-content padding class="trial2" scroll="false">
 
   <div class="trial">
-
   </div>
+
+  <h1 class="title"> Login </h1>
 
   <ion-list inset>
     <div class="input">
@@ -11,6 +15,7 @@
         <ion-item>
           <ion-input #email formControlName="email" type="email" placeholder="Email Address" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
         </ion-item>
+
         <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid  &&
           loginForm.controls.email.dirty">
           <p>Please enter a valid email.</p>
@@ -19,6 +24,7 @@
         <ion-item>
           <ion-input #password formControlName="password" type="password" placeholder="Password" [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
         </ion-item>
+
         <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  &&
           loginForm.controls.password.dirty">
           <p>Please enter your password.</p>
