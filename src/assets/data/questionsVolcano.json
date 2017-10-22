@@ -3,7 +3,7 @@
     "questions": [
 
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_2.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_2.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A mountain that opens downward to a pool of molten rock below the surface of the Earth.",
@@ -15,7 +15,7 @@
                     "correctAnswer":"Volcano"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_1.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_1.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This occurs when pressure builds up.",
@@ -27,7 +27,7 @@
                     "correctAnswer":"Eruption"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_4.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_4.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Eruptions can cause all EXCEPT.",
@@ -39,7 +39,7 @@
                     "correctAnswer":"Tsunamis"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_3.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_3.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Volcanoes are formed when ______ from within the Earth’s upper mantle works its way to the surface.",
@@ -51,7 +51,7 @@
                     "correctAnswer":"Magma"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_12.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_12.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A stage of a volcano where it has recently erupted and has the possibility of erupting soon.",
@@ -63,7 +63,7 @@
                     "correctAnswer":"Active"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_11.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_11.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A stage of a volcano where it has not erupted for a long time but have the possibility of erupting.",
@@ -75,7 +75,7 @@
                     "correctAnswer":"Dormant"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_10.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_10.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A stage of a volcano where it has erupted thousands of years ago and has no possibility of erupting again.",
@@ -87,7 +87,7 @@
                     "correctAnswer":"Extinct"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_13.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_13.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The Earth’s crust is made up of huge slabs called ______, which fit together like a jigsaw puzzle.",
@@ -99,7 +99,7 @@
                     "correctAnswer":"Plates"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_9.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_9.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It causes earthquakes and volcanic eruptions near the edges of the plates.",
@@ -111,7 +111,7 @@
                     "correctAnswer":"Friction"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_5.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_5.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The reason why volcanoes erupt.",
@@ -123,7 +123,7 @@
                     "correctAnswer":"Tectonic plates"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_8.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_8.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A type of volcano that is a circular or oval cone made up of small fragments of lava from a single event.",
@@ -135,7 +135,7 @@
                     "correctAnswer":"Cinder cone volcano"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_6.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_6.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A steep-sided volcano composed of many layers of volcanic rocks.",
@@ -147,7 +147,7 @@
                     "correctAnswer":"Composite volcano"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_2.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_2.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A volcano shaped like a bowl in the middle with long gentle slopes made by basaltic lava flows.",
@@ -159,7 +159,7 @@
                     "correctAnswer":"Shield volcano"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_3.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_3.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A type of volcano where lava domes are formed when erupting lava is too thick to flow and makes a steep-sided mound as the lava piles up near the volcanic vent.",
@@ -171,7 +171,7 @@
                     "correctAnswer":"Lava volcano"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/volcano_6.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Volcano/volcano_6.png' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These have been known to knock down entire forests.",
