@@ -3,7 +3,7 @@
     "questions": [
 
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                  "flashCardFront": "<img src='assets/quizimg/Earth/Q01.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This contains the cold and hard solid land of the planet’s crust(surface).",
@@ -15,7 +15,7 @@
                     "correctAnswer":"Lithosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q02.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are the subsystems of Earth’s system.",
@@ -27,7 +27,7 @@
                     "correctAnswer":"Spheres"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q03.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This contains all the solid, liquid, and gaseous water of the planet.",
@@ -39,7 +39,7 @@
                     "correctAnswer":"Hydrosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q04.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Earth’s water is ______ salty.",
@@ -51,7 +51,7 @@
                     "correctAnswer":"97%"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q05.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The surface of the lithosphere is very ____.",
@@ -63,7 +63,7 @@
                     "correctAnswer":"Uneven"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q06.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This contains all of the planet’s living things.",
@@ -75,7 +75,7 @@
                     "correctAnswer":"Bioshpere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q07.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "It contains all of the air in the Earth’s system.",
@@ -87,7 +87,7 @@
                     "correctAnswer":"Atmosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q08.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This sphere includes all of the microorganisms, plants, and animals of the Earth.",
@@ -99,7 +99,7 @@
                     "correctAnswer":"Bioshpere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q09.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Portion of the atmosphere that protects the organisms of the biosphere from the sun’s ultraviolet radiation.",
@@ -111,7 +111,7 @@
                     "correctAnswer":"Upper"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q10.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Some scientists place humans in their own sphere called _____.",
@@ -123,7 +123,7 @@
                     "correctAnswer":"Anthrosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q11.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The hydrosphere ranges from ______ to ______ kilometers in thickness.",
@@ -135,7 +135,7 @@
                     "correctAnswer":"10, 20"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q12.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Living things form ecological communities called _____.",
@@ -147,7 +147,7 @@
                     "correctAnswer":"Biomes"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q13.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The atmosphere is ______ kilometers above the planet’s surface.",
@@ -159,7 +159,7 @@
                     "correctAnswer":"10,000"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q14.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Another term used for hydrosphere.",
@@ -171,7 +171,7 @@
                     "correctAnswer":"Cryosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q15.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The rainforest belongs to what sphere?",
@@ -183,7 +183,7 @@
                     "correctAnswer":"Biosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q16.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The ozone layer belongs to what sphere?",
@@ -195,7 +195,7 @@
                     "correctAnswer":"Atmosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q17.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This subsystem absorbs and emits heat.",
@@ -207,7 +207,7 @@
                     "correctAnswer":"Atmosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q18.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Spheres can be divided into ____.",
@@ -219,7 +219,7 @@
                     "correctAnswer":"Subspheres"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q19.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The _____ layer of the lithosphere consists of loose soil rich in nutrients, oxygen, and silicon.",
@@ -231,7 +231,7 @@
                     "correctAnswer":"Outermost"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q20.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "What are the four major subsystems of Earth?",
@@ -243,7 +243,7 @@
                     "correctAnswer":"Lithosphere, Hydrosphere, Biosphere, Atmosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q21.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A system that consists of four major subsystems.",
@@ -255,7 +255,7 @@
                     "correctAnswer":"Earth system"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q22.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The differences in _____ cause water to change physical states.",
@@ -267,7 +267,7 @@
                     "correctAnswer":"Temperature"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q23.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "A small portion of the water in the hydrosphere is ____.",
@@ -279,7 +279,7 @@
                     "correctAnswer":"Fresh"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q24.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Most of Earth’s fresh water however, is _____.",
@@ -291,7 +291,7 @@
                     "correctAnswer":"Frozen"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q25.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "At the center of the center of Earth is a solid inner core of _____ and _____.",
@@ -303,7 +303,7 @@
                     "correctAnswer":"Frozen"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q26.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is where land is found.",
@@ -315,7 +315,7 @@
                     "correctAnswer":"Lithosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q27.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is where water is found.",
@@ -327,7 +327,7 @@
                     "correctAnswer":"Hydrosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q28.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is where air is found.",
@@ -339,7 +339,7 @@
                     "correctAnswer":"Atmosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q29.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is where living things are found.",
@@ -351,7 +351,7 @@
                     "correctAnswer":"Biosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q30.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "There are how many major subsystems on Earth?",
@@ -363,7 +363,7 @@
                     "correctAnswer":"4"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q31.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is a combination of land, water, air, and living things.",
@@ -375,7 +375,7 @@
                     "correctAnswer":"Earth system"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q32.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Referred to as large collections of salt water.",
@@ -387,7 +387,7 @@
                     "correctAnswer":"Oceans"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q33.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is an example of a biome.",
@@ -399,7 +399,7 @@
                     "correctAnswer":"Rainforest"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q34.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Tornadoes can be found where?",
@@ -411,7 +411,7 @@
                     "correctAnswer":"Atmosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q35.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "When air temperature in the lower portion of the atmosphere changes, _____ occurs.",
@@ -423,7 +423,7 @@
                     "correctAnswer":"Weather"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q36.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "____ temperatures freeze the water.",
@@ -435,7 +435,7 @@
                     "correctAnswer":"Low"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q37.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These can be seen from space.",
@@ -447,7 +447,7 @@
                     "correctAnswer":"Biomes"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q38.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is where living things can be seen.",
@@ -459,7 +459,7 @@
                     "correctAnswer":"Anthrosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q39.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is where water can be found.",
@@ -471,7 +471,7 @@
                     "correctAnswer":"Cryosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q40.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Places along Earth’s surface where salty water collects.",
@@ -483,7 +483,7 @@
                     "correctAnswer":"Deep valleys"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q41.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "The atmosphere is made up of many _____ that differ in chemical composition and temperature.",
@@ -495,7 +495,7 @@
                     "correctAnswer":"Layers"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q42.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Living things form ___________ based on the physical surroundings of an area.",
@@ -507,7 +507,7 @@
                     "correctAnswer":"Ecological communities"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q43.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "These are referred to as ecological communities.",
@@ -519,7 +519,7 @@
                     "correctAnswer":"Biomes"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q44.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is where storms and tornadoes are formed.",
@@ -531,7 +531,7 @@
                     "correctAnswer":"Atmosphere"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q45.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This is produced when water is at high temperature.",
@@ -543,7 +543,7 @@
                     "correctAnswer":"Water vapour"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q46.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Nickel and iron are found here.",
@@ -555,7 +555,7 @@
                     "correctAnswer":"Center of Earth"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q47.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "Smaller systems in Earth’s system.",
@@ -567,7 +567,7 @@
                     "correctAnswer":"Spheres"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q48.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This element can be found in the lithosphere",
@@ -579,7 +579,7 @@
                     "correctAnswer":"Silicon"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q49.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "This element is NOT found in the lithosphere",
@@ -591,7 +591,7 @@
                     "correctAnswer":"Iron"
                 },
                 {
-                    "flashCardFront": "<img src='assets/images/universe.png' />",
+                    "flashCardFront": "<img src='assets/quizimg/Earth/Q50.svg' />",
                     "flashCardBack": "",
                     "flashCardFlipped": false,
                     "questionText": "97% of the water on Earth is ______.",
