@@ -36,6 +36,15 @@ export class ProfilePage {
     l3prog: number;
     UserProgressTotal: FirebaseObjectObservable<any>;
 
+
+    totalValue:number;
+    value0:any;
+    value1:number;
+    value2:number;
+    value3:number;
+    value4:number;
+    value5:number;
+    value6:number;
     constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFireDatabase, afAuth: AngularFireAuth, public modalCtrl: ModalController, public alertCtrl: AlertController) {
 
         this.currentUser = afAuth.auth.currentUser.uid;
@@ -105,6 +114,16 @@ export class ProfilePage {
                 this.arrayTest.sort(function (a, b) {
                     return parseInt(b.value) - parseInt(a.value);
                 });
+                this.totalValue =
+                this.arrayTest[0].value +
+                this.arrayTest[1].value +
+                this.arrayTest[2].value +
+                this.arrayTest[3].value +
+                this.arrayTest[4].value +
+                this.arrayTest[5].value +
+                this.arrayTest[6].value;
+                console.log(this.totalValue);
+
                 console.log(this.arrayTest[0].style);
                 for (var i = 0; i <= this.styleArray.length - 1; i++) {
                     if (this.arrayTest[0].style == this.styleArray[i]) {
@@ -121,6 +140,14 @@ export class ProfilePage {
                         ];
                     }
                 }
+
+                this.value0 =Math.ceil((this.arrayTest[0].value/this.totalValue) * 100);
+                this.value1 =Math.ceil((this.arrayTest[1].value/this.totalValue) * 100);
+                this.value2 =Math.ceil((this.arrayTest[2].value/this.totalValue) * 100);
+                this.value3 =Math.ceil((this.arrayTest[3].value/this.totalValue) * 100);
+                this.value4 =Math.ceil((this.arrayTest[4].value/this.totalValue) * 100);
+                this.value5 =Math.ceil((this.arrayTest[5].value/this.totalValue) * 100);
+                this.value6 =Math.ceil((this.arrayTest[6].value/this.totalValue) * 100);
 
                 this.chartOptions = {
                     chart: {
@@ -140,41 +167,22 @@ export class ProfilePage {
                             depth: 45
                         }
                     },
+
                     series: [{
                         name: 'Score:',
                         data: [
-                            [this.arrayTest[0].style, this.arrayTest[0].value],
-                            [this.arrayTest[1].style, this.arrayTest[1].value],
-                            [this.arrayTest[2].style, this.arrayTest[2].value],
-                            [this.arrayTest[3].style, this.arrayTest[3].value],
-                            [this.arrayTest[4].style, this.arrayTest[4].value],
-                            [this.arrayTest[5].style, this.arrayTest[5].value],
-                            [this.arrayTest[6].style, this.arrayTest[6].value],
+                            [this.arrayTest[0].style, this.value0],
+                            [this.arrayTest[1].style, this.value1],
+                            [this.arrayTest[2].style, this.value2],
+                            [this.arrayTest[3].style, this.value3],
+                            [this.arrayTest[4].style, this.value4],
+                            [this.arrayTest[5].style, this.value5],
+                            [this.arrayTest[6].style, this.value6],
                         ]
                     }]
                 }
             })
         });
-
-            /* for (var i = 0; i <= 8; i++) {
-                if (this.userScores.length <= i) {
-                    this.scores.push([{
-                        None: "Nothing Recorded"
-                    }]);
-                    console.log("Nothing");
-                    console.log(this.scores);
-                }
-                else {
-                    this.scores.push([{
-                        Chapter: this.userScores[i].Chapter_Quiz,
-                        QuizNo: this.userScores[i].Quiz,
-                        Score: this.userScores[i].Score,
-                    }]);
-                    console.log("With Scores");
-                    console.log(this.scores);
-                }
-            } */
-
         });
   }
 
