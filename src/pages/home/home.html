@@ -6,9 +6,18 @@
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
       <p [innerHTML]="slide.description"></p>
     </ion-slide>
+
     <ion-slide>
-      <ion-toolbar>
-      </ion-toolbar>
+      <h4>Navigation</h4>
+      <img src="assets/img/home-instruction.png" class="slide-image" />
+    </ion-slide>
+
+    <ion-slide>
+      <h4>Lesson Content</h4>
+      <img src="assets/img/lesson-instruction.png" class="slide-image" />
+    </ion-slide>
+
+    <ion-slide>
       <h4>Get Started!</h4>
       <img src="assets/img/4th.png" class="slide-image" />
       <button ion-button round color="primary" (click)="onButtonClicked()">Continue</button>

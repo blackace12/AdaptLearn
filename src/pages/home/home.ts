@@ -22,7 +22,7 @@ export class HomePage {
   slides = [
     {
       title: "Welcome to AdaptLearn!",
-      description: "A<b>Multi-modal Hybrid Learning Application</b> designed to generate multimodal adaptive learning content based on your learning style.",
+      description: "A <b>Multi-modal Hybrid Learning Application</b> designed to generate multimodal adaptive learning content based on your learning style.",
       image: "./assets/img/adapt2.png",
     },
     {
@@ -34,16 +34,6 @@ export class HomePage {
       title: "Learning Content",
       description: "The combination of your top 3 learning styles will be the basis in the presentation of the learning content.",
       image: "./assets/img/3rd.png"
-    },
-    {
-      title: "Navigation",
-      description: "",
-      image: "./assets/img/home-instruction.png"
-    },
-    {
-      title: "Lesson Content",
-      description: "",
-      image: "./assets/img/lesson-instruction.png"
     }
   ];
 
