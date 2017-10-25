@@ -56,7 +56,7 @@ export class HomePage {
           handler: data => {
             if (NameValidator.isValid(data.name)) {
               this.introSlides.update(this.currentUser, { UserName: data.name });
-              this.userChecker.update(this.currentUser,{ Checker: 'true' })
+             /*  this.userChecker.update(this.currentUser,{ Checker: 'true' }) */
               this.navCtrl.setRoot(LearnertestPage);
             } else if (!NameValidator.isValid(data.name)) {
               this.showErrorToast('Invalid Name');
