@@ -115,12 +115,15 @@ export class ListPage {
     });
 
   }
-
-  /* ionViewDidLoad(){
-    this.userChecker = this.db.list('/Users/');
-    this.userChecker.set(this.currentUser, { Checker: 'true' });
-  } */
-
+  /*
+  ionViewDidLoad() {
+    if(this.navParams.get('first')) {
+      console.log(this.navParams.get('first') + ' first time login');
+      this.userChecker = this.db.list('/Users/');
+      this.userChecker.set(this.currentUser, { Checker: 'true' });
+    }
+  }
+  */
   commonMethod(methodName) {
     this[methodName]();
   }
