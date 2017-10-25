@@ -773,6 +773,9 @@ export class LearnertestPage {
             this.navCtrl.setRoot(SplashscreenPage);
             this.navCtrl.push(SplashscreenPage);
           }
+        /*   handler: data => {
+            this.userChecker.update(this.currentUser,{ Checker: 'true' })
+          } */
         }
       ]
 
