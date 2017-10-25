@@ -33,8 +33,9 @@ export class SplashscreenPage {
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   currentUser;
   currentEmail;
+  userChecker: any;
 
-  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider, public menuCtrl:MenuController,db: AngularFireDatabase, afAuth: AngularFireAuth) {
+  constructor(private platform: Platform, public statusBar: StatusBar, public alerCtrl: AlertController, public authProvider: AuthProvider, public navCtrl: NavController, private settings: SettingsProvider, public menuCtrl:MenuController,public db: AngularFireDatabase, afAuth: AngularFireAuth) {
     this.currentUser = afAuth.auth.currentUser.uid;
     this.currentEmail = afAuth.auth.currentUser.email;
 
@@ -83,7 +84,6 @@ export class SplashscreenPage {
     });
 
 
-
     this.initializeApp();
     this.icons = ['home', 'planet', 'podium'];
     // used for an example of ngFor and navigation
@@ -92,7 +92,7 @@ export class SplashscreenPage {
       { title: 'Earth Science', component: LessonPage, icon: this.icons[1] },
       { title: 'Progress', component: ProfilePage, icon: this.icons[2] }
 
-    ];
+    ];    
 
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }

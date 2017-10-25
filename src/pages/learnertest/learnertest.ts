@@ -3,6 +3,7 @@ import { Content, NavController, AlertController, Nav } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SplashscreenPage } from './../splashscreen/splashscreen';
+import { ListPage } from './../list/list';
 
 @Component({
   selector: 'page-learnertest',
@@ -26,7 +27,7 @@ export class LearnertestPage {
   userChecker: any;
   learningStyles: FirebaseListObservable<any>;
 
-  constructor(public navCtrl: NavController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public alertCtrl: AlertController, public db: AngularFireDatabase) {
     this.VisualList = ['You can easily visualize objects, buildings, situations, etc. from plans or descriptions.', 'You navigate well and use maps with ease. You rarely get lost. You have a good sense of direction. You usually know which way is north.',
       'You like using a camera or video camera to capture the world around you.',
       'You like visual arts, painting, sculpture. You like jigsaws and mazes.',
@@ -768,7 +769,9 @@ export class LearnertestPage {
         {
           text: 'OK',
           handler: data => {
-            this.userChecker.update(this.currentUser,{ Checker: 'true' })
+            this.userChecker.update(this.currentUser, { Checker: 'true' });
+            this.navCtrl.setRoot(SplashscreenPage);
+            this.navCtrl.push(SplashscreenPage);
           }
         }
       ]
@@ -787,7 +790,6 @@ export class LearnertestPage {
         { style: total[6].style, value: total[6].value }]
     );
 
-    this.navCtrl.setRoot(SplashscreenPage)
     alert.present();
   }
 }
