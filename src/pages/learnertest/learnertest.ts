@@ -767,9 +767,13 @@ export class LearnertestPage {
       buttons: [
         {
           text: 'OK',
-          handler: data => {
-            this.userChecker.update(this.currentUser,{ Checker: 'true' })
+          role: 'ok',
+          handler: () => {
+            console.log('Ok');
           }
+        /*   handler: data => {
+            this.userChecker.update(this.currentUser,{ Checker: 'true' })
+          } */
         }
       ]
 

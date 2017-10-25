@@ -13,10 +13,11 @@ import { NavController, ModalController, AlertController, ToastController } from
 export class HomePage {
   introSlides: FirebaseListObservable<any>;
   currentUser: any;
-
+  userChecker: FirebaseListObservable<any>;
   constructor(public navCtrl: NavController, public modalCtrl: ModalController, public af: AngularFireDatabase, public afAuth: AngularFireAuth, public alertCtrl: AlertController,public toastCtrl: ToastController) {
     this.introSlides = af.list('/Users/');
     this.currentUser = afAuth.auth.currentUser.uid;
+    this.userChecker = af.list('/Users/');
   }
 
   slides = [
@@ -53,9 +54,9 @@ export class HomePage {
         {
           text: 'Save',
           handler: data => {
-
             if (NameValidator.isValid(data.name)) {
               this.introSlides.update(this.currentUser, { UserName: data.name });
+              this.userChecker.update(this.currentUser,{ Checker: 'true' })
               this.navCtrl.setRoot(LearnertestPage);
             } else if (!NameValidator.isValid(data.name)) {
               this.showErrorToast('Invalid Name');
