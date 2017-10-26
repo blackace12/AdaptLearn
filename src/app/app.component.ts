@@ -27,6 +27,7 @@ export class MyApp {
     // watch network for a disconnect
     let dc;
     this.network.onDisconnect().subscribe(() => {
+
       dc = this.toastCtrl.create({
         message: 'Network Disconnected',
         //duration: 5000,
@@ -41,7 +42,7 @@ export class MyApp {
       dc.dismiss();
       let toast = this.toastCtrl.create({
         message: 'Network Connected',
-        duration: 2500,
+        duration: 2000,
         position: 'bottom',
         cssClass: "toast-success"
       })
@@ -141,7 +142,7 @@ export class MyApp {
       smartAudio.preload('tsunami5', 'assets/sounds/Tsunami/Tsunami - Tsunami races away from the epicenter.mp3');
       smartAudio.preload('tsunami6', 'assets/sounds/Tsunami/Tsunami - Tsunamis travel rapidly across ocean basin.mp3');
       smartAudio.preload('tsunami7', 'assets/sounds/Tsunami/Tsunami - Tsunami wave train.mp3');
-      
+
       //Mitigation and Adaptation Audio
       smartAudio.preload('mitigation', 'assets/sounds/Mitigation.mp3');
       smartAudio.preload('mitigation1', 'assets/sounds/Mitigation and Adaptation/Mitigation.mp3');

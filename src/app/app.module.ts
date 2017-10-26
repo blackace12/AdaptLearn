@@ -223,7 +223,7 @@ const firebaseConfig = {
     TriviaLandslidePage,
     TriviaTsunamiPage,
     TriviaMitadaptPage,
-    ReferencePage
+    ReferencePage,
   ],
 
   providers: [

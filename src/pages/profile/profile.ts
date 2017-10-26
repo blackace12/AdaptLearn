@@ -162,14 +162,19 @@ export class ProfilePage {
                     },
 
                     plotOptions: {
+                      series: {
+                        dataLabels: {
+                            enabled: true,
+                            format: '{y} %'
+                        }
+                    },
                         pie: {
                             innerSize: 100,
                             depth: 45
                         }
                     },
-
                     series: [{
-                        name: 'Score:',
+                        name: 'Percentage ',
                         data: [
                             [this.arrayTest[0].style, this.value0],
                             [this.arrayTest[1].style, this.value1],
@@ -178,7 +183,8 @@ export class ProfilePage {
                             [this.arrayTest[4].style, this.value4],
                             [this.arrayTest[5].style, this.value5],
                             [this.arrayTest[6].style, this.value6],
-                        ]
+                        ],
+
                     }]
                 }
             })

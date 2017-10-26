@@ -3,8 +3,6 @@ import { Content, NavController, AlertController, Nav } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SplashscreenPage } from './../splashscreen/splashscreen';
-import { ListPage } from './../list/list';
-
 @Component({
   selector: 'page-learnertest',
   templateUrl: 'learnertest.html',
@@ -764,7 +762,7 @@ export class LearnertestPage {
     }
     let alert = this.alertCtrl.create({
       title: 'Welcome!',
-      subTitle: 'The first three pictures presented are your top three learning styles. Your learning content will be based on these styles. Tap the images for more information.',
+      subTitle: '<p>The first three pictures presented are your top three learning styles. Your learning content will be based on these styles. Tap the images for more information.</p>',
       buttons: [
         {
           text: 'OK',
@@ -773,14 +771,9 @@ export class LearnertestPage {
             this.navCtrl.setRoot(SplashscreenPage);
             this.navCtrl.push(SplashscreenPage);
           }
-        /*   handler: data => {
-            this.userChecker.update(this.currentUser,{ Checker: 'true' })
-          } */
         }
       ]
-
     });
-
 
     this.learningStyles.push(
      [

@@ -150,12 +150,14 @@ export class QuizPage {
       //Edit Here
 
       if (this.score >= 7) {
+        //comment this if ever
         this.quizID = this.quizUniverse.push(
           {
             Chapter_Quiz: "Universe Formation", Passed: true, Score: this.score, ProgressRate: 1
           }
         ).key;
         console.log(this.quizID);
+        //comment this if ever
 
         this.progressID.push({
           QuizID: this.quizID,
@@ -166,12 +168,14 @@ export class QuizPage {
       }
 
       else if (this.score < 7) {
+        //comment this if ever
         this.quizID = this.quizUniverse.push(
           {
             Chapter_Quiz: "Universe Formation", Passed: false, Score: this.score, ProgressRate: 1
           }
         ).key;
         console.log(this.quizID);
+        //comment this if ever
         this.progressID.push({
           QuizID: this.quizID,
           Chapter_Quiz: "Universe Formation",
