@@ -24,7 +24,7 @@ export class DataMitadaptProvider {
 
         return new Promise(resolve => {
 
-        this.http.get('assets/data/questionsMitadapt.json').map(res => res.json()).subscribe(data => {
+        this.http.get('assets/data/questionsMitAdapt.json').map(res => res.json()).subscribe(data => {
              this.data = data.questions;
              resolve(this.data);
              });
