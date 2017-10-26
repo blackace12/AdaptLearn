@@ -173,7 +173,7 @@ export class LessonEarthEarthsystemPage {
       this.pauseAudio();
     }
 
-    this.youtube.openVideo('N7TReqdgw0Q');
+    this.youtube.openVideo('Nlwljx7sQnU');
   }
 
   regularShare() {

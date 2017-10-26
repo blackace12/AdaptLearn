@@ -172,7 +172,7 @@ export class LessonNaturalVolcanoPage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-   this.youtube.openVideo('DZZFPCY6RlE');
+   this.youtube.openVideo('1gJltB1K350');
   }
 
   SettingsPage(){

@@ -154,7 +154,7 @@ export class LessonMitadaptPage {
     if (this.playingAudio === true) {
       this.pauseAudio();
     }
-    this.youtube.openVideo('zl42nHerP2Y');
+    this.youtube.openVideo('5yBHaNqrbtI');
 
   }
   SettingsPage() {
