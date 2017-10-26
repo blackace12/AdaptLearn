@@ -1,3 +1,4 @@
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { ReferencePage } from './../reference/reference';
 import { LoginPage } from './../login/login';
 import { AuthProvider } from './../../providers/auth/auth';
@@ -34,7 +35,7 @@ export class SettingsPage {
   public userProfile: any;
   public loading: Loading;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFireDatabase, afAuth: AngularFireAuth, public alertCtrl: AlertController, private settings: SettingsProvider, public auth: AuthProvider, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFireDatabase, afAuth: AngularFireAuth, public alertCtrl: AlertController, private settings: SettingsProvider, public auth: AuthProvider, public loadingCtrl: LoadingController, public scrnOrnt: ScreenOrientation) {
 
 
     this.currentUser = afAuth.auth.currentUser.uid;
@@ -233,6 +234,18 @@ export class SettingsPage {
     console.log('ionViewDidLoad SettingsPage');
   }
 
+  ionViewWillEnter(){
+    this.scrnOrnt.unlock();
+    this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+    console.log("Will Enter");
+  }
+
+
+  ionViewWillLoad(){
+    this.scrnOrnt.unlock();
+    this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
+    console.log("Will Load");
+  }
   changeToNight() {
     if(this.selectedTheme === 'night-theme'){
       this.settings.setActiveTheme('day-theme');
