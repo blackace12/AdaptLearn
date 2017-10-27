@@ -8,8 +8,8 @@
 </ion-buttons>
 
 <ion-slides #slides class="slide-color">
-  <ion-slide class="start-slide">
-    <button ion-button clear (click)="nextSlide()">Start!</button>
+  <ion-slide class="start-slide" (click)="nextSlide()">
+    <button ion-button clear>Start!</button>
   </ion-slide>
 
   <ion-slide *ngFor="let question of questions; let i = index;">

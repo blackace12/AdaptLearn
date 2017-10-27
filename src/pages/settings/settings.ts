@@ -1,10 +1,11 @@
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { ReferencePage } from './../reference/reference';
 import { LoginPage } from './../login/login';
+import { LearnertestPage } from './../learnertest/learnertest'; 
 import { AuthProvider } from './../../providers/auth/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Loading, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController, Loading, LoadingController, Navbar } from 'ionic-angular';
 import { SettingsProvider } from "../../providers/settings/settings";
 import {
   AngularFireDatabase,
@@ -23,6 +24,7 @@ import {
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
+  @ViewChild(Navbar) navBar: Navbar;
   currentUser: any;
   userChecker: any;
   learningStyles: FirebaseListObservable<any>;
@@ -42,7 +44,7 @@ export class SettingsPage {
     console.log(this.currentUser);
 
 
-    this.userChecker = af.list('/Users/' + this.currentUser);
+    this.userChecker = af.list('/Users/' + this.currentUser + '/Checker');
     console.log(this.userChecker);
 
     this.learningStyles = af.list('/LearningStyle/' + this.currentUser);
@@ -83,23 +85,20 @@ export class SettingsPage {
           handler: data => {
             this.userChecker.remove();
             this.learningStyles.remove();
-
             if (this.userProgress != undefined || this.userProgress != null){
               this.userProgress.remove();
             }else {
               console.log('Undefined/Null');
             }
-
+            this.changeToDay();
+            this.navCtrl.setRoot(LearnertestPage);
             let alert = this.alertCtrl.create({
-              message: "Account successfully reset! Please login to continue.",
+              message: "Account successfully reset! Please take the test.",
               buttons: [
                 {
                   text: "Ok",
                   handler: data =>{
-                    this.auth.logoutUser().then(() => {
-                      this.changeToNight();
-                      this.navCtrl.setRoot(LoginPage);
-                    });
+                    console.log('Yes clicked');
                   }
                 }
               ]
@@ -117,9 +116,7 @@ export class SettingsPage {
       ]
     });
     alert.present();
-
   }
-
 
   updatePassword() {
     let alert = this.alertCtrl.create({
@@ -198,7 +195,7 @@ export class SettingsPage {
                 });
                 alert.present();
                 this.navCtrl.setRoot(LoginPage);
-                this.changeToNight();
+                this.changeToDay();
               }, error => {
                 this.loading.dismiss().then(() => {
                   let alert = this.alertCtrl.create({
@@ -232,6 +229,17 @@ export class SettingsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      if (this.navParams.get('orientation')==="landscape") {
+        console.log(this.navParams.get('orientation'));
+        this.scrnOrnt.unlock();
+        this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+        this.navCtrl.pop();
+      }
+      else {
+        this.navCtrl.pop();
+      }
+    }
   }
 
   ionViewWillEnter(){
@@ -240,13 +248,13 @@ export class SettingsPage {
     console.log("Will Enter");
   }
 
-
   ionViewWillLoad(){
     this.scrnOrnt.unlock();
     this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
     console.log("Will Load");
   }
-  changeToNight() {
+
+  changeToDay() {
     if(this.selectedTheme === 'night-theme'){
       this.settings.setActiveTheme('day-theme');
     }
