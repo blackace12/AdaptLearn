@@ -34,6 +34,7 @@ export class LessonNaturalTsunamiPage {
   myTracks: any[];
   selectedTrack: any;
   selectedTheme:String; //new
+  orientation: String;
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
@@ -178,7 +179,7 @@ export class LessonNaturalTsunamiPage {
   }
 
   SettingsPage(){
-    this.navCtrl.push(SettingsPage)
+    this.navCtrl.push(SettingsPage,{orientation:this.orientation});
   }
 
   openModal(){
@@ -226,6 +227,7 @@ export class LessonNaturalTsunamiPage {
       this.visual = true;
       this.verbal = false;
       this.font = false;
+      this.orientation = "landscape";
     }
 
     else {

@@ -29,6 +29,7 @@ export class LessonNaturalEarthquakePage {
   myTracks: any[];
   selectedTrack: any;
   selectedTheme:String; //new
+  orientation: String;
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
@@ -162,7 +163,7 @@ export class LessonNaturalEarthquakePage {
 
 
   SettingsPage(){
-    this.navCtrl.push(SettingsPage)
+    this.navCtrl.push(SettingsPage,{orientation:this.orientation});
   }
 
   openModal(){
@@ -230,6 +231,7 @@ export class LessonNaturalEarthquakePage {
       this.visual = true;
       this.verbal = false;
       this.font = false;
+      this.orientation = "landscape";
     }
 
     else {

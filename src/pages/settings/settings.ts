@@ -3,8 +3,8 @@ import { ReferencePage } from './../reference/reference';
 import { LoginPage } from './../login/login';
 import { AuthProvider } from './../../providers/auth/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Loading, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController, Loading, LoadingController, Navbar } from 'ionic-angular';
 import { SettingsProvider } from "../../providers/settings/settings";
 import {
   AngularFireDatabase,
@@ -23,6 +23,7 @@ import {
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
+  @ViewChild(Navbar) navBar: Navbar;
   currentUser: any;
   userChecker: any;
   learningStyles: FirebaseListObservable<any>;
@@ -232,6 +233,17 @@ export class SettingsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
+    this.navBar.backButtonClick = (e: UIEvent) => {
+      if (this.navParams.get('orientation')==="landscape") {
+        console.log(this.navParams.get('orientation'));
+        this.scrnOrnt.unlock();
+        this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.LANDSCAPE);
+        this.navCtrl.pop();
+      }
+      else {
+        this.navCtrl.pop();
+      }
+    }
   }
 
   ionViewWillEnter(){
@@ -240,12 +252,12 @@ export class SettingsPage {
     console.log("Will Enter");
   }
 
-
   ionViewWillLoad(){
     this.scrnOrnt.unlock();
     this.scrnOrnt.lock(this.scrnOrnt.ORIENTATIONS.PORTRAIT);
     console.log("Will Load");
   }
+
   changeToNight() {
     if(this.selectedTheme === 'night-theme'){
       this.settings.setActiveTheme('day-theme');

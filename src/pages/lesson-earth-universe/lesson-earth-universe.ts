@@ -9,7 +9,7 @@ import { SettingsPage } from '../settings/settings';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
-import { SettingsProvider } from "../../providers/settings/settings"; //new
+import { SettingsProvider } from "../../providers/settings/settings"; 
 
 @IonicPage()
 @Component({
@@ -28,7 +28,8 @@ export class LessonEarthUniversePage {
   learningStyleObject: FirebaseObjectObservable<any>;
   myTracks: any[];
   selectedTrack: any;
-  selectedTheme: String; //new
+  selectedTheme: String;
+  orientation: String;
   styleArray = ["Solitary", "Visual", "Auditory", "Logical", "Physical", "Social", "Verbal"];
   styles: any[] = [];
   user = [];
@@ -259,7 +260,7 @@ export class LessonEarthUniversePage {
   }
   
   SettingsPage() {
-    this.navCtrl.push(SettingsPage)
+    this.navCtrl.push(SettingsPage,{orientation:this.orientation});
   }
 
   openModal() {
@@ -307,6 +308,7 @@ export class LessonEarthUniversePage {
       this.visual = true;
       this.verbal = false;
       this.font = false;
+      this.orientation = "landscape";
     }
 
     else {
