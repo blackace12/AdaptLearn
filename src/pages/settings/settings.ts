@@ -1,6 +1,7 @@
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { ReferencePage } from './../reference/reference';
 import { LoginPage } from './../login/login';
+import { LearnertestPage } from './../learnertest/learnertest'; 
 import { AuthProvider } from './../../providers/auth/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component, ViewChild } from '@angular/core';
@@ -43,7 +44,7 @@ export class SettingsPage {
     console.log(this.currentUser);
 
 
-    this.userChecker = af.list('/Users/' + this.currentUser);
+    this.userChecker = af.list('/Users/' + this.currentUser + '/Checker');
     console.log(this.userChecker);
 
     this.learningStyles = af.list('/LearningStyle/' + this.currentUser);
@@ -84,23 +85,20 @@ export class SettingsPage {
           handler: data => {
             this.userChecker.remove();
             this.learningStyles.remove();
-
             if (this.userProgress != undefined || this.userProgress != null){
               this.userProgress.remove();
             }else {
               console.log('Undefined/Null');
             }
-
+            this.changeToDay();
+            this.navCtrl.setRoot(LearnertestPage);
             let alert = this.alertCtrl.create({
-              message: "Account successfully reset! Please login to continue.",
+              message: "Account successfully reset! Please take the test.",
               buttons: [
                 {
                   text: "Ok",
                   handler: data =>{
-                    this.auth.logoutUser().then(() => {
-                      this.changeToNight();
-                      this.navCtrl.setRoot(LoginPage);
-                    });
+                    console.log('Yes clicked');
                   }
                 }
               ]
@@ -118,9 +116,7 @@ export class SettingsPage {
       ]
     });
     alert.present();
-
   }
-
 
   updatePassword() {
     let alert = this.alertCtrl.create({
@@ -199,7 +195,7 @@ export class SettingsPage {
                 });
                 alert.present();
                 this.navCtrl.setRoot(LoginPage);
-                this.changeToNight();
+                this.changeToDay();
               }, error => {
                 this.loading.dismiss().then(() => {
                   let alert = this.alertCtrl.create({
@@ -258,7 +254,7 @@ export class SettingsPage {
     console.log("Will Load");
   }
 
-  changeToNight() {
+  changeToDay() {
     if(this.selectedTheme === 'night-theme'){
       this.settings.setActiveTheme('day-theme');
     }

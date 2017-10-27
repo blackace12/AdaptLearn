@@ -1,4 +1,3 @@
-import { SplashscreenPage } from './../splashscreen/splashscreen';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
