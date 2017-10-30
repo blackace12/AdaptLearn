@@ -246,8 +246,12 @@ export class QuizMitadaptPage {
       });
     }
 
-    exit(){
-      this.changeTheme(); //new
-      this.navCtrl.pop();
+    exit() {
+      if (this.score >= 7){
+        this.continue();
+      } else {
+        this.changeTheme(); //new
+        this.navCtrl.pop();
+      }
     }
   }

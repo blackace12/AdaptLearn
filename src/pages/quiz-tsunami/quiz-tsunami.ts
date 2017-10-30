@@ -6,6 +6,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { SettingsProvider } from "../../providers/settings/settings"; //new
 import * as _ from 'lodash';
+import { LessonMitadaptPage } from '../lesson-mitadapt/lesson-mitadapt';
 
 @IonicPage()
 @Component({
@@ -222,7 +223,8 @@ export class QuizTsunamiPage {
       })
     }
     this.changeTheme(); //new
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
+    this.navCtrl.push(LessonMitadaptPage);
   }
 
   restartQuiz() {
@@ -242,8 +244,12 @@ export class QuizTsunamiPage {
       this.questions = this.shuffledQuestions;
     });
   }
-  exit(){
-    this.changeTheme(); //new
-    this.navCtrl.pop();
+  exit() {
+    if (this.score >= 7){
+      this.continue();
+    } else {
+      this.changeTheme(); //new
+      this.navCtrl.pop();
+    }
   }
 }

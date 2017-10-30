@@ -1,3 +1,4 @@
+import { LessonEarthEarthsystemPage } from '../lesson-earth-earthsystem/lesson-earth-earthsystem';
 import { FormBuilder } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
@@ -221,7 +222,8 @@ export class QuizSolarsystemPage {
       })
     }
     this.changeTheme(); //new
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
+    this.navCtrl.push(LessonEarthEarthsystemPage);
   }
 
   restartQuiz() {
@@ -243,7 +245,11 @@ export class QuizSolarsystemPage {
   }
 
   exit() {
-    this.changeTheme(); //new
-    this.navCtrl.pop();
+    if (this.score >= 7){
+      this.continue();
+    } else {
+      this.changeTheme(); //new
+      this.navCtrl.pop();
+    }
   }
 }

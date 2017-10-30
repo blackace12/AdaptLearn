@@ -1,3 +1,4 @@
+import { LessonNaturalTsunamiPage } from './../lesson-natural-tsunami/lesson-natural-tsunami';
 import { FormBuilder } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
@@ -223,7 +224,8 @@ export class QuizLslidePage {
       })
     }
     this.changeTheme(); //new
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
+    this.navCtrl.push(LessonNaturalTsunamiPage);
   }
 
   restartQuiz() {
@@ -244,8 +246,12 @@ export class QuizLslidePage {
     });
   }
 
-  exit(){
-    this.changeTheme(); //new
-    this.navCtrl.pop();
+  exit() {
+    if (this.score >= 7){
+      this.continue();
+    } else {
+      this.changeTheme(); //new
+      this.navCtrl.pop();
+    }
   }
 }

@@ -1,3 +1,4 @@
+import { LessonNaturalVolcanoPage } from './../lesson-natural-volcano/lesson-natural-volcano';
 import { FormBuilder } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -223,8 +224,9 @@ export class QuizEquakePage {
         })
       })
     }
-      this.changeTheme(); //new
-      this.navCtrl.pop();
+    this.changeTheme(); //new
+    this.navCtrl.popToRoot();
+    this.navCtrl.push(LessonNaturalVolcanoPage);
     }
 
     restartQuiz() {
@@ -245,8 +247,12 @@ export class QuizEquakePage {
       });
     }
 
-    exit(){
-      this.changeTheme(); //new
-      this.navCtrl.pop();
+    exit() {
+      if (this.score >= 7){
+        this.continue();
+      } else {
+        this.changeTheme(); //new
+        this.navCtrl.pop();
+      }
     }
   }

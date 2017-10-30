@@ -1,3 +1,5 @@
+import { LessonEarthPage } from '../lesson-earth/lesson-earth';
+import { LessonEarthAstronomyPage } from './../lesson-earth-astronomy/lesson-earth-astronomy';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { DataProvider } from './../../providers/data/data';
@@ -225,7 +227,8 @@ export class QuizPage {
       })
     }
     this.changeTheme(); //new
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
+    this.navCtrl.push(LessonEarthAstronomyPage);
   }
 
   restartQuiz() {
@@ -247,7 +250,11 @@ export class QuizPage {
   }
 
   exit() {
-    this.changeTheme(); //new
-    this.navCtrl.pop();
+    if (this.score >= 7){
+      this.continue();
+    } else {
+      this.changeTheme(); //new
+      this.navCtrl.pop();
+    }
   }
 }

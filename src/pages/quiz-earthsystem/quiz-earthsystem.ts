@@ -6,6 +6,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { SettingsProvider } from "../../providers/settings/settings"; //new
 import * as _ from 'lodash';
+import { LessonNaturalEarthquakePage } from '../lesson-natural-earthquake/lesson-natural-earthquake';
 
 
 @IonicPage()
@@ -228,7 +229,8 @@ export class QuizEarthsytemPage {
       })
     }
     this.changeTheme(); //new
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
+    this.navCtrl.push(LessonNaturalEarthquakePage);
     }
 
     restartQuiz() {
@@ -249,8 +251,12 @@ export class QuizEarthsytemPage {
       });
     }
 
-    exit(){
-      this.changeTheme(); //new
-      this.navCtrl.pop();
+    exit() {
+      if (this.score >= 7){
+        this.continue();
+      } else {
+        this.changeTheme(); //new
+        this.navCtrl.pop();
+      }
     }
   }
