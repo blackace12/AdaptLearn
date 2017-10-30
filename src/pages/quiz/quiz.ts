@@ -1,4 +1,3 @@
-import { LessonEarthPage } from '../lesson-earth/lesson-earth';
 import { LessonEarthAstronomyPage } from './../lesson-earth-astronomy/lesson-earth-astronomy';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
